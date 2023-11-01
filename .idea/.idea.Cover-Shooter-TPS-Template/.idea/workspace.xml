@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Control-Freak-2/Samples/Demo-Dual-Stick-Shooter/Prefab/Bullet-bullet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Control-Freak-2/Samples/Demo-Dual-Stick-Shooter/Prefab/Bullet-bullet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Gun/Thompson/Materials/Bullet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Gun/Thompson/Materials/Bullet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Extra/BodyPartHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Extra/BodyPartHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Util/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Util/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/china town env final/china town mafia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/china town env final/china town mafia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/BoxAndWhiskerPlot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/ProfileTable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.1/PostProcessing/Runtime/Effects/ColorGrading.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/Editor/Lighting/LightAnchorEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.6/Shaders/Utils/CopyDepth.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/AsyncOperation/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/AsyncOperation/AsyncOperationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/AsyncOperation/TaskAsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/Components/Networking/ReadOnlyHttpResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Editor/CoverageFormats/OpenCover/Model/SkippedMethod.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Scripts/Controllers/SpaceshipController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Tests/WeaponTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/ReorderableList/ReorderableListFlags.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/30/076d1622/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/3d/6b35485d/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/50/c10db258/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/7d/d3fc5668/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a642ad78cd754c97a615f0d9a616a6031a000/a9/bc248481/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2U49tCW7Z8m9w14tdaxr5oAm3Tp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\GNG\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\GitProjects\Cover-Shooter-TPS-Template -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\GitProjects\Cover-Shooter-TPS-Template" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\GitProjects\Cover-Shooter-TPS-Template -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\GitProjects\Cover-Shooter-TPS-Template" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18476">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="18476" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="" />
+      <created>1692188204688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692188204688</updated>
+      <workItem from="1692188207530" duration="4521000" />
+      <workItem from="1692253837089" duration="8590000" />
+      <workItem from="1692270335075" duration="5015000" />
+      <workItem from="1692345252924" duration="9178000" />
+      <workItem from="1692604309571" duration="14153000" />
+      <workItem from="1692688623241" duration="7861000" />
+      <workItem from="1692710085191" duration="966000" />
+      <workItem from="1692949368484" duration="7492000" />
+      <workItem from="1693206819664" duration="602000" />
+      <workItem from="1693213175718" duration="1581000" />
+      <workItem from="1693221984254" duration="5600000" />
+      <workItem from="1693296506836" duration="5750000" />
+      <workItem from="1693399368584" duration="2852000" />
+      <workItem from="1693465267043" duration="12418000" />
+      <workItem from="1693553711574" duration="10034000" />
+      <workItem from="1693813035239" duration="6772000" />
+      <workItem from="1695384247824" duration="2114000" />
+      <workItem from="1695622745828" duration="631000" />
+      <workItem from="1695630089288" duration="10398000" />
+      <workItem from="1695714523127" duration="8887000" />
+      <workItem from="1695803007725" duration="10637000" />
+      <workItem from="1695883157873" duration="19322000" />
+      <workItem from="1696229804213" duration="850000" />
+      <workItem from="1696231209879" duration="19415000" />
+      <workItem from="1696317892418" duration="1385000" />
+      <workItem from="1696402852709" duration="5850000" />
+      <workItem from="1696492979353" duration="11420000" />
+      <workItem from="1696576019413" duration="7645000" />
+      <workItem from="1696919995575" duration="12907000" />
+      <workItem from="1697015335965" duration="105000" />
+      <workItem from="1697027128052" duration="4458000" />
+      <workItem from="1697094847525" duration="13527000" />
+      <workItem from="1697183594242" duration="1212000" />
+      <workItem from="1697440211873" duration="12664000" />
+      <workItem from="1697527494535" duration="5042000" />
+      <workItem from="1697551066998" duration="223000" />
+      <workItem from="1697614740074" duration="6447000" />
+      <workItem from="1697719496399" duration="680000" />
+      <workItem from="1698662438676" duration="6440000" />
+      <workItem from="1698735208012" duration="5465000" />
+      <workItem from="1698819334823" duration="4983000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="241" />
+    <coverage-tree-state>
+      <expand />
+      <select />
+    </coverage-tree-state>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs</url>
+          <line>1591</line>
+          <properties documentPath="C:\GitProjects\Cover-Shooter-TPS-Template\Assets\Scripts\CoverBrain.cs" initialLine="1620" containingFunctionPresentation="Method 'setThreat'">
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
