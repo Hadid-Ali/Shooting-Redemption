@@ -1,0 +1,155 @@
+Converting script [1 / 11]	[/SimpleCameraController.cs]
+	Fragments : 17
+		[ 0] : Line:   82	InputMethod   GetKey              	(KeyCode.W)
+		[ 1] : Line:   86	InputMethod   GetKey              	(KeyCode.S)
+		[ 2] : Line:   90	InputMethod   GetKey              	(KeyCode.A)
+		[ 3] : Line:   94	InputMethod   GetKey              	(KeyCode.D)
+		[ 4] : Line:   98	InputMethod   GetKey              	(KeyCode.Q)
+		[ 5] : Line:  102	InputMethod   GetKey              	(KeyCode.E)
+		[ 6] : Line:  112	InputMethod   GetKey              	(KeyCode.Escape)
+		[ 7] : Line:  121	InputMethod   GetMouseButtonDown  	(1)
+		[ 8] : Line:  123	Other mod.	[Cursor.lockState]
+		[ 9] : Line:  127	InputMethod   GetMouseButtonUp    	(1)
+		[10] : Line:  129	Other mod.	[Cursor.visible]
+		[11] : Line:  130	Other mod.	[Cursor.lockState]
+		[12] : Line:  134	InputMethod   GetMouseButton      	(1)
+		[13] : Line:  136	InputMethod   GetAxis             	("Mouse X")
+		[14] : Line:  136	InputMethod   GetAxis             	("Mouse Y")
+		[15] : Line:  148	InputMethod   GetKey              	(KeyCode.LeftShift)
+		[16] : Line:  154	InputProperty mouseScrollDelta    
+
+Converting script [2 / 11]	[/ThirdPersonCoverShooter/Scripts/Camera/StrategyCamera.cs]
+	Fragments : 5
+		[ 0] : Line:  125	InputMethod   GetKey              	(KeyCode.W)
+		[ 1] : Line:  126	InputMethod   GetKey              	(KeyCode.S)
+		[ 2] : Line:  127	InputMethod   GetKey              	(KeyCode.D)
+		[ 3] : Line:  128	InputMethod   GetKey              	(KeyCode.A)
+		[ 4] : Line:  137	InputProperty mouseScrollDelta    
+
+Converting script [3 / 11]	[/ThirdPersonCoverShooter/Scripts/Camera/TopDownCamera.cs]
+	Fragments : 1
+		[ 0] : Line:  138	InputMethod   GetAxisRaw          	("Mouse ScrollWheel")
+
+Converting script [4 / 11]	[/ThirdPersonCoverShooter/Scripts/Controllers/CharacterSwitcher.cs]
+	Fragments : 3
+		[ 0] : Line:   69	InputMethod   GetKey              	(key)
+		[ 1] : Line:   82	InputMethod   GetKeyDown          	(key)
+		[ 2] : Line:   84	InputMethod   GetKeyUp            	(key)
+
+Converting script [5 / 11]	[/ThirdPersonCoverShooter/Scripts/Controllers/StrategyInput.cs]
+	Fragments : 3
+		[ 0] : Line:  213	InputProperty mousePosition       
+		[ 1] : Line:  224	InputMethod   GetMouseButtonDown  	(0)
+		[ 2] : Line:  347	InputMethod   GetMouseButtonDown  	(1)
+
+Converting script [6 / 11]	[/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs]
+	Fragments : 46
+		[ 0] : Line:  184	InputMethod   GetKeyDown          	(action.Key)
+		[ 1] : Line:  196	InputMethod   GetAxis             	("Horizontal")
+		[ 2] : Line:  197	InputMethod   GetAxis             	("Vertical")
+		[ 3] : Line:  211	InputMethod   GetButton           	("Run")
+		[ 4] : Line:  218	InputMethod   GetButton           	("Run")
+		[ 5] : Line:  230	InputMethod   GetButtonDown       	("Climb")
+		[ 6] : Line:  232	InputMethod   GetAxis             	("Horizontal")
+		[ 7] : Line:  233	InputMethod   GetAxis             	("Vertical")
+		[ 8] : Line:  249	InputMethod   GetButtonDown       	("TakeCover")
+		[ 9] : Line:  255	InputMethod   GetButtonDown       	("Jump")
+		[10] : Line:  257	InputMethod   GetAxis             	("Horizontal")
+		[11] : Line:  258	InputMethod   GetAxis             	("Vertical")
+		[12] : Line:  269	InputMethod   GetButton           	("Crouch")
+		[13] : Line:  277	InputMethod   GetButtonDown       	("Fire")
+		[14] : Line:  280	InputMethod   GetButtonDown       	("Cancel")
+		[15] : Line:  284	InputMethod   GetButton           	("Grenade")
+		[16] : Line:  290	InputMethod   GetButtonDown       	("Fire")
+		[17] : Line:  293	InputMethod   GetButtonUp         	("Fire")
+		[18] : Line:  296	InputMethod   GetButtonDown       	("Melee")
+		[19] : Line:  299	InputMethod   GetButtonDown       	("Zoom")
+		[20] : Line:  302	InputMethod   GetButtonUp         	("Zoom")
+		[21] : Line:  305	InputMethod   GetButtonDown       	("Block")
+		[22] : Line:  308	InputMethod   GetButtonUp         	("Block")
+		[23] : Line:  313	InputMethod   GetButtonDown       	("Scope")
+		[24] : Line:  327	InputMethod   GetButtonDown       	("RollForward")
+		[25] : Line:  342	InputMethod   GetButtonDown       	("RollLeft")
+		[26] : Line:  357	InputMethod   GetButtonDown       	("RollBackward")
+		[27] : Line:  372	InputMethod   GetButtonDown       	("RollRight")
+		[28] : Line:  390	InputMethod   GetKey              	(KeyCode.Alpha1)
+		[29] : Line:  391	InputMethod   GetKey              	(KeyCode.Alpha2)
+		[30] : Line:  392	InputMethod   GetKey              	(KeyCode.Alpha3)
+		[31] : Line:  393	InputMethod   GetKey              	(KeyCode.Alpha4)
+		[32] : Line:  394	InputMethod   GetKey              	(KeyCode.Alpha5)
+		[33] : Line:  395	InputMethod   GetKey              	(KeyCode.Alpha6)
+		[34] : Line:  396	InputMethod   GetKey              	(KeyCode.Alpha7)
+		[35] : Line:  397	InputMethod   GetKey              	(KeyCode.Alpha8)
+		[36] : Line:  398	InputMethod   GetKey              	(KeyCode.Alpha9)
+		[37] : Line:  399	InputMethod   GetKey              	(KeyCode.Alpha0)
+		[38] : Line:  401	InputProperty mouseScrollDelta    
+		[39] : Line:  408	InputProperty mouseScrollDelta    
+		[40] : Line:  445	InputMethod   GetButton           	("Reload")
+		[41] : Line:  470	InputMethod   GetAxis             	("Horizontal")
+		[42] : Line:  471	InputMethod   GetAxis             	("Vertical")
+		[43] : Line:  488	Other mod.	[Cursor.lockState]
+		[44] : Line:  502	InputMethod   GetAxis             	("Mouse X")
+		[45] : Line:  503	InputMethod   GetAxis             	("Mouse Y")
+
+Converting script [7 / 11]	[/ThirdPersonCoverShooter/Scripts/Controllers/TopDownInput.cs]
+	Fragments : 10
+		[ 0] : Line:  135	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:  136	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:  143	InputMethod   GetButton           	("Run")
+		[ 3] : Line:  157	InputMethod   GetButton           	("Run")
+		[ 4] : Line:  180	InputMethod   GetButtonDown       	("Fire")
+		[ 5] : Line:  183	InputMethod   GetButtonUp         	("Fire")
+		[ 6] : Line:  186	InputMethod   GetButtonDown       	("Zoom")
+		[ 7] : Line:  189	InputMethod   GetButtonUp         	("Zoom")
+		[ 8] : Line:  192	InputMethod   GetButtonDown       	("Melee")
+		[ 9] : Line:  211	InputProperty mousePosition       
+
+Converting script [8 / 11]	[/ThirdPersonCoverShooter/Scripts/UI/TouchBase.cs]
+	Fragments : 9
+		[ 0] : Line:  104	InputProperty mousePosition       
+		[ 1] : Line:  104	InputProperty mousePosition       
+		[ 2] : Line:  105	InputProperty mousePosition       
+		[ 3] : Line:  108	InputMethod   GetMouseButton      	(0)
+		[ 4] : Line:  114	InputProperty touchCount          
+		[ 5] : Line:  116	InputMethod   GetTouch            	(i)
+		[ 6] : Line:  125	InputMethod   GetMouseButton      	(0)
+		[ 7] : Line:  127	InputProperty mousePosition       
+		[ 8] : Line:  127	InputProperty mousePosition       
+
+Converting script [9 / 11]	[/ThirdPersonCoverShooter/Scripts/Util/ExitToEscape.cs]
+	Fragments : 1
+		[ 0] : Line:   12	InputMethod   GetKeyDown          	(KeyCode.Escape)
+
+Converting script [10 / 11]	[/ThirdPersonCoverShooter/Scripts/Util/MouseLock.cs]
+	Fragments : 6
+		[ 0] : Line:   15	InputMethod   GetKeyDown          	(KeyCode.Escape)
+		[ 1] : Line:   18	InputMethod   GetMouseButtonDown  	(0)
+		[ 2] : Line:   23	Other mod.	[Cursor.lockState]
+		[ 3] : Line:   24	Other mod.	[Cursor.visible]
+		[ 4] : Line:   28	Other mod.	[Cursor.lockState]
+		[ 5] : Line:   29	Other mod.	[Cursor.visible]
+
+Converting script [11 / 11]	[/ThirdPersonCoverShooter/Scripts/Util/Util.cs]
+	Fragments : 5
+		[ 0] : Line:  343	InputProperty touchCount          
+		[ 1] : Line:  346	Other mod.	[Touch]
+		[ 2] : Line:  346	InputMethod   GetTouch            	(0)
+		[ 3] : Line:  347	Other mod.	[Touch]
+		[ 4] : Line:  347	InputMethod   GetTouch            	(1)
+
+
+11 scripts modified!
+Overwriting actual scripts...
+	[0 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//SimpleCameraController.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//SimpleCameraController.cs]
+	[1 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Camera/StrategyCamera.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Camera/StrategyCamera.cs]
+	[2 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Camera/TopDownCamera.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Camera/TopDownCamera.cs]
+	[3 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Controllers/CharacterSwitcher.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Controllers/CharacterSwitcher.cs]
+	[4 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Controllers/StrategyInput.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Controllers/StrategyInput.cs]
+	[5 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs]
+	[6 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Controllers/TopDownInput.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Controllers/TopDownInput.cs]
+	[7 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/UI/TouchBase.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/UI/TouchBase.cs]
+	[8 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Util/ExitToEscape.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Util/ExitToEscape.cs]
+	[9 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Util/MouseLock.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Util/MouseLock.cs]
+	[10 / 11] from  [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/CF2-Data/Script-Backups/2022-09-30-13-34/Assets-After//ThirdPersonCoverShooter/Scripts/Util/Util.cs] to [/Users/mac/Desktop/Data Drive/UnityProjects/Cover Shooter/Assets//ThirdPersonCoverShooter/Scripts/Util/Util.cs]
+
+Overwriting COMPLETED!
