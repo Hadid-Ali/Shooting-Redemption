@@ -10,7 +10,7 @@ public class EnemyGroupEvents : MonoBehaviour
     public static GameEvent<Vector3> OnEnemyGroupKilled = new();
     public static GameEvent<bool> ShowBoss = new();
     
-    private AIMovement _controller;
+    private AIPlayerMovement _controller;
     private Actor m_Actor;
     
     private ThirdPersonInput _InputController;
@@ -22,18 +22,22 @@ public class EnemyGroupEvents : MonoBehaviour
 
     private void Awake()
     {
-        _controller = GetComponent<AIMovement>();
+        _controller = GetComponent<AIPlayerMovement>();
         _InputThirdPersonController = GetComponent<ThirdPersonController>();
         _InputController = GetComponent<ThirdPersonInput>();
         _motor = GetComponent<CharacterMotor>();
         
         _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
+        
+        
     }
 
     private void Start()
     {
         CustomCameraController.CameraStateChanged(CamState.Follow);
+        
+        SetPosition(new Vector3(0 , 0, 0));
     }
 
     private void OnDestroy()
@@ -62,8 +66,9 @@ public class EnemyGroupEvents : MonoBehaviour
 
     public void SetPosition(Vector3 coverPosition)
     {
-        _controller.ToRunTo(coverPosition);
-        _motor.InputCrouch();
+        _controller.SetPosition(coverPosition);
+        print("To Run Too working");
+        
     }
     public void OnEnemiesKilledEvent(Vector3 coverPosition)
     {
@@ -71,7 +76,6 @@ public class EnemyGroupEvents : MonoBehaviour
         _InputThirdPersonController.ZoomInput = false;
         _InputController.UndrawWeapon();
         SetPosition(coverPosition);
-
         
     }
 }
