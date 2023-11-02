@@ -3186,6 +3186,9 @@ namespace CoverShooter
 
         private void Awake()
         {
+            if (ismainplayer)
+                _customzoomListener = FindObjectOfType<OverlayGunHandler>();
+            
             _capsule = GetComponent<CapsuleCollider>();
             _body = GetComponent<Rigidbody>();
             _animator = GetComponent<Animator>();

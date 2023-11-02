@@ -9,8 +9,8 @@ public class AIPlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
-    private static readonly int CustomCrouchStart = Animator.StringToHash("Cstart");
-    private static readonly int CustomCrouchEnd = Animator.StringToHash("Cend");
+
+    private static readonly int CustomCrouchEnd = Animator.StringToHash("CrouchEndC");
 
     private bool _isMoving;
     private Vector3 _destinationPoint;
@@ -35,9 +35,6 @@ public class AIPlayerMovement : MonoBehaviour
     {
         if (_isMoving)
         {
-            if(!_animator.GetCurrentAnimatorStateInfo(0).IsName("CustomCrouch"))
-                _animator.SetTrigger(CustomCrouchStart);
-            
             if (Vector3.Distance(transform.position, _destinationPoint) < 1f)
             {
                 OnDestinationReached();
@@ -57,7 +54,6 @@ public class AIPlayerMovement : MonoBehaviour
         
         _motor.enabled = false;
         
-        print("working");
     }
 
     public void OnDestinationReached()
