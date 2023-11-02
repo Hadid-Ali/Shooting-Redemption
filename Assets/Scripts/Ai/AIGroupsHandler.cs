@@ -61,7 +61,7 @@ public class AIGroupsHandler : MonoBehaviour
     }
     private void EnableGroup()
     {
-        EnemyGroupEvents.OnEnemyGroupKilled.Raise(m_AIgroups[0].CoverPosition.transform.position);
+        EnemyGroupEvents.OnEnemyGroupKilled.Raise(m_AIgroups[0].CoverPosition.transform);
     }
     
 }

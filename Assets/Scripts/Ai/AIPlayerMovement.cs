@@ -16,7 +16,7 @@ public class AIPlayerMovement : MonoBehaviour
     private Vector3 _destinationPoint;
     private CharacterMotor _motor;
     
-    public GameEvent OnCoverReached = new();
+    public static GameEvent OnCoverReached = new();
 
 
     private void Awake()

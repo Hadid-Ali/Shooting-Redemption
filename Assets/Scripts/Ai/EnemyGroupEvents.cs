@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class EnemyGroupEvents : MonoBehaviour
 {
-    public static GameEvent<Vector3> OnEnemyGroupKilled = new();
+    public static GameEvent<Transform> OnEnemyGroupKilled = new();
     public static GameEvent<bool> ShowBoss = new();
     
     private AIPlayerMovement _controller;
@@ -27,7 +27,7 @@ public class EnemyGroupEvents : MonoBehaviour
         _InputController = GetComponent<ThirdPersonInput>();
         _motor = GetComponent<CharacterMotor>();
         
-        _controller.OnCoverReached.Register(OnCoverReached);
+        AIPlayerMovement.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
     }
 
@@ -38,7 +38,7 @@ public class EnemyGroupEvents : MonoBehaviour
 
     private void OnDestroy()
     {
-        _controller.OnCoverReached.Unregister(OnCoverReached);
+        AIPlayerMovement.OnCoverReached.Unregister(OnCoverReached);
         OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
     }
 
@@ -68,12 +68,12 @@ public class EnemyGroupEvents : MonoBehaviour
         _controller.SetPosition(coverPosition);
 
     }
-    public void OnEnemiesKilledEvent(Vector3 coverPosition)
+    public void OnEnemiesKilledEvent(Transform coverPosition)
     {
         _InputController.TakeInputGun = false;
         _InputThirdPersonController.ZoomInput = false;
         _InputController.UndrawWeapon();
-        SetPosition(coverPosition);
+        SetPosition(coverPosition.position);
 
         
     }

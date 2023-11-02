@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using CoverShooter;
 using UnityEngine;
 
@@ -12,6 +13,10 @@ public enum  CamState{
 }
 public class CustomCameraController : MonoBehaviour
 {
+    [SerializeField] private CinemachineVirtualCamera followCam;
+    [SerializeField] private CinemachineVirtualCamera idleCam;
+    [SerializeField] private CinemachineVirtualCamera zoomCam;
+    
     private static readonly int CamNumber = Animator.StringToHash("CamNumber");
     public Animator _animator;
 
@@ -50,13 +55,21 @@ public class CustomCameraController : MonoBehaviour
         switch (state)
         {
             case CamState.Follow:
-                _animator.SetInteger(CamNumber,0);
+                followCam.Priority = 10;
+                zoomCam.Priority = 5;
+                idleCam.Priority = 4;
                 break;
+            
             case CamState.Idle:
-                _animator.SetInteger(CamNumber,1);
+                followCam.Priority = 5;
+                zoomCam.Priority = 5;
+                idleCam.Priority = 10;
                 break;
+            
             case CamState.Zoom:
-                _animator.SetInteger(CamNumber,2);
+                followCam.Priority = 4;
+                zoomCam.Priority = 10;
+                idleCam.Priority = 5;
                 break;
         }
     }
