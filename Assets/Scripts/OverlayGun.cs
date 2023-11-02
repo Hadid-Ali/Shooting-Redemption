@@ -109,8 +109,6 @@ public class OverlayGun : MonoBehaviour
     {
         if (_bullet != null)
         {
-
-            
             var bullet = Instantiate(_bullet);
             var gunTipPosition = gunTip.transform.position;
             
@@ -123,9 +121,8 @@ public class OverlayGun : MonoBehaviour
             if (last)
             {
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
-                projectile.Speed = 10;
                 projectile.isLast = true;
-                Time.timeScale = 0.3f;
+                Time.timeScale = 0.1f;
             }
 
             var trail = bullet.GetComponent<TrailRenderer>();

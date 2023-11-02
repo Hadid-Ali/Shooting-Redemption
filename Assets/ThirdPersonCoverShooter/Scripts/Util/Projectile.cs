@@ -39,7 +39,7 @@ namespace CoverShooter
                 
                 
             _path += Speed * Time.deltaTime;
-
+    
             if (_path >= Distance)
             {
                 if (Target != null)

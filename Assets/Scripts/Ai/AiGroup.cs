@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CoverShooter;
 using UnityEngine;
 
@@ -12,14 +13,12 @@ public class AiGroup : MonoBehaviour
     private GameEvent m_OnEnemyKilled = new();
     
     
-    [SerializeField] private CharacterHealth[] enemies;
-    [SerializeField] private int deadCount;
+    [SerializeField] private List<CharacterHealth> enemies;
     [SerializeField] private int totalCount;
 
     private void Start()
     {
-        deadCount = 0;
-        totalCount = enemies.Length;
+        totalCount = enemies.Count;
 
         foreach (var v in enemies)
         {
@@ -36,20 +35,20 @@ public class AiGroup : MonoBehaviour
 
     public void OnEnemykilled()
     {
-        deadCount++;
+        for (int i = 0; i < enemies.Count; i++)
+            if(enemies[i].Health <= 0) 
+                enemies.Remove(enemies[i]);
         
-        if(!CheckLastEnemy()) //So it doesn't throw error on the last enemy
+        if(enemies.Count > 1) //So it doesn't throw error on the last enemy
             m_OnEnemyKilled.Raise();
         
-        if (deadCount >= totalCount)
-        {
+        if (enemies.Count <= 0) 
             m_OnGroupKilled.Raise(this);
-        }
     }
 
     public bool CheckLastEnemy()
     {
-        return totalCount - deadCount == 1;
+        return enemies.Count == 1;
     }
     
     

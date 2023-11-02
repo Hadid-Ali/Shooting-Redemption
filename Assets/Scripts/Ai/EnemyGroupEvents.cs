@@ -62,8 +62,12 @@ public class EnemyGroupEvents : MonoBehaviour
 
     public void SetPosition(Vector3 coverPosition)
     {
+<<<<<<< Updated upstream
         _controller.ToRunTo(coverPosition);
         _motor.InputCrouch();
+=======
+        _controller.SetPosition(coverPosition);
+>>>>>>> Stashed changes
     }
     public void OnEnemiesKilledEvent(Vector3 coverPosition)
     {
