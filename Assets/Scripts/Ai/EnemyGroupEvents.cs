@@ -20,6 +20,8 @@ public class EnemyGroupEvents : MonoBehaviour
 
     private int counter = 0;
 
+    private bool hasboss;
+
     private void Awake()
     {
         _controller = GetComponent<AIPlayerMovement>();
@@ -30,45 +32,69 @@ public class EnemyGroupEvents : MonoBehaviour
         _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
         
-        
+        AIGroupsHandler.hasBossE.Register(hasBossCheck);
+        AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
+
     }
 
     private void Start()
     {
         CustomCameraController.CameraStateChanged(CamState.Follow);
-        
-        SetPosition(new Vector3(0 , 0, 0));
     }
 
     private void OnDestroy()
     {
         _controller.OnCoverReached.Unregister(OnCoverReached);
         OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
+        AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
+        AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
+    }
+
+    public void hasBossCheck(bool _hasboss)
+    {
+        hasboss = _hasboss;
+    }
+
+    public void SetPlayerPosition(Transform t)
+    {
+        transform.SetPositionAndRotation(t.position, t.rotation);
     }
 
     public void OnCoverReached()
     {
+        CharacterStates.playerState = PlayerCustomStates.CutScene;
+        
         StartCoroutine(ShowBossSequence());        
         
         _InputController.TakeInputGun = true;
         _InputController.DrawWeapon(1);
         
         CustomCameraController.CameraStateChanged(CamState.Idle);
+        
     }
 
     IEnumerator ShowBossSequence()
     {
+        
+        CharacterStates.playerState = PlayerCustomStates.CutScene;
         yield return new WaitForSeconds(1);
-        ShowBoss.Raise(true);
-        yield return new WaitForSeconds(3);
-        ShowBoss.Raise(false);
+        if (hasboss)
+        {
+            ShowBoss.Raise(true);
+            yield return new WaitForSeconds(3);
+            ShowBoss.Raise(false);
+        }
+        CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
+
     }
 
     public void SetPosition(Vector3 coverPosition)
     {
         _controller.SetPosition(coverPosition);
-        print("To Run Too working");
+
+        _motor.InputCrouch();
         
+        CharacterStates.playerState = PlayerCustomStates.InMovement;
     }
     public void OnEnemiesKilledEvent(Vector3 coverPosition)
     {

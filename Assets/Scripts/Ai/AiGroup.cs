@@ -9,17 +9,17 @@ public class AiGroup : MonoBehaviour
     public GameObject CoverPosition;
     
     private GameEvent<AiGroup> m_OnGroupKilled = new();
-    private GameEvent m_OnEnemyKilled = new();
+    private GameEvent<CharacterHealth> m_OnEnemyKilled = new();
     
     
-    [SerializeField] private CharacterHealth[] enemies;
+    [SerializeField] private List<CharacterHealth> enemies;
     [SerializeField] private int deadCount;
     [SerializeField] private int totalCount;
 
     private void Start()
     {
         deadCount = 0;
-        totalCount = enemies.Length;
+        totalCount = enemies.Count;
 
         foreach (var v in enemies)
         {
@@ -27,29 +27,38 @@ public class AiGroup : MonoBehaviour
         }
     }
 
-    public void Initialize(Action<AiGroup> onactionDie, Action OnEnemyDie)
+    public void Initialize(Action<AiGroup> onactionDie, Action<CharacterHealth> OnEnemyDie)
     {
         m_OnGroupKilled.Register(onactionDie);
         m_OnEnemyKilled.Register(OnEnemyDie);
     }
 
-
-    public void OnEnemykilled()
+    private void OnDestroy()
     {
-        deadCount++;
+        m_OnGroupKilled = null;
+        m_OnEnemyKilled = null;
+    }
+
+
+    public void OnEnemykilled(CharacterHealth h)
+    {
+        enemies.Remove(h);
+
+        totalCount--;
         
-        if(!CheckLastEnemy()) //So it doesn't throw error on the last enemy
-            m_OnEnemyKilled.Raise();
-        
-        if (deadCount >= totalCount)
-        {
+        if(enemies.Count >= 1) //So it doesn't throw error on the last enemy
+            m_OnEnemyKilled.Raise(h);
+
+
+        if (enemies.Count <= 0)
             m_OnGroupKilled.Raise(this);
-        }
+        
+
     }
 
     public bool CheckLastEnemy()
     {
-        return totalCount - deadCount == 1;
+        return enemies.Count == 1;
     }
     
     

@@ -71,7 +71,7 @@ public class OverlayGun : MonoBehaviour
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
                 
-                if (_canShoot && characterHealth.Health is >= 10 and <= 20 && AIGroupsHandler.isLastEnemy)
+                if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy)
                 {
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
@@ -125,7 +125,9 @@ public class OverlayGun : MonoBehaviour
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
                 projectile.Speed = 10;
                 projectile.isLast = true;
-                Time.timeScale = 0.3f;
+                Time.timeScale = 0.1f;
+
+                CharacterStates.playerState = PlayerCustomStates.InActive;
             }
 
             var trail = bullet.GetComponent<TrailRenderer>();
