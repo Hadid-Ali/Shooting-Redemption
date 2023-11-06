@@ -7,15 +7,14 @@ using UnityEngine;
 
 public class EnemyGroupEvents : MonoBehaviour
 {
-    public static GameEvent<Vector3> OnEnemyGroupKilled = new();
+    public static GameEvent<Transform> OnEnemyGroupKilled = new();
     public static GameEvent<bool> ShowBoss = new();
     
     private AIPlayerMovement _controller;
     private Actor m_Actor;
     
-    private ThirdPersonInput _InputController;
-    private ThirdPersonController _InputThirdPersonController;
-    private CharacterMotor _motor;
+
+    private Animator _animator;
 
 
     private int counter = 0;
@@ -25,9 +24,7 @@ public class EnemyGroupEvents : MonoBehaviour
     private void Awake()
     {
         _controller = GetComponent<AIPlayerMovement>();
-        _InputThirdPersonController = GetComponent<ThirdPersonController>();
-        _InputController = GetComponent<ThirdPersonInput>();
-        _motor = GetComponent<CharacterMotor>();
+        _animator = GetComponent<Animator>();
         
         _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
@@ -62,14 +59,14 @@ public class EnemyGroupEvents : MonoBehaviour
 
     public void OnCoverReached()
     {
-        CharacterStates.playerState = PlayerCustomStates.CutScene;
-        
         StartCoroutine(ShowBossSequence());        
         
-        _InputController.TakeInputGun = true;
-        _InputController.DrawWeapon(1);
+        PlayerInputt.CanTakeInput = true;
+        PlayerInputt.DrawWeapon(1);
         
         CustomCameraController.CameraStateChanged(CamState.Idle);
+        
+        _animator.Play("LeanCoverr");
         
     }
 
@@ -88,19 +85,15 @@ public class EnemyGroupEvents : MonoBehaviour
 
     }
 
-    public void SetPosition(Vector3 coverPosition)
+    public void SetPosition(Transform coverPosition)
     {
         _controller.SetPosition(coverPosition);
-
-        _motor.InputCrouch();
         
         CharacterStates.playerState = PlayerCustomStates.InMovement;
     }
-    public void OnEnemiesKilledEvent(Vector3 coverPosition)
+    public void OnEnemiesKilledEvent(Transform coverPosition)
     {
-        _InputController.TakeInputGun = false;
-        _InputThirdPersonController.ZoomInput = false;
-        _InputController.UndrawWeapon();
+        PlayerInputt.CanTakeInput = false;
         SetPosition(coverPosition);
         
     }

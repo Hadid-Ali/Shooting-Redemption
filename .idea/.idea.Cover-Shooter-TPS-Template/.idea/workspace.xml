@@ -5,28 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoyFat.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoyFat.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/PatrollerBoss.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/PatrollerBoss.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Image.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Image.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CinemachineBlend/PlayerCamera Blends.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CinemachineBlend/PlayerCamera Blends.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/CharacterStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/CharacterStates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/CharacterAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/CharacterAnimator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,6 +181,7 @@
       <workItem from="1698662438676" duration="6440000" />
       <workItem from="1698735208012" duration="5465000" />
       <workItem from="1698819334823" duration="9017000" />
+      <workItem from="1699252583618" duration="12234000" />
     </task>
     <servers />
   </component>

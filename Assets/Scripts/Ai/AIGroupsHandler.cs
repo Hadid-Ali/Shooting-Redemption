@@ -57,6 +57,7 @@ public class AIGroupsHandler : MonoBehaviour
         groupsDown++;
         m_AIgroups.Remove(aiGroup);
 
+        CheckLastEnemy(new CharacterHealth());
         if (m_AIgroups.Count < 1)
         {
             AllGroupsCCleared.Raise();
@@ -67,7 +68,7 @@ public class AIGroupsHandler : MonoBehaviour
     }
     private void EnableGroup()
     {
-        EnemyGroupEvents.OnEnemyGroupKilled.Raise(m_AIgroups[0].CoverPosition.transform.position);
+        EnemyGroupEvents.OnEnemyGroupKilled.Raise(m_AIgroups[0].CoverPosition.transform);
     }
     
 }

@@ -6,8 +6,8 @@ namespace CoverShooter
     /// <summary>
     /// Takes player input (usually from ThirdPersonInput) and translates that to commands to CharacterMotor.
     /// </summary>
-    [RequireComponent(typeof(CharacterMotor))]
-    [RequireComponent(typeof(BaseActor))]
+    //[RequireComponent(typeof(CharacterMotor))]
+    //[RequireComponent(typeof(BaseActor))]
     public class ThirdPersonController : MonoBehaviour
     {
         /// <summary>

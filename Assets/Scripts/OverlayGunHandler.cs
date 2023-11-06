@@ -1,31 +1,31 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using CoverShooter;
-using CoverShooter.AI;
+using System.Net.Mime;
 using UnityEngine;
-using Hit = CoverShooter.Hit;
+using UnityEngine.UI;
 
-public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener, IGunListener
+
+public class OverlayGunHandler : MonoBehaviour
 {
     [SerializeField] private GameObject[] Guns;
     [SerializeField] private GameObject Aim;
     private int _selectedGun;
+    
 
-    public static Action OnCustomZoom;
-    public static Action OnCustomUnZoom;
-    private static readonly int InActive = Animator.StringToHash("InActive");
-    private static readonly int Active = Animator.StringToHash("Active");
-
+    private Image _FadeImage;
     private void Awake()
     {
-        ThirdPersonInput.GunChanged.Register(SelectGun);
+        PlayerInputt.OnZoom += OnZoom;
+        PlayerInputt.OnUnZoom += OnUnzoom;
+        PlayerInputt.OnGunChange += SelectGun;
         _selectedGun = 0;
+
+        _FadeImage = Aim.GetComponent<Image>();
     }
 
     private void OnDestroy()
     {
-        ThirdPersonInput.GunChanged.UnRegister(SelectGun);
+        PlayerInputt.OnZoom -= OnZoom;
+        PlayerInputt.OnUnZoom -= OnUnzoom;
+        PlayerInputt.OnGunChange -= SelectGun;
     }
 
 
@@ -47,12 +47,11 @@ public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener, IGunList
                 Guns[i].SetActive(true);
             else
                 Guns[i].SetActive(false);
-
         }
         
-        Aim.GetComponent<Animator>().SetTrigger(Active);
         Aim.SetActive(true);
-        OnCustomZoom();
+        _FadeImage.color = Color.black;;
+        
     }
 
     public void OnUnzoom()
@@ -60,75 +59,14 @@ public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener, IGunList
         foreach (var v in Guns)
             v.SetActive(false);
 
-        Aim.GetComponent<Animator>().SetTrigger(InActive);
+        _FadeImage.color = Color.clear;
         Aim.SetActive(false);
-        OnCustomUnZoom();
     }
     public void OnBulletLoadStart()
     {
         foreach (var v in Guns)
             v.SetActive(false);
     }
-
-#region USELSS
-
-    public void OnScope()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnUnscope()
-    {
-        throw new NotImplementedException();
-    }
-public void OnEject()
-{
-    throw new NotImplementedException();
-}
-
-public void OnRechamber()
-{
-    throw new NotImplementedException();
-}
-
-public void OnPump()
-{
-    throw new NotImplementedException();
-}
-
-public void OnFire(float delay)
-{
-    throw new NotImplementedException();
-}
-
-public void OnEmptyFire()
-{
-    throw new NotImplementedException();
-}
-
-public void OnBulletLoad()
-{
-    throw new NotImplementedException();
-}
-
-public void OnFullyLoaded()
-{
-    throw new NotImplementedException();
-}
-
-
-
-public void OnPumpStart()
-{
-    throw new NotImplementedException();
-}
-
-public void OnMagazineLoadStart()
-{
-    throw new NotImplementedException();
-}
-#endregion
-
-
+    
 }
 

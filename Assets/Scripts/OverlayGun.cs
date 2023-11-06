@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CoverShooter;
+using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
 public class OverlayGun : MonoBehaviour
@@ -22,11 +23,10 @@ public class OverlayGun : MonoBehaviour
     //======= References
     [SerializeField] private AudioClip _FireSound;
     [SerializeField] private GameObject _muzzleFlash;
-    [SerializeField] private CharacterMotor _motor;
     
     private AudioSource _audioSource;
     private Animator _anim;
-    private Camera _playerCamera;
+    public Camera _playerCamera;
     private GameObject _bullet;
     private bool _canShoot = true;
     private Hit _currentHit;
@@ -53,7 +53,7 @@ public class OverlayGun : MonoBehaviour
 
     void Update()
     {
-        if(!_motor.IsZooming)
+        if(CharacterStates.playerState != PlayerCustomStates.InZoom)
             return;
         
         Ray ray = _playerCamera.ViewportPointToRay (new Vector3(0.5f,0.5f,0));
@@ -62,11 +62,11 @@ public class OverlayGun : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * range,Color.blue);
         if (Physics.Raycast(ray , out raycastHit, range, shootableLayer))
         {
-            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, _motor.gameObject,
+            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, this.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
 
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
-            
+
             if (bodyPartHealth != null )
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
@@ -96,11 +96,6 @@ public class OverlayGun : MonoBehaviour
         _muzzleFlash.SetActive(false);
         
         yield return new WaitForSeconds(timeBetweenShots);
-        
-        
-        _motor.EquippedWeapon.Gun.Consume(); //Consume Bullet
-        if(_motor.EquippedWeapon.Gun.LoadedBulletsLeft <= 0) //Reload if Bullets are less and equal to zero
-            _motor.InputReload();
         
         _canShoot = true;
     }

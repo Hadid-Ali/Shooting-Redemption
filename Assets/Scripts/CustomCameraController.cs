@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
-using CoverShooter;
 using UnityEngine;
 
 public enum  CamState{
@@ -17,27 +14,24 @@ public class CustomCameraController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera idleCam;
     [SerializeField] private CinemachineVirtualCamera zoomCam;
     
-    private static readonly int CamNumber = Animator.StringToHash("CamNumber");
-    public Animator _animator;
 
     public static Action<CamState> CameraStateChanged;
     private void Awake()
     {
-        _animator.GetComponent<Animator>();
         CameraStateChanged += SetCamState;
         
         SetCamState(CamState.Follow);
         
-        OverlayGunHandler.OnCustomZoom += OnZoom;
-        OverlayGunHandler.OnCustomUnZoom += OnUnZoom;
+        PlayerInputt.OnZoom += OnZoom;
+        PlayerInputt.OnUnZoom += OnUnZoom;
     }
 
     private void OnDestroy()
     {
         CameraStateChanged -= SetCamState;
         
-        OverlayGunHandler.OnCustomZoom -= OnZoom;
-        OverlayGunHandler.OnCustomUnZoom -= OnUnZoom;
+        PlayerInputt.OnZoom -= OnZoom;
+        PlayerInputt.OnUnZoom -= OnUnZoom;
     }
 
     private void OnZoom()
@@ -45,14 +39,12 @@ public class CustomCameraController : MonoBehaviour
         if(CharacterStates.playerState != PlayerCustomStates.HoldingPosition)
             return;
         
-        if(!AIGroupsHandler.isLastEnemy)
-            SetCamState(CamState.Zoom);
+        SetCamState(CamState.Zoom);
     }
 
     private void OnUnZoom()
     {
-        if(!AIGroupsHandler.isLastEnemy)
-            SetCamState(CamState.Idle);
+        SetCamState(CamState.Idle);
     }
 
     private void SetCamState(CamState state)
