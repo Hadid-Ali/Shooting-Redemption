@@ -1,9 +1,10 @@
 using System.Net.Mime;
+using CoverShooter;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-public class OverlayGunHandler : MonoBehaviour
+public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener
 {
     [SerializeField] private GameObject[] Guns;
     [SerializeField] private GameObject Aim;
@@ -59,6 +60,17 @@ public class OverlayGunHandler : MonoBehaviour
         _FadeImage.color = Color.clear;
         Aim.SetActive(false);
     }
+
+    public void OnScope()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnUnscope()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void OnBulletLoadStart()
     {
         foreach (var v in Guns)
