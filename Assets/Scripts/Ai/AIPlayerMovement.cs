@@ -10,7 +10,6 @@ public class AIPlayerMovement : MonoBehaviour
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
     private CharacterMotor _motor;
-    private Rigidbody rb;
 
     public bool _isMoving;
     public bool _rotate;
@@ -28,7 +27,8 @@ public class AIPlayerMovement : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _motor = GetComponent<CharacterMotor>();
-        rb = GetComponent <Rigidbody>();
+
+        _motor.enabled = false;
 
     }
 
@@ -36,7 +36,6 @@ public class AIPlayerMovement : MonoBehaviour
     {
         if (_isMoving)
         {
-            
             if (Vector3.Distance(transform.position, _destination.position) < 1)
             {
                 OnDestinationReached();
@@ -73,7 +72,7 @@ public class AIPlayerMovement : MonoBehaviour
         _rotate = false;
         _isMoving = true;
         
-        _destination = destination;
+        _destination = destination.GetChild(0);
         _animator.Play("CustomCrouch"); //Animate
         
         
@@ -89,7 +88,9 @@ public class AIPlayerMovement : MonoBehaviour
         _rotate = true;
         
         _animator.Play("LowCover");
-        _animator.Play("EquipPistol");
+        _animator.Play("EquipPisol");
+        
+        GetComponent<CharacterInventory>().Weapons[0].RightItem.SetActive(true);
         OnCoverReached.Raise();
 
         StartCoroutine(DelayedMotorActivation(false));
