@@ -12,7 +12,7 @@ public class EnemyGroupEvents : MonoBehaviour
     
     private AIPlayerMovement _controller;
     private Actor m_Actor;
-    
+    private CharacterMotor _motor;
 
     private Animator _animator;
 
@@ -21,16 +21,23 @@ public class EnemyGroupEvents : MonoBehaviour
 
     private bool hasboss;
 
+
+    private void NotifyGunShoot()
+    {
+        _motor.NotifyStartGunFire();
+    }
     private void Awake()
     {
         _controller = GetComponent<AIPlayerMovement>();
         _animator = GetComponent<Animator>();
+        _motor = GetComponent<CharacterMotor>();
         
         _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
         
         AIGroupsHandler.hasBossE.Register(hasBossCheck);
         AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
+        OverlayGun.OnGunShoot += NotifyGunShoot;
 
     }
 
@@ -45,6 +52,7 @@ public class EnemyGroupEvents : MonoBehaviour
         OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
         AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
         AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
+        OverlayGun.OnGunShoot -= NotifyGunShoot;
     }
 
     public void hasBossCheck(bool _hasboss)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,8 @@ public class OverlayGun : MonoBehaviour
     private GameObject _bullet;
     private bool _canShoot = true;
     private Hit _currentHit;
+
+    public static Action OnGunShoot;
     
     private void OnEnable()
     {
@@ -82,6 +85,8 @@ public class OverlayGun : MonoBehaviour
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
                 }
+
+                OnGunShoot();
             }
 
         }
@@ -118,7 +123,7 @@ public class OverlayGun : MonoBehaviour
             if (last)
             {
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
-                projectile.Speed = 10;
+                // projectile.Speed = 25;
                 projectile.isLast = true;
                 Time.timeScale = 0.1f;
 

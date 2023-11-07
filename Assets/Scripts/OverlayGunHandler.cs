@@ -38,9 +38,6 @@ public class OverlayGunHandler : MonoBehaviour
     }
     public void OnZoom()
     {
-        if(CharacterStates.playerState != PlayerCustomStates.HoldingPosition)
-         return;
-        
         for (int i = 0; i < Guns.Length; i++)
         {
             if(i == _selectedGun)

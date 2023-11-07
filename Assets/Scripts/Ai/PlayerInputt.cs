@@ -1,4 +1,5 @@
 using System;
+using CoverShooter;
 using UnityEngine;
 
 public class PlayerInputt : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerInputt : MonoBehaviour
 
     public static bool CanTakeInput;
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -18,13 +20,18 @@ public class PlayerInputt : MonoBehaviour
         
         if (ControlFreak2.CF2Input.GetButtonDown("Zoom"))
         {
-            OnZoom();
+            if(CharacterStates.playerState == PlayerCustomStates.HoldingPosition) 
+                OnZoom();
+            
             CharacterStates.playerState = PlayerCustomStates.InZoom;
         }
         
         if (ControlFreak2.CF2Input.GetButtonUp("Zoom"))
         {
+            GetComponent<Actor>().enabled = true;
+            
             OnUnZoom();
+            
             CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
         }
 
