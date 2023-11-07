@@ -151,6 +151,8 @@ namespace CoverShooter
         //Custom
         public static GameEvent<int> GunChanged = new();
         public bool TakeInputGun = false;
+        public GameObject zoomListenerGO;
+        private ICharacterZoomListener[] _zoomListeners;
         
         [SerializeField] private GameObject zoomPad;
         private void Awake()
@@ -161,7 +163,8 @@ namespace CoverShooter
             _actor = GetComponent<Actor>();
 
             _controller.WaitForUpdateCall = true;
-            
+
+            _zoomListeners = Util.GetInterfaces<ICharacterZoomListener>(zoomListenerGO);
 
         }
 
@@ -356,6 +359,10 @@ namespace CoverShooter
             if (ControlFreak2.CF2Input.GetButtonDown("Zoom"))
             {
                 _controller.ZoomInput = true;
+
+                foreach (var v in _zoomListeners)
+                    v.OnZoom();
+                
             }
             
             //Custom Fire Mechanic
@@ -364,10 +371,10 @@ namespace CoverShooter
                 _controller.ZoomInput = false;
                 _controller.FireInput = false;
                 
-                _actor.enabled = true; //On first fire enable visibility to enemy
+                _actor.enabled = true; 
                 
-                // _controller.FireInput = true;
-                // StartCoroutine(Wait()); //Custom Execution
+                foreach (var v in _zoomListeners)
+                    v.OnUnzoom();
 
             }
             

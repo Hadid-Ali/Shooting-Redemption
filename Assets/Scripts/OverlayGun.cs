@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CoverShooter;
+using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
 public class OverlayGun : MonoBehaviour
@@ -22,14 +24,15 @@ public class OverlayGun : MonoBehaviour
     //======= References
     [SerializeField] private AudioClip _FireSound;
     [SerializeField] private GameObject _muzzleFlash;
-    [SerializeField] private CharacterMotor _motor;
     
     private AudioSource _audioSource;
     private Animator _anim;
-    private Camera _playerCamera;
+    public Camera _playerCamera;
     private GameObject _bullet;
     private bool _canShoot = true;
     private Hit _currentHit;
+
+    public static Action OnGunShoot;
     
     private void OnEnable()
     {
@@ -53,7 +56,7 @@ public class OverlayGun : MonoBehaviour
 
     void Update()
     {
-        if(!_motor.IsZooming)
+        if(CharacterStates.playerState != PlayerCustomStates.InZoom)
             return;
         
         Ray ray = _playerCamera.ViewportPointToRay (new Vector3(0.5f,0.5f,0));
@@ -62,16 +65,16 @@ public class OverlayGun : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * range,Color.blue);
         if (Physics.Raycast(ray , out raycastHit, range, shootableLayer))
         {
-            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, _motor.gameObject,
+            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, this.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
 
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
-            
+
             if (bodyPartHealth != null )
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
                 
-                if (_canShoot && characterHealth.Health is >= 10 and <= 20 && AIGroupsHandler.isLastEnemy)
+                if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy)
                 {
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
@@ -82,6 +85,8 @@ public class OverlayGun : MonoBehaviour
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
                 }
+
+                OnGunShoot();
             }
 
         }
@@ -97,11 +102,6 @@ public class OverlayGun : MonoBehaviour
         
         yield return new WaitForSeconds(timeBetweenShots);
         
-        
-        _motor.EquippedWeapon.Gun.Consume(); //Consume Bullet
-        if(_motor.EquippedWeapon.Gun.LoadedBulletsLeft <= 0) //Reload if Bullets are less and equal to zero
-            _motor.InputReload();
-        
         _canShoot = true;
     }
 
@@ -109,6 +109,8 @@ public class OverlayGun : MonoBehaviour
     {
         if (_bullet != null)
         {
+
+            
             var bullet = Instantiate(_bullet);
             var gunTipPosition = gunTip.transform.position;
             
@@ -121,8 +123,11 @@ public class OverlayGun : MonoBehaviour
             if (last)
             {
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
+                // projectile.Speed = 25;
                 projectile.isLast = true;
                 Time.timeScale = 0.1f;
+
+                CharacterStates.playerState = PlayerCustomStates.InActive;
             }
 
             var trail = bullet.GetComponent<TrailRenderer>();

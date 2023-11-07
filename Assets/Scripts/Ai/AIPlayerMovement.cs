@@ -9,63 +9,102 @@ public class AIPlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
-
-    private static readonly int CustomCrouchEnd = Animator.StringToHash("CrouchEndC");
-
-    private bool _isMoving;
-    private Vector3 _destinationPoint;
     private CharacterMotor _motor;
+    private Rigidbody rb;
+
+    public bool _isMoving;
+    public bool _rotate;
+    [SerializeField] private float lerpSpeed = 2f;
+    private Transform _destination;
     
-    public static GameEvent OnCoverReached = new();
+    public GameEvent OnCoverReached = new();
 
 
     private void Awake()
     {
         _isMoving = false;
-        _destinationPoint = Vector3.zero;
-
-        _motor = GetComponent<CharacterMotor>();
+        _destination = null;
+        
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-        
-        _motor.enabled = false;
+        _motor = GetComponent<CharacterMotor>();
+        rb = GetComponent <Rigidbody>();
+
     }
 
     private void Update()
     {
         if (_isMoving)
         {
-            if (Vector3.Distance(transform.position, _destinationPoint) < 1f)
+            
+            if (Vector3.Distance(transform.position, _destination.position) < 1)
             {
                 OnDestinationReached();
                 _isMoving = false;
             }
         }
+
+        if (_rotate)
+        {
+            float positionStep = lerpSpeed * Time.deltaTime;
+            float rotationStep = lerpSpeed * Time.deltaTime;
+
+            // Lerp the position towards the target position
+            transform.position = Vector3.Lerp(transform.position, _destination.position, positionStep);
+
+            // Lerp the rotation towards the target rotation
+            transform.rotation = Quaternion.Lerp(transform.rotation, _destination.rotation, rotationStep);
+            
+            bool positionCompleted = Vector3.Distance(transform.position, _destination.position) < 0.5f;
+            bool rotationCompleted = Quaternion.Angle(transform.rotation, _destination.rotation) < 0.5f;
+
+            if (positionCompleted && rotationCompleted)
+            {
+                _rotate = false;
+            }
+            
+        }
     }
     
-    public void SetPosition(Vector3 position)
+    public void SetPosition(Transform destination)
     {
-        _animator.Play("CustomCrouch");
+        PlayerInputt.OnUnZoom();
         
-        _destinationPoint = position;
+        _rotate = false;
         _isMoving = true;
         
-        _navMeshAgent.SetDestination(position);
+        _destination = destination;
+        _animator.Play("CustomCrouch"); //Animate
         
-        _motor.enabled = false;
         
+        StartCoroutine(DelayedMotorActivation(true));
+        
+
     }
 
     public void OnDestinationReached()
     {
-        _motor.enabled = true;
+        CharacterStates.playerState = PlayerCustomStates.InMovement;
         _isMoving = false;
+        _rotate = true;
         
-        _animator.SetTrigger(CustomCrouchEnd);
-        _navMeshAgent.enabled = false;
-        
+        _animator.Play("LowCover");
+        _animator.Play("EquipPistol");
         OnCoverReached.Raise();
+
+        StartCoroutine(DelayedMotorActivation(false));
 
     }
 
+    IEnumerator DelayedMotorActivation(bool val)
+    {
+        yield return new WaitForSeconds(1);
+        _motor.enabled = !val;
+        _navMeshAgent.enabled = val;
+        //rb.isKinematic = val;
+        
+        if(val == true)
+            _navMeshAgent.SetDestination(_destination.position);
+        
+    }
 }

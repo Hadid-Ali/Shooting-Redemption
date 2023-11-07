@@ -56,9 +56,9 @@ namespace CoverShooter
     /// Characters can throw grenades from both hands. Left hand is used in some situations when the character is hiding behind a cover. Grenades are duplicated when thrown. 
     /// A character can be setup to have many hitboxes for various body parts. Setup is done inside Character Health component.
     /// </summary>
-    [RequireComponent(typeof(CapsuleCollider))]
-    [RequireComponent(typeof(Animator))]
-    [RequireComponent(typeof(Rigidbody))]
+   // [RequireComponent(typeof(CapsuleCollider))]
+  //  [RequireComponent(typeof(Animator))]
+  //  [RequireComponent(typeof(Rigidbody))]
     public class CharacterMotor : MonoBehaviour
     {
         #region Properties
@@ -3171,6 +3171,8 @@ namespace CoverShooter
             }
 
             _moveDirection = transform.forward;
+            
+            Awake();
         }
 
         private void OnDisable()

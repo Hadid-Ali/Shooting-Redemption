@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using Mono.CompilerServices.SymbolWriter;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class PlayerFollowOffset : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;

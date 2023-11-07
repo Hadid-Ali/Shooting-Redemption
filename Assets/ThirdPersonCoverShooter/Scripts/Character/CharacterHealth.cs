@@ -13,7 +13,7 @@ namespace CoverShooter
     {
 
 
-        private GameEvent m_OnDie = new();
+        private GameEvent<CharacterHealth> m_OnDie = new();
 
         // [SerializeField] private Image _hpUI;
         /// <summary>
@@ -143,7 +143,7 @@ namespace CoverShooter
                 Health = 0.001f;
         }
 
-        public void Initialize(Action onactionDie)
+        public void Initialize(Action<CharacterHealth> onactionDie)
         {
             m_OnDie.Register(onactionDie);
         }
@@ -160,7 +160,7 @@ namespace CoverShooter
             //  _hpUI.fillAmount = 0;
             if (!wasOff)
                 if (!isMainPlayer)
-                    m_OnDie.Raise();
+                    m_OnDie.Raise(this);
 
             if (!wasOff && Died != null)
             {

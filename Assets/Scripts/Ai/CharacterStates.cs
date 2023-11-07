@@ -6,20 +6,27 @@ using UnityEngine;
 
 public enum PlayerCustomStates
 {
-     IdleStart,
+     CutScene,
      InMovement,
      HoldingPosition,
+     InActive,
      InZoom
 }
 public class CharacterStates : MonoBehaviour
 {
     public static PlayerCustomStates playerState;
 
+    public PlayerCustomStates currentState;
+
     private void Awake()
     {
-        playerState = PlayerCustomStates.IdleStart;
+        playerState = PlayerCustomStates.CutScene;
     }
 
+    private void Update()
+    {
+        currentState = playerState;
+    }
 
     public void SetPlayerState(PlayerCustomStates state)
     {

@@ -1,22 +1,29 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using UnityEditor;
+using CoverShooter;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class AIGroupsHandler : MonoBehaviour
 {
     [SerializeField] private List<AiGroup> m_AIgroups;
     [SerializeField] private int groupsDown;
     [SerializeField] private int totalgroups;
+    [SerializeField] private bool hasBoss;
+    [SerializeField] private Transform playerStartPos;
     
     public static GameEvent AllGroupsCCleared = new ();
-
+    public static GameEvent<bool> hasBossE = new ();
+    public static GameEvent<Transform> SetPlayerStartPosition = new();
+    
     public static bool isLastEnemy = false;
 
+    private void Awake()
+    {
+        hasBossE.Raise(hasBoss);
+        SetPlayerStartPosition.Raise(playerStartPos);
+    }
 
-    
     private void Start()
     {
         groupsDown = 0;
@@ -28,11 +35,8 @@ public class AIGroupsHandler : MonoBehaviour
         }
         
         CutScene.CutSceneEnded.Register(EnableGroup);
-        
-        CheckLastEnemy();
-        
-        print(isLastEnemy);
-        
+        CheckLastEnemy(new CharacterHealth());
+
     }
 
     private void OnDestroy()
@@ -40,10 +44,12 @@ public class AIGroupsHandler : MonoBehaviour
         CutScene.CutSceneEnded.Unregister(EnableGroup);
     }
 
-    private void CheckLastEnemy()  //This checks for last enemy (if its the last group alive) 
+    private void CheckLastEnemy(CharacterHealth h)  //This checks for last enemy (if its the last group alive) 
     {
-        if (m_AIgroups.Count <= 1)
+        if (m_AIgroups.Count == 1)
             isLastEnemy = m_AIgroups[0].CheckLastEnemy();
+        
+        print(isLastEnemy);
     }
 
     private void OnAreaCleared(AiGroup aiGroup)
@@ -51,6 +57,7 @@ public class AIGroupsHandler : MonoBehaviour
         groupsDown++;
         m_AIgroups.Remove(aiGroup);
 
+        CheckLastEnemy(new CharacterHealth());
         if (m_AIgroups.Count < 1)
         {
             AllGroupsCCleared.Raise();
