@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CoverShooter;
 using UnityEngine;
 
 public class BossCamera : MonoBehaviour
@@ -11,6 +12,12 @@ public class BossCamera : MonoBehaviour
     private void Awake()
     {
         EnemyGroupEvents.ShowBoss.Register(EnableCams);
+        GetComponent<CharacterHealth>().Died += CanccelEvent;
+    }
+
+    private void CanccelEvent()
+    {
+        EnemyGroupEvents.ShowBoss.UnRegister(EnableCams);
     }
 
     private void OnDestroy()

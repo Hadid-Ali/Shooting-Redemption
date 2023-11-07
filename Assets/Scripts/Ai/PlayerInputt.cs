@@ -11,8 +11,14 @@ public class PlayerInputt : MonoBehaviour
 
     public static bool CanTakeInput;
 
-    
-    // Update is called once per frame
+    private int gunCounter;
+
+
+    private void Awake()
+    {
+        gunCounter = 0;
+    }
+
     void Update()
     {
         if(!CanTakeInput)
@@ -23,7 +29,7 @@ public class PlayerInputt : MonoBehaviour
             if(CharacterStates.playerState == PlayerCustomStates.HoldingPosition) 
                 OnZoom();
             
-            CharacterStates.playerState = PlayerCustomStates.InZoom;
+            // CharacterStates.playerState = PlayerCustomStates.InZoom;
         }
         
         if (ControlFreak2.CF2Input.GetButtonUp("Zoom"))
@@ -32,13 +38,18 @@ public class PlayerInputt : MonoBehaviour
             
             OnUnZoom();
             
-            CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
+           // CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
         }
 
-        if (ControlFreak2.CF2Input.GetKey(KeyCode.Alpha1)){OnGunChange(0);}
-        if (ControlFreak2.CF2Input.GetKey(KeyCode.Alpha2)){OnGunChange(1);}
-        if (ControlFreak2.CF2Input.GetKey(KeyCode.Alpha3)){OnGunChange(2);}
-        if (ControlFreak2.CF2Input.GetKey(KeyCode.Alpha4)){OnGunChange(3);}
+        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            gunCounter++;
+            if (gunCounter > PlayerInventory.guns)
+                gunCounter = 0;
+
+            OnGunChange(gunCounter);
+        }
+
 
     }
 

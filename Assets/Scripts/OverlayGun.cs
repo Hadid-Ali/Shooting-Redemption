@@ -33,10 +33,13 @@ public class OverlayGun : MonoBehaviour
     private Hit _currentHit;
 
     public static Action OnGunShoot;
+
+    private float timer = 1f;
     
     private void OnEnable()
     {
         _anim.SetTrigger(Active);
+        timer = 1f;
     }
     private void OnDisable()
     {
@@ -56,7 +59,8 @@ public class OverlayGun : MonoBehaviour
 
     void Update()
     {
-        if(CharacterStates.playerState != PlayerCustomStates.InZoom)
+        timer -= Time.deltaTime;
+        if(timer >= 0)
             return;
         
         Ray ray = _playerCamera.ViewportPointToRay (new Vector3(0.5f,0.5f,0));
@@ -68,11 +72,15 @@ public class OverlayGun : MonoBehaviour
             _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, this.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
 
+            print(raycastHit.transform.gameObject);
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
 
             if (bodyPartHealth != null )
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
+                print("Shoot working");
+                if (characterHealth.Health <= 0)
+                    return;
                 
                 if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy)
                 {
@@ -80,7 +88,7 @@ public class OverlayGun : MonoBehaviour
                     StartCoroutine(ShootWithDelay(true));
                 }
                 
-                if (_canShoot && characterHealth.Health > 0)
+                if (_canShoot)
                 {
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
@@ -109,8 +117,6 @@ public class OverlayGun : MonoBehaviour
     {
         if (_bullet != null)
         {
-
-            
             var bullet = Instantiate(_bullet);
             var gunTipPosition = gunTip.transform.position;
             
@@ -123,9 +129,9 @@ public class OverlayGun : MonoBehaviour
             if (last)
             {
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
-                // projectile.Speed = 25;
+                projectile.Speed = 100f;
                 projectile.isLast = true;
-                Time.timeScale = 0.1f;
+                Time.timeScale = 0.09f;
 
                 CharacterStates.playerState = PlayerCustomStates.InActive;
             }

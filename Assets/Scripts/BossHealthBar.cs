@@ -25,6 +25,8 @@ public class BossHealthBar : MonoBehaviour
 
         maxhp = _characterHealth.MaxHealth;
         currentHp = maxhp;
+
+        cameraPosition = Camera.main.transform;
     }
 
     private void OnDestroy()
@@ -38,6 +40,7 @@ public class BossHealthBar : MonoBehaviour
         float percentage= currentHp / maxhp;
         GreenHp.fillAmount = percentage;
         
+        print("workinggg");
     }
 
     private void Update()
@@ -45,7 +48,9 @@ public class BossHealthBar : MonoBehaviour
         Quaternion lookAtRotation = 
             Quaternion.LookRotation(new Vector3(cameraPosition.position.x - transform.position.x, 
             0f, cameraPosition.position.z - transform.position.z));
-        transform.rotation = Quaternion.Euler(0f, lookAtRotation.eulerAngles.y, 0f);
+        
+        Bg.transform.rotation = Quaternion.Euler(0f, lookAtRotation.eulerAngles.y, 0f);
+        GreenHp.transform.rotation = Quaternion.Euler(0f, lookAtRotation.eulerAngles.y, 0f);
 
         float currentPercentage = currentHp / maxhp;
 
