@@ -52,6 +52,7 @@ public class EnemyGroupEvents : MonoBehaviour
         OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
         AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
         AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
+        
         OverlayGun.OnGunShoot -= NotifyGunShoot;
     }
 

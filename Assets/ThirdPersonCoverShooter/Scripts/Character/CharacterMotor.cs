@@ -1711,8 +1711,8 @@ namespace CoverShooter
         private ICharacterPhysicsListener[] _physicsListeners;
         private ICharacterWeaponChangeListener[] _weaponChangeListeners;
         private ICharacterZoomListener[] _zoomListeners;
-        private ICharacterZoomListener _customzoomListener;
-        public GameObject _customzoomListenerGameobject;
+        //private ICharacterZoomListener _customzoomListener;
+        //public GameObject _customzoomListenerGameobject;
         private ICharacterGunListener[] _gunListeners;
         private ICharacterSuccessfulHitListener[] _successfulHitListeners;
         private ICharacterToolListener[] _toolListeners;
@@ -1994,8 +1994,8 @@ namespace CoverShooter
             for (int i = 0; i < _zoomListeners.Length; i++)
             {
                 _zoomListeners[i].OnZoom();
-                if(ismainplayer)
-                    _customzoomListener.OnZoom();
+                //if(ismainplayer)
+                  //  _customzoomListener.OnZoom();
             }
 
             if (Zoomed != null) Zoomed.Invoke();
@@ -2011,8 +2011,8 @@ namespace CoverShooter
             for (int i = 0; i < _zoomListeners.Length; i++)
             {
                 _zoomListeners[i].OnUnzoom();
-                if(ismainplayer)
-                 _customzoomListener.OnUnzoom();
+               // if(ismainplayer)
+                 //_customzoomListener.OnUnzoom();
             }
 
             if (Unzoomed != null) Unzoomed.Invoke();
@@ -3196,8 +3196,8 @@ namespace CoverShooter
             _physicsListeners = Util.GetInterfaces<ICharacterPhysicsListener>(gameObject);
             _weaponChangeListeners = Util.GetInterfaces<ICharacterWeaponChangeListener>(gameObject);
             _zoomListeners = Util.GetInterfaces<ICharacterZoomListener>(gameObject);
-            if(ismainplayer)
-                _customzoomListener = _customzoomListenerGameobject.GetComponent<ICharacterZoomListener>();
+          //  if(ismainplayer)
+             //   _customzoomListener = _customzoomListenerGameobject.GetComponent<ICharacterZoomListener>();
             
             _gunListeners = Util.GetInterfaces<ICharacterGunListener>(gameObject);
             _toolListeners = Util.GetInterfaces<ICharacterToolListener>(gameObject);
