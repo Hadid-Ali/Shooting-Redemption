@@ -29,6 +29,8 @@ public class EnemyGroupEvents : MonoBehaviour
     }
     private void Awake()
     {
+        AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
+        
         _controller = GetComponent<AIPlayerMovement>();
         _animator = GetComponent<Animator>();
         _motor = GetComponent<CharacterMotor>();
@@ -37,12 +39,12 @@ public class EnemyGroupEvents : MonoBehaviour
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
         
         AIGroupsHandler.hasBossE.Register(hasBossCheck);
-        AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
         OverlayGun.OnGunShoot += NotifyGunShoot;
 
         hasShowBossOnce = false;
 
     }
+    
 
     private void OnDestroy()
     {
@@ -62,6 +64,7 @@ public class EnemyGroupEvents : MonoBehaviour
     public void SetPlayerPosition(Transform t)
     {
         transform.SetPositionAndRotation(t.position, t.rotation);
+
         print("Set Position working");
     }
 

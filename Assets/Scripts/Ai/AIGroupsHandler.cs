@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using CoverShooter;
 using UnityEngine;
@@ -18,16 +19,16 @@ public class AIGroupsHandler : MonoBehaviour
     
     public static bool isLastEnemy;
 
-    private void Awake()
-    {
-        hasBossE.Raise(hasBoss);
-        SetPlayerStartPosition.Raise(playerStartPos);
-
-        isLastEnemy = false;
-    }
+    
 
     private void Start()
     {
+        SetPlayerStartPosition.Raise(playerStartPos);
+        
+        hasBossE.Raise(hasBoss);
+
+        isLastEnemy = false;
+        
         groupsDown = 0;
         totalgroups = m_AIgroups.Count;
 
@@ -41,6 +42,11 @@ public class AIGroupsHandler : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        print("islastEnemy" + isLastEnemy);
+    }
+
     private void OnDestroy()
     {
         CutScene.CutSceneEnded.Unregister(EnableGroup);
@@ -51,7 +57,6 @@ public class AIGroupsHandler : MonoBehaviour
         if (m_AIgroups.Count == 1)
             isLastEnemy = m_AIgroups[0].CheckLastEnemy();
         
-        print(isLastEnemy);
     }
 
     private void OnAreaCleared(AiGroup aiGroup)

@@ -19,7 +19,7 @@ public class PlayerFollowOffset : MonoBehaviour
 
     private void Awake()
     {
-        //gameObject.transform.parent = null;
+        playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
         EnemyGroupEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
 
         followCam = follow;
@@ -35,8 +35,6 @@ public class PlayerFollowOffset : MonoBehaviour
     private void UpdateFollowRotation(Transform obj)
     {
         transform.localEulerAngles = obj.localEulerAngles;
-
-        print("Rotation is working");
     }
     
     // Update is called once per frame

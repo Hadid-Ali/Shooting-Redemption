@@ -74,14 +74,12 @@ public class OverlayGun : MonoBehaviour
         {
             _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, _aiPlayer.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
-
-            print(raycastHit.transform.gameObject);
+            
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
 
             if (bodyPartHealth != null )
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
-                print("Shoot working");
                 if (characterHealth.Health <= 0)
                     return;
                 

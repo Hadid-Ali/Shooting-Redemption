@@ -6,81 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/CowBoy 1/CowBoyDiffuse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/CowBoy 1/CowBoyDiffuse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Metalness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Metalness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/Body_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/belt_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/blouse_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/boots_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Albedo 1.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Albedo 1.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Metalness 1.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Metalness 1.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Occlusion 1.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/cloak_Occlusion 1.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/eye_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/eye_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/eye_Metalness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/eye_Metalness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gloves_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/gun_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hair_albedo_map 1.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hair_albedo_map 1.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/hat_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_Albedo.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_Occlusion.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_metalic+roughness.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Texture/Skin1/pants_metalic+roughness.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyBodyMAT_AlbedoTransparency.bmp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyBodyMAT_AlbedoTransparency.bmp.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyBodyMAT_MetallicSmoothness.bmp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyBodyMAT_MetallicSmoothness.bmp.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyClothesMAT_AlbedoTransparency.bmp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyClothesMAT_AlbedoTransparency.bmp.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyClothesMAT_MetallicSmoothness.bmp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/StudioNewPunch/HumanMales/SkinnyGuy/Model/Materials/SkinnyClothesMAT_MetallicSmoothness.bmp.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_AO.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_AlbedoTransparency.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_MetallicSmoothness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_MetallicSmoothness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Hat_Holster_Strap_Pants_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_AO.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_AlbedoTransparency.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_MetallicSmoothness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_MetallicSmoothness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Scarf_Shirt_Vest_Boots_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_AO.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_AlbedoTransparency.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_MetallicSmoothness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_MetallicSmoothness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Western Cowboy/Textures/Textures LWRP &amp; Standard/TEX_Skin_Normal.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CinemachineBlend/PlayerCamera Blends.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CinemachineBlend/PlayerCamera Blends.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level 10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level 7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level 8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level 9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level11.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level12.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level12.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level14.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerBossEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerBossEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerSimpleEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerSimpleEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameStateManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/CharacterAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/CharacterAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc_mafia_env/ny back street mafia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/nyc_mafia_env/ny back street mafia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" beforeDir="false" afterPath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,27 +101,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Mechanics-And-Chapter2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "RiskMerge",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\GNG\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\GNG\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe" />
@@ -250,7 +211,7 @@
       <workItem from="1698819334823" duration="9017000" />
       <workItem from="1699252583618" duration="12828000" />
       <workItem from="1699338725779" duration="18138000" />
-      <workItem from="1699427128399" duration="6310000" />
+      <workItem from="1699427128399" duration="12082000" />
     </task>
     <servers />
   </component>

@@ -44,7 +44,7 @@ public class PlayerInputt : MonoBehaviour
         if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha0))
         {
             gunCounter++;
-            if (gunCounter > PlayerInventory.guns)
+            if (gunCounter > PlayerInventory.guns + 1)
                 gunCounter = 0;
 
             OnGunChange(gunCounter);
