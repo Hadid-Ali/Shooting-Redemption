@@ -35,7 +35,8 @@ public class OverlayGun : MonoBehaviour
     public static Action OnGunShoot;
 
     private float timer = 1f;
-    
+    private AIPlayerMovement _aiPlayer;
+
     private void OnEnable()
     {
         _anim.SetTrigger(Active);
@@ -44,6 +45,7 @@ public class OverlayGun : MonoBehaviour
     private void OnDisable()
     {
         _anim.SetTrigger(InActive);
+        _muzzleFlash.SetActive(false);
         _canShoot = true;
     }
 
@@ -51,8 +53,9 @@ public class OverlayGun : MonoBehaviour
     private void Awake()
     {
         _anim = GetComponent<Animator>();
-        _audioSource = GetComponent<AudioSource>();
+        _audioSource = transform.parent.GetComponent<AudioSource>();
         _playerCamera = Camera.main;
+        _aiPlayer = FindObjectOfType<AIPlayerMovement>();
         
         _bullet = Resources.Load("Prefabs/Bullet") as GameObject;
     }
@@ -69,7 +72,7 @@ public class OverlayGun : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * range,Color.blue);
         if (Physics.Raycast(ray , out raycastHit, range, shootableLayer))
         {
-            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, this.gameObject,
+            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, _aiPlayer.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
 
             print(raycastHit.transform.gameObject);

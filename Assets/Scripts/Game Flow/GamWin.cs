@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
@@ -10,10 +11,16 @@ public class GamWin : MonoBehaviour
 {
     [SerializeField] private GameObject _screen;
 
+    [SerializeField] private GameObject[] Levels;
+
+    public int selectedLevel;
+
 
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
+        LoadLevel(PlayerPrefs.GetInt("SelectedLevel", 0));
+        
     }
 
     private void OnDestroy()
@@ -25,6 +32,17 @@ public class GamWin : MonoBehaviour
     public void OnGameWon()
     {
         StartCoroutine(wait());
+    }
+
+    public void OnLevelSelect(int i)
+    {
+        PlayerPrefs.SetInt("SelectedLevel", i);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
+    }
+    
+    public void LoadLevel(int i)
+    {
+        Levels[i].SetActive(true);
     }
 
     IEnumerator wait()

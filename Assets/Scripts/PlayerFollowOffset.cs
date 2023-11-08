@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -8,10 +9,22 @@ public class PlayerFollowOffset : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
 
+    [SerializeField] private CinemachineVirtualCamera follow;
+    [SerializeField] private CinemachineVirtualCamera idle;
+    [SerializeField] private CinemachineVirtualCamera zoom;
+    
+    public static CinemachineVirtualCamera followCam;
+    public static CinemachineVirtualCamera idleCam;
+    public static CinemachineVirtualCamera zoomCam;
+
     private void Awake()
     {
-        gameObject.transform.parent = null;
+        //gameObject.transform.parent = null;
         EnemyGroupEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
+
+        followCam = follow;
+        idleCam = idle;
+        zoomCam = zoom;
     }
 
     private void OnDestroy()

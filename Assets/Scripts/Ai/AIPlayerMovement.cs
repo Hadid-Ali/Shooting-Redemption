@@ -17,6 +17,7 @@ public class AIPlayerMovement : MonoBehaviour
     private Transform _destination;
     
     public GameEvent OnCoverReached = new();
+    private static readonly int CrouchWalk = Animator.StringToHash("CrouchWalk");
 
 
     private void Awake()
@@ -73,7 +74,7 @@ public class AIPlayerMovement : MonoBehaviour
         _isMoving = true;
         
         _destination = destination.GetChild(0);
-        _animator.Play("CustomCrouch"); //Animate
+        _animator.SetTrigger(CrouchWalk); //Animate
         
         
         StartCoroutine(DelayedMotorActivation(true));

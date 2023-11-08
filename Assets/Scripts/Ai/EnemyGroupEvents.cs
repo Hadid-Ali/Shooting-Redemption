@@ -20,6 +20,7 @@ public class EnemyGroupEvents : MonoBehaviour
     private int counter = 0;
 
     private bool hasboss;
+    private bool hasShowBossOnce;
 
 
     private void NotifyGunShoot()
@@ -39,11 +40,8 @@ public class EnemyGroupEvents : MonoBehaviour
         AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
         OverlayGun.OnGunShoot += NotifyGunShoot;
 
-    }
+        hasShowBossOnce = false;
 
-    private void Start()
-    {
-        CustomCameraController.CameraStateChanged(CamState.Follow);
     }
 
     private void OnDestroy()
@@ -64,6 +62,7 @@ public class EnemyGroupEvents : MonoBehaviour
     public void SetPlayerPosition(Transform t)
     {
         transform.SetPositionAndRotation(t.position, t.rotation);
+        print("Set Position working");
     }
 
     public void OnCoverReached()
@@ -84,8 +83,9 @@ public class EnemyGroupEvents : MonoBehaviour
         
         CharacterStates.playerState = PlayerCustomStates.CutScene;
         yield return new WaitForSeconds(1);
-        if (hasboss)
+        if (hasboss && !hasShowBossOnce)
         {
+            hasShowBossOnce = true;
             ShowBoss.Raise(true);
             yield return new WaitForSeconds(3);
             ShowBoss.Raise(false);
@@ -99,6 +99,7 @@ public class EnemyGroupEvents : MonoBehaviour
         _controller.SetPosition(coverPosition);
         
         CharacterStates.playerState = PlayerCustomStates.InMovement;
+        CustomCameraController.CameraStateChanged(CamState.Follow);
     }
     public void OnEnemiesKilledEvent(Transform coverPosition)
     {

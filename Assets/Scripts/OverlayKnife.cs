@@ -19,7 +19,7 @@ public class OverlayKnife : MonoBehaviour
     //======= References
     [SerializeField] private AudioClip _knifeSound;
     [SerializeField] private GameObject KnifeObject;
-    [SerializeField] private CharacterMotor _motor;
+    [SerializeField] private AIPlayerMovement _motor;
     [SerializeField] private ThirdPersonController _input;
     
     private AudioSource _audioSource;
@@ -54,17 +54,15 @@ public class OverlayKnife : MonoBehaviour
     private void Awake()
     {
         _anim = GetComponent<Animator>();
-        _audioSource = GetComponent<AudioSource>();
+        _audioSource = _audioSource = transform.parent.GetComponent<AudioSource>();
         _playerCamera = Camera.main;
+        _motor = FindObjectOfType<AIPlayerMovement>();
         
         _knife = Resources.Load("Prefabs/knife") as GameObject;
     }
 
     void Update()
     {
-        if(!_motor.IsZooming)
-            return;
-        
         Ray ray = _playerCamera.ViewportPointToRay (new Vector3(0.5f,0.5f,0));
         RaycastHit raycastHit;
         

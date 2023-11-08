@@ -16,12 +16,14 @@ public class AIGroupsHandler : MonoBehaviour
     public static GameEvent<bool> hasBossE = new ();
     public static GameEvent<Transform> SetPlayerStartPosition = new();
     
-    public static bool isLastEnemy = false;
+    public static bool isLastEnemy;
 
     private void Awake()
     {
         hasBossE.Raise(hasBoss);
         SetPlayerStartPosition.Raise(playerStartPos);
+
+        isLastEnemy = false;
     }
 
     private void Start()
