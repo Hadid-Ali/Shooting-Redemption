@@ -15,7 +15,7 @@ public class CutScene : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
         CutSceneEnded.Raise();
     }
 }
