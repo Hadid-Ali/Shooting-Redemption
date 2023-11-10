@@ -6,30 +6,211 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Coldre_calca_cinta_chapeu.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Coldre_calca_cinta_chapeu.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Boots_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Boots_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Hat_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Hat_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Holster_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Holster_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Pants_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Pants_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Scarf_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Scarf_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Shirt_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Shirt_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Skin_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Skin_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Vest_LWRP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Cowboy/Mat_Vest_LWRP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Gangsters/DemoScene/GroundMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Gangsters/DemoScene/GroundMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_belt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_belt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_blouse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_blouse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_boots.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_boots.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_cloak.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_cloak.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_hair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_hair.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_underclothes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_underclothes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Base mesh/Materials/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_blouse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_blouse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin3/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_belt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_belt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_boots.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_boots.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_belt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_belt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin7/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin8/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin8/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin8/Mat_hunter_underclothes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin8/Mat_hunter_underclothes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/Short/Materials/pasted__pasted__pasted__pasted__pasted__Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/Short/Materials/pasted__pasted__pasted__pasted__pasted__Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials/pasted__Mat_hunter_blouse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials/pasted__Mat_hunter_blouse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials/pasted__Mat_hunter_blouse1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials/pasted__Mat_hunter_blouse1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials2/pasted__Mat_hunter_blouse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/blouse/Materials2/pasted__Mat_hunter_blouse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/Mat_hunter_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/Mat_hunter_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__Mat_hunter_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__Mat_hunter_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__pasted__pasted__pasted__Mat_hunter_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__pasted__pasted__pasted__Mat_hunter_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__pasted__pasted__pasted__pasted__pasted__Mat_hunter_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/body/Materials/pasted__pasted__pasted__pasted__pasted__pasted__Mat_hunter_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/cloak/Materials/pasted__Mat_hunter_cloak1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/cloak/Materials/pasted__Mat_hunter_cloak1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/eyes/Materials/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/eyes/Materials/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/gloves/Materials/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/gloves/Materials/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/pants/Materials/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/pants/Materials/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/underclothes/Materials/pasted__pasted__Mat_hunter_underclothes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/underclothes/Materials/pasted__pasted__Mat_hunter_underclothes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/waistcoat/Materials/pasted__pasted__Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/waistcoat/Materials/pasted__pasted__Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/Mat_hunter_sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/Mat_hunter_sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Separated_mesh/weapon/Materials/sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mafia Men - Yakuza Boss/ShowFloor/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mafia Men - Yakuza Boss/ShowFloor/Materials/No Name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Army_boot_texture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Army_boot_texture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Brick_Main3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Brick_Main3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Cement_Floor2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Cement_Floor2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Plaster1_03C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Plaster1_03C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Roof_Metal3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Roof_Metal3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Wood2B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BrickHouse/Wood2B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Brick_Main3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Brick_Main3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BullsEye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/BullsEye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Cement_Floor2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Cement_Floor2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Chair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Chair.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Crate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Crate.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Plaster1_03C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Plaster1_03C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/RCF_Chair1_Tex_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/RCF_Chair1_Tex_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/RCF_Shelf1_Tex_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/RCF_Shelf1_Tex_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Roof_Metal3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Roof_Metal3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/S1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/S1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/S3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/S3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Shelf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Shelf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/SpaceShip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/SpaceShip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/TargetSword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/TargetSword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Wood2B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/Wood2B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/barrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/barrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/blinn1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/blinn1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/can.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/can.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/color3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/color3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/house.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/house.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/logends.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/logends.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/logs.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/logs.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/redBarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/redBarrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/space_cruiser_4_color_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/space_cruiser_4_color_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Materials/wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Boat/Meshes/Materials/Boat-01 - Default.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Boat/Meshes/Materials/Boat-01 - Default.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/RockBlobs/Materials/RockJagged0021Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/RockBlobs/Materials/RockJagged0021Diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/ChainLinkFence/Materials/ChainLinkFence.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/ChainLinkFence/Materials/ChainLinkFence.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/ConcreteWall/Materials/Ladder.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/ConcreteWall/Materials/Ladder.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/WoodFence/Materials/WoodFence1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/WoodFence/Materials/WoodFence1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/WoodPlank/Materials/WoodPlank.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/ShantyTown/WoodPlank/Materials/WoodPlank.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/TableWood/Materials/wood_01_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/TableWood/Materials/wood_01_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Cliff (Sandstone).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Cliff (Sandstone).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Forest Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Forest Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Grass (Meadows).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Grass (Meadows).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Grass&amp;Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Grass&amp;Rock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Pebbles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Pebbles.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Sand (Beach Wet2).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Materials/Sand (Beach Wet2).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Trees Ambient-Occlusion/Materials/pinesprite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Trees Ambient-Occlusion/Materials/pinesprite.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Trees Ambient-Occlusion/Materials/scotspinetypea-pinetrunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/Terrain Assets/Trees Ambient-Occlusion/Materials/scotspinetypea-pinetrunk.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/brick_01_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/brick_01_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/plaster_01_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/plaster_01_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/rubblebrick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/bricks/Materials/rubblebrick.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/doors/Materials/door_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Demo/Other/doors/Materials/door_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water (Basic)/Materials/WaterDefault.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water (Basic)/Materials/WaterDefault.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water/Water/Materials/WaterPlaneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water/Water/Materials/WaterPlaneMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/PostProcessing/Utilities/CustomMotionTexture/Materials/UVChecker.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Image Effects/PostProcessing/Utilities/CustomMotionTexture/Materials/UVChecker.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Arrow_Shaft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Arrow_Shaft.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Arrowhead.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Arrowhead.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Bow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Bow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/FlashlightTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/FlashlightTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Grenade3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/BulletDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/BulletDebris.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/MeleeMark1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/MeleeMark1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/dirt3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glass3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glassDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/glassDebris.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/metal3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/wood3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/woodDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/ImpactMarks/woodDebris.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Katana.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Katana.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/M4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/M4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Scope.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Scope.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Shield.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Shield.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Sniper.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Sniper.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/SniperReticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/SniperReticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/SoldierSleeve.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/SoldierSleeve.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/Sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/Sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/apple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/apple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/canteen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/canteen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/crosshair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/crosshair.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/healthkit copy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/healthkit copy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/landMine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/landMine.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/lens.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/lens.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/m1911_tex.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/m1911_tex.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/m_floor_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/m_floor_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/mp5sd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/mp5sd.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/quiver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/quiver.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/shelll.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/shelll.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgbarrel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgbarrel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgdiffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgdiffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgparts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgparts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgparts2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/shotgparts2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/w_mp510.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/w_mp510.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Materials/w_mp512.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Materials/w_mp512.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/M4-lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/M4-lambert2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/Unity_soldier_Body_DIF_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/Unity_soldier_Body_DIF_wip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/body01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/body01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/head01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/head01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/lambert2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/m4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/m4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/m4tex.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/m4tex.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_01BC-lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_01BC-lambert2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_01BC-unity_pilot_body_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_01BC-unity_pilot_body_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_body_01_dif.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_body_01_dif.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_head.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_head.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_head_01_dif.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Player/Materials/unity_pilot_head_01_dif.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Models/Weapons/Materials/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Models/Weapons/Materials/lambert1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Android/Materials/Robot_Color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Android/Materials/Robot_Color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Robot/Materials/gun_colour_and_ambocc.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Robot/Materials/gun_colour_and_ambocc.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Robot/Materials/robot_colour_and_ambocc2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Robot/Materials/robot_colour_and_ambocc2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/Copy of unity_goodsoldier_body_dif_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/Copy of unity_goodsoldier_body_dif_wip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_goodsoldier_body_dif_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_goodsoldier_body_dif_wip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_goodsoldier_head_dif_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_goodsoldier_head_dif_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_soldier_body_dif_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_soldier_body_dif_wip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_soldier_head_dif_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/unity_soldier_head_dif_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Meshes/Materials/Unity_soldier_Body_DIF_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Soldier/Meshes/Materials/Unity_soldier_Body_DIF_wip.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Zombie/Materials/zombie.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Zombie/Materials/zombie.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Zombie/Meshes/Materials/difusse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RFPSP/Objects/NPCs/Zombie/Meshes/Materials/difusse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,27 +271,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;RiskMerge&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Mechanics-And-Chapter2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\GNG\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\GNG\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\GNG\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe" />
