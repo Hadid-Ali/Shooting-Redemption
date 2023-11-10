@@ -36,6 +36,7 @@ public class OverlayGun : MonoBehaviour
 
     private float timer = 1f;
     private AIPlayerMovement _aiPlayer;
+    private Transform _nearestBone;
 
     private void OnEnable()
     {
@@ -85,12 +86,14 @@ public class OverlayGun : MonoBehaviour
                 
                 if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy)
                 {
+                    _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
                 }
                 
                 if (_canShoot)
                 {
+                    _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
                 }
@@ -113,6 +116,29 @@ public class OverlayGun : MonoBehaviour
         
         _canShoot = true;
     }
+    
+    Transform GetNearestBone(Animator animator,Vector3 point)
+    {
+        Transform nearestBone = null;
+        float nearestDistance = float.MaxValue;
+
+        foreach (HumanBodyBones boneType in System.Enum.GetValues(typeof(HumanBodyBones)))
+        {
+            if (boneType != HumanBodyBones.LastBone && animator.GetBoneTransform(boneType) != null)
+            {
+                Transform bone = animator.GetBoneTransform(boneType);
+                float distance = Vector3.Distance(point, bone.position);
+
+                if (distance < nearestDistance)
+                {
+                    nearestDistance = distance;
+                    nearestBone = bone;
+                }
+            }
+        }
+
+        return nearestBone;
+    }
 
     void FireProjectile(bool last)
     {
@@ -126,6 +152,7 @@ public class OverlayGun : MonoBehaviour
 
             var projectile = bullet.GetComponent<Projectile>();
             var vector = _currentHit.Position - gunTipPosition;
+            vector = _nearestBone.position - gunTipPosition;
             
             if (last)
             {
@@ -134,6 +161,8 @@ public class OverlayGun : MonoBehaviour
                 projectile.isLast = true;
                 Time.timeScale = 0.09f;
 
+                
+                //vector = _nearestBone.position - gunTipPosition;
                 CharacterStates.playerState = PlayerCustomStates.InActive;
             }
 

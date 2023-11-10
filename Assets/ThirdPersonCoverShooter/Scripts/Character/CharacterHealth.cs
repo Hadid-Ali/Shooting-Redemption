@@ -12,7 +12,7 @@ namespace CoverShooter
     public class CharacterHealth : MonoBehaviour, ICharacterHealthListener
     {
 
-
+        public Animator Animator;
         private GameEvent<CharacterHealth> m_OnDie = new();
 
         // [SerializeField] private Image _hpUI;
@@ -101,7 +101,7 @@ namespace CoverShooter
 
         private void Awake()
         {
-            // if(!isMainPlayer)_hpUI.fillAmount = Health / 100;
+            Animator = GetComponent<Animator>();
 
             _previousHealth = Health;
             _motor = GetComponent<CharacterMotor>();
