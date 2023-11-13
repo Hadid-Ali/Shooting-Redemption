@@ -64,8 +64,6 @@ public class EnemyGroupEvents : MonoBehaviour
     public void SetPlayerPosition(Transform t)
     {
         transform.SetPositionAndRotation(t.position, t.rotation);
-
-        print("Set Position working");
     }
 
     public void OnCoverReached()

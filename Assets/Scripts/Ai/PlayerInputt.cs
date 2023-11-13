@@ -29,7 +29,7 @@ public class PlayerInputt : MonoBehaviour
             if(CharacterStates.playerState == PlayerCustomStates.HoldingPosition) 
                 OnZoom();
             
-            // CharacterStates.playerState = PlayerCustomStates.InZoom;
+            CharacterStates.playerState = PlayerCustomStates.InZoom;
         }
         
         if (ControlFreak2.CF2Input.GetButtonUp("Zoom"))
@@ -38,7 +38,7 @@ public class PlayerInputt : MonoBehaviour
             
             OnUnZoom();
             
-           // CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
+            CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
         }
 
         if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha0))

@@ -147,6 +147,10 @@ namespace CoverShooter
         {
             m_OnDie.Register(onactionDie);
         }
+        public void UnInitialize()
+        {
+            m_OnDie.UnRegisterAll();
+        }
 
         /// <summary>
         /// Catch the death event, set health to zero and remember that the character is dead now.
@@ -161,6 +165,8 @@ namespace CoverShooter
             if (!wasOff)
                 if (!isMainPlayer)
                     m_OnDie.Raise(this);
+                    
+                
 
             if (!wasOff && Died != null)
             {
@@ -176,7 +182,7 @@ namespace CoverShooter
         {
             if (isMainPlayer)
             {
-                if (_motor.IsAiming)
+                if (_motor.GetComponent<CharacterStates>().currentState == PlayerCustomStates.InZoom)
                 {
                     Deal(hit.Damage);
                 }

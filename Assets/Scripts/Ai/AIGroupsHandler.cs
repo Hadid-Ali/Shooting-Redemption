@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using CoverShooter;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class AIGroupsHandler : MonoBehaviour
@@ -17,9 +18,26 @@ public class AIGroupsHandler : MonoBehaviour
     public static GameEvent<bool> hasBossE = new ();
     public static GameEvent<Transform> SetPlayerStartPosition = new();
     
+
     public static bool isLastEnemy;
 
-    
+    private EnemyPoolManager _enemyPoolManager;
+    [SerializeField] private int resurrectingIterations ;
+    [SerializeField] private Transform enemyResurrectPosition;
+    [SerializeField] private int enemyResurrectDelay;
+
+    private int iterationCounter ;
+
+
+    private void Awake()
+    {
+        _enemyPoolManager = GetComponent<EnemyPoolManager>();
+        
+        _enemyPoolManager.time = enemyResurrectDelay;
+        _enemyPoolManager.spawnPosition = enemyResurrectPosition;
+
+        iterationCounter = -1; //Because first time its called is wasted
+    }
 
     private void Start()
     {
@@ -38,13 +56,11 @@ public class AIGroupsHandler : MonoBehaviour
         }
         
         CutScene.CutSceneEnded.Register(EnableGroup);
+        
         CheckLastEnemy(new CharacterHealth());
 
-    }
+        
 
-    private void Update()
-    {
-        print("islastEnemy" + isLastEnemy);
     }
 
     private void OnDestroy()
@@ -57,14 +73,21 @@ public class AIGroupsHandler : MonoBehaviour
         if (m_AIgroups.Count == 1)
             isLastEnemy = m_AIgroups[0].CheckLastEnemy();
         
+
+        if (iterationCounter <= AiGroup.TotalEnemiesCount * resurrectingIterations && iterationCounter >= 0)
+        {
+            _enemyPoolManager.ResurectEnemy(h);
+            m_AIgroups[m_AIgroups.Count - 1].AddEnemy(h);
+        }
+        iterationCounter++;
+            
     }
 
     private void OnAreaCleared(AiGroup aiGroup)
     {
         groupsDown++;
         m_AIgroups.Remove(aiGroup);
-
-        CheckLastEnemy(new CharacterHealth());
+        
         if (m_AIgroups.Count < 1)
         {
             AllGroupsCCleared.Raise();
