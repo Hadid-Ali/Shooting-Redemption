@@ -30,6 +30,7 @@ public class AIPlayerMovement : MonoBehaviour
         _motor = GetComponent<CharacterMotor>();
 
         _motor.enabled = false;
+        
 
     }
 
@@ -50,15 +51,17 @@ public class AIPlayerMovement : MonoBehaviour
             float rotationStep = lerpSpeed * Time.deltaTime;
 
             // Lerp the position towards the target position
-            transform.position = Vector3.Lerp(transform.position, _destination.position, positionStep);
+            
+            
+           // transform.position = Vector3.Lerp(transform.position, _destination.position, positionStep);
 
             // Lerp the rotation towards the target rotation
             transform.rotation = Quaternion.Lerp(transform.rotation, _destination.rotation, rotationStep);
             
-            bool positionCompleted = Vector3.Distance(transform.position, _destination.position) < 0.5f;
+            //bool positionCompleted = Vector3.Distance(transform.position, _destination.position) < 0.5f;
             bool rotationCompleted = Quaternion.Angle(transform.rotation, _destination.rotation) < 0.5f;
 
-            if (positionCompleted && rotationCompleted)
+            if (/*positionCompleted && */rotationCompleted)
             {
                 _rotate = false;
             }
@@ -75,7 +78,8 @@ public class AIPlayerMovement : MonoBehaviour
         
         _destination = destination.GetChild(0);
         _animator.SetTrigger(CrouchWalk); //Animate
-        
+
+        GetComponent<NavMeshAgent>().enabled = true;
         
         StartCoroutine(DelayedMotorActivation(true));
         
@@ -87,8 +91,9 @@ public class AIPlayerMovement : MonoBehaviour
         CharacterStates.playerState = PlayerCustomStates.InMovement;
         _isMoving = false;
         _rotate = true;
-        
-        _animator.Play("LowCover");
+
+        _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCover" : "LowCover");
+
         _animator.Play("EquipPisol");
         
         GetComponent<CharacterInventory>().Weapons[0].RightItem.SetActive(true);
@@ -104,7 +109,6 @@ public class AIPlayerMovement : MonoBehaviour
         _motor.enabled = !val;
         _navMeshAgent.enabled = val;
         //rb.isKinematic = val;
-        
         if(val == true)
             _navMeshAgent.SetDestination(_destination.position);
         

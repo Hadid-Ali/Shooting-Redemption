@@ -164,7 +164,7 @@ namespace CoverShooter
 
             _controller.WaitForUpdateCall = true;
 
-            _zoomListeners = Util.GetInterfaces<ICharacterZoomListener>(zoomListenerGO);
+//            _zoomListeners = Util.GetInterfaces<ICharacterZoomListener>(zoomListenerGO);
 
         }
 

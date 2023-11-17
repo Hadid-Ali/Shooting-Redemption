@@ -7,7 +7,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class PlayerFollowOffset : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
+    private Transform playerTransform;
 
     [SerializeField] private CinemachineVirtualCamera follow;
     [SerializeField] private CinemachineVirtualCamera idle;

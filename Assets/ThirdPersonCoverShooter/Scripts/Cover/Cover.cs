@@ -39,6 +39,9 @@ namespace CoverShooter
     [RequireComponent(typeof(BoxCollider))]
     public class Cover : MonoBehaviour
     {
+        public bool isHigh;
+        
+        
         /// <summary>
         /// Minimal distance from characters feet to the top of a cover for it to be considered tall.
         /// </summary>

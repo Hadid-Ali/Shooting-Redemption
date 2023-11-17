@@ -105,6 +105,33 @@ namespace CoverShooter
 
             _previousHealth = Health;
             _motor = GetComponent<CharacterMotor>();
+
+            if (isMainPlayer)
+            {
+                PlayerInputt.OnZoom += OnZoom;
+                PlayerInputt.OnUnZoom += OnUnZoom;
+                
+            }
+
+        }
+
+        private void OnDestroy()
+        {
+            if (isMainPlayer)
+            {
+                PlayerInputt.OnZoom -= OnZoom;
+                PlayerInputt.OnUnZoom -= OnUnZoom;
+            }
+        }
+
+        private void OnZoom()
+        {
+            IsTakingDamage = true;
+        }
+
+        private void OnUnZoom()
+        {
+            IsTakingDamage = false;
         }
 
         private void OnEnable()

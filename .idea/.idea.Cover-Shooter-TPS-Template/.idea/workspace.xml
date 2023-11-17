@@ -6,38 +6,97 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 10.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 10.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 6.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 6.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 7.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 7.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 8.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 8.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 9.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level 9.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level11.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level11.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level12 .prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level12 .prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level13.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level14.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level14.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelPrefab/Level15.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_blouse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_blouse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_sword.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin2/Mat_hunter_sword.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_belt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_belt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_boots.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_boots.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_pants.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_pants.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin4/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_belt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_belt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_gun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin5/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_eye.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_eye.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_gloves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_gloves.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_hat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_hat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_shorts.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_shorts.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_waistcoat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hunter/Materials/Skin6/Mat_hunter_waistcoat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mafia Men - Yakuza Boss/Materials/YakuzaBoss.Unity.Metallic.Clear.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mafia Men - Yakuza Boss/Materials/YakuzaBoss.Unity.Metallic.Clear.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerBossEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerBossEnemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerSimpleEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PatrollerSimpleEnemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level16.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/CharacterStates.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/CharacterStates.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomCameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeCanvas.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeCanvas.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGun.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayGunHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Screens.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Fantastic_PipelineAsset_ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Fantastic_PipelineAsset_ForwardRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy-mobile/Materials/body_color_oclusion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy-mobile/Materials/body_color_oclusion.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy-mobile/Materials/colormap_mustaches.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy-mobile/Materials/colormap_mustaches.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy/TankGirl/TankGirl 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Cowboy/TankGirl/TankGirl 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Gun/Shotgun/Shotgun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Gun/Shotgun/Shotgun.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/Materials/phone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/Materials/phone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/civilian.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/civilian.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/cop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/cop.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/soldier.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Materials/soldier.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/BlueGrid 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/BlueGrid 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/NavyGrid 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/NavyGrid 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/NavySmooth.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/NavySmooth.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/PinkSmooth.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/PinkSmooth.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/SwatchNavyDarkAlbedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/SwatchNavyDarkAlbedo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/YellowGrid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Assets/Prototyping/Materials/YellowGrid.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/italian_env/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/italian_env/New Lighting Settings.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/italian_env/materials/T_StoneTile_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/italian_env/materials/T_StoneTile_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/italian_env/materials/italian mafia atlas 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/italian_env/materials/italian mafia atlas 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Controllers/ThirdPersonInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Cover/Cover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Cover/Cover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -52,8 +111,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/KillEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerVisibility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,8 +127,11 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.15/Editor/Collaborate/Components/AlertBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/BoxAndWhiskerPlot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/ProfileAnalyzerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/ProfileTable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.1/PostProcessing/Runtime/Effects/ColorGrading.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.9.4/Editor/Analytics/Entity/EventActions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.9.4/Editor/Common/Entity/PurchasingIdentifierKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@4.9.4/Runtime/Stores/Android/GooglePlay/Models/GoogleBillingResponseCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.6/Editor/Lighting/LightAnchorEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.6/Shaders/Utils/CopyDepth.shader" root0="SKIP_HIGHLIGHTING" />
@@ -77,6 +141,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/AsyncOperation/IAsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/AsyncOperation/TaskAsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core.Internal/Components/Networking/ReadOnlyHttpResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Editor/CoverageFormats/OpenCover/CyclomaticComplexity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Editor/CoverageFormats/OpenCover/Model/SkippedMethod.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Scripts/Controllers/SpaceshipController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Tests/WeaponTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -213,7 +278,12 @@
       <workItem from="1699338725779" duration="18138000" />
       <workItem from="1699427128399" duration="12082000" />
       <workItem from="1699602248216" duration="2478000" />
-      <workItem from="1699871619722" duration="13191000" />
+      <workItem from="1699871619722" duration="13773000" />
+      <workItem from="1699944166420" duration="8913000" />
+      <workItem from="1700034646976" duration="2992000" />
+      <workItem from="1700046687544" duration="4704000" />
+      <workItem from="1700118105427" duration="4172000" />
+      <workItem from="1700219391053" duration="3746000" />
     </task>
     <servers />
   </component>

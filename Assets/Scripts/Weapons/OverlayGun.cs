@@ -77,6 +77,7 @@ public class OverlayGun : MonoBehaviour
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
             
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
+            Explodeable explodeable = raycastHit.collider.GetComponent<Explodeable>();
 
             if (bodyPartHealth != null )
             {
@@ -84,14 +85,14 @@ public class OverlayGun : MonoBehaviour
                 if (characterHealth.Health <= 0)
                     return;
                 
-                if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy)
+                if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy) //For last enemy
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
                 }
                 
-                if (_canShoot)
+                if (_canShoot) //For All enemies
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
@@ -100,8 +101,30 @@ public class OverlayGun : MonoBehaviour
 
                 OnGunShoot();
             }
+            
+            if (_canShoot && explodeable != null) //For explodeables
+            {
+                StopAllCoroutines();
+                StartCoroutine(ShootWithDelayExplode(explodeable));
+            }
+
+            
 
         }
+    }
+
+    IEnumerator ShootWithDelayExplode(Explodeable e)
+    {
+        _canShoot = false;
+        
+        _muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(.1f);
+        _muzzleFlash.SetActive(false);
+        
+        e.Detonate();
+        
+        yield return new WaitForSeconds(timeBetweenShots);
+        _canShoot = true;
     }
     IEnumerator ShootWithDelay(bool last)
     {
@@ -140,7 +163,7 @@ public class OverlayGun : MonoBehaviour
         return nearestBone;
     }
 
-    void FireProjectile(bool last)
+    void FireProjectile(bool last, bool explode = false)
     {
         if (_bullet != null)
         {
@@ -152,17 +175,16 @@ public class OverlayGun : MonoBehaviour
 
             var projectile = bullet.GetComponent<Projectile>();
             var vector = _currentHit.Position - gunTipPosition;
-            vector = _nearestBone.position - gunTipPosition;
+            
+            if(!explode) vector = _nearestBone.position - gunTipPosition;
             
             if (last)
             {
                 projectile.transform.GetChild(3).gameObject.SetActive(true);
-                projectile.Speed = 100f;
+                projectile.Speed = 15000f;
                 projectile.isLast = true;
-                Time.timeScale = 0.09f;
-
+                Time.timeScale = 0.001f;
                 
-                //vector = _nearestBone.position - gunTipPosition;
                 CharacterStates.playerState = PlayerCustomStates.InActive;
             }
 
@@ -192,9 +214,5 @@ public class OverlayGun : MonoBehaviour
         
     }
 
-    IEnumerator ShootSequence()
-    {
-        yield return new WaitForSeconds(1f);
-    }
     
 }

@@ -32,7 +32,7 @@ public class AiGroup : MonoBehaviour
         }
         
         TotalEnemiesCount += enemies.Count;
-        print(TotalEnemiesCount);
+
     }
 
     public void AddEnemy(CharacterHealth h)
@@ -73,7 +73,7 @@ public class AiGroup : MonoBehaviour
     {
         enemies.Remove(h);
 
-        deadCount--;
+        deadCount++;
         
         //if(enemies.Count >= 1) //So it doesn't throw error on the last enemy
         m_OnEnemyKilled.Raise(h);

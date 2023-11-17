@@ -1,32 +1,25 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class GamWin : MonoBehaviour
 {
     [SerializeField] private GameObject _screen;
-
     [SerializeField] private GameObject[] Levels;
-
-    public int selectedLevel;
-
+    
+    public int selectedPlayer;
+    public GameObject[] players;
 
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
         LoadLevel(PlayerPrefs.GetInt("SelectedLevel", 0));
-        
+        Instantiate(players[selectedPlayer]);
     }
 
-    private void OnDestroy()
+    private void OnDestroy()    
     {
         AIGroupsHandler.AllGroupsCCleared.Unregister(OnGameWon);
-        
     }
 
     public void OnGameWon()

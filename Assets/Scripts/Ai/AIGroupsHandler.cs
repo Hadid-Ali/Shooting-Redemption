@@ -1,10 +1,9 @@
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using CoverShooter;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 
 public class AIGroupsHandler : MonoBehaviour
 {
@@ -39,7 +38,7 @@ public class AIGroupsHandler : MonoBehaviour
         iterationCounter = -1; //Because first time its called is wasted
     }
 
-    private void Start()
+    private void  Start()
     {
         SetPlayerStartPosition.Raise(playerStartPos);
         
@@ -58,9 +57,6 @@ public class AIGroupsHandler : MonoBehaviour
         CutScene.CutSceneEnded.Register(EnableGroup);
         
         CheckLastEnemy(new CharacterHealth());
-
-        
-
     }
 
     private void OnDestroy()
@@ -72,7 +68,6 @@ public class AIGroupsHandler : MonoBehaviour
     {
         if (m_AIgroups.Count == 1)
             isLastEnemy = m_AIgroups[0].CheckLastEnemy();
-        
 
         if (iterationCounter <= AiGroup.TotalEnemiesCount * resurrectingIterations && iterationCounter >= 0)
         {

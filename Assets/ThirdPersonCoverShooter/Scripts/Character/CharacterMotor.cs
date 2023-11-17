@@ -3172,7 +3172,6 @@ namespace CoverShooter
 
             _moveDirection = transform.forward;
             
-            Awake();
         }
 
         private void OnDisable()
