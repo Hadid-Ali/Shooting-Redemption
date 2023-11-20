@@ -19,15 +19,17 @@ public class OverlayGun : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 100f;
     [SerializeField] private float timeBetweenShots = 0.5f;
+    [SerializeField] private bool BothHands;
     
     
     //======= References
     [SerializeField] private AudioClip _FireSound;
     [SerializeField] private GameObject _muzzleFlash;
+    [SerializeField] private GameObject _muzzleFlash2;
     
     private AudioSource _audioSource;
     private Animator _anim;
-    public Camera _playerCamera;
+    private Camera _playerCamera;
     private GameObject _bullet;
     private bool _canShoot = true;
     private Hit _currentHit;
@@ -137,7 +139,18 @@ public class OverlayGun : MonoBehaviour
         
         yield return new WaitForSeconds(timeBetweenShots);
         
+
+        if (BothHands)
+        {
+            yield return new WaitForSeconds(1f);
+            
+            _muzzleFlash2.SetActive(true);
+            yield return new WaitForSeconds(.1f);
+            _muzzleFlash2.SetActive(false);
+            
+        }
         _canShoot = true;
+            
     }
     
     Transform GetNearestBone(Animator animator,Vector3 point)

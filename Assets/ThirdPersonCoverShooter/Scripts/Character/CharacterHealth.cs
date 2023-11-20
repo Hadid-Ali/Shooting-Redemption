@@ -12,7 +12,7 @@ namespace CoverShooter
     public class CharacterHealth : MonoBehaviour, ICharacterHealthListener
     {
 
-        public Animator Animator;
+        [HideInInspector] public Animator Animator;
         private GameEvent<CharacterHealth> m_OnDie = new();
 
         // [SerializeField] private Image _hpUI;

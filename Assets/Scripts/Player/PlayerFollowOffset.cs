@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class PlayerFollowOffset : MonoBehaviour
 {
     private Transform playerTransform;
@@ -37,7 +36,6 @@ public class PlayerFollowOffset : MonoBehaviour
         transform.localEulerAngles = obj.localEulerAngles;
     }
     
-    // Update is called once per frame
     void Update()
     {
         transform.position = playerTransform.position + Vector3.up;
