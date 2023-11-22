@@ -13,9 +13,8 @@ public class EnemyGroupEvents : MonoBehaviour
     private AIPlayerMovement _controller;
     private Actor m_Actor;
     private CharacterMotor _motor;
-
     private Animator _animator;
-
+    private PlayerInventory _PlayerInventory;
 
     private int counter = 0;
 
@@ -23,23 +22,19 @@ public class EnemyGroupEvents : MonoBehaviour
     private bool hasShowBossOnce;
 
 
-    private void NotifyGunShoot()
-    {
-        _motor.NotifyStartGunFire();
-    }
     private void Awake()
     {
         AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
         
         _controller = GetComponent<AIPlayerMovement>();
         _animator = GetComponent<Animator>();
-        _motor = GetComponent<CharacterMotor>();
+        //_motor = GetComponent<CharacterMotor>();
+        _PlayerInventory = GetComponent<PlayerInventory>();
         
         _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
         
         AIGroupsHandler.hasBossE.Register(hasBossCheck);
-        OverlayGun.OnGunShoot += NotifyGunShoot;
 
         hasShowBossOnce = false;
 
@@ -53,7 +48,6 @@ public class EnemyGroupEvents : MonoBehaviour
         AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
         AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
         
-        OverlayGun.OnGunShoot -= NotifyGunShoot;
     }
 
     public void hasBossCheck(bool _hasboss)
@@ -71,12 +65,9 @@ public class EnemyGroupEvents : MonoBehaviour
         StartCoroutine(ShowBossSequence());        
         
         PlayerInputt.CanTakeInput = true;
-        PlayerInputt.DrawWeapon(1);
+        _PlayerInventory.DrawWeapon(_PlayerInventory.selectedWeapon);
         
         CustomCameraController.CameraStateChanged(CamState.Idle);
-        
-        _animator.Play("LeanCoverr");
-        
     }
 
     IEnumerator ShowBossSequence()

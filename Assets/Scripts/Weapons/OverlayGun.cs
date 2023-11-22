@@ -119,13 +119,17 @@ public class OverlayGun : MonoBehaviour
     {
         _canShoot = false;
         
+        _audioSource.PlayOneShot(_FireSound);
+        _anim.SetTrigger(Fire);
+        
         _muzzleFlash.SetActive(true);
         yield return new WaitForSeconds(.1f);
         _muzzleFlash.SetActive(false);
         
+        yield return new WaitForSeconds(timeBetweenShots);
+        
         e.Detonate();
         
-        yield return new WaitForSeconds(timeBetweenShots);
         _canShoot = true;
     }
     IEnumerator ShootWithDelay(bool last)

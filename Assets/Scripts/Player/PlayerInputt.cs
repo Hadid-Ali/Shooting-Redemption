@@ -7,18 +7,10 @@ public class PlayerInputt : MonoBehaviour
     
     public static Action OnZoom;
     public static Action OnUnZoom;
-    public static Action<int> OnGunChange;
+    public static Action OnGunChangeInput;
 
     public static bool CanTakeInput;
-
-    private int gunCounter;
-
-
-    private void Awake()
-    {
-        gunCounter = 0;
-    }
-
+    
     void Update()
     {
         if(!CanTakeInput)
@@ -43,18 +35,8 @@ public class PlayerInputt : MonoBehaviour
 
         if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Alpha0))
         {
-            gunCounter++;
-            if (gunCounter > PlayerInventory.guns + 1)
-                gunCounter = 0;
-
-            OnGunChange(gunCounter);
+            OnGunChangeInput();
         }
-
-
     }
 
-    public static void DrawWeapon(int i)
-    {
-        OnGunChange(i);
-    }
 }

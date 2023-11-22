@@ -20,7 +20,7 @@ public class EnemyPoolManager : MonoBehaviour
 
         if (h != null)
         {
-            var randomPosition = new Vector3(Random.Range(-2.0f, 2.0f), 0, Random.Range(-2.0f, 2.0f));
+            var randomPosition = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
             h.transform.SetPositionAndRotation(spawnPosition.position + randomPosition, spawnPosition.rotation);
             h.Heal(10);
         }

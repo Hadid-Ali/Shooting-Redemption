@@ -9,7 +9,8 @@ public class AIPlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
-    private CharacterMotor _motor;
+    //private CharacterMotor _motor;
+    private PlayerInventory _playerInventory;
 
     public bool _isMoving;
     public bool _rotate;
@@ -20,6 +21,7 @@ public class AIPlayerMovement : MonoBehaviour
     private static readonly int CrouchWalk = Animator.StringToHash("CrouchWalk");
 
 
+
     private void Awake()
     {
         _isMoving = false;
@@ -27,9 +29,10 @@ public class AIPlayerMovement : MonoBehaviour
         
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-        _motor = GetComponent<CharacterMotor>();
+        //_motor = GetComponent<CharacterMotor>();
+        _playerInventory = GetComponent<PlayerInventory>();
 
-        _motor.enabled = false;
+        //_motor.enabled = false;
         
 
     }
@@ -50,21 +53,13 @@ public class AIPlayerMovement : MonoBehaviour
             float positionStep = lerpSpeed * Time.deltaTime;
             float rotationStep = lerpSpeed * Time.deltaTime;
 
-            // Lerp the position towards the target position
-            
-            
-           // transform.position = Vector3.Lerp(transform.position, _destination.position, positionStep);
 
-            // Lerp the rotation towards the target rotation
             transform.rotation = Quaternion.Lerp(transform.rotation, _destination.rotation, rotationStep);
-            
-            //bool positionCompleted = Vector3.Distance(transform.position, _destination.position) < 0.5f;
             bool rotationCompleted = Quaternion.Angle(transform.rotation, _destination.rotation) < 0.5f;
 
-            if (/*positionCompleted && */rotationCompleted)
-            {
+            if (rotationCompleted)
                 _rotate = false;
-            }
+            
             
         }
     }
@@ -79,7 +74,7 @@ public class AIPlayerMovement : MonoBehaviour
         _destination = destination.GetChild(0);
         _animator.SetTrigger(CrouchWalk); //Animate
 
-        GetComponent<NavMeshAgent>().enabled = true;
+        _navMeshAgent.enabled = true;
         
         StartCoroutine(DelayedMotorActivation(true));
         
@@ -92,11 +87,14 @@ public class AIPlayerMovement : MonoBehaviour
         _isMoving = false;
         _rotate = true;
 
-        _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCover" : "LowCover");
-
-        _animator.Play("EquipPisol");
+        if (_playerInventory.IsCurrentWeaponRifle()) //Animate
+            _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCoverRifle" : "LowCoverRifle");
+        else
+            _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCover" : "LowCover");
         
-        GetComponent<CharacterInventory>().Weapons[0].RightItem.SetActive(true);
+
+        _playerInventory.EquipWeapon();
+        
         OnCoverReached.Raise();
 
         StartCoroutine(DelayedMotorActivation(false));
@@ -106,11 +104,10 @@ public class AIPlayerMovement : MonoBehaviour
     IEnumerator DelayedMotorActivation(bool val)
     {
         yield return new WaitForSeconds(1);
-        _motor.enabled = !val;
+       // _motor.enabled = !val;
         _navMeshAgent.enabled = val;
-        //rb.isKinematic = val;
-        if(val == true)
-            _navMeshAgent.SetDestination(_destination.position);
+
+        if(val) _navMeshAgent.SetDestination(_destination.position);
         
     }
 }

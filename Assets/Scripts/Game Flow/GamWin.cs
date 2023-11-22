@@ -8,13 +8,21 @@ public class GamWin : MonoBehaviour
     [SerializeField] private GameObject[] Levels;
     
     public int selectedPlayer;
+    public int selectedLevel;
+    public int selectedGun;
+    
     public GameObject[] players;
+
+    private PlayerInventory _playerInventory;
 
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
-        LoadLevel(PlayerPrefs.GetInt("SelectedLevel", 0));
+        LoadLevel(selectedLevel);
         Instantiate(players[selectedPlayer]);
+
+        _playerInventory = FindObjectOfType<PlayerInventory>();
+        _playerInventory.selectedWeapon = selectedGun;
     }
 
     private void OnDestroy()    

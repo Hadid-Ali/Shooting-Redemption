@@ -84,8 +84,8 @@
             "Any": {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -1576.149658203125,
-                    "y": -668.276611328125
+                    "x": -1577.149658203125,
+                    "y": -669.276611328125
                 },
                 "_type": "",
                 "_fieldNames": [],
@@ -228,7 +228,7 @@
             "Entry": {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -35.00048828125,
+                    "x": -35.0003662109375,
                     "y": -106.0
                 },
                 "_type": "",
@@ -244,7 +244,7 @@
             "Any": {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -49.1767578125,
+                    "x": -49.1768798828125,
                     "y": -238.76470947265626
                 },
                 "_type": "",
@@ -345,7 +345,7 @@
                     "Parent": 0,
                     "EditorPosition": {
                         "x": -22.000244140625,
-                        "y": 206.99945068359376
+                        "y": 206.99951171875
                     },
                     "_type": "",
                     "_fieldNames": [],
@@ -363,7 +363,7 @@
                     "Parent": 0,
                     "EditorPosition": {
                         "x": -20.895751953125,
-                        "y": 98.50723266601563
+                        "y": 98.5072021484375
                     },
                     "_type": "",
                     "_fieldNames": [],
@@ -378,7 +378,7 @@
                     "Parent": 0,
                     "EditorPosition": {
                         "x": 1372.555419921875,
-                        "y": 280.34466552734377
+                        "y": 280.3447265625
                     },
                     "_type": "",
                     "_fieldNames": [],
@@ -408,7 +408,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 352.78662109375,
+                    "x": 352.7864990234375,
                     "y": -171.5
                 },
                 "_type": "CoverShooter.AI.DetectGrenades, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1242,7 +1242,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -691.62939453125,
+                    "x": -691.6292724609375,
                     "y": -315.614990234375
                 },
                 "_type": "CoverShooter.AI.Approach, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2491,7 +2491,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -349.8255615234375,
+                    "x": -349.8251953125,
                     "y": -938.2646484375
                 },
                 "_type": "CoverShooter.AI.ArmGun, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2639,8 +2639,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -1185.789794921875,
-                    "y": -275.162109375
+                    "x": -1182.789794921875,
+                    "y": -332.162109375
                 },
                 "_type": "CoverShooter.AI.ArmGun, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -3079,7 +3079,7 @@
                 "Parent": 0,
                 "EditorPosition": {
                     "x": -986.315673828125,
-                    "y": 266.896240234375
+                    "y": 266.89642333984377
                 },
                 "_type": "CoverShooter.AI.SetOff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -3513,7 +3513,7 @@
                 "Parent": 36,
                 "EditorPosition": {
                     "x": 408.10125732421877,
-                    "y": 191.58270263671876
+                    "y": 191.582763671875
                 },
                 "_type": "CoverShooter.AI.Disarm, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -3609,7 +3609,7 @@
             {
                 "Parent": 976,
                 "EditorPosition": {
-                    "x": 782.9998168945313,
+                    "x": 782.999755859375,
                     "y": -341.9998779296875
                 },
                 "_type": "CoverShooter.AI.Hold, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -4707,8 +4707,8 @@
             {
                 "Parent": 36,
                 "EditorPosition": {
-                    "x": 820.8308715820313,
-                    "y": 166.39398193359376
+                    "x": 820.830810546875,
+                    "y": 166.39404296875
                 },
                 "_type": "CoverShooter.AI.FollowWaypoints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -4982,8 +4982,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -1392.0107421875,
-                    "y": 25.0
+                    "x": -1511.010498046875,
+                    "y": -221.0
                 },
                 "_type": "CoverShooter.AI.SetOffInvestigate, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -5403,7 +5403,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 1215.06640625,
+                    "x": 1215.06591796875,
                     "y": 18.893798828125
                 },
                 "_type": "CoverShooter.AI.SetOff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -5620,8 +5620,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 591.25,
-                    "y": -188.7744140625
+                    "x": 770.2504272460938,
+                    "y": 57.2257080078125
                 },
                 "_type": "CoverShooter.AI.If, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -5745,8 +5745,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 1028.091796875,
-                    "y": -124.3006591796875
+                    "x": 1227.09130859375,
+                    "y": 56.6993408203125
                 },
                 "_type": "CoverShooter.AI.FreezeAboveLayers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -5842,8 +5842,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 1405.7236328125,
-                    "y": -455.87957763671877
+                    "x": 1372.723388671875,
+                    "y": -813.8795776367188
                 },
                 "_type": "CoverShooter.AI.Hit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -5943,8 +5943,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 1843.880126953125,
-                    "y": -311.1427001953125
+                    "x": 1824.884521484375,
+                    "y": -236.1427001953125
                 },
                 "_type": "CoverShooter.AI.UnfreezeAboveLayers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -6040,7 +6040,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 2159.671142578125,
+                    "x": 2159.67138671875,
                     "y": -242.7218017578125
                 },
                 "_type": "CoverShooter.AI.RestartLayer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -6138,7 +6138,7 @@
                 "Parent": 0,
                 "EditorPosition": {
                     "x": 1481.99853515625,
-                    "y": 120.000244140625
+                    "y": 120.00042724609375
                 },
                 "_type": "CoverShooter.AI.RestartLayer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -6234,8 +6234,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -679.0,
-                    "y": 365.0010986328125
+                    "x": -675.0,
+                    "y": 277.00115966796877
                 },
                 "_type": "CoverShooter.AI.RestartLayer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [],
@@ -9395,7 +9395,7 @@
             {
                 "Parent": 976,
                 "EditorPosition": {
-                    "x": 399.0013732910156,
+                    "x": 399.0013427734375,
                     "y": -588.0
                 },
                 "_type": "CoverShooter.AI.Less, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -10339,7 +10339,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": -169.491455078125,
+                    "x": -169.49151611328126,
                     "y": -669.2451782226563
                 },
                 "_type": "CoverShooter.AI.DistanceTo, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -10381,7 +10381,7 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 196.51318359375,
+                    "x": 196.51300048828126,
                     "y": -680.8795166015625
                 },
                 "_type": "CoverShooter.AI.LessEqual, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -10454,8 +10454,8 @@
             {
                 "Parent": 0,
                 "EditorPosition": {
-                    "x": 568.88134765625,
-                    "y": -632.1954345703125
+                    "x": 584.8799438476563,
+                    "y": -627.1954345703125
                 },
                 "_type": "CoverShooter.AI.And, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "_fieldNames": [
@@ -11113,7 +11113,8 @@
             1277,
             1280,
             1282,
-            1283
+            1283,
+            1286
         ],
         "values": [
             {
@@ -19695,8 +19696,34 @@
                 "ExpressionValue": false,
                 "Values": [],
                 "Saves": []
+            },
+            {
+                "Name": "Done",
+                "Target": 0,
+                "Owner": 1285,
+                "Type": 0,
+                "ID": 0,
+                "Event": 0,
+                "Expression": {
+                    "Type": 0,
+                    "ID": 0,
+                    "Vector": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "Object": {
+                        "instanceID": 0
+                    },
+                    "Text": "",
+                    "Array": [],
+                    "SubType": 0
+                },
+                "ExpressionValue": false,
+                "Values": [],
+                "Saves": []
             }
         ]
     },
-    "_id": 1284
+    "_id": 1287
 }

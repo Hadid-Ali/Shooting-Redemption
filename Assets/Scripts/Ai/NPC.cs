@@ -9,11 +9,10 @@ using Hit = CoverShooter.Hit;
 public class NPC : MonoBehaviour
 {
     private Animator anim;
-    private CharacterHealth hp;
     
-    private static readonly int Scared = Animator.StringToHash("Scared");
-
     private bool isDead;
+    private static readonly int Scared = Animator.StringToHash("Scared");
+    private static readonly int Dead = Animator.StringToHash("Dead");
 
     private void Awake()
     {
@@ -25,25 +24,19 @@ public class NPC : MonoBehaviour
 
     private void OnDestroy()
     {
-      //  hp.Died -= OnDead;
         OverlayGun.OnGunShoot -= OnAlert;
     }
 
     public void OnHit(Hit hit)
     {
-        OnDead();
-    }
-
-    public void OnDead()
-    {
-        anim.Play("Death");
+        isDead = true;
+        OverlayGun.OnGunShoot -= OnAlert;
+        anim.Play(Dead);
     }
 
     public void OnAlert()
     {
-        if(isDead)
-            return;
-        
-        anim.SetTrigger(Scared);
+        if(!isDead)
+            anim.SetTrigger(Scared);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener
+public class OverlayGunHandler : MonoBehaviour
 {
     [SerializeField] private GameObject[] Guns;
     [SerializeField] private GameObject Aim;
@@ -16,26 +16,23 @@ public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener
     {
         PlayerInputt.OnZoom += OnZoom;
         PlayerInputt.OnUnZoom += OnUnzoom;
-        PlayerInputt.OnGunChange += SelectGun;
-        _selectedGun = 0;
+        PlayerInventory.OnGunChangeSuccessFul += SelectGun;
 
         _FadeImage = Aim.GetComponent<Image>();
+        
     }
 
     private void OnDestroy()
     {
         PlayerInputt.OnZoom -= OnZoom;
         PlayerInputt.OnUnZoom -= OnUnzoom;
-        PlayerInputt.OnGunChange -= SelectGun;
+        PlayerInventory.OnGunChangeSuccessFul -= SelectGun;
     }
 
 
     private void SelectGun(int gunIndex)
     {
-        if (gunIndex == 0)
-            gunIndex = 1;
-        
-        _selectedGun = gunIndex - 1;
+        _selectedGun = gunIndex;
     }
     public void OnZoom()
     {
@@ -59,22 +56,6 @@ public class OverlayGunHandler : MonoBehaviour, ICharacterZoomListener
 
         _FadeImage.color = Color.clear;
         Aim.SetActive(false);
-    }
-
-    public void OnScope()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnUnscope()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnBulletLoadStart()
-    {
-        foreach (var v in Guns)
-            v.SetActive(false);
     }
     
 }
