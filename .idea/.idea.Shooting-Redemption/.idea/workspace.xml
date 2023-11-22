@@ -10,6 +10,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/91/108c7bfb/Handheld.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CompleteLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FailLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/00_ShopHandler/ItemHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Base/ButtonComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/Characters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/ItemDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/DailyGoals/DailyGoalHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/GunData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/GunDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/HapticHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelSpawnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Quit Panel/QuitPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/SettingPanel/SettingPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds Handler/Dependencies.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/UIMenuHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Ui Level/EpdisodeSelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@3.7.5/Tests/Runtime/Advertisement/Platform/EditorPlatformTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../New folder/Unity-Project/Assets/Scripts/MenuSystem/MainMenu/ShopManager/ShopManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2XZcKX0NSJcW2kkq5Rd9hKRyJHa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -85,6 +110,14 @@
       <workItem from="1699012465709" duration="644000" />
       <workItem from="1699257609763" duration="4457000" />
       <workItem from="1699343322959" duration="5468000" />
+      <workItem from="1699861996635" duration="15783000" />
+      <workItem from="1699943467655" duration="17089000" />
+      <workItem from="1700035049902" duration="12615000" />
+      <workItem from="1700119406221" duration="6243000" />
+      <workItem from="1700234376512" duration="4458000" />
+      <workItem from="1700471360137" duration="3347000" />
+      <workItem from="1700549112583" duration="19843000" />
+      <workItem from="1700630623088" duration="2975000" />
     </task>
     <servers />
   </component>
