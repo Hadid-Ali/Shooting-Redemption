@@ -39,6 +39,12 @@ namespace CoverShooter
             _isVisiting = false;
         }
 
+
+        private void Awake()
+        {
+             Points = GetComponent<Waypoints>().Points;
+        }
+
         private void Update()
         {
             if (!_isVisiting)

@@ -125,8 +125,6 @@ namespace CoverShooter
         /// Notified by the brains of a new threat position.
         /// </summary>
         /// <param name="value"></param>
-
-        public GameEvent OnCoverReached = new();
         public void OnThreatPosition(Vector3 value)
         {
             if (_mode == Mode.circle || _mode == Mode.fromPosition)
@@ -358,7 +356,6 @@ namespace CoverShooter
                 if (_wasMoving)
                 {
                     Message("OnStopMoving");
-                    if(ismainplayer) OnCoverReached.Raise();
                     _wasMoving = false;
                 }
 
@@ -475,9 +472,6 @@ namespace CoverShooter
                     }
                     else
                     {
-                        OnCoverReached.Raise();
-                                
-
                         if (vector.magnitude > 0.03f)
                         {
                             if (!checkIncomingCollisions(direction, _speed) && !_motor.IsInCover)
@@ -502,7 +496,6 @@ namespace CoverShooter
                         else 
                         {
                             _motor.transform.position = _target;
-                            OnCoverReached.Raise();
                             _mode = Mode.none;
                         }
                     }

@@ -12,69 +12,91 @@ public class EnemyGroupEvents : MonoBehaviour
     
     private AIPlayerMovement _controller;
     private Actor m_Actor;
-    
-    private ThirdPersonInput _InputController;
-    private ThirdPersonController _InputThirdPersonController;
     private CharacterMotor _motor;
-
+    private Animator _animator;
+    private PlayerInventory _PlayerInventory;
 
     private int counter = 0;
 
+    private bool hasboss;
+    private bool hasShowBossOnce;
+
+
     private void Awake()
     {
-        _controller = GetComponent<AIPlayerMovement>();
-        _InputThirdPersonController = GetComponent<ThirdPersonController>();
-        _InputController = GetComponent<ThirdPersonInput>();
-        _motor = GetComponent<CharacterMotor>();
+        AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
         
-        AIPlayerMovement.OnCoverReached.Register(OnCoverReached);
+        _controller = GetComponent<AIPlayerMovement>();
+        _animator = GetComponent<Animator>();
+        //_motor = GetComponent<CharacterMotor>();
+        _PlayerInventory = GetComponent<PlayerInventory>();
+        
+        _controller.OnCoverReached.Register(OnCoverReached);
         OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
-    }
+        
+        AIGroupsHandler.hasBossE.Register(hasBossCheck);
 
-    private void Start()
-    {
-        CustomCameraController.CameraStateChanged(CamState.Follow);
+        hasShowBossOnce = false;
+
     }
+    
 
     private void OnDestroy()
     {
-        AIPlayerMovement.OnCoverReached.Unregister(OnCoverReached);
+        _controller.OnCoverReached.Unregister(OnCoverReached);
         OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
+        AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
+        AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
+        
+    }
+
+    public void hasBossCheck(bool _hasboss)
+    {
+        hasboss = _hasboss;
+    }
+
+    public void SetPlayerPosition(Transform t)
+    {
+        transform.SetPositionAndRotation(t.position, t.rotation);
     }
 
     public void OnCoverReached()
     {
         StartCoroutine(ShowBossSequence());        
         
-        _InputController.TakeInputGun = true;
-        _InputController.DrawWeapon(1);
+        PlayerInputt.CanTakeInput = true;
+        _PlayerInventory.DrawWeapon(_PlayerInventory.selectedWeapon);
         
         CustomCameraController.CameraStateChanged(CamState.Idle);
     }
 
     IEnumerator ShowBossSequence()
     {
+        
+        CharacterStates.playerState = PlayerCustomStates.CutScene;
         yield return new WaitForSeconds(1);
-        ShowBoss.Raise(true);
-        yield return new WaitForSeconds(3);
-        ShowBoss.Raise(false);
+        if (hasboss && !hasShowBossOnce)
+        {
+            hasShowBossOnce = true;
+            ShowBoss.Raise(true);
+            yield return new WaitForSeconds(3);
+            ShowBoss.Raise(false);
+        }
+        CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
+
     }
 
-    public void SetPosition(Vector3 coverPosition)
+    public void SetPosition(Transform coverPosition)
     {
         _controller.SetPosition(coverPosition);
-        _motor.InputCrouch();
-
-        _controller.SetPosition(coverPosition);
-
+        
+        CharacterStates.playerState = PlayerCustomStates.InMovement;
+        CustomCameraController.CameraStateChanged(CamState.Follow);
     }
     public void OnEnemiesKilledEvent(Transform coverPosition)
     {
-        _InputController.TakeInputGun = false;
-        _InputThirdPersonController.ZoomInput = false;
-        _InputController.UndrawWeapon();
-        SetPosition(coverPosition.position);
-
+        PlayerInputt.CanTakeInput = false;
+        SetPosition(coverPosition);
         
     }
 }

@@ -56,9 +56,9 @@ namespace CoverShooter
     /// Characters can throw grenades from both hands. Left hand is used in some situations when the character is hiding behind a cover. Grenades are duplicated when thrown. 
     /// A character can be setup to have many hitboxes for various body parts. Setup is done inside Character Health component.
     /// </summary>
-    [RequireComponent(typeof(CapsuleCollider))]
-    [RequireComponent(typeof(Animator))]
-    [RequireComponent(typeof(Rigidbody))]
+   // [RequireComponent(typeof(CapsuleCollider))]
+  //  [RequireComponent(typeof(Animator))]
+  //  [RequireComponent(typeof(Rigidbody))]
     public class CharacterMotor : MonoBehaviour
     {
         #region Properties
@@ -1711,8 +1711,8 @@ namespace CoverShooter
         private ICharacterPhysicsListener[] _physicsListeners;
         private ICharacterWeaponChangeListener[] _weaponChangeListeners;
         private ICharacterZoomListener[] _zoomListeners;
-        private ICharacterZoomListener _customzoomListener;
-        public GameObject _customzoomListenerGameobject;
+        //private ICharacterZoomListener _customzoomListener;
+        //public GameObject _customzoomListenerGameobject;
         private ICharacterGunListener[] _gunListeners;
         private ICharacterSuccessfulHitListener[] _successfulHitListeners;
         private ICharacterToolListener[] _toolListeners;
@@ -1994,8 +1994,8 @@ namespace CoverShooter
             for (int i = 0; i < _zoomListeners.Length; i++)
             {
                 _zoomListeners[i].OnZoom();
-                if(ismainplayer)
-                    _customzoomListener.OnZoom();
+                //if(ismainplayer)
+                  //  _customzoomListener.OnZoom();
             }
 
             if (Zoomed != null) Zoomed.Invoke();
@@ -2011,8 +2011,8 @@ namespace CoverShooter
             for (int i = 0; i < _zoomListeners.Length; i++)
             {
                 _zoomListeners[i].OnUnzoom();
-                if(ismainplayer)
-                 _customzoomListener.OnUnzoom();
+               // if(ismainplayer)
+                 //_customzoomListener.OnUnzoom();
             }
 
             if (Unzoomed != null) Unzoomed.Invoke();
@@ -3171,6 +3171,7 @@ namespace CoverShooter
             }
 
             _moveDirection = transform.forward;
+            
         }
 
         private void OnDisable()
@@ -3186,8 +3187,8 @@ namespace CoverShooter
 
         private void Awake()
         {
-            if (ismainplayer)
-                _customzoomListener = FindObjectOfType<OverlayGunHandler>();
+            /*if (ismainplayer)
+                //_customzoomListener = FindObjectOfType<OverlayGunHandler>();*/
             
             _capsule = GetComponent<CapsuleCollider>();
             _body = GetComponent<Rigidbody>();
@@ -3197,8 +3198,8 @@ namespace CoverShooter
             _physicsListeners = Util.GetInterfaces<ICharacterPhysicsListener>(gameObject);
             _weaponChangeListeners = Util.GetInterfaces<ICharacterWeaponChangeListener>(gameObject);
             _zoomListeners = Util.GetInterfaces<ICharacterZoomListener>(gameObject);
-            if(ismainplayer)
-                _customzoomListener = _customzoomListenerGameobject.GetComponent<ICharacterZoomListener>();
+          //  if(ismainplayer)
+             //   _customzoomListener = _customzoomListenerGameobject.GetComponent<ICharacterZoomListener>();
             
             _gunListeners = Util.GetInterfaces<ICharacterGunListener>(gameObject);
             _toolListeners = Util.GetInterfaces<ICharacterToolListener>(gameObject);

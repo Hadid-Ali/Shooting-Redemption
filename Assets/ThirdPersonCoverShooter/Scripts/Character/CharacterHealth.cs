@@ -12,8 +12,8 @@ namespace CoverShooter
     public class CharacterHealth : MonoBehaviour, ICharacterHealthListener
     {
 
-
-        private GameEvent m_OnDie = new();
+        [HideInInspector] public Animator Animator;
+        private GameEvent<CharacterHealth> m_OnDie = new();
 
         // [SerializeField] private Image _hpUI;
         /// <summary>
@@ -101,10 +101,37 @@ namespace CoverShooter
 
         private void Awake()
         {
-            // if(!isMainPlayer)_hpUI.fillAmount = Health / 100;
+            Animator = GetComponent<Animator>();
 
             _previousHealth = Health;
             _motor = GetComponent<CharacterMotor>();
+
+            if (isMainPlayer)
+            {
+                PlayerInputt.OnZoom += OnZoom;
+                PlayerInputt.OnUnZoom += OnUnZoom;
+                
+            }
+
+        }
+
+        private void OnDestroy()
+        {
+            if (isMainPlayer)
+            {
+                PlayerInputt.OnZoom -= OnZoom;
+                PlayerInputt.OnUnZoom -= OnUnZoom;
+            }
+        }
+
+        private void OnZoom()
+        {
+            IsTakingDamage = true;
+        }
+
+        private void OnUnZoom()
+        {
+            IsTakingDamage = false;
         }
 
         private void OnEnable()
@@ -143,9 +170,13 @@ namespace CoverShooter
                 Health = 0.001f;
         }
 
-        public void Initialize(Action onactionDie)
+        public void Initialize(Action<CharacterHealth> onactionDie)
         {
             m_OnDie.Register(onactionDie);
+        }
+        public void UnInitialize()
+        {
+            m_OnDie.UnRegisterAll();
         }
 
         /// <summary>
@@ -160,7 +191,9 @@ namespace CoverShooter
             //  _hpUI.fillAmount = 0;
             if (!wasOff)
                 if (!isMainPlayer)
-                    m_OnDie.Raise();
+                    m_OnDie.Raise(this);
+                    
+                
 
             if (!wasOff && Died != null)
             {
@@ -176,7 +209,7 @@ namespace CoverShooter
         {
             if (isMainPlayer)
             {
-                if (_motor.IsAiming)
+                if (_motor.GetComponent<CharacterStates>().currentState == PlayerCustomStates.InZoom)
                 {
                     Deal(hit.Damage);
                 }

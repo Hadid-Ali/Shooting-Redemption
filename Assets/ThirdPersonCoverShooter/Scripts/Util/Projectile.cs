@@ -45,9 +45,12 @@ namespace CoverShooter
                 if (Target != null)
                     Target.SendMessage("OnHit", Hit, SendMessageOptions.DontRequireReceiver);
 
-                
-                if(isLast)
-                    transform.GetChild(0).transform.SetParent(null);
+
+                if (isLast)
+                {
+                    transform.GetChild(3).transform.SetParent(null);
+                    Time.timeScale = 1f;
+                }
                     
                 GameObject.Destroy(gameObject);
             }

@@ -21,6 +21,11 @@ public class GameEvent
     {
         Event?.Invoke();
     }
+
+    public void UnRegisterAll()
+    {
+        Event = null;
+    }
 }
 
 public class GameEvent<T1>
@@ -38,6 +43,10 @@ public class GameEvent<T1>
     {
         Event?.Invoke(param);
     }
+    public void UnRegisterAll()
+    {
+        Event = null;
+    }
 }
 public class GameEvent<T1,T2>
 {
@@ -53,6 +62,10 @@ public class GameEvent<T1,T2>
     public void Raise(T1 param, T2 paramB)
     {
         Event?.Invoke(param,paramB);
+    }
+    public void UnRegisterAll()
+    {
+        Event = null;
     }
 }
 
@@ -70,6 +83,10 @@ public class GameEvent<T1,T2,T3>
     public void Raise(T1 param, T2 paramB,T3 paramC)
     {
         Event?.Invoke(param,paramB,paramC);
+    }
+    public void UnRegisterAll()
+    {
+        Event = null;
     }
 }
 

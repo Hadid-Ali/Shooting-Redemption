@@ -1,30 +1,49 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class GamWin : MonoBehaviour
 {
     [SerializeField] private GameObject _screen;
+    [SerializeField] private GameObject[] Levels;
+    
+    public int selectedPlayer;
+    public int selectedLevel;
+    public int selectedGun;
+    
+    public GameObject[] players;
 
+    private PlayerInventory _playerInventory;
 
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
+        LoadLevel(selectedLevel);
+        Instantiate(players[selectedPlayer]);
+
+        _playerInventory = FindObjectOfType<PlayerInventory>();
+        _playerInventory.selectedWeapon = selectedGun;
     }
 
-    private void OnDestroy()
+    private void OnDestroy()    
     {
         AIGroupsHandler.AllGroupsCCleared.Unregister(OnGameWon);
-        
     }
 
     public void OnGameWon()
     {
         StartCoroutine(wait());
+    }
+
+    public void OnLevelSelect(int i)
+    {
+        PlayerPrefs.SetInt("SelectedLevel", i);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
+    }
+    
+    public void LoadLevel(int i)
+    {
+        Levels[i].SetActive(true);
     }
 
     IEnumerator wait()
