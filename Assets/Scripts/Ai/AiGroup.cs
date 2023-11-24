@@ -66,6 +66,8 @@ public class AiGroup : MonoBehaviour
         m_OnGroupKilled.UnRegisterAll();
         m_OnEnemyKilled.UnRegisterAll();
         EnemyPoolManager.OnEnemyResurrect.UnRegister(AddEnemy);
+        
+        TotalEnemiesCount = 0;
     }
 
 

@@ -9,7 +9,7 @@ public class AIPlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
-    //private CharacterMotor _motor;
+    private CharacterMotor _motor;
     private PlayerInventory _playerInventory;
 
     public bool _isMoving;
@@ -29,10 +29,10 @@ public class AIPlayerMovement : MonoBehaviour
         
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-        //_motor = GetComponent<CharacterMotor>();
+        _motor = GetComponent<CharacterMotor>();
         _playerInventory = GetComponent<PlayerInventory>();
 
-        //_motor.enabled = false;
+        _motor.enabled = false;
         
 
     }
@@ -86,7 +86,7 @@ public class AIPlayerMovement : MonoBehaviour
         CharacterStates.playerState = PlayerCustomStates.InMovement;
         _isMoving = false;
         _rotate = true;
-
+        
         if (_playerInventory.IsCurrentWeaponRifle()) //Animate
             _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCoverRifle" : "LowCoverRifle");
         else
@@ -104,7 +104,7 @@ public class AIPlayerMovement : MonoBehaviour
     IEnumerator DelayedMotorActivation(bool val)
     {
         yield return new WaitForSeconds(1);
-       // _motor.enabled = !val;
+        _motor.enabled = !val;
         _navMeshAgent.enabled = val;
 
         if(val) _navMeshAgent.SetDestination(_destination.position);

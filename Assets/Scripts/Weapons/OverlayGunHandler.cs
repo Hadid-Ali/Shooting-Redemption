@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.Mime;
 using CoverShooter;
 using UnityEngine;
@@ -6,9 +7,9 @@ using UnityEngine.UI;
 
 public class OverlayGunHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Guns;
+    [SerializeField] private List<OverlayGun> Guns;
     [SerializeField] private GameObject Aim;
-    private int _selectedGun;
+    private OverlayWeapons _selectedGun;
     
 
     private Image _FadeImage;
@@ -30,29 +31,23 @@ public class OverlayGunHandler : MonoBehaviour
     }
 
 
-    private void SelectGun(int gunIndex)
+    private void SelectGun(OverlayWeapons gunIndex)
     {
         _selectedGun = gunIndex;
     }
     public void OnZoom()
     {
-        for (int i = 0; i < Guns.Length; i++)
-        {
-            if(i == _selectedGun)
-                Guns[i].SetActive(true);
-            else
-                Guns[i].SetActive(false);
-        }
+        foreach (var v in Guns)
+            v.gameObject.SetActive(v.weaponType == _selectedGun);
         
         Aim.SetActive(true);
         _FadeImage.color = Color.black;;
-        
     }
 
     public void OnUnzoom()
     {
         foreach (var v in Guns)
-            v.SetActive(false);
+            v.gameObject.SetActive(false);
 
         _FadeImage.color = Color.clear;
         Aim.SetActive(false);

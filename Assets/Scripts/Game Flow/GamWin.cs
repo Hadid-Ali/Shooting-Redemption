@@ -8,8 +8,8 @@ public class GamWin : MonoBehaviour
     [SerializeField] private GameObject[] Levels;
     
     public int selectedPlayer;
-    public int selectedLevel;
-    public int selectedGun;
+    [HideInInspector] public int selectedLevel;
+    public OverlayWeapons selectedGun;
     
     public GameObject[] players;
 
@@ -18,6 +18,8 @@ public class GamWin : MonoBehaviour
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
+        selectedLevel = PlayerPrefs.GetInt("SelectedLevel", 0);
+        
         LoadLevel(selectedLevel);
         Instantiate(players[selectedPlayer]);
 
@@ -54,6 +56,7 @@ public class GamWin : MonoBehaviour
     
     public void LoadScene()
     {
+        PlayerPrefs.SetInt("SelectedLevel", 0);
         SceneManager.LoadScene(0);
     }
 

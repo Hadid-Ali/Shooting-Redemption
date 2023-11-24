@@ -18,6 +18,13 @@ public class PlayerFollowOffset : MonoBehaviour
 
     private void Awake()
     {
+        followCam = follow;
+        idleCam = idle;
+        zoomCam = zoom;
+    }
+
+    private void Start()
+    {
         playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
         EnemyGroupEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
 

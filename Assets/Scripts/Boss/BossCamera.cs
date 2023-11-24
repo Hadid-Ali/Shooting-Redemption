@@ -23,6 +23,7 @@ public class BossCamera : MonoBehaviour
     private void OnDestroy()
     {
         EnemyGroupEvents.ShowBoss.UnRegister(EnableCams);
+        GetComponent<CharacterHealth>().Died -= CanccelEvent;
     }
 
     private void EnableCams(bool val)

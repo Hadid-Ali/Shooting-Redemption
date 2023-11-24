@@ -16,7 +16,8 @@ public class AIGroupsHandler : MonoBehaviour
     public static GameEvent AllGroupsCCleared = new ();
     public static GameEvent<bool> hasBossE = new ();
     public static GameEvent<Transform> SetPlayerStartPosition = new();
-    
+
+    public static Action<int> OnEnemyKilledUIUpdate;
 
     public static bool isLastEnemy;
 
@@ -66,15 +67,17 @@ public class AIGroupsHandler : MonoBehaviour
 
     private void CheckLastEnemy(CharacterHealth h)  //This checks for last enemy (if its the last group alive) 
     {
-        if (m_AIgroups.Count == 1)
-            isLastEnemy = m_AIgroups[0].CheckLastEnemy();
-
-        if (iterationCounter <= AiGroup.TotalEnemiesCount * resurrectingIterations && iterationCounter >= 0)
+        if (iterationCounter <= AiGroup.TotalEnemiesCount * resurrectingIterations && iterationCounter >= 0 && resurrectingIterations > 0)
         {
             _enemyPoolManager.ResurectEnemy(h);
             m_AIgroups[m_AIgroups.Count - 1].AddEnemy(h);
         }
         iterationCounter++;
+        OnEnemyKilledUIUpdate?.Invoke(resurrectingIterations);
+        
+        if (m_AIgroups.Count == 1)
+            isLastEnemy = m_AIgroups[0].CheckLastEnemy();
+        
             
     }
 

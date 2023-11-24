@@ -35,6 +35,7 @@ public class OverlayGun : MonoBehaviour
     private Hit _currentHit;
 
     public static Action OnGunShoot;
+    public OverlayWeapons weaponType;
 
     private float timer = 1f;
     private AIPlayerMovement _aiPlayer;
@@ -81,7 +82,7 @@ public class OverlayGun : MonoBehaviour
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
             Explodeable explodeable = raycastHit.collider.GetComponent<Explodeable>();
 
-            if (bodyPartHealth != null )
+            if (bodyPartHealth != null)
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
                 if (characterHealth.Health <= 0)
@@ -93,15 +94,14 @@ public class OverlayGun : MonoBehaviour
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
                 }
-                
-                if (_canShoot) //For All enemies
+                else if (_canShoot) //For All enemies
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
                 }
 
-                OnGunShoot();
+                OnGunShoot?.Invoke();
             }
             
             if (_canShoot && explodeable != null) //For explodeables
@@ -126,10 +126,9 @@ public class OverlayGun : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         _muzzleFlash.SetActive(false);
         
-        yield return new WaitForSeconds(timeBetweenShots);
-        
         e.Detonate();
         
+        yield return new WaitForSeconds(timeBetweenShots);
         _canShoot = true;
     }
     IEnumerator ShootWithDelay(bool last)

@@ -14,7 +14,7 @@ namespace CoverShooter
 
         [HideInInspector] public Animator Animator;
         private GameEvent<CharacterHealth> m_OnDie = new();
-
+        
         // [SerializeField] private Image _hpUI;
         /// <summary>
         /// Current health of the character.
