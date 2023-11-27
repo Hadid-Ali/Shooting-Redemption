@@ -5,11 +5,12 @@ using UnityEngine;
 public class FadeCanvas : MonoBehaviour
 {
     private Animator _animator;
-    
+    private static readonly int FadeCanva = Animator.StringToHash("FadeCanva");
+
     void Awake()
     {
         _animator = GetComponent<Animator>();
-        _animator.enabled = true;
+        _animator.SetTrigger(FadeCanva);
     }
 
 }

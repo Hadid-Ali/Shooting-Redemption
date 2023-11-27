@@ -22,7 +22,13 @@ public class CharacterStates : MonoBehaviour
     {
         playerState = PlayerCustomStates.CutScene;
     }
-    public void SetPlayerState(PlayerCustomStates state)
+
+    private void Update()
+    {
+        currentState = playerState;
+    }
+
+    public static void SetPlayerState(PlayerCustomStates state)
     {
         playerState = state;
     }

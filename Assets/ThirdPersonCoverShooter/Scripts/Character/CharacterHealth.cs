@@ -73,6 +73,8 @@ namespace CoverShooter
         /// Executed after any health change.
         /// </summary>
         public Action<float> Changed;
+        
+        public Action OnHit;
 
         private CharacterMotor _motor;
 
@@ -110,7 +112,7 @@ namespace CoverShooter
             {
                 PlayerInputt.OnZoom += OnZoom;
                 PlayerInputt.OnUnZoom += OnUnZoom;
-                
+                GameEvents.GamePlayEvents.OnPlayerSpawned.Raise(OnHit);
             }
 
         }
@@ -211,6 +213,7 @@ namespace CoverShooter
             {
                 if (_motor.GetComponent<CharacterStates>().currentState == PlayerCustomStates.InZoom)
                 {
+                    OnHit?.Invoke();
                     Deal(hit.Damage);
                 }
             }

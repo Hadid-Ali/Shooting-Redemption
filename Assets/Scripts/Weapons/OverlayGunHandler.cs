@@ -41,7 +41,7 @@ public class OverlayGunHandler : MonoBehaviour
             v.gameObject.SetActive(v.weaponType == _selectedGun);
         
         Aim.SetActive(true);
-        _FadeImage.color = Color.black;;
+        _FadeImage.color = Color.black;
     }
 
     public void OnUnzoom()
@@ -51,6 +51,7 @@ public class OverlayGunHandler : MonoBehaviour
 
         _FadeImage.color = Color.clear;
         Aim.SetActive(false);
+        
     }
     
 }
