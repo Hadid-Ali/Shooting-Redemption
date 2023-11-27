@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,12 @@ public class LevelSelection : MonoBehaviour
     {
         LockFrom(SaveLoadData.GameData.m_UnLockLevel);
     }*/
-    private void Start()
+    private void OnEnable()
     {
-        LockFrom(SaveLoadData.GameData.m_UnLockLevel);
+        print(Dependencies.GameDataOperations.GetSelectedEpisode());
+        print(Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode()));
+        LockFrom(Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode()));
+        
     }
 
     void LockFrom(int StartFrom)
@@ -33,8 +37,15 @@ public class LevelSelection : MonoBehaviour
 
     public void OpenLevel(int i)
     {
+        print(i+"asfsf");
+        Dependencies.GameDataOperations.SetSelectedlevel(i);
        // LevelManager.Level = i;
         lvlManager.SetLevelNum();
-        SaveLoadData.GameData.m_SelectedLevel = i;
+        /*SaveLoadData.GameData.m_SelectedLevel = i;*/
+        
+        
+        
+        
+        
     }
 }

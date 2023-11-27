@@ -17,13 +17,14 @@ public class GameData : ScriptableObject
     public int m_Stars;
     public int m_SelectedLevel;
     public int m_SelectedEpisode;
-    public int m_UnlockEpisode;
-    public int m_UnLockLevel;
     public int m_SelectedGunIndex;
+    public int[] m_UnlockedLevels = new int[5];
+    public int m_UnlockedEpisodes ;
     public int m_SelectedCharacterIndex;
     public List<Characters> CharacterData;
     public List<Guns> GunsData;
     public float playerHealth;
+    
     
 
     [Space]
@@ -66,6 +67,23 @@ public class GameData : ScriptableObject
     public List<GoalProgress> AchievementHeadshot;
     
     public List<GoalProgress> Achievementbanker;
+
     
+
+    /*public void InitializeCompletedLevels()
+    {
+     completedLevelsPerEpisode = new bool[5, 5];
+    }
+
+    public bool IsLevelCompleted(int episode, int level)
+    {
+     return completedLevelsPerEpisode[episode, level];
+    }
+
+    public void CompleteLevel(int episode, int level,bool val)
+    {
+     completedLevelsPerEpisode[episode, level] = val;
+    }*/
     
+   
 }

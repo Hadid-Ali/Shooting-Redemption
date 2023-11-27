@@ -32,7 +32,7 @@ public class CompleteLevel : UIMenuBase
     public void OnLevelComplete()
     {
         ChangeMenuState(MenuName.LevelComplete);
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SaveData();
         levelsCompleted++;
         if (levelsCompleted % 5 == 0)
         {
@@ -52,7 +52,7 @@ public class CompleteLevel : UIMenuBase
 
     public void updateCoinsTxt()
     {
-        Cointxt.text = $"Coins: {SaveLoadData.GameData.m_Coins}";
+        Cointxt.text = $"Coins: {Dependencies.GameDataOperations.SetCoins()}";
     }
     private void OnLoadScene()
     {

@@ -6,7 +6,7 @@ public static class HapticHandler
 {
     public static void Vibrate()
     {
-        if (SaveLoadData.GameData.haptic)
+        if (Dependencies.GameDataOperations.GetHapticSound())
         {
             Handheld.Vibrate();
             Debug.Log("vibratrion");

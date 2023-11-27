@@ -5,6 +5,7 @@ using System.Data;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
+using TMPro;
 
 [Serializable]
 public class GunsStats
@@ -33,15 +34,15 @@ public class ShopManager : MonoBehaviour
     public Button m_Selected;
 
     public Button m_WatchAdBtn;
-    public Text m_GunPrice;
-    public Text m_TodalCoins;
+    public TextMeshProUGUI m_GunPrice;
+    public TextMeshProUGUI m_TodalCoins;
 
     [SerializeField] private List<GunsStats> m_GunsStats;
     [SerializeField] private Image Aim, RelodTime, BulletCount;
 
     private void Start()
     {
-        selectedGunIndex = SaveLoadData.GameData.m_SelectedGunIndex;
+        selectedGunIndex = Dependencies.GameDataOperations.GetSelectedGunIndex();
         m_Buy.onClick.AddListener(BuyGun);
         m_Select.onClick.AddListener(SelectGun);
         m_WatchAdBtn.onClick.AddListener(WatchAD);
@@ -49,9 +50,10 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < GunButton.Count; i++)
         {
             var j = i;
-            GunButton[i].onClick.AddListener(() => SelectGun(j));
+           // GunButton[i].onClick.AddListener(() => SelectGun(j));
         }
 
+        UpdateCoins();
         UpdateGunData(selectedGunIndex);
     }
 
@@ -71,7 +73,8 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateGunData(int CurrentIndex)
     {
-        if (!SaveLoadData.Instance.GetGunUnlocked(GunDatas[CurrentIndex].gun))
+
+        if (!Dependencies.GameDataOperations.GetGunUnlocked(GunDatas[CurrentIndex].gun))
         {
             m_Buy.gameObject.SetActive(true);
             m_Select.gameObject.SetActive(false);
@@ -81,46 +84,57 @@ public class ShopManager : MonoBehaviour
         {
             m_Buy.gameObject.SetActive(false);
             m_Select.gameObject.SetActive(true);
-            if (SaveLoadData.Instance.GetSelectedGun(GunDatas[CurrentIndex].gun))
+            if (Dependencies.GameDataOperations.GetSelectedGun(GunDatas[CurrentIndex].gun))
             {
                 m_Select.gameObject.SetActive(false);
                 m_Selected.gameObject.SetActive(true);
             }
         }
 
-        UpdateStatus(CurrentIndex);
+      //  UpdateStatus(CurrentIndex);
     }
 
-    void UpdateStatus(int CurrentIndex)
+    /*void UpdateStatus(int CurrentIndex)
     {
         Aim.fillAmount = m_GunsStats[CurrentIndex].Aim / 100;
         RelodTime.fillAmount = m_GunsStats[CurrentIndex].ReloadTime / 100;
         BulletCount.fillAmount = m_GunsStats[CurrentIndex].Bullets / 100;
-    }
+    }*/
 
-    public void SelectGun(int gunIndex)
+    public void SelectGun(bool IsRight)
     {
-        if (gunIndex >= 0 && gunIndex < Guns.Count)
+        if (IsRight)
         {
-            if (selectedGunIndex != -1)
-            {
-                Guns[selectedGunIndex].SetActive(false);
-            }
-
-            Guns[gunIndex].SetActive(true);
-            selectedGunIndex = gunIndex;
-            SaveLoadData.GameData.m_SelectedGunIndex = gunIndex;
-            UpdateGunData(gunIndex);
+            selectedGunIndex++;
         }
+        else
+        {
+            selectedGunIndex--;
+        }
+
+        if (selectedGunIndex >= Guns.Count || selectedGunIndex < 0)
+        {
+            selectedGunIndex = 0;
+        }
+
+        foreach (var gun in Guns)
+            gun.SetActive(false);
+
+        Guns[selectedGunIndex].SetActive(true);
+        Dependencies.GameDataOperations.SetSelectedGunIndex(selectedGunIndex);
+        UpdateGunData(selectedGunIndex);
+
+
+        print(selectedGunIndex);
     }
 
     void SelectGun()
     {
-        SaveLoadData.Instance.DeselectAllGuns();
-        SaveLoadData.Instance.SetSelectedGun(GunDatas[selectedGunIndex].gun);
+        Dependencies.GameDataOperations.DeselectAllGuns();
+        Dependencies.GameDataOperations.SetSelectedGun(GunDatas[selectedGunIndex].gun);
         UpdateGunData(selectedGunIndex);
-        SaveLoadData.GameData.m_SelectedGunIndex = selectedGunIndex;
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SetSelectedGunIndex(selectedGunIndex);
+        Dependencies.GameDataOperations.SaveData();
     }
 
     public void Deselect()
@@ -135,14 +149,14 @@ public class ShopManager : MonoBehaviour
     public void BuyGun()
     {
         int gunCost = GunDatas[selectedGunIndex].ItemPrice;
-        if (SaveLoadData.GameData.m_Coins >= gunCost)
+        if (Dependencies.GameDataOperations.SetCoins() >= gunCost)
         {
-            SaveLoadData.GameData.m_Coins -= gunCost;
+            Dependencies.GameDataOperations.GetCoins(gunCost);
             GunDatas[selectedGunIndex].isLocked = false;
-            SaveLoadData.Instance.SetGunUnlocked(GunDatas[selectedGunIndex].gun);
+            Dependencies.GameDataOperations.SetGunUnlocked(GunDatas[selectedGunIndex].gun);
             UpdateGunData(selectedGunIndex);
             print("buy gun");
-            SaveLoadData.SaveData();
+            Dependencies.GameDataOperations.SaveData();
             UpdateCoins();
 
         }
@@ -154,13 +168,15 @@ public class ShopManager : MonoBehaviour
 
     public void WatchAD()
     {
-        SaveLoadData.GameData.m_Coins += 300;
-        SaveLoadData.SaveData();
-        UpdateCoins();
+        Dependencies.GameDataOperations.GetCoins(300) ;
+        Dependencies.GameDataOperations.SaveData();
+        
     }
 
     void UpdateCoins()
     {
-        m_TodalCoins.text = SaveLoadData.GameData.m_Coins.ToString();
+        m_TodalCoins.text = Dependencies.GameDataOperations.SetCoins().ToString();
     }
+    
+    
 }

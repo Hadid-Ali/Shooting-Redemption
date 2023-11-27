@@ -12,7 +12,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/91/108c7bfb/Handheld.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92548e7fa7644ea69832f35fa112291c3400/77/d8c4294b/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CompleteLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EpisodePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FailLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/00_ShopHandler/ItemHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Base/ButtonComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/GunData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/GunDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/HapticHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/IGameDataOperation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelSpawnController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Quit Panel/QuitPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/SettingPanel/SettingPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -33,7 +37,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/UIMenuHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/Ui Level/EpdisodeSelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@3.7.5/Tests/Runtime/Advertisement/Platform/EditorPlatformTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Toggle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../New folder/Unity-Project/Assets/Scripts/MenuSystem/MainMenu/ShopManager/ShopManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2XZcKX0NSJcW2kkq5Rd9hKRyJHa" />
   <component name="ProjectViewState">
@@ -117,7 +125,12 @@
       <workItem from="1700234376512" duration="4458000" />
       <workItem from="1700471360137" duration="3347000" />
       <workItem from="1700549112583" duration="19843000" />
-      <workItem from="1700630623088" duration="2975000" />
+      <workItem from="1700630623088" duration="7697000" />
+      <workItem from="1700723532929" duration="2086000" />
+      <workItem from="1700725804752" duration="22656000" />
+      <workItem from="1700810822468" duration="5873000" />
+      <workItem from="1700829776243" duration="1018000" />
+      <workItem from="1701066254637" duration="4808000" />
     </task>
     <servers />
   </component>

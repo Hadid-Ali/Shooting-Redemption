@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenuHandler : UIMenuBase
 {
@@ -13,7 +15,7 @@ public class MainMenuHandler : UIMenuBase
     [SerializeField] private Button m_GunPanel;
     [SerializeField] private Button m_EpisodeSelectionPanel;
 
-    [SerializeField]private Text CoinTxt;
+    [SerializeField]private TextMeshProUGUI CoinTxt;
     
     private void Start()
     {
@@ -23,7 +25,7 @@ public class MainMenuHandler : UIMenuBase
     
     public void updateCoins()
     {
-        CoinTxt.text = SaveLoadData.GameData.m_Coins.ToString();
+        CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
     }
 
     private void Initialize()
@@ -39,7 +41,7 @@ public class MainMenuHandler : UIMenuBase
 
     private void OnPlayBtnTap()
     {
-        ChangeMenuState(MenuName.GamePlay);
+        ChangeMenuState(MenuName.EpisodeSelection);
     }
     
     private void OnDailyBtnTap()
@@ -71,4 +73,5 @@ public class MainMenuHandler : UIMenuBase
     {
         ChangeMenuState(MenuName.EpisodeSelection);
     }
+    
 }

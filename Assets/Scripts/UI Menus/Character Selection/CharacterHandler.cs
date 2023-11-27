@@ -17,7 +17,7 @@ public class CharacterHandler : ItemHandler
     [SerializeField] private List<GameObject> Characters = new();
     private void Start()
     {
-        m_SelectedItemIndex = SaveLoadData.GameData.m_SelectedCharacterIndex;
+        m_SelectedItemIndex =Dependencies.GameDataOperations.GetSelectedCharacterIndex();
         
         m_Buy.onClick.AddListener(BuyCharacter);
         m_Select.onClick.AddListener(SelectCharacter);
@@ -25,9 +25,9 @@ public class CharacterHandler : ItemHandler
         for (int i = 0; i < m_ItemSelectionButton.Count; i++)
         {
             var j = i;
-            m_ItemSelectionButton[i].onClick.AddListener(() => SelectCharacter(j));
+           // m_ItemSelectionButton[i].onClick.AddListener(() => SelectCharacter(j));
         }
-
+        UpdateCoins();
         UpdateCharacterData(m_SelectedItemIndex);
     }
 
@@ -48,7 +48,7 @@ public class CharacterHandler : ItemHandler
 
     public void UpdateCharacterData(int CurrentIndex)
     {
-        if (!SaveLoadData.Instance.GetCharacterUnlocked(CharacterDatas[CurrentIndex].character))
+        if (!Dependencies.GameDataOperations.GetCharacterUnlocked(CharacterDatas[CurrentIndex].character))
         {
             m_Buy.gameObject.SetActive(true);
             m_Select.gameObject.SetActive(false);
@@ -58,7 +58,7 @@ public class CharacterHandler : ItemHandler
         {
             m_Buy.gameObject.SetActive(false);
             m_Select.gameObject.SetActive(true);
-            if (SaveLoadData.Instance.GetSelectedCharacter(CharacterDatas[CurrentIndex].character))
+            if (Dependencies.GameDataOperations.GetSelectedCharacter(CharacterDatas[CurrentIndex].character))
             {
                 m_Select.gameObject.SetActive(false);
                 m_Selected.gameObject.SetActive(true);
@@ -67,9 +67,27 @@ public class CharacterHandler : ItemHandler
     }
 
 
-    public void SelectCharacter(int CharacterIndex)
+    public void SelectCharacter(bool IsRight)
     {
-        if (CharacterIndex >= 0 && CharacterIndex < Characters.Count)
+        if (IsRight)
+        {
+            m_SelectedItemIndex++;
+        }
+        else
+        {
+            m_SelectedItemIndex--;
+        }
+        if (m_SelectedItemIndex >= Characters.Count || m_SelectedItemIndex < 0)
+        {
+            m_SelectedItemIndex = 0;
+        }
+        foreach (var character in Characters)
+            character.SetActive(false);
+        Characters[m_SelectedItemIndex].SetActive(true);
+        Dependencies.GameDataOperations.SetSelectedCharacterIndex((CharacterType) m_SelectedItemIndex);
+        UpdateCharacterData(m_SelectedItemIndex);
+        
+        /*if (CharacterIndex >= 0 && CharacterIndex < Characters.Count)
         {
             if (m_SelectedItemIndex != -1)
             {
@@ -78,20 +96,20 @@ public class CharacterHandler : ItemHandler
 
             Characters[CharacterIndex].SetActive(true);
             m_SelectedItemIndex = CharacterIndex;
-            
+
             UpdateCharacterData(CharacterIndex);
 
-        }
+        }*/
     }
 
     void SelectCharacter()
     {
         print("selected");
-        SaveLoadData.Instance.DeselectAllCharacters();
-        SaveLoadData.Instance.SetSelectedCharacter(CharacterDatas[m_SelectedItemIndex].character);
+        Dependencies.GameDataOperations.DeselectAllCharacters();
+        Dependencies.GameDataOperations.SetSelectedCharacter(CharacterDatas[m_SelectedItemIndex].character);
         UpdateCharacterData(m_SelectedItemIndex);
-        SaveLoadData.GameData.m_SelectedCharacterIndex = m_SelectedItemIndex;
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SetSelectedCharacterIndex((CharacterType) m_SelectedItemIndex);
+        Dependencies.GameDataOperations.SaveData();
     }
 
     /*
@@ -108,14 +126,15 @@ public class CharacterHandler : ItemHandler
     public void BuyCharacter()
     {
             int characterCost = CharacterDatas[m_SelectedItemIndex].ItemPrice;
-            if (SaveLoadData.GameData.m_Coins >= characterCost)
+            if (Dependencies.GameDataOperations.SetCoins() >= characterCost)
             {
-                SaveLoadData.GameData.m_Coins -= characterCost;
+                Dependencies.GameDataOperations.GetCoins(Dependencies.GameDataOperations.SetCoins() - characterCost);
                 CharacterDatas[m_SelectedItemIndex].isLocked = false;
-                SaveLoadData.Instance.SetCharacterUnlocked(CharacterDatas[m_SelectedItemIndex].character);
+                Dependencies.GameDataOperations.SetCharacterUnlocked(CharacterDatas[m_SelectedItemIndex].character);
                 UpdateCharacterData(m_SelectedItemIndex);
                 print("buy gun");
-                SaveLoadData.SaveData();
+                //SaveLoadData.SaveData();
+                Dependencies.GameDataOperations.SaveData();
                 UpdateCoins();
 
             }
@@ -127,13 +146,15 @@ public class CharacterHandler : ItemHandler
 
     public void WatchAD()
     {
-        SaveLoadData.GameData.m_Coins += 300;
-        SaveLoadData.SaveData();
+      //  SaveLoadData.GameData.m_Coins += 300;
+        Dependencies.GameDataOperations.GetCoins(300);
+        Dependencies.GameDataOperations.SaveData();
+        //SaveLoadData.SaveData();
         UpdateCoins();
     }
 
     void UpdateCoins()
     {
-        m_TotalCoins.text = SaveLoadData.GameData.m_Coins.ToString();
+        m_TotalCoins.text = Dependencies.GameDataOperations.SetCoins().ToString();
     }
 }

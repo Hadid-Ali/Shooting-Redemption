@@ -11,11 +11,11 @@ public class TimeManager : MonobehaviourSingleton<TimeManager>
     public Text timeTxt;
     private void Start()
     {
-        SaveLoadData.SaveData();
+        /*SaveLoadData.SaveData();
         
         string timeString = SaveLoadData.GameData.DateTime;
         long binaryTime = Convert.ToInt64(timeString);
-        _DateTime = DateTime.FromBinary(binaryTime);
+        _DateTime = DateTime.FromBinary(binaryTime);*/
     }
 
     private void Update()

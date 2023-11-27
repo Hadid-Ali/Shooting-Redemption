@@ -2,6 +2,8 @@ public enum GunName
 {
     Revolver,
     OldRevolver,
-    ClassicRevolver,
-    Pistol
+    Pistol,
+    DoubleGun,
+    AK47,
+    ShotGun
 }

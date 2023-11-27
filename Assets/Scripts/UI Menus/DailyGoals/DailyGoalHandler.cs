@@ -16,21 +16,21 @@ public class DailyGoalHandler : MonoBehaviour
     private int totalStars;
     private void Start()
     {
-        CheckTImeDate();
-        totalCoins = SaveLoadData.GameData.m_Coins;
-        totalStars = SaveLoadData.GameData.m_Stars;
+      //  CheckTImeDate();
+        totalCoins = Dependencies.GameDataOperations.SetCoins();
+        //totalStars = SaveLoadData.GameData.m_Stars;
         updateDailyGoalData();
     }
     
     public void updateDailyGoalData()
     {
-        RedmanKillTask.UpdateTaskData(SaveLoadData.GameData.kills.DailyGoalValue,SaveLoadData.GameData.kills.CurrentAchieveValue);
+        /*RedmanKillTask.UpdateTaskData(SaveLoadData.GameData.kills.DailyGoalValue,SaveLoadData.GameData.kills.CurrentAchieveValue);
         HeadShotTask.UpdateTaskData(SaveLoadData.GameData.Headshot.DailyGoalValue,SaveLoadData.GameData.Headshot.CurrentAchieveValue);
         BankerTask.UpdateTaskData(SaveLoadData.GameData.banker.DailyGoalValue,SaveLoadData.GameData.banker.CurrentAchieveValue);
-        CheckGoals();
+        CheckGoals();*/
     }
     
-    private void CheckGoals()
+    /*private void CheckGoals()
     {
         if(SaveLoadData.GameData.kills.onDailyGoalAchieve())
         {
@@ -54,10 +54,10 @@ public class DailyGoalHandler : MonoBehaviour
         }
         
         
-    }
+    }*/
 
 
-    public void CheckTImeDate()
+    /*public void CheckTImeDate()
     {
         if (TimeManager.Instance.GetTime() <= 0)
         {
@@ -73,5 +73,5 @@ public class DailyGoalHandler : MonoBehaviour
         SaveLoadData.GameData.banker.reset();
         SaveLoadData.GameData.Headshot.reset();
         SaveLoadData.SaveData();
-    }
+    }*/
 }

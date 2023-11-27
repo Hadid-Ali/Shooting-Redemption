@@ -14,14 +14,9 @@ public class EpdisodeSelection : MonoBehaviour
     public LevelManager lvlManager;/*
     [SerializeField] private Button BackBtn;*/
 
-    /*private void Update()
-    {
-        LockFrom(SaveLoadData.GameData.m_UnlockEpisode);
-    }*/
-
     private void Start()
     {
-        LockFrom(SaveLoadData.GameData.m_UnlockEpisode);
+        LockFrom(Dependencies.GameDataOperations.GetUnlockedEpisodes());
     }
 
     void LockFrom(int StartFrom)
@@ -41,9 +36,13 @@ public class EpdisodeSelection : MonoBehaviour
 
     public void OpenEpisode(int i)
     {
+        print(Dependencies.GameDataOperations.GetSelectedEpisode());
         //LevelManager.Episode = i;
+        Dependencies.GameDataOperations.SetSelectedEpisode(i);
+        /*SaveLoadData.GameData.m_SelectedEpisode = i;*/
+        
         lvlManager.OpenLevelPanel();
-        SaveLoadData.GameData.m_SelectedEpisode = i;
+        
     }
 
 }

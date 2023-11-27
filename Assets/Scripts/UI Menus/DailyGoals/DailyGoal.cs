@@ -17,8 +17,8 @@ public class DailyGoal : UIMenuBase
     }
     public void updateCoins()
     {
-        CoinTxt.text = SaveLoadData.GameData.m_Coins.ToString();
-        StarsTxt.text = SaveLoadData.GameData.m_Stars.ToString();
+        CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+        //StarsTxt.text = SaveLoadData.GameData.m_Stars.ToString();
         
     }
 

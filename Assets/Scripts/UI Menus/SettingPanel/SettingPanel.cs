@@ -22,7 +22,7 @@ public class SettingPanel : UIMenuBase
         m_CloseBtnTap.onClick.AddListener(onCloseButtonTap);
         musicToggle.onValueChanged.AddListener(SetMusic);
         hapticToggle.onValueChanged.AddListener(SetHaptic);
-        shadowToggle.onValueChanged.AddListener(SetShadow);
+        shadowToggle.onValueChanged.AddListener(SetShadows);
     }
     
     private void Start()
@@ -33,28 +33,29 @@ public class SettingPanel : UIMenuBase
 
     private void updateToggleButtons()
     {
-        musicToggle.isOn = SaveLoadData.GameData.sound;
-        hapticToggle.isOn = SaveLoadData.GameData.haptic;
-        shadowToggle.isOn = SaveLoadData.GameData.shadow;
+        musicToggle.isOn = Dependencies.GameDataOperations.GetSound();
+        hapticToggle.isOn = Dependencies.GameDataOperations.GetHapticSound();
+        shadowToggle.isOn = Dependencies.GameDataOperations.GetShadow();
     }
     
     public void SetMusic(bool status)
     {
         print(status);
-        SaveLoadData.GameData.sound = status;
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SetSound(status);
+        Dependencies.GameDataOperations.SaveData();
+        
     }
 
     public void SetHaptic(bool status)
     {
-        SaveLoadData.GameData.haptic = status;
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SetHapticSound(status);
+        Dependencies.GameDataOperations.SaveData();
     }
 
-    public void SetShadow(bool status)
+    public void SetShadows(bool status)
     {
-        SaveLoadData.GameData.shadow = status;
-        SaveLoadData.SaveData();
+        Dependencies.GameDataOperations.SetShadow(status);
+        Dependencies.GameDataOperations.SaveData();
     }
 
     

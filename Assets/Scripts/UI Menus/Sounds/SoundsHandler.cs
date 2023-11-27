@@ -19,7 +19,6 @@ public class SoundsHandler : MonoBehaviour,ISoundHandler
         
         Bg.Play();
         Dependencies.SoundHandler = this;
-
         
     }
 
@@ -30,7 +29,7 @@ public class SoundsHandler : MonoBehaviour,ISoundHandler
 
     private void updateSoundStatus()
     {
-        if (SaveLoadData.GameData.sound)
+        if (Dependencies.GameDataOperations.GetSound())
         {
             AS.mute = false;
             Bg.mute = false;
