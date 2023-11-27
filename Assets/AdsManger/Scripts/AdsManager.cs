@@ -24,25 +24,25 @@ public class AdsManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.InitAds.Register(Init);
-        GameEvents.ShowBannerAd.Register(ShowBannerAD);
-        GameEvents.ShowRectBannerAd.Register(ShowRectBannerAD);
-        GameEvents.HideBannerAd.Register(HideBannerAD);
-        GameEvents.HideRectBannerAd.Register(HideRectBannerAD);
-        GameEvents.ShowRInterstitialAd.Register(ShowInterstitialAD);
-        GameEvents.ShowRewardedAd.Register(ShowRewarderVideo);
-        GameEvents.ShowAppOpenAd.Register(showAppOpen);
+        GameAdEvents.InitAds.Register(Init);
+        GameAdEvents.ShowBannerAd.Register(ShowBannerAD);
+        GameAdEvents.ShowRectBannerAd.Register(ShowRectBannerAD);
+        GameAdEvents.HideBannerAd.Register(HideBannerAD);
+        GameAdEvents.HideRectBannerAd.Register(HideRectBannerAD);
+        GameAdEvents.ShowRInterstitialAd.Register(ShowInterstitialAD);
+        GameAdEvents.ShowRewardedAd.Register(ShowRewarderVideo);
+        GameAdEvents.ShowAppOpenAd.Register(showAppOpen);
     }
     private void OnDisable()
     {
-        GameEvents.InitAds.Unregister(Init);
-        GameEvents.ShowBannerAd.Unregister(ShowBannerAD);
-        GameEvents.HideBannerAd.Unregister(HideBannerAD);
-        GameEvents.HideRectBannerAd.Unregister(HideRectBannerAD);
-        GameEvents.ShowRectBannerAd.Register(ShowRectBannerAD);
-        GameEvents.ShowRInterstitialAd.Unregister(ShowInterstitialAD);
-        GameEvents.ShowRewardedAd.UnRegister(ShowRewarderVideo);
-        GameEvents.ShowAppOpenAd.Unregister(showAppOpen);
+        GameAdEvents.InitAds.Unregister(Init);
+        GameAdEvents.ShowBannerAd.Unregister(ShowBannerAD);
+        GameAdEvents.HideBannerAd.Unregister(HideBannerAD);
+        GameAdEvents.HideRectBannerAd.Unregister(HideRectBannerAD);
+        GameAdEvents.ShowRectBannerAd.Register(ShowRectBannerAD);
+        GameAdEvents.ShowRInterstitialAd.Unregister(ShowInterstitialAD);
+        GameAdEvents.ShowRewardedAd.UnRegister(ShowRewarderVideo);
+        GameAdEvents.ShowAppOpenAd.Unregister(showAppOpen);
     }
 
     private void Start()

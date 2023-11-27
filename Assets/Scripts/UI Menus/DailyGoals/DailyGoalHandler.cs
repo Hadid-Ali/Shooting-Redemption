@@ -17,7 +17,7 @@ public class DailyGoalHandler : MonoBehaviour
     private void Start()
     {
       //  CheckTImeDate();
-        totalCoins = Dependencies.GameDataOperations.SetCoins();
+        totalCoins = Dependencies.GameDataOperations.GetCoins();
         //totalStars = SaveLoadData.GameData.m_Stars;
         updateDailyGoalData();
     }

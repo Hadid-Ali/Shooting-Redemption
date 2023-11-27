@@ -112,7 +112,7 @@ namespace CoverShooter
             {
                 PlayerInputt.OnZoom += OnZoom;
                 PlayerInputt.OnUnZoom += OnUnZoom;
-                GameEvents.GamePlayEvents.OnPlayerSpawned.Raise(OnHit);
+                GameAdEvents.GamePlayEvents.OnPlayerHit.Raise();
             }
 
         }
@@ -200,7 +200,7 @@ namespace CoverShooter
             if (!wasOff && Died != null)
             {
                 Died();
-                if (isMainPlayer) GameEvents.GamestateEvents.GameLost.Raise();
+                if (isMainPlayer) GameAdEvents.GamestateEvents.GameLost.Raise();
             }
         }
 

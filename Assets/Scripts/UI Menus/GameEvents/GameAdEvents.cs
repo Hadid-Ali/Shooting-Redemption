@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class GameEvents
+public partial class GameAdEvents
 {
     public static GameEvent<float> m_HealthUpdate=new();
     public static GameEvent<float> m_EnemyHealthUpdate=new();

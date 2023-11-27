@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class GunsStats
@@ -21,39 +22,29 @@ public class ShopManager : MonoBehaviour
     [SerializeField]private List<GunData> GunDatas = new();
     private List<GameObject> Guns = new();
 
-    public List<Button> GunButton;
-
     public int defaultGunIndex = 0;
-
-    /*public int coins = 0;*/
     private int selectedGunIndex = 0;
     public Transform parentObj;
 
-    public Button m_Buy;
-    public Button m_Select;
-    public Button m_Selected;
-
     public Button m_WatchAdBtn;
+
+    public Button m_GunButton;
+    public TextMeshProUGUI m_GunButtonText;
+
+    public Image m_GunPriceContainer;
+    
     public TextMeshProUGUI m_GunPrice;
-    public TextMeshProUGUI m_TodalCoins;
+    public TextMeshProUGUI m_Coins;
 
     [SerializeField] private List<GunsStats> m_GunsStats;
-    [SerializeField] private Image Aim, RelodTime, BulletCount;
+
 
     private void Start()
     {
         selectedGunIndex = Dependencies.GameDataOperations.GetSelectedGunIndex();
-        m_Buy.onClick.AddListener(BuyGun);
-        m_Select.onClick.AddListener(SelectGun);
-        m_WatchAdBtn.onClick.AddListener(WatchAD);
+        m_WatchAdBtn.onClick.AddListener(OnRewardedADWatched);
+        
         RetainGunData();
-        for (int i = 0; i < GunButton.Count; i++)
-        {
-            var j = i;
-           // GunButton[i].onClick.AddListener(() => SelectGun(j));
-        }
-
-        UpdateCoins();
         UpdateGunData(selectedGunIndex);
     }
 
@@ -73,33 +64,41 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateGunData(int CurrentIndex)
     {
+        m_GunButton.onClick.RemoveAllListeners();
+        
+        //Data Assessing
+        bool isGunUnlocked = Dependencies.GameDataOperations.GetGunUnlocked(GunDatas[CurrentIndex].gun);
+        bool isGunSelected = Dependencies.GameDataOperations.GetSelectedGun(GunDatas[CurrentIndex].gun);
+        bool isAffordable = Dependencies.GameDataOperations.GetCoins() >= GunDatas[CurrentIndex].ItemPrice;
+        
+        //Assignation
+        m_GunPrice.SetText( "Price : " + GunDatas[CurrentIndex].ItemPrice.ToString());
+        m_Coins.SetText(Dependencies.GameDataOperations.GetCoins().ToString());
+            
 
-        if (!Dependencies.GameDataOperations.GetGunUnlocked(GunDatas[CurrentIndex].gun))
+        if (!isGunUnlocked)
         {
-            m_Buy.gameObject.SetActive(true);
-            m_Select.gameObject.SetActive(false);
-            m_GunPrice.text = GunDatas[CurrentIndex].ItemPrice.ToString();
+            m_GunButton.onClick.AddListener(BuyGun);
+            m_GunButtonText.SetText("Unlock Gun"); //Gun Status
+            m_GunPriceContainer.color =  isAffordable ? Color.green : Color.red ; //Price container Color
+            m_GunButton.image.color = Color.white; // Gun Button Color
+        }
+        else if (!isGunSelected)
+        {
+            m_GunButton.onClick.AddListener(SelectGun);
+            m_GunButtonText.SetText("Select Gun");
+            m_GunPriceContainer.color =  Color.green ;
+            m_GunButton.image.color = Color.white;
         }
         else
         {
-            m_Buy.gameObject.SetActive(false);
-            m_Select.gameObject.SetActive(true);
-            if (Dependencies.GameDataOperations.GetSelectedGun(GunDatas[CurrentIndex].gun))
-            {
-                m_Select.gameObject.SetActive(false);
-                m_Selected.gameObject.SetActive(true);
-            }
+            m_GunButton.onClick.RemoveAllListeners();
+            m_GunButtonText.SetText("Selected");
+            m_GunButton.image.color = Color.green;
+            m_GunPriceContainer.color =  Color.green ;
         }
-
-      //  UpdateStatus(CurrentIndex);
     }
 
-    /*void UpdateStatus(int CurrentIndex)
-    {
-        Aim.fillAmount = m_GunsStats[CurrentIndex].Aim / 100;
-        RelodTime.fillAmount = m_GunsStats[CurrentIndex].ReloadTime / 100;
-        BulletCount.fillAmount = m_GunsStats[CurrentIndex].Bullets / 100;
-    }*/
 
     public void SelectGun(bool IsRight)
     {
@@ -112,7 +111,7 @@ public class ShopManager : MonoBehaviour
             selectedGunIndex--;
         }
 
-        if (selectedGunIndex >= Guns.Count || selectedGunIndex < 0)
+        if (selectedGunIndex >= Guns.Count || selectedGunIndex <= 0)
         {
             selectedGunIndex = 0;
         }
@@ -149,15 +148,15 @@ public class ShopManager : MonoBehaviour
     public void BuyGun()
     {
         int gunCost = GunDatas[selectedGunIndex].ItemPrice;
-        if (Dependencies.GameDataOperations.SetCoins() >= gunCost)
+        if (Dependencies.GameDataOperations.GetCoins() >= gunCost)
         {
-            Dependencies.GameDataOperations.GetCoins(gunCost);
+            Dependencies.GameDataOperations.SetCoins(gunCost);
             GunDatas[selectedGunIndex].isLocked = false;
             Dependencies.GameDataOperations.SetGunUnlocked(GunDatas[selectedGunIndex].gun);
             UpdateGunData(selectedGunIndex);
             print("buy gun");
             Dependencies.GameDataOperations.SaveData();
-            UpdateCoins();
+
 
         }
         else
@@ -166,17 +165,13 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void WatchAD()
+    public void OnRewardedADWatched()
     {
-        Dependencies.GameDataOperations.GetCoins(300) ;
+        Dependencies.GameDataOperations.SetCoins(300);
         Dependencies.GameDataOperations.SaveData();
-        
     }
 
-    void UpdateCoins()
-    {
-        m_TodalCoins.text = Dependencies.GameDataOperations.SetCoins().ToString();
-    }
+
     
     
 }

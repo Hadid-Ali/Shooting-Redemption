@@ -17,12 +17,12 @@ public class FailLevel : UIMenuBase
 
     private void OnEnable()
     {
-        GameEvents.MenuEvents.LevelFail.Register(OnLevelFail);
+        GameAdEvents.MenuEvents.LevelFail.Register(OnLevelFail);
     }
 
     private void OnDisable()
     {
-        GameEvents.MenuEvents.LevelFail.Unregister(OnLevelFail);
+        GameAdEvents.MenuEvents.LevelFail.Unregister(OnLevelFail);
     }
 
     public void OnLevelFail()

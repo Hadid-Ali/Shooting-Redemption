@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ButtonComponent : MonoBehaviour
 {
     [SerializeField] private Button m_ButtonComponent;
-    [SerializeField]private ButtonType buttonTYpe;
+    [SerializeField] private ButtonType buttonType;
 
     private GameEvent m_OnButtonTap = new();
     
@@ -30,7 +30,7 @@ public class ButtonComponent : MonoBehaviour
     private void ButtonClickInternal()
     {
         m_OnButtonTap.Raise();
-        Dependencies.SoundHandler.BtnClickSound(buttonTYpe);
+        Dependencies.SoundHandler.BtnClickSound(buttonType);
     }
     
     public void SubscribeClick(Action action)

@@ -21,12 +21,12 @@ public class CompleteLevel : UIMenuBase
 
     private void OnEnable()
     {
-        GameEvents.MenuEvents.LevelWin.Register(OnLevelComplete);
+        GameAdEvents.MenuEvents.LevelWin.Register(OnLevelComplete);
     }
 
     private void OnDisable()
     {
-        GameEvents.MenuEvents.LevelWin.Unregister(OnLevelComplete);
+        GameAdEvents.MenuEvents.LevelWin.Unregister(OnLevelComplete);
     }
 
     public void OnLevelComplete()
@@ -52,7 +52,7 @@ public class CompleteLevel : UIMenuBase
 
     public void updateCoinsTxt()
     {
-        Cointxt.text = $"Coins: {Dependencies.GameDataOperations.SetCoins()}";
+        Cointxt.text = $"Coins: {Dependencies.GameDataOperations.GetCoins()}";
     }
     private void OnLoadScene()
     {

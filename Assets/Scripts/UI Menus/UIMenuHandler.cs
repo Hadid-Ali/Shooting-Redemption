@@ -10,7 +10,7 @@ public abstract class UIMenuHandler : MonoBehaviour
 
     protected virtual void Start()
     {
-        GameEvents.MenuEvents.MenuControllerInit.Raise();
+        GameAdEvents.MenuEvents.MenuControllerInit.Raise();
     }
 
     protected void OnEnable()
@@ -25,12 +25,12 @@ public abstract class UIMenuHandler : MonoBehaviour
 
     protected virtual void InitializeEvents()
     {
-        GameEvents.MenuEvents.MenuStateSwitched.Register(OnMenuTransition);
+        GameAdEvents.MenuEvents.MenuStateSwitched.Register(OnMenuTransition);
     }
 
     protected virtual void DeInitializeEvents()
     {
-        GameEvents.MenuEvents.MenuStateSwitched.UnRegister(OnMenuTransition);
+        GameAdEvents.MenuEvents.MenuStateSwitched.UnRegister(OnMenuTransition);
     }
     
     protected void SetMenuState(MenuName menuName)

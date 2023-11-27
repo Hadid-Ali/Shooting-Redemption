@@ -29,7 +29,7 @@ public class WeaponShop : UIMenuBase
     {
         if (CoinTxt != null)
         {
-            CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+            CoinTxt.text = Dependencies.GameDataOperations.GetCoins().ToString();
         }
     }
     

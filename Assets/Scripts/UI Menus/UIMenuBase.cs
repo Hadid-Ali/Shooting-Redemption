@@ -46,6 +46,6 @@ public abstract class UIMenuBase : MonoBehaviour
 
     protected void ChangeMenuState(MenuName menuName)
     {
-        GameEvents.MenuEvents.MenuStateSwitched.Raise(menuName);
+        GameAdEvents.MenuEvents.MenuStateSwitched.Raise(menuName);
     }
 }

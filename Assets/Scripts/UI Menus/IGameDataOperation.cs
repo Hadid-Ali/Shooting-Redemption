@@ -46,8 +46,8 @@ public interface IGameDataOperation
     public void SetShadow(bool i);
     public bool GetShadow();
 
-    public int SetCoins();
-    public void GetCoins(int i);
+    public void SetCoins(int i);
+    public int GetCoins();
 
     public int SetSelectedGunIndex(int i);
 

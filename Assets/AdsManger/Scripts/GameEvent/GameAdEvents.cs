@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class GameEvents
+public partial class GameAdEvents
 {
     public static GameEvent InitAds = new();
     public static GameEvent ShowBannerAd = new();

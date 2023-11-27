@@ -19,7 +19,7 @@ public class CharacterShop : UIMenuBase
 
     public void updateCoins()
     {
-        CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+        CoinTxt.text = Dependencies.GameDataOperations.GetCoins().ToString();
     }
     public void OnCloseBtnTap()
     {

@@ -79,8 +79,8 @@ public class SaveLoadData : MonoBehaviour,IGameDataOperation
 
    public bool GetShadow() => m_GameData.shadow;
 
-   public int SetCoins() => m_GameData.m_Coins;
-   public void GetCoins(int i) => m_GameData.m_Coins = i;
+   public void SetCoins(int i) => m_GameData.m_Coins = i;
+   public int GetCoins() => m_GameData.m_Coins;
    public int SetSelectedGunIndex(int i) => m_GameData.m_SelectedGunIndex = i;
    
 
