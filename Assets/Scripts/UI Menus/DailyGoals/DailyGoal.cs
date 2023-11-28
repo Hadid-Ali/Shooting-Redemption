@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class DailyGoal : UIMenuBase
 {
-    [SerializeField] private Button m_closeTap;
-    [SerializeField]private Text CoinTxt;
-    [SerializeField]private Text StarsTxt;
-
-    private void Start()
-    {
-        m_closeTap.onClick.AddListener(OnCloseBtnTap);
-        updateCoins();
-    }
-    public void updateCoins()
-    {
-        CoinTxt.text = Dependencies.GameDataOperations.GetCoins().ToString();
-        //StarsTxt.text = SaveLoadData.GameData.m_Stars.ToString();
-        
-    }
-
-    void OnCloseBtnTap()
-    {
-        ChangeMenuState(MenuName.MainMenu);
-    }
+    // [SerializeField] private Button m_closeTap;
+    // [SerializeField]private Text CoinTxt;
+    // [SerializeField]private Text StarsTxt;
+    //
+    // private void Start()
+    // {
+    //     m_closeTap.onClick.AddListener(OnCloseBtnTap);
+    //     updateCoins();
+    // }
+    // public void updateCoins()
+    // {
+    //     CoinTxt.text = Dependencies.GameDataOperations.GetCoins().ToString();
+    //     //StarsTxt.text = SaveLoadData.GameData.m_Stars.ToString();
+    //     
+    // }
+    //
+    // void OnCloseBtnTap()
+    // {
+    //     ChangeMenuState(MenuName.MainMenu);
+    // }
 }

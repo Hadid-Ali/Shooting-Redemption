@@ -25,7 +25,7 @@ public class MainMenuHandler : UIMenuBase
     
     public void updateCoins()
     {
-        CoinTxt.text = Dependencies.GameDataOperations.GetCoins().ToString();
+        CoinTxt.text = Dependencies.GameDataOperations.GetCredits().ToString();
     }
 
     private void Initialize()

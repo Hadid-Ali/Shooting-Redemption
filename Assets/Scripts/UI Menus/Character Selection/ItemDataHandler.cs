@@ -8,5 +8,5 @@ public class ItemDataHandler : MonobehaviourSingleton<ItemDataHandler>
     public CharacterData GetCharacterDataData(CharacterType characterType) => characterDatas.Find(x => x.character == characterType);
     
     public List<GunData> GunDatas;
-    public GunData GetGunData(GunName gunName) => GunDatas.Find(x => x.gun == gunName);
+    public GunData GetGunData(OverlayWeapons gunName) => GunDatas.Find(x => x.gun == gunName);
 }

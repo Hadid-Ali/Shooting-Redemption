@@ -8,17 +8,10 @@ public class LevelSelection : MonoBehaviour
 {
     [SerializeField] private List<Button> LevelBtns;
     public LevelManager lvlManager;
-
-    /*private void Update()
-    {
-        LockFrom(SaveLoadData.GameData.m_UnLockLevel);
-    }*/
+    
     private void OnEnable()
     {
-        print(Dependencies.GameDataOperations.GetSelectedEpisode());
-        print(Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode()));
         LockFrom(Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode()));
-        
     }
 
     void LockFrom(int StartFrom)
@@ -37,15 +30,8 @@ public class LevelSelection : MonoBehaviour
 
     public void OpenLevel(int i)
     {
-        print(i+"asfsf");
-        Dependencies.GameDataOperations.SetSelectedlevel(i);
-       // LevelManager.Level = i;
+        Dependencies.GameDataOperations.SetSelectedLevel(i);
+        
         lvlManager.SetLevelNum();
-        /*SaveLoadData.GameData.m_SelectedLevel = i;*/
-        
-        
-        
-        
-        
     }
 }

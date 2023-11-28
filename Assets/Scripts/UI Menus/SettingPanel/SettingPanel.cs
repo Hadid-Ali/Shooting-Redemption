@@ -33,28 +33,27 @@ public class SettingPanel : UIMenuBase
 
     private void updateToggleButtons()
     {
-        musicToggle.isOn = Dependencies.GameDataOperations.GetSound();
-        hapticToggle.isOn = Dependencies.GameDataOperations.GetHapticSound();
-        shadowToggle.isOn = Dependencies.GameDataOperations.GetShadow();
+        musicToggle.isOn = Dependencies.GameDataOperations.GetSoundStatus();
+
     }
     
     public void SetMusic(bool status)
     {
         print(status);
-        Dependencies.GameDataOperations.SetSound(status);
+        Dependencies.GameDataOperations.SetSoundStatus(status);
         Dependencies.GameDataOperations.SaveData();
         
     }
 
     public void SetHaptic(bool status)
     {
-        Dependencies.GameDataOperations.SetHapticSound(status);
+       // Dependencies.GameDataOperations.SetHapticSound(status);
         Dependencies.GameDataOperations.SaveData();
     }
 
     public void SetShadows(bool status)
     {
-        Dependencies.GameDataOperations.SetShadow(status);
+       // Dependencies.GameDataOperations.SetShadow(status);
         Dependencies.GameDataOperations.SaveData();
     }
 

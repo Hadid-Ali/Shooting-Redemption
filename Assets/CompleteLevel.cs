@@ -52,7 +52,7 @@ public class CompleteLevel : UIMenuBase
 
     public void updateCoinsTxt()
     {
-        Cointxt.text = $"Coins: {Dependencies.GameDataOperations.GetCoins()}";
+        Cointxt.text = $"Coins: {Dependencies.GameDataOperations.GetCredits()}";
     }
     private void OnLoadScene()
     {

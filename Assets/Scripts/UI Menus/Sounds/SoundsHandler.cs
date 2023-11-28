@@ -26,7 +26,7 @@ public class SoundsHandler : MonoBehaviour, ISoundHandler
 
     private void updateSoundStatus()
     {
-        if (Dependencies.GameDataOperations.GetSound())
+        if (Dependencies.GameDataOperations.GetSoundStatus())
         {
             AS.mute = false;
             Bg.mute = false;

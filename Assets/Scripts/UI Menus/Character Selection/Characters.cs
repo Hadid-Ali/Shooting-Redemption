@@ -32,5 +32,5 @@ public class Characters : ItemSelection
 [System.Serializable]
 public class Guns : ItemSelection
 {
-    public GunName Gun;
+    public OverlayWeapons Gun;
 }
