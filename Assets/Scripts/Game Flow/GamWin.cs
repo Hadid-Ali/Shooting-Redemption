@@ -18,9 +18,9 @@ public class GamWin : MonoBehaviour
     private void Awake()
     {
         AIGroupsHandler.AllGroupsCCleared.Register(OnGameWon);
-        selectedLevel = PlayerPrefs.GetInt("SelectedLevel", 0);
+        selectedLevel = Dependencies.GameDataOperations.GetSelectedLevel();
         
-        LoadLevel(selectedLevel);
+        LoadLevel(Dependencies.GameDataOperations.GetSelectedLevel());
         Instantiate(players[selectedPlayer]);
 
         _playerInventory = FindObjectOfType<PlayerInventory>();
@@ -37,9 +37,8 @@ public class GamWin : MonoBehaviour
         StartCoroutine(wait());
     }
 
-    public void OnLevelSelect(int i)
+    public void LoadNextLevel()
     {
-        PlayerPrefs.SetInt("SelectedLevel", i);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
     }
     

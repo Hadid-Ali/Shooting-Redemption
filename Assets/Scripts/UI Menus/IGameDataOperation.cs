@@ -24,14 +24,16 @@ public interface IGameDataOperation
     public void SetSelectedEpisode(int episode);
     
     //Character and Guns
-    public Dictionary<OverlayWeapons, bool> GetAllWeapons();
-    public void SetCharacterData(CharacterType character, bool unlocked);
-    public void SetGunData(OverlayWeapons weapon, bool unlocked);
-    public bool GetCharacterUnlocked(CharacterType character);
-    public bool GetGunUnlocked(OverlayWeapons weapon);
+    public List<GunStatus> GetAllWeaponsData();
+    public List<CharacterStatus> GetAllCharactersData();
+    public void SetCharacterData(CharacterStatus status);
+    public void SetGunData(GunStatus status);
+    public CharacterStatus GetCharacterData(CharacterType character);
+    public GunStatus GetGunData(OverlayWeapons weapon);
+
+    public CharacterType GetSelectedCharacter();
     public OverlayWeapons GetSelectedWeapon();
+    public void SetSelectedCharacter(CharacterType characterType);
     public void SetSelectedWeapon(OverlayWeapons weapon);
 
-    public CharacterType GetSelectedCharacterType();
-    public void SetSelectedCharacterType(CharacterType character);
 }

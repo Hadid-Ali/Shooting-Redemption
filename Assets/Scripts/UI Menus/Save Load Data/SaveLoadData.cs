@@ -24,32 +24,35 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
         {
             string saveJson = PlayerPrefs.GetString("Save");
             JsonUtility.FromJsonOverwrite(saveJson, m_GameData);
-            OnGameDataLoaded();
+           // OnGameDataLoaded();
         }
         else
         {
-            InitData();
+           // InitData();\
+           print("No Data Found");
         }
     }
 
     private void OnGameDataLoaded()
     {
-        for (int i = 0; i < m_GameData.CurrentWeapons.Length; i++)
-        {
-            if (m_GameData.Guns.Keys.Contains(m_GameData.CurrentWeapons[i]))
-                continue;
-
-            m_GameData.Guns[m_GameData.CurrentWeapons[i]] = false;
-        }
+        // for (int i = 0; i < m_GameData.CurrentWeapons.Length; i++)
+        // {
+        //     if (m_GameData.Guns.Keys.Contains(m_GameData.CurrentWeapons[i]))
+        //         continue;
+        //
+        //     m_GameData.Guns[m_GameData.CurrentWeapons[i]] = false;
+        // }
+        // print("working");
     }
     
     private void InitData()
     {
-        for (int i = 0; i < m_GameData.CurrentWeapons.Length; i++)
-        {
-            OverlayWeapons weapon = m_GameData.CurrentWeapons[i];
-            m_GameData.Guns[weapon] = weapon == m_GameData.selectedGun;
-        }
+        // for (int i = 0; i < m_GameData.CurrentWeapons.Length; i++)
+        // {
+        //     OverlayWeapons weapon = m_GameData.CurrentWeapons[i];
+        //     m_GameData.Guns[weapon] = weapon == m_GameData.selectedGun;
+        // }
+        // print("working");
     }
 
     void IGameDataOperation.SaveData()
@@ -76,16 +79,27 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
     public int GetSelectedLevel() => m_GameData.m_SelectedLevel;
     public int GetSelectedEpisode() => m_GameData.m_SelectedEpisode;
     public void SetSelectedEpisode(int episode) => m_GameData.m_SelectedEpisode = episode;
-    public Dictionary<OverlayWeapons, bool> GetAllWeapons() => m_GameData.Guns;
 
 
     //Character and Guns
-    public void SetCharacterData(CharacterType character, bool unlocked) => m_GameData.Characters[character] = unlocked;
-    public void SetGunData(OverlayWeapons weapon, bool unlocked) => m_GameData.Guns[weapon] = unlocked;
-    public bool GetCharacterUnlocked(CharacterType character) => m_GameData.Characters[character];
-    public bool GetGunUnlocked(OverlayWeapons weapon) => m_GameData.Guns[weapon];
+    public List<GunStatus> GetAllWeaponsData() => m_GameData.Guns;
+    public List<CharacterStatus> GetAllCharactersData() => m_GameData.Characters;
+
+    public void SetCharacterData(CharacterStatus characterStatus)
+    {
+        CharacterStatus status = m_GameData.Characters.Find(x => x.character == characterStatus.character);
+        status = characterStatus;
+    }
+
+    public void SetGunData(GunStatus gunStatus)
+    {
+        GunStatus status =  m_GameData.Guns.Find(x => x.weapon == gunStatus.weapon);
+        status = gunStatus;
+    }
+    public CharacterStatus GetCharacterData(CharacterType character) => m_GameData.Characters.Find(x=> x.character == character);
+    public GunStatus GetGunData(OverlayWeapons weapon) => m_GameData.Guns.Find(x=> x.weapon == weapon);
+    public CharacterType GetSelectedCharacter() => m_GameData.selectedCharacter;
     public OverlayWeapons GetSelectedWeapon() => m_GameData.selectedGun;
+    public void SetSelectedCharacter(CharacterType characterType) => m_GameData.selectedCharacter = characterType;
     public void SetSelectedWeapon(OverlayWeapons weapon) => m_GameData.selectedGun = weapon;
-    public CharacterType GetSelectedCharacterType() => m_GameData.selectedCharacter;
-    public void SetSelectedCharacterType(CharacterType character) => m_GameData.selectedCharacter = character;
 }

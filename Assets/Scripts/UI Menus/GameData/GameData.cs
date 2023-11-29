@@ -16,23 +16,22 @@ public class GameData : ScriptableObject
     public int[] m_UnlockedLevels = new int[5];
     public int m_UnlockedEpisodes;
     
-    public Dictionary<CharacterType, bool> Characters = new();
-    public Dictionary<OverlayWeapons, bool> Guns = new();
+    public List<CharacterStatus> Characters = new();
+    public List<GunStatus> Guns = new();
 
     public OverlayWeapons selectedGun;
     public CharacterType selectedCharacter;
-
-    public OverlayWeapons[] CurrentWeapons;
 }
 
-public class ItemStatus
+[Serializable]
+public class GunStatus
 {
-    public ItemStatus(bool _isUnlocked, bool _isSelected)
-    {
-        isUnlocked = _isUnlocked;
-        isSelected = _isSelected;
-
-    }
+    public OverlayWeapons weapon;
     public bool isUnlocked = false;
-    public bool isSelected = false;
+}
+[Serializable]
+public class CharacterStatus
+{
+    public CharacterType character;
+    public bool isUnlocked = false;
 }

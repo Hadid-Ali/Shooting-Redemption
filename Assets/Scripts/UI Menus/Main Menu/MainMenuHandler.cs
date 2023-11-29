@@ -14,8 +14,9 @@ public class MainMenuHandler : UIMenuBase
     [SerializeField] private Button m_CharacterPanel;
     [SerializeField] private Button m_GunPanel;
     [SerializeField] private Button m_EpisodeSelectionPanel;
+    [SerializeField] private Button m_AddCoins;
 
-    [SerializeField]private TextMeshProUGUI CoinTxt;
+    [SerializeField] private TextMeshProUGUI CoinTxt;
     
     private void Start()
     {
@@ -37,6 +38,18 @@ public class MainMenuHandler : UIMenuBase
         m_CharacterPanel.onClick.AddListener(OnCharacterBtnTap);
         m_GunPanel.onClick.AddListener(OnGunBtnTap);
         m_EpisodeSelectionPanel.onClick.AddListener(OnEpisodeSelectionBtnTap);
+        m_AddCoins.onClick.AddListener(OnClickAddcoin);
+    }
+
+    private void OnClickAddcoin()
+    {
+        AdHandler.ShowRewarded(OnRewardedAddCoins);
+    }
+
+    private void OnRewardedAddCoins()
+    {
+        Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
+        updateCoins();
     }
 
     private void OnPlayBtnTap()

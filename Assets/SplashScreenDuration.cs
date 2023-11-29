@@ -13,6 +13,7 @@ public class SplashScreenDuration : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadSceneAsync());
+        AdHandler.InitializeAds();
     }
     
     IEnumerator LoadSceneAsync()

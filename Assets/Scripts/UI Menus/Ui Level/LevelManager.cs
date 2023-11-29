@@ -7,28 +7,9 @@ public class LevelManager : MonoBehaviour
 {
     public static int Episode; 
     public static int Level;
-
-    public Transform EpisodePanel;
+    
     public Transform LevelPanel;
-
-    private void Awake()
-    {
-        OpenEpisodePanel();
-    }
-
-    void OpenEpisodePanel()
-    {
-        EpisodePanel.gameObject.SetActive(true);
-        LevelPanel.gameObject.SetActive(false);
-    }
-
-   public void OpenLevelPanel()
-    {
-        EpisodePanel.gameObject.SetActive(false);
-        LevelPanel.gameObject.SetActive(true);
-    }
-
-
+    
     public void SetLevelNum()
     {
         Debug.LogError("Episode" + (Episode+1) + " Level " + (Level+1));

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class EpdisodeSelection : MonoBehaviour
+public class EpdisodeSelection : UIMenuBase
 {
 
    // [SerializeField] private TextMeshProUGUI m_CoinText;
@@ -37,12 +37,8 @@ public class EpdisodeSelection : MonoBehaviour
     public void OpenEpisode(int i)
     {
         print(Dependencies.GameDataOperations.GetSelectedEpisode());
-        //LevelManager.Episode = i;
         Dependencies.GameDataOperations.SetSelectedEpisode(i);
-        /*SaveLoadData.GameData.m_SelectedEpisode = i;*/
-        
-        lvlManager.OpenLevelPanel();
-        
+        ChangeMenuState(MenuName.LevelSelection);
     }
 
 }
