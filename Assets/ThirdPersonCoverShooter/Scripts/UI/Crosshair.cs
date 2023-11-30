@@ -50,12 +50,12 @@ namespace CoverShooter
             _thirdPersonCamera = GetComponent<ThirdPersonCamera>();
             _camera = GetComponent<Camera>();
             
-            AIGroupsHandler.AllGroupsCCleared.Register(OnWin);
+            GameEvents.GamePlayEvents.OnAllGroupsCleared.Register(OnWin);
         }
 
         private void OnDestroy()
         {
-            AIGroupsHandler.AllGroupsCCleared.Unregister(OnWin);
+            GameEvents.GamePlayEvents.OnAllGroupsCleared.Unregister(OnWin);
         }
 
         private void OnWin()

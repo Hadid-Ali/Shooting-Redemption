@@ -32,7 +32,6 @@ public class MainMenuHandler : UIMenuBase
     private void Initialize()
     {
         m_PlayButon.onClick.AddListener(OnPlayBtnTap);
-        m_DailyGoal.onClick.AddListener(OnDailyBtnTap);
         m_SettingPanel.onClick.AddListener(OnSettingBtnTap);
         m_QuitPanel.onClick.AddListener(OnQuitBtnTap);
         m_CharacterPanel.onClick.AddListener(OnCharacterBtnTap);
@@ -56,12 +55,6 @@ public class MainMenuHandler : UIMenuBase
     {
         ChangeMenuState(MenuName.EpisodeSelection);
     }
-    
-    private void OnDailyBtnTap()
-    {
-        ChangeMenuState(MenuName.DailyGoals);
-    }
-
     private void OnSettingBtnTap()
     {
         ChangeMenuState(MenuName.SettingsMenu);

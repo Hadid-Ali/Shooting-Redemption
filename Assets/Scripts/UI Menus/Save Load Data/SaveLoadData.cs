@@ -73,8 +73,8 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
     //Levels and Episodes
     public void SetUnlockedLevels(int episode, int levels) => m_GameData.m_UnlockedLevels[episode] = levels;
     public int GetUnlockedLevels(int episode) => m_GameData.m_UnlockedLevels[episode];
-    public void SetUnlockedEpisodes(int episodes) => m_GameData.m_UnlockedEpisodes = episodes;
-    public int GetUnlockedEpisodes() => m_GameData.m_UnlockedEpisodes;
+    public void SetUnlockedEpisodes(int episode) => m_GameData.m_UnlockedEpisodes[episode] = true;
+    public bool GetUnlockedEpisodes(int episode) => m_GameData.m_UnlockedEpisodes[episode];
     public void SetSelectedLevel(int level) => m_GameData.m_SelectedLevel = level;
     public int GetSelectedLevel() => m_GameData.m_SelectedLevel;
     public int GetSelectedEpisode() => m_GameData.m_SelectedEpisode;

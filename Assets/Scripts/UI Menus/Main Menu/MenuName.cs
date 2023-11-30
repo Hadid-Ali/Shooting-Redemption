@@ -5,7 +5,6 @@ public enum MenuName
     SettingsMenu,
     LevelComplete,
     LevelFailed,
-    DailyGoals,
     CharacterShop,
     QuitPanel,
     GunShop,

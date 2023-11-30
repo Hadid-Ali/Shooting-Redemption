@@ -14,6 +14,8 @@ public enum PlayerCustomStates
 }
 public class CharacterStates : MonoBehaviour
 {
+    public CharacterType CharacterType;
+    
     public static PlayerCustomStates playerState;
 
     public PlayerCustomStates currentState;

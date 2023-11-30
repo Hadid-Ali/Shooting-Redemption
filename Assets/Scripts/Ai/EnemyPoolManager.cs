@@ -5,9 +5,7 @@ using UnityEngine;
 public class EnemyPoolManager : MonoBehaviour
 {
     [HideInInspector] public int time;
-    [HideInInspector] public Transform spawnPosition;
-
-    public static GameEvent<CharacterHealth> OnEnemyResurrect = new();
+    [HideInInspector] public Transform[] spawnPosition;
 
     public void ResurectEnemy(CharacterHealth h)
     {
@@ -21,7 +19,11 @@ public class EnemyPoolManager : MonoBehaviour
         if (h != null)
         {
             var randomPosition = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
-            h.transform.SetPositionAndRotation(spawnPosition.position + randomPosition, spawnPosition.rotation);
+            
+            Vector3 newPosition = spawnPosition[Random.Range(0, spawnPosition.Length)].position + randomPosition;
+            Quaternion newRotation = spawnPosition[Random.Range(0, spawnPosition.Length)].rotation ;
+            
+            h.transform.SetPositionAndRotation(newPosition,newRotation);
             h.Heal(10);
         }
     }

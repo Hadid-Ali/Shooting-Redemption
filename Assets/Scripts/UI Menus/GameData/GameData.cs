@@ -14,7 +14,7 @@ public class GameData : ScriptableObject
     public int m_SelectedEpisode;
     
     public int[] m_UnlockedLevels = new int[5];
-    public int m_UnlockedEpisodes;
+    public bool[] m_UnlockedEpisodes = new bool[5];
     
     public List<CharacterStatus> Characters = new();
     public List<GunStatus> Guns = new();

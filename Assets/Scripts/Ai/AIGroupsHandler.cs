@@ -8,95 +8,66 @@ using UnityEngine;
 public class AIGroupsHandler : MonoBehaviour
 {
     [SerializeField] private List<AiGroup> m_AIgroups;
-    [SerializeField] private int groupsDown;
-    [SerializeField] private int totalgroups;
     [SerializeField] private bool hasBoss;
-    [SerializeField] private Transform playerStartPos;
+    public Transform playerStartPos;
     
-    public static GameEvent AllGroupsCCleared = new ();
-    public static GameEvent<bool> hasBossE = new ();
-    public static GameEvent<Transform> SetPlayerStartPosition = new();
 
-    public static Action<int> OnEnemyKilledUIUpdate;
-
-    public static bool isLastEnemy;
 
     private EnemyPoolManager _enemyPoolManager;
-    [SerializeField] private int resurrectingIterations ;
-    [SerializeField] private Transform enemyResurrectPosition;
+    [SerializeField] [Range(1,5)] private int resurrectingIterations ;
+    [SerializeField] private Transform[] enemyResurrectPositions;
     [SerializeField] private int enemyResurrectDelay;
 
-    private int iterationCounter ;
+    private bool hasShowBossOnce;
+    private static Transform playerStartPosStatic ;
 
 
     private void Awake()
     {
+        playerStartPosStatic = playerStartPos;
         _enemyPoolManager = GetComponent<EnemyPoolManager>();
         
         _enemyPoolManager.time = enemyResurrectDelay;
-        _enemyPoolManager.spawnPosition = enemyResurrectPosition;
-
-        iterationCounter = -1; //Because first time its called is wasted
-    }
-
-    private void  Start()
-    {
-        SetPlayerStartPosition.Raise(playerStartPos);
-        
-        hasBossE.Raise(hasBoss);
-
-        isLastEnemy = false;
-        
-        groupsDown = 0;
-        totalgroups = m_AIgroups.Count;
-
-        foreach (var v in m_AIgroups)
-        {
-            v.Initialize(OnAreaCleared, CheckLastEnemy);
-        }
-        
-        CutScene.CutSceneEnded.Register(EnableGroup);
-        
-        CheckLastEnemy(new CharacterHealth());
+        _enemyPoolManager.spawnPosition = enemyResurrectPositions;
+        hasShowBossOnce = false;
     }
 
     private void OnDestroy()
     {
-        CutScene.CutSceneEnded.Unregister(EnableGroup);
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Unregister(OnPlayerReachedCover);
     }
-
-    private void CheckLastEnemy(CharacterHealth h)  //This checks for last enemy (if its the last group alive) 
+    
+    public static Transform GetPlayerSpawnPoint()
     {
-        if (iterationCounter <= AiGroup.TotalEnemiesCount * resurrectingIterations && iterationCounter >= 0 && resurrectingIterations > 0)
-        {
-            _enemyPoolManager.ResurectEnemy(h);
-            m_AIgroups[m_AIgroups.Count - 1].AddEnemy(h);
-        }
-        iterationCounter++;
-        OnEnemyKilledUIUpdate?.Invoke(resurrectingIterations);
-        
-        if (m_AIgroups.Count == 1)
-            isLastEnemy = m_AIgroups[0].CheckLastEnemy();
-        
-            
+        return playerStartPosStatic;
     }
 
+    private void OnPlayerReachedCover()
+    {
+        StartCoroutine(CutSceneSequence());
+    }
+    IEnumerator CutSceneSequence()
+    {
+        CharacterStates.playerState = PlayerCustomStates.CutScene;
+        yield return new WaitForSeconds(1);
+        if (hasBoss && !hasShowBossOnce)
+        {
+            hasShowBossOnce = true;
+            GameEvents.GamePlayEvents.ShowingBoss.Raise(true);
+            yield return new WaitForSeconds(3);
+            GameEvents.GamePlayEvents.ShowingBoss.Raise(false);
+        }
+        CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
+        
+    }
+    
     private void OnAreaCleared(AiGroup aiGroup)
     {
-        groupsDown++;
         m_AIgroups.Remove(aiGroup);
         
         if (m_AIgroups.Count < 1)
-        {
-            AllGroupsCCleared.Raise();
-        }
-        else
-            EnableGroup();
+            GameEvents.GamePlayEvents.OnAllGroupsCleared.Raise();
+    }
 
-    }
-    private void EnableGroup()
-    {
-        EnemyGroupEvents.OnEnemyGroupKilled.Raise(m_AIgroups[0].CoverPosition.transform);
-    }
     
 }

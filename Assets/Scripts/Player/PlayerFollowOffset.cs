@@ -26,7 +26,7 @@ public class PlayerFollowOffset : MonoBehaviour
     private void Start()
     {
         playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
-        EnemyGroupEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
 
         followCam = follow;
         idleCam = idle;
@@ -35,7 +35,7 @@ public class PlayerFollowOffset : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemyGroupEvents.OnEnemyGroupKilled.UnRegister(UpdateFollowRotation);
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.UnRegister(UpdateFollowRotation);
     }
 
     private void UpdateFollowRotation(Transform obj)

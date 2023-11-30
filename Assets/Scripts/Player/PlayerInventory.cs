@@ -18,7 +18,6 @@ public class PlayerInventory : MonoBehaviour
     public static Action<OverlayWeapons> OnGunChangeSuccessFul;
     
     public List<CustomWeapon> weapons;
-    public OverlayWeapons selectedWeapon;  
     
     private static readonly int Pistol = Animator.StringToHash("EquipPistol");
     private static readonly int Rifle = Animator.StringToHash("EquipRifle");
@@ -35,13 +34,13 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
-        UpdateSelectedWeapon(selectedWeapon);
+        UpdateSelectedWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
         OnGunChangeSuccessFul(_selectedWeapon.Weapon);
     }
 
     private void UpdateSelectedWeapon(OverlayWeapons i)
     {
-        _selectedWeapon = weapons.Find(x => x.Weapon == selectedWeapon);
+        _selectedWeapon = weapons.Find(x => x.Weapon == Dependencies.GameDataOperations.GetSelectedWeapon());
     }
 
     private void OnDestroy()

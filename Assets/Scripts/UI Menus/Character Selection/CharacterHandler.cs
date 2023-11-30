@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [Serializable]
 public class CharacterSelectionData
 {
-    public GameObject weaponPrefab;
+    public GameObject characterPrefab;
     public CharacterStatus characterData;
 }
 public class CharacterHandler : MonoBehaviour
@@ -36,7 +37,6 @@ public class CharacterHandler : MonoBehaviour
     private int currentIndex;
     private CharacterType selectedCharacter;
     private CharacterType currentCharacter;
-    
     
     private void Start()
     {
@@ -78,9 +78,9 @@ public class CharacterHandler : MonoBehaviour
             {
                 GameObject gun = Instantiate(ItemDataHandler.Instance.GetCharacterData(guns[i].character).ItemPrefab, parentObj,
                     true);
-                characters[i].weaponPrefab = gun;
+                characters[i].characterPrefab = gun;
             }
-            characters[i].weaponPrefab.SetActive(false);
+            characters[i].characterPrefab.SetActive(false);
 
             if (characters[i].characterData.character == selectedCharacter)
             {
@@ -88,7 +88,7 @@ public class CharacterHandler : MonoBehaviour
                 currentCharacter = characters[i].characterData.character;
             }
         }
-        characters.Find(x => x.characterData.character == selectedCharacter).weaponPrefab.SetActive(true);
+        characters.Find(x => x.characterData.character == selectedCharacter).characterPrefab.SetActive(true);
         
     }
 
@@ -161,9 +161,9 @@ public class CharacterHandler : MonoBehaviour
         }
 
         foreach (var v in characters)
-            v.weaponPrefab.SetActive(false);
+            v.characterPrefab.SetActive(false);
         
-        characters[currentIndex].weaponPrefab.SetActive(true);
+        characters[currentIndex].characterPrefab.SetActive(true);
 
         currentCharacter = characters[currentIndex].characterData.character;
         UpdateGunData();

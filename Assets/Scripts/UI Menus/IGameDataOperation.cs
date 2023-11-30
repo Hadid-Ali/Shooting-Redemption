@@ -17,11 +17,11 @@ public interface IGameDataOperation
     public void SetUnlockedLevels(int episode, int levels);
     public int GetUnlockedLevels(int episode);
     public void SetUnlockedEpisodes(int episodes);
-    public int GetUnlockedEpisodes();
-    public void SetSelectedLevel(int level);
+    public bool GetUnlockedEpisodes(int episode);
     public int GetSelectedLevel();
     public int GetSelectedEpisode();
     public void SetSelectedEpisode(int episode);
+    public void SetSelectedLevel(int level);
     
     //Character and Guns
     public List<GunStatus> GetAllWeaponsData();
