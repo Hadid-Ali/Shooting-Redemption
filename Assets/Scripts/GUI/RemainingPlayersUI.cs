@@ -12,6 +12,7 @@ public class RemainingPlayersUI : MonoBehaviour
     
     void Awake()
     {
+        text = GetComponent<TextMeshProUGUI>();
         GamePlayStatsManager.OnUIUpdate.Register(UpdateText);
     }
 
@@ -24,5 +25,6 @@ public class RemainingPlayersUI : MonoBehaviour
     public void UpdateText(GameplayStats stats)
     {
         text.SetText(stats.RemainingEnemies.ToString() + "/" + stats.TotalEnemies.ToString());
+        print("Working");
     }
 }

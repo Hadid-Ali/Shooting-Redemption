@@ -13,7 +13,7 @@ public class LevelsPanel : UIMenuBase
         for (int i = 0; i < buttons.Count; i++)
         {
             int j = i;
-            buttons[j].interactable = j < Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode());
+            buttons[j].interactable = j <= Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode());
             buttons[j].onClick.AddListener(()=> SetLevelNum(j));
         }
         
@@ -30,20 +30,20 @@ public class LevelsPanel : UIMenuBase
 
     public void SetLevelNum(int i)
     {
-        StartCoroutine(LoadAsyncScene("Chapter" + (Dependencies.GameDataOperations.GetSelectedEpisode() + 1)));
+        int selectedEpisode = Dependencies.GameDataOperations.GetSelectedEpisode();
+        
+        if(selectedEpisode == 0)
+            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter1);
+        if(selectedEpisode == 1)
+            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter2);
+        if(selectedEpisode == 2)
+            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter3);
+        
+        Dependencies.GameDataOperations.SetSelectedLevel(i);
+
+        SceneManager.LoadScene("LoadingScreen");
     }
 
-    IEnumerator LoadAsyncScene(string m_LoadScene)
-    {
-        print(m_LoadScene + "m_LoadScene");
-        yield return new WaitForSeconds(.5f);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(m_LoadScene);
-        yield return new WaitForSeconds(.5f);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-    }
     public void OnCloseButtonClicked()
     {
         ChangeMenuState(MenuName.EpisodeSelection);

@@ -35,7 +35,13 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         UpdateSelectedWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Register(OnPlayerCoverReached);
         OnGunChangeSuccessFul(_selectedWeapon.Weapon);
+    }
+    private void OnDestroy()
+    {
+        PlayerInputt.OnGunChangeInput -= EquipWeapon;
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Unregister(OnPlayerCoverReached);
     }
 
     private void UpdateSelectedWeapon(OverlayWeapons i)
@@ -43,10 +49,14 @@ public class PlayerInventory : MonoBehaviour
         _selectedWeapon = weapons.Find(x => x.Weapon == Dependencies.GameDataOperations.GetSelectedWeapon());
     }
 
-    private void OnDestroy()
+    public void OnPlayerCoverReached()
     {
-        PlayerInputt.OnGunChangeInput -= EquipWeapon;
+        PlayerInputt.CanTakeInput = true;
+        DrawWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
+
+        CustomCameraController.CameraStateChanged(CamState.Idle);
     }
+
 
     public void EquipWeapon()
     {

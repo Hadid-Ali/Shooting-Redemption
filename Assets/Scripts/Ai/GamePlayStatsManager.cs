@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GamePlayStatsManager : MonoBehaviour
 {
-    public static GameEvent<GameplayStats> OnUIUpdate;
+    public static GameEvent<GameplayStats> OnUIUpdate = new();
     
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class GamePlayStatsManager : MonoBehaviour
         GameEvents.GamePlayEvents.OnEnemyKilled.UnRegister(UpdateStats);
     }
 
-    public void UpdateStats(GameplayStats stats)
+    private void UpdateStats(GameplayStats stats)
     {
         OnUIUpdate.Raise(stats);
     }

@@ -10,9 +10,4 @@ public partial class GameAdEvents : MonoBehaviour
         public static GameEvent GameLost  = new ();
         
     }
-    
-    public partial class GamePlayEvents
-    {
-        public static GameEvent OnPlayerHit = new();
-    }
 }

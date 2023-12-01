@@ -8,7 +8,6 @@ public class SplashScreenDuration : MonoBehaviour
 {
     public float splashScreenDuration = 3f;
     public Image progressBar;
-    public string sceneToLoad = "Main Menu";
     
     void Start()
     {
@@ -19,7 +18,7 @@ public class SplashScreenDuration : MonoBehaviour
     IEnumerator LoadSceneAsync()
     {
         yield return new WaitForSeconds(splashScreenDuration);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         
         while (!asyncLoad.isDone)
         {

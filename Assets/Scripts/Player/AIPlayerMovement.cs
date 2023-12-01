@@ -16,8 +16,7 @@ public class AIPlayerMovement : MonoBehaviour
     public bool _rotate;
     [SerializeField] private float lerpSpeed = 2f;
     private Transform _destination;
-    
-    public GameEvent OnCoverReached = new();
+
     private static readonly int CrouchWalk = Animator.StringToHash("CrouchWalk");
 
 
@@ -31,10 +30,15 @@ public class AIPlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _motor = GetComponent<CharacterMotor>();
         _playerInventory = GetComponent<PlayerInventory>();
+        
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.Register(OnEnemyGroupKilled);
 
         _motor.enabled = false;
-        
+    }
 
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.UnRegister(OnEnemyGroupKilled);
     }
 
     private void Update()
@@ -62,6 +66,14 @@ public class AIPlayerMovement : MonoBehaviour
             
             
         }
+    }
+    public void OnEnemyGroupKilled(Transform coverPosition)
+    {
+        PlayerInputt.CanTakeInput = false;
+        SetPosition(coverPosition);
+        
+        CharacterStates.playerState = PlayerCustomStates.InMovement;
+        CustomCameraController.CameraStateChanged(CamState.Follow);
     }
     
     public void SetPosition(Transform destination)
@@ -95,7 +107,7 @@ public class AIPlayerMovement : MonoBehaviour
 
         _playerInventory.EquipWeapon();
         
-        OnCoverReached.Raise();
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Raise();
 
         StartCoroutine(DelayedMotorActivation(false));
 

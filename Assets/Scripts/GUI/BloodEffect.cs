@@ -14,13 +14,13 @@ public class BloodEffect : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        GameAdEvents.GamePlayEvents.OnPlayerHit.Register(OnHit);
+        GameEvents.GamePlayEvents.OnPlayerHit.Register(OnHit);
 
     }
 
     private void OnDestroy()
     {
-        GameAdEvents.GamePlayEvents.OnPlayerHit.Register(OnHit);
+        GameEvents.GamePlayEvents.OnPlayerHit.Register(OnHit);
     }
 
 

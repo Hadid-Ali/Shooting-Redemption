@@ -13,6 +13,9 @@ public interface IGameDataOperation
     public void SetCredit(int i);
     public int GetCredits();
 
+    public SceneName GetSceneToLoadName();
+    public void SetSceneToLoadName(SceneName sceneToLoad);
+
     //Levels
     public void SetUnlockedLevels(int episode, int levels);
     public int GetUnlockedLevels(int episode);

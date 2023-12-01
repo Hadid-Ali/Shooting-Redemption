@@ -14,7 +14,7 @@ public class AiGroup : MonoBehaviour
     
     [SerializeField] private List<CharacterHealth> enemies;
 
-    private static HashSet<CharacterHealth> AllEnemies;
+    private static HashSet<CharacterHealth> AllEnemies = new();
     private static int totalEnemiesCount;
     private static int resurrectingIterations;
 
@@ -33,6 +33,11 @@ public class AiGroup : MonoBehaviour
         AllEnemies.AddRange(enemies);
         resurrectingIterations = respawningIteration;
         totalEnemiesCount = AllEnemies.Count * resurrectingIterations;
+
+        GameplayStats s = new GameplayStats();
+        s.TotalEnemies = totalEnemiesCount;
+        s.RemainingEnemies = totalEnemiesCount;
+        GamePlayStatsManager.OnUIUpdate.Raise(s);
     }
 
     private void OnDestroy()
@@ -46,10 +51,11 @@ public class AiGroup : MonoBehaviour
     public void OnEnemykilled(CharacterHealth h)
     {
         AllEnemies.Remove(h);
+        enemies.Remove(h);
 
         GameplayStats stat = new();
         stat.TotalEnemies = totalEnemiesCount;
-        stat.RemainingEnemies = AllEnemies.Count + (totalEnemiesCount* (resurrectingIterations-1));
+        stat.RemainingEnemies = AllEnemies.Count;
         
         GameEvents.GamePlayEvents.OnEnemyKilled.Raise(stat);
         

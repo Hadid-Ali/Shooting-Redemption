@@ -8,9 +8,9 @@ public partial class GameEvents
     public static partial class GamePlayEvents
     {
         //Player
-        public static GameEvent<Transform> OnRequestPlayerPosition = new();
         public static GameEvent OnPlayerSpawned = new();
         public static GameEvent OnPlayerReachedCover = new();
+        public static GameEvent OnPlayerHit = new();
         
         //Enemies
         public static GameEvent<GameplayStats> OnEnemyKilled = new ();

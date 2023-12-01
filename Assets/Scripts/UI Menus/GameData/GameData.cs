@@ -7,8 +7,10 @@ using UnityEngine.Purchasing;
 [CreateAssetMenu(fileName = "GameData", menuName = "GameData/GameData/Create", order = 1)]
 public class GameData : ScriptableObject
 {
+    public SceneName sceneToLoad;
+    
     public bool sound;
-
+    
     public int m_Credits;
     public int m_SelectedLevel;
     public int m_SelectedEpisode;

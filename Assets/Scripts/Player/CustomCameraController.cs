@@ -17,7 +17,7 @@ public class CustomCameraController : MonoBehaviour
 
     public static Action<CamState> CameraStateChanged;
 
-    private void Start()
+    private void Awake()
     {
         followCam = PlayerFollowOffset.followCam;
         idleCam = PlayerFollowOffset.idleCam;

@@ -88,7 +88,7 @@ public class OverlayGun : MonoBehaviour
                 if (characterHealth.Health <= 0)
                     return;
                 
-                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 0) //For last enemy
+                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 1) //For last enemy
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
