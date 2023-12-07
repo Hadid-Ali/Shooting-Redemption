@@ -27,7 +27,7 @@ public class FailLevel : UIMenuBase
 
     public void OnLevelFail()
     {
-        ChangeMenuState(MenuName.LevelFailed);
+        ChangeMenuState(MenuName.GameplayLevelFailed);
     }
     
 

@@ -4172,8 +4172,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 7887864314459933051}
   - {fileID: 7887864314329752906}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &691437211574301199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,12 +4220,10 @@ MonoBehaviour:
   m_AIgroups:
   - {fileID: 691437212786234143}
   - {fileID: 691437211567930034}
-  groupsDown: 0
-  totalgroups: 0
   hasBoss: 0
   playerStartPos: {fileID: 730877703270270918}
   resurrectingIterations: 0
-  enemyResurrectPosition: {fileID: 621421795}
+  enemyResurrectPositions: []
   enemyResurrectDelay: 2
 --- !u!114 &7411395349902423260
 MonoBehaviour:
@@ -4242,7 +4238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  spawnPosition: {fileID: 0}
+  spawnPosition:
+  - {fileID: 0}
 --- !u!1 &691437211593261716
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,8 +8234,6 @@ MonoBehaviour:
   - {fileID: 8120947458205271875}
   - {fileID: 7887864314679675229}
   - {fileID: 7887864314571064670}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &691437212795640996
 GameObject:
   m_ObjectHideFlags: 0

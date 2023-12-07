@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 158926328}
   - component: {fileID: 158926327}
   - component: {fileID: 1873733496}
+  - component: {fileID: 601812744}
   m_Layer: 10
   m_Name: w
   m_TagString: Untagged
@@ -92,6 +93,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 20, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &601812744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158926325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 20, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2127256251
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +119,7 @@ GameObject:
   - component: {fileID: 2127256254}
   - component: {fileID: 2127256256}
   - component: {fileID: 27549047}
+  - component: {fileID: 601812745}
   m_Layer: 10
   m_Name: KillEnemyOutsideRange
   m_TagString: Untagged
@@ -172,6 +187,19 @@ NavMeshObstacle:
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
 --- !u!65 &27549047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127256251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 20, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &601812745
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,7 +414,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788218219467058678}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.000000003695509, y: -0.016080845, z: -0.0000000018620638,
+    w: 0.9998707}
   m_LocalPosition: {x: 0.16176575, y: -0.90897125, z: 0.000013642677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -755,6 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2634839138530478975}
   - component: {fileID: 2634839138530478974}
+  - component: {fileID: 601812750}
   m_Layer: 0
   m_Name: PlayerFollowOffset
   m_TagString: Untagged
@@ -793,6 +823,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61af2d0a099dcb429da940a2f737eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow: {fileID: 1788218219333764646}
-  idle: {fileID: 1788218221364112129}
-  zoom: {fileID: 1788218219467058673}
+--- !u!114 &601812750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2634839138530478960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aec38af3506174eb12eae92fc8848a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followCam: {fileID: 1788218219333764646}
+  idleCam: {fileID: 1788218221364112129}
+  zoomCam: {fileID: 1788218219467058673}

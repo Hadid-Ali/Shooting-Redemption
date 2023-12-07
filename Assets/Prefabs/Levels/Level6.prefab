@@ -12112,12 +12112,10 @@ MonoBehaviour:
   m_AIgroups:
   - {fileID: 8228368619322702638}
   - {fileID: 8228368618133475971}
-  groupsDown: 0
-  totalgroups: 0
   hasBoss: 0
   playerStartPos: {fileID: 8182454159006691319}
   resurrectingIterations: 0
-  enemyResurrectPosition: {fileID: 3739402304984117520}
+  enemyResurrectPositions: []
   enemyResurrectDelay: 2
 --- !u!114 &5875044214568049618
 MonoBehaviour:
@@ -12132,7 +12130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  spawnPosition: {fileID: 0}
+  spawnPosition:
+  - {fileID: 0}
 --- !u!1 &8228368618123242841
 GameObject:
   m_ObjectHideFlags: 0
@@ -12212,8 +12211,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 3396672365040993723}
   - {fileID: 3396672365063553028}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &8228368618133678612
 GameObject:
   m_ObjectHideFlags: 0
@@ -15849,8 +15846,6 @@ MonoBehaviour:
   CoverPosition: {fileID: 5875044213089384139}
   enemies:
   - {fileID: 8695500860689875419}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &8228368619358701554
 GameObject:
   m_ObjectHideFlags: 0
@@ -18088,7 +18083,7 @@ PrefabInstance:
     - target: {fileID: 9127457311578429052, guid: 0937718fe1fe27f41b19a08d05b4fc3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8600006
+      value: -0.40691376
       objectReference: {fileID: 0}
     - target: {fileID: 9127457311578429052, guid: 0937718fe1fe27f41b19a08d05b4fc3d,
         type: 3}

@@ -33,11 +33,14 @@ public class LevelsPanel : UIMenuBase
         int selectedEpisode = Dependencies.GameDataOperations.GetSelectedEpisode();
         
         if(selectedEpisode == 0)
-            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter1);
+            SessionData.Instance.sceneToLoad = SceneName.Chapter1;
         if(selectedEpisode == 1)
-            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter2);
+            SessionData.Instance.sceneToLoad = SceneName.Chapter2;
         if(selectedEpisode == 2)
-            Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.Chapter3);
+            SessionData.Instance.sceneToLoad = SceneName.Chapter3;
+        if(selectedEpisode == 3)
+            SessionData.Instance.sceneToLoad = SceneName.Chapter4;
+            
         
         Dependencies.GameDataOperations.SetSelectedLevel(i);
 
@@ -46,6 +49,6 @@ public class LevelsPanel : UIMenuBase
 
     public void OnCloseButtonClicked()
     {
-        ChangeMenuState(MenuName.EpisodeSelection);
+        ChangeMenuState(MenuName.EpisodesSelection);
     }
 }

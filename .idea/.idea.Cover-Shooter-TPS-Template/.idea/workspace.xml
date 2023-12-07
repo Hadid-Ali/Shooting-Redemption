@@ -6,41 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelsPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AiGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GUI/BloodEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GUI/BloodEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GUI/RemainingPlayersUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GUI/RemainingPlayersUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameAdEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GameAdEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamePlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamePlayUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamePlayManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamePlayUIManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AIPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AIPlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GameData/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GameData/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/IGameDataOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/IGameDataOperation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelDataController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelDataController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelSpawnController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu Level UI/LevelSpawnController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu/MenuName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu/MenuName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Save Load Data/SaveLoadData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Save Load Data/SaveLoadData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplashScreenDuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplashScreenDuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scripts/Character/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +30,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GUI/RemainingPlayersUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GameWinStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.15/Editor/Collaborate/Components/AlertBox.cs" root0="SKIP_HIGHLIGHTING" />
@@ -236,6 +211,11 @@
       <workItem from="1701328440711" duration="98000" />
       <workItem from="1701328552923" duration="19193000" />
       <workItem from="1701414590257" duration="16305000" />
+      <workItem from="1701673990935" duration="17665000" />
+      <workItem from="1701754639289" duration="4786000" />
+      <workItem from="1701760616926" duration="1250000" />
+      <workItem from="1701846484822" duration="11343000" />
+      <workItem from="1701934619108" duration="1861000" />
     </task>
     <servers />
   </component>

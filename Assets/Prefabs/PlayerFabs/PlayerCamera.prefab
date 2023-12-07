@@ -2437,7 +2437,7 @@ MonoBehaviour:
     m_Bits: 4097
   damage: 30
   range: 50
-  timeBetweenShots: 0.5
+  timeBetweenShots: 1
   BothHands: 0
   _FireSound: {fileID: 8300000, guid: 5023689c4ec4df24f86a1e6674384c95, type: 3}
   _muzzleFlash: {fileID: 4873068}
@@ -10322,11 +10322,11 @@ MonoBehaviour:
     m_Bits: 4097
   damage: 30
   range: 50
-  timeBetweenShots: 0.5
+  timeBetweenShots: 1
   BothHands: 1
   _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
-  _muzzleFlash: {fileID: 759756869514422750}
-  _muzzleFlash2: {fileID: 759756869671087364}
+  _muzzleFlash: {fileID: 759756869671087364}
+  _muzzleFlash2: {fileID: 759756869514422750}
   weaponType: 2
 --- !u!1 &759756868300447374
 GameObject:
@@ -11594,7 +11594,6 @@ GameObject:
   - component: {fileID: 759756868395430457}
   - component: {fileID: 759756868395430456}
   - component: {fileID: 759756868395430407}
-  - component: {fileID: 759756868395430458}
   - component: {fileID: 759756868395430460}
   m_Layer: 0
   m_Name: PlayerCamera
@@ -11730,18 +11729,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &759756868395430458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759756868395430414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6aec38af3506174eb12eae92fc8848a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &759756868395430460
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12736,7 +12723,7 @@ MonoBehaviour:
   shootableLayer:
     serializedVersion: 2
     m_Bits: 4097
-  damage: 100
+  damage: 50
   range: 50
   timeBetweenShots: 1
   BothHands: 0
@@ -12978,7 +12965,7 @@ MonoBehaviour:
     m_Bits: 4097
   damage: 30
   range: 50
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.7
   BothHands: 0
   _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
   _muzzleFlash: {fileID: 759756867603787707}
@@ -15630,7 +15617,7 @@ MonoBehaviour:
     m_Bits: 4097
   damage: 10
   range: 50
-  timeBetweenShots: 0.01
+  timeBetweenShots: 0.2
   BothHands: 0
   _FireSound: {fileID: 8300000, guid: eb19c101e680075468ddaa277d8450f3, type: 3}
   _muzzleFlash: {fileID: 759756869260671822}
@@ -22736,9 +22723,9 @@ MonoBehaviour:
   shootableLayer:
     serializedVersion: 2
     m_Bits: 4097
-  damage: 1
+  damage: 10
   range: 50
-  timeBetweenShots: 0.01
+  timeBetweenShots: 0.2
   BothHands: 0
   _FireSound: {fileID: 8300000, guid: eb19c101e680075468ddaa277d8450f3, type: 3}
   _muzzleFlash: {fileID: 759756869343084184}
@@ -25371,7 +25358,7 @@ MonoBehaviour:
     m_Bits: 4097
   damage: 30
   range: 50
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.7
   BothHands: 0
   _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
   _muzzleFlash: {fileID: 759756867970569565}

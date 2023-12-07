@@ -3059,7 +3059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2067273947
 Transform:
   m_ObjectHideFlags: 0
@@ -4665,8 +4665,6 @@ MonoBehaviour:
   - {fileID: 7396107963779739073}
   - {fileID: 7396107964187348817}
   - {fileID: 7396107963723673946}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &165342048741239392
 GameObject:
   m_ObjectHideFlags: 0
@@ -8416,12 +8414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AIgroups:
   - {fileID: 165342048734680365}
-  groupsDown: 0
-  totalgroups: 0
   hasBoss: 0
   playerStartPos: {fileID: 141734380202983924}
   resurrectingIterations: 0
-  enemyResurrectPosition: {fileID: 0}
+  enemyResurrectPositions: []
   enemyResurrectDelay: 0
 --- !u!114 &1733744093163913156
 MonoBehaviour:
@@ -8436,7 +8432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  spawnPosition: {fileID: 0}
+  spawnPosition:
+  - {fileID: 0}
 --- !u!1 &165342049971796486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9287,8 +9284,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 165342049994259044}
   - {fileID: 2446080820696701441}
-  deadCount: 0
-  totalCount: 0
 --- !u!1 &165342050034795354
 GameObject:
   m_ObjectHideFlags: 0
