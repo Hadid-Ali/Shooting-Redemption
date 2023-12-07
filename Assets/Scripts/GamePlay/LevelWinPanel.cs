@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,12 +11,24 @@ public class LevelWinPanel : UIMenuBase
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button nextButton;
-    
+
+    public static GameEvent<GameWinStats> OnUpdateStatsStart = new();
+
+    private void Awake()
+    {
+        GameEvents.GamePlayEvents.OnAllGroupsCleared.Register(OnAllGroupsCleared);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.OnAllGroupsCleared.Unregister(OnAllGroupsCleared);
+    }
 
     protected override void OnMenuContainerEnable()
     {
         Time.timeScale = 0.001f;
 
+        GetComponent<Animator>().enabled = true;
         IncrementProgressLevel();
     }
 
@@ -23,50 +37,54 @@ public class LevelWinPanel : UIMenuBase
         Time.timeScale = 1;
     }
 
-    private void Start()
+    private void OnAllGroupsCleared()
     {
-        mainMenuButton.onClick.AddListener(OnClickMainMenu);
-        restartButton.onClick.AddListener(OnClickRestart);
-        nextButton.onClick.AddListener(OnClickResume);
+        StartCoroutine(GameWon());
     }
 
-    private void OnClickResume() => OnNextClicked();
-    private void OnClickRestart() => OnRestartClicked();
-    private void OnClickMainMenu() => OnMainMenuClicked();
-    private void OnNextClicked()
+    IEnumerator GameWon()
     {
-        int currentLevel = Dependencies.GameDataOperations.GetSelectedLevel();
-        currentLevel++;
-        Dependencies.GameDataOperations.SetSelectedLevel(currentLevel);
-        ChangeMenuState(MenuName.None);
+        yield return new WaitForSeconds(2f);
+        ChangeMenuState(MenuName.GameplayLevelWon);
+        IncrementProgressLevel();
+        
+        GameWinStats stats = new();
+        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) + Dependencies.GameDataOperations.GetCredits() - 
+                            (SessionData.Instance.civiliansKilled * 20);
+        stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
+        stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
+        stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
+
+        OnUpdateStatsStart.Raise(stats);
+        
+        Dependencies.GameDataOperations.SetCredit(stats.coinsEarned);
+        Dependencies.GameDataOperations.SaveData();
     }
-    private void OnRestartClicked()
-    {
-        SceneManager.LoadScene("LoadingScreen");
-    }
+    
     public void IncrementProgressLevel()
     {
         int currentLevel = Dependencies.GameDataOperations.GetSelectedLevel();
         int currentEpisode = Dependencies.GameDataOperations.GetSelectedEpisode();
         
-        if (currentLevel < 4)
+        int unlockedLevels = currentLevel;
+        
+        if (unlockedLevels < 4)
         {
-            Dependencies.GameDataOperations.SetUnlockedLevels(currentEpisode, currentLevel);
+            unlockedLevels = currentLevel + 1;
+            if(unlockedLevels > Dependencies.GameDataOperations.GetUnlockedLevels(currentEpisode))
+                Dependencies.GameDataOperations.SetUnlockedLevels(currentEpisode, unlockedLevels);
         }
-        if (currentLevel >= 4)
+        if (unlockedLevels >= 4)
         {
-            if (!Dependencies.GameDataOperations.GetUnlockedEpisodes(currentEpisode))
+            int nextEpisode = currentEpisode + 1;
+            if (!Dependencies.GameDataOperations.GetUnlockedEpisodes(nextEpisode))
             {
-                currentEpisode++;
-                Dependencies.GameDataOperations.SetUnlockedEpisodes(currentEpisode);
+                Dependencies.GameDataOperations.SetUnlockedEpisodes(nextEpisode);
             }
+            
         }
-    }
-    
-    private void OnMainMenuClicked()
-    {
-        Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.MainMenu);
-        SceneManager.LoadScene("LoadingScreen");
+        Dependencies.GameDataOperations.SetSelectedLevel(currentLevel);
+        Dependencies.GameDataOperations.SaveData();
     }
     
 }

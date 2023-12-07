@@ -7,14 +7,10 @@ public interface IGameDataOperation
     public void LoadData();
     public void SaveData();
 
-
     public bool GetSoundStatus();
     public void SetSoundStatus(bool val);
     public void SetCredit(int i);
     public int GetCredits();
-
-    public SceneName GetSceneToLoadName();
-    public void SetSceneToLoadName(SceneName sceneToLoad);
 
     //Levels
     public void SetUnlockedLevels(int episode, int levels);

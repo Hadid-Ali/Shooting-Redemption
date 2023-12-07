@@ -53,7 +53,7 @@ public class MainMenuHandler : UIMenuBase
 
     private void OnPlayBtnTap()
     {
-        ChangeMenuState(MenuName.EpisodeSelection);
+        ChangeMenuState(MenuName.EpisodesSelection);
     }
     private void OnSettingBtnTap()
     {
@@ -67,17 +67,17 @@ public class MainMenuHandler : UIMenuBase
     
     private void OnCharacterBtnTap()
     {
-        ChangeMenuState(MenuName.CharacterShop);
+        ChangeMenuState(MenuName.CharacterSelection);
     }
     
     private void OnGunBtnTap()
     {
-        ChangeMenuState(MenuName.GunShop);
+        ChangeMenuState(MenuName.GunSelection);
     }
     
     private void OnEpisodeSelectionBtnTap()
     {
-        ChangeMenuState(MenuName.EpisodeSelection);
+        ChangeMenuState(MenuName.EpisodesSelection);
     }
     
 }

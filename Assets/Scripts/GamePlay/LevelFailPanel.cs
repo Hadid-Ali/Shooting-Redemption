@@ -34,7 +34,7 @@ public class LevelFailPanel : UIMenuBase
     
     private void OnMainMenuClicked()
     {
-        Dependencies.GameDataOperations.SetSceneToLoadName(SceneName.MainMenu);
+        SessionData.Instance.sceneToLoad = SceneName.MainMenu;
         SceneManager.LoadScene("LoadingScreen");
     }
 }

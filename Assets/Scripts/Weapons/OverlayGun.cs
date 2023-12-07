@@ -67,6 +67,7 @@ public class OverlayGun : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        
         if(timer >= 0)
             return;
         
@@ -88,7 +89,7 @@ public class OverlayGun : MonoBehaviour
                 if (characterHealth.Health <= 0)
                     return;
                 
-                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 1) //For last enemy
+                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 1 && !characterHealth.isNPC) //For last enemy
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
@@ -110,8 +111,8 @@ public class OverlayGun : MonoBehaviour
                 StartCoroutine(ShootWithDelayExplode(explodeable));
             }
 
-            
 
+            PlayerInputt.PlayerExposed();
         }
     }
 

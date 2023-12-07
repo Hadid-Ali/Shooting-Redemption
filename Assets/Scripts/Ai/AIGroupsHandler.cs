@@ -34,9 +34,12 @@ public class AIGroupsHandler : MonoBehaviour
         GameEvents.GamePlayEvents.OnPlayerReachedCover.Register(OnPlayerReachedCover);
         GameEvents.GamePlayEvents.OnPlayerSpawned.Register(OnPlayerSpawned);
         
+    }
+
+    private void Start()
+    {
         foreach (var v in m_AIgroups)
             v.Initialize(OnGroupKilled, resurrectingIterations);
-        
     }
 
     private void OnDestroy()

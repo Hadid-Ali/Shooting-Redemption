@@ -12,22 +12,26 @@ public enum SceneName
     LoadingScreen,
     Chapter1,
     Chapter2,
-    Chapter3
+    Chapter3,
+    Chapter4
 }
 public class LoadingSceneProgress : MonoBehaviour
 {
     [SerializeField] private Image _loadingBar;
     
-    private void Start()
+    private void Awake()
     {
-        String sceneName = Dependencies.GameDataOperations.GetSceneToLoadName().ToString();
+        String sceneName = SessionData.Instance.sceneToLoad.ToString();
+        print(sceneName);
+        StopAllCoroutines();
         StartCoroutine(LoadAsyncScene(sceneName));
     }
     IEnumerator LoadAsyncScene(string m_LoadScene)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSecondsRealtime(.5f);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(m_LoadScene);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSecondsRealtime(.5f);
+
         while (!asyncLoad.isDone)
         {
             _loadingBar.fillAmount = asyncLoad.progress;

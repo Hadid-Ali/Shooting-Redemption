@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class LevelSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Levels;
+    //[SerializeField] private GameObject[] Levels;
     private PlayerInventory _playerInventory;
     private Transform playerSpawnPoint;
     private void Awake()
     {
+        Time.timeScale = 1;
+        
         LoadLevel(Dependencies.GameDataOperations.GetSelectedLevel());
     }
 
@@ -20,16 +22,22 @@ public class LevelSpawner : MonoBehaviour
     private void SpawnPlayer()
     {
         GameObject player =
-            ItemDataHandler.Instance.GetPlayerPrefab(Dependencies.GameDataOperations.GetSelectedCharacter());
+            SessionData.Instance.GetPlayerPrefab(Dependencies.GameDataOperations.GetSelectedCharacter());
         
-        GameObject g = Instantiate(player, playerSpawnPoint.position,playerSpawnPoint.rotation);
+        Instantiate(player, playerSpawnPoint.position,playerSpawnPoint.rotation);
         
         GameEvents.GamePlayEvents.OnPlayerSpawned.Raise();
     }
     
     public void LoadLevel(int i)
     {
-        Levels[i].SetActive(true);
-        playerSpawnPoint = Levels[i].GetComponentInChildren<AIGroupsHandler>().playerStartPos; //Get Player Start position
+        int levelToLoad = i + 1;
+        int currentEpisode = Dependencies.GameDataOperations.GetSelectedEpisode();
+        currentEpisode++;
+
+        string path = "Levels/Episode" + currentEpisode + "/Level" + levelToLoad;
+        GameObject g = Instantiate(Resources.Load<GameObject>(path));
+        
+        playerSpawnPoint = g.GetComponentInChildren<AIGroupsHandler>().playerStartPos; //Get Player Start position
     }
 }

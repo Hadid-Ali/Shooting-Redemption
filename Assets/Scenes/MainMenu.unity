@@ -6553,7 +6553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9240af2f4255a4a4c9b589de21069f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MenuName: 7
+  m_MenuName: 5
   m_MenuContainer: {fileID: 1989929819}
   m_CloseBtnTap: {fileID: 266105091}
   CoinTxt: {fileID: 1319743036}
@@ -11119,7 +11119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494eba8fd97d8d94ca76c01343fe0ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MenuName: 5
+  m_MenuName: 4
   m_MenuContainer: {fileID: 701967157}
   m_CloseBtn: {fileID: 368520832}
   CoinTxt: {fileID: 1878835588}
@@ -12629,7 +12629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc6863ba3d42cc4aaaa1fd221cef091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MenuName: 9
+  m_MenuName: 7
   m_MenuContainer: {fileID: 55252088}
   buttons:
   - {fileID: 317730840}
@@ -14343,7 +14343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414f21825cb860e4ea427e37a216731b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MenuName: 8
+  m_MenuName: 6
   m_MenuContainer: {fileID: 1424980672}
   LevelBtns:
   - {fileID: 735425103}

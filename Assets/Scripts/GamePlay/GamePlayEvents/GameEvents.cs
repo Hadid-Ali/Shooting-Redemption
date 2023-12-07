@@ -21,7 +21,7 @@ public partial class GameEvents
         
         public static GameEvent OnAllGroupsCleared = new();
         public static GameEvent<Transform> OnEnemyGroupKilled = new();
-
+        
 
 
     }

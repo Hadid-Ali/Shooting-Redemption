@@ -3,6 +3,8 @@ using Hit = CoverShooter.Hit;
 
 public class NPC : MonoBehaviour
 {
+    [SerializeField] private GameObject helpmeCanvas;
+    
     private AudioSource audioSource;
     
     public AudioClip scream;
@@ -29,6 +31,8 @@ public class NPC : MonoBehaviour
     private void OnDestroy()
     {
         OverlayGun.OnGunShoot -= OnAlert;
+        if(SessionData.Instance)
+        SessionData.Instance.civiliansKilled = 0;
     }
 
     public void OnHit(Hit hit)
@@ -37,9 +41,18 @@ public class NPC : MonoBehaviour
         OverlayGun.OnGunShoot -= OnAlert;
         
         anim.Play(Death);
+        helpmeCanvas.SetActive(false);
+        SessionData.Instance.civiliansKilled += 1;
+    }
+
+    public void OnHit()
+    {
+        isDead = true;
+        OverlayGun.OnGunShoot -= OnAlert;
         
-        print("Wokring");
-        
+        anim.Play(Death);
+        helpmeCanvas.SetActive(false);
+        SessionData.Instance.civiliansKilled += 1;
     }
 
     public void OnAlert()
@@ -49,6 +62,7 @@ public class NPC : MonoBehaviour
             anim.SetTrigger(Scared);
             audioSource.PlayOneShot(scream);
             hasScreamed = true;
+            helpmeCanvas.SetActive(true);
             
         }
     }

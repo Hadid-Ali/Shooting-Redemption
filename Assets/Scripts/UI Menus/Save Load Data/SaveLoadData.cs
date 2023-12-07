@@ -69,8 +69,6 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
     //Credits
     public void SetCredit(int i) => m_GameData.m_Credits = i;
     public int GetCredits() => m_GameData.m_Credits;
-    public SceneName GetSceneToLoadName() => m_GameData.sceneToLoad;
-    public void SetSceneToLoadName(SceneName sceneToLoad) => m_GameData.sceneToLoad = sceneToLoad;
     
     //Levels and Episodes
     public void SetUnlockedLevels(int episode, int levels) => m_GameData.m_UnlockedLevels[episode] = levels;

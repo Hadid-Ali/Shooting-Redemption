@@ -24,7 +24,6 @@ public class RemainingPlayersUI : MonoBehaviour
 
     public void UpdateText(GameplayStats stats)
     {
-        text.SetText(stats.RemainingEnemies.ToString() + "/" + stats.TotalEnemies.ToString());
-        print("Working");
+        text.SetText("x" + stats.RemainingEnemies.ToString());
     }
 }

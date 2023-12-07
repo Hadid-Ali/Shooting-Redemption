@@ -22,7 +22,15 @@ public class AiGroup : MonoBehaviour
     {
         AllEnemies.Add(h);
     }
-    
+
+    private void Awake()
+    {
+        foreach (var v in enemies)
+            v.GetComponent<Rigidbody>().isKinematic = true;
+        
+        AllEnemies.AddRange(enemies);
+    }
+
     public void Initialize(Action<AiGroup> onactionDie, int respawningIteration)
     {
         m_OnGroupKilled.Register(onactionDie);
@@ -30,13 +38,24 @@ public class AiGroup : MonoBehaviour
         foreach (var v in enemies)
             v.Initialize(OnEnemykilled);
         
-        AllEnemies.AddRange(enemies);
         resurrectingIterations = respawningIteration;
-        totalEnemiesCount = AllEnemies.Count * resurrectingIterations;
+        totalEnemiesCount = AllEnemies.Count;
+        
+        
+        StartCoroutine(Wait()); //For enemies disappearing bug
 
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        foreach (var v in enemies)
+            v.GetComponent<Rigidbody>().isKinematic = false;
+        
         GameplayStats s = new GameplayStats();
         s.TotalEnemies = totalEnemiesCount;
         s.RemainingEnemies = totalEnemiesCount;
+        
         GamePlayStatsManager.OnUIUpdate.Raise(s);
     }
 
@@ -44,8 +63,10 @@ public class AiGroup : MonoBehaviour
     {
         m_OnGroupKilled.UnRegisterAll();
         GameEvents.GamePlayEvents.OnEnemyResurrected.UnRegister(ResurrectEnemey);
+        AllEnemies = new HashSet<CharacterHealth>();
     }
     public static int GetRemainingEnemiesCount() => AllEnemies.Count;
+    public static int GetAllEnemiesCount() => totalEnemiesCount;
 
 
     public void OnEnemykilled(CharacterHealth h)

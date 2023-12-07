@@ -1,16 +1,29 @@
 using System;
+using System.Security.Cryptography;
 using CoverShooter;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PlayerInputt : MonoBehaviour
 {
+    public static Action PlayerExposed;
     
     public static Action OnZoom;
     public static Action OnUnZoom;
     public static Action OnGunChangeInput;
 
     public static bool CanTakeInput;
-    
+
+    private void Awake()
+    {
+        PlayerExposed += playerExposed;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerExposed -= playerExposed;
+    }
+
     void Update()
     {
         if(!CanTakeInput)
@@ -26,8 +39,7 @@ public class PlayerInputt : MonoBehaviour
         
         if (ControlFreak2.CF2Input.GetButtonUp("Zoom"))
         {
-            GetComponent<Actor>().enabled = true;
-            
+            PlayerExposed();
             OnUnZoom();
             
             CharacterStates.SetPlayerState(PlayerCustomStates.HoldingPosition);
@@ -37,6 +49,11 @@ public class PlayerInputt : MonoBehaviour
         {
             OnGunChangeInput();
         }
+    }
+
+    public void playerExposed()
+    {
+        GetComponent<Actor>().enabled = true;
     }
 
 }

@@ -26,6 +26,9 @@ public class BloodEffect : MonoBehaviour
 
     public void OnHit()
     {
-        anim.SetTrigger(Effect);
+        if (anim)
+        {
+            anim.SetTrigger(Effect);
+        }
     }
 }

@@ -76,7 +76,7 @@ public class CharacterHandler : MonoBehaviour
 
             if (!charactersAlreadyInstatiated)
             {
-                GameObject gun = Instantiate(ItemDataHandler.Instance.GetCharacterData(guns[i].character).ItemPrefab, parentObj,
+                GameObject gun = Instantiate(SessionData.Instance.GetCharacterData(guns[i].character).ItemPrefab, parentObj,
                     true);
                 characters[i].characterPrefab = gun;
             }
@@ -98,10 +98,10 @@ public class CharacterHandler : MonoBehaviour
         bool isGunUnlocked = characters[currentIndex].characterData.isUnlocked;
         bool isGunSelected = selectedCharacter == currentCharacter;
         bool isAffordable = Dependencies.GameDataOperations.GetCredits() >=
-                            ItemDataHandler.Instance.GetCharacterData(selectedCharacter).ItemPrice;
+                            SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice;
 
         //Assignation
-        m_GunPrice.SetText("Price : " + ItemDataHandler.Instance.GetCharacterData(selectedCharacter).ItemPrice);
+        m_GunPrice.SetText("Price : " + SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice);
         m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
 
 
@@ -177,7 +177,7 @@ public class CharacterHandler : MonoBehaviour
     }
     public void BuyGun()
     {
-        int gunCost = ItemDataHandler.Instance.GetCharacterData(selectedCharacter).ItemPrice;
+        int gunCost = SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice;
         int availableCredits = Dependencies.GameDataOperations.GetCredits();
         
         if (availableCredits >= gunCost && !characters[currentIndex].characterData.isUnlocked)
