@@ -11,6 +11,8 @@ public class LevelFailPanel : UIMenuBase
 
     protected override void OnMenuContainerEnable()
     {
+        AdHandler.ShowInterstitial();
+        
         Time.timeScale = 0.001f;
     }
 

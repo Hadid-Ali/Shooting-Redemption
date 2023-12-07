@@ -131,6 +131,7 @@ public class AdsManager : MonoBehaviour
             }
             
             Debug.Log("Ad Initialized");
+            GameAdEvents.OnAdsInitialized.Raise();
         });
     }
 

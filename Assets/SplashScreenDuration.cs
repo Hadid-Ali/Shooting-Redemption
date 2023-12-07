@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,26 @@ public class SplashScreenDuration : MonoBehaviour
     public float splashScreenDuration = 3f;
     public Image progressBar;
     
-    void Start()
+    void Awake()
     {
-        StartCoroutine(LoadSceneAsync());
+        GameAdEvents.OnAdsInitialized.Register(OnAdsInitialized);
+        
         AdHandler.InitializeAds();
+        
     }
+
+    private void OnDestroy()
+    {
+        GameAdEvents.OnAdsInitialized.Unregister(OnAdsInitialized);
+    }
+
+    public void OnAdsInitialized()
+    {
+        AdHandler.ShowAppOpen();
+        StartCoroutine(LoadSceneAsync());
+    }
+    
+    
     
     IEnumerator LoadSceneAsync()
     {

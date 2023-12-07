@@ -13,7 +13,8 @@ public enum GamePlayButtonName
     Restart,
     Next,
     Pause,
-    Exit
+    Exit,
+    DoubleReward
 }
 
 [RequireComponent(typeof(Button))]
@@ -51,7 +52,32 @@ public class GamePlayButton : MonoBehaviour
             case GamePlayButtonName.Exit:
                 _button.onClick.AddListener(OnExitButtonClicked);
                 break;
+            case GamePlayButtonName.DoubleReward:
+                _button.onClick.AddListener(OnClickDoubleReward);
+                break;
+                
         }
+    }
+
+    private void OnClickDoubleReward()
+    {
+        AdHandler.ShowRewarded(OnClickDoubleRewardCallBack);
+    }
+
+    private void OnClickDoubleRewardCallBack()
+    {
+        _button.interactable = false;
+        
+        GameWinStats stats = new();
+        stats.coinsEarned = ((AiGroup.GetAllEnemiesCount() * 50)  ) + Dependencies.GameDataOperations.GetCredits();
+        stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
+        stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
+        stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
+
+        LevelWinPanel.OnUpdateStatsStart.Raise(stats);
+        
+        Dependencies.GameDataOperations.SetCredit(stats.coinsEarned);
+        Dependencies.GameDataOperations.SaveData();
     }
 
     private void OnMenuMenuClicked()

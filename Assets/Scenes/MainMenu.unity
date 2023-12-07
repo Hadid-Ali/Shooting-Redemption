@@ -4987,6 +4987,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Episode 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1363683985169498755, guid: 1d0a97d5e2d278d4dbebfdcb91019af9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1363683985394087125, guid: 1d0a97d5e2d278d4dbebfdcb91019af9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -11875,6 +11880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2e49ab26909754696c391559e0201a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  civiliansKilled: 0
+  sceneToLoad: 0
   characterDatas:
   - {fileID: 11400000, guid: 996d38be4561fb847bb4554fb530b0b9, type: 2}
   - {fileID: 11400000, guid: 5d30f1e0a1fdd4a44875acd3b60545ee, type: 2}

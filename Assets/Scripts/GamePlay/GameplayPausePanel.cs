@@ -17,6 +17,8 @@ public class GameplayPausePanel : UIMenuBase
 
         GetComponent<Animator>().enabled = true;
         GetComponent<Animator>().SetTrigger(Play);
+        
+        AdHandler.ShowInterstitial();
     }
 
     protected override void OnMenuContainerDisable()

@@ -26,10 +26,14 @@ public class LevelWinPanel : UIMenuBase
 
     protected override void OnMenuContainerEnable()
     {
+        AdHandler.ShowInterstitial();
+        
         Time.timeScale = 0.001f;
 
         GetComponent<Animator>().enabled = true;
         IncrementProgressLevel();
+        
+        
     }
 
     protected override void OnMenuContainerDisable()
