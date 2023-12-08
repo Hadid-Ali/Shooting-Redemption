@@ -12,19 +12,20 @@ public class GameplayPausePanel : UIMenuBase
 
     protected override void OnMenuContainerEnable()
     {
-        Time.timeScale = 0.001f;
         sound.isOn = Dependencies.GameDataOperations.GetSoundStatus();
 
         GetComponent<Animator>().enabled = true;
         GetComponent<Animator>().SetTrigger(Play);
         
         AdHandler.ShowInterstitial();
+        
+        PlayerCanvasScipt.DeActive();
     }
 
     protected override void OnMenuContainerDisable()
     {
-        Time.timeScale = 1;
         GetComponent<Animator>().enabled = false;
+        PlayerCanvasScipt.SetActive();
     }
     
 }

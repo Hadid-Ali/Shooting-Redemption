@@ -23,7 +23,12 @@ public class MainMenuHandler : UIMenuBase
         Initialize();
         updateCoins();
     }
-    
+
+    protected override void OnMenuContainerEnable()
+    {
+        updateCoins();
+    }
+
     public void updateCoins()
     {
         CoinTxt.text = Dependencies.GameDataOperations.GetCredits().ToString();

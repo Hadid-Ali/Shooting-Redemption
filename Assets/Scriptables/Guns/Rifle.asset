@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95258fe9a59eab44c90d9e3cc1167fa4, type: 3}
   m_Name: Rifle
   m_EditorClassIdentifier: 
-  ItemPrice: 300
+  ItemPrice: 1300
   ItemPrefab: {fileID: 2955617016580990451, guid: 0197ff42a23b39c4798e951fdb58b901,
     type: 3}
   gun: 4

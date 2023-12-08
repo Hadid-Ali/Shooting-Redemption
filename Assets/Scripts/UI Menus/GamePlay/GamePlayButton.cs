@@ -108,12 +108,15 @@ public class GamePlayButton : MonoBehaviour
         buttonEvent?.Invoke();
         GameplayPausePanel.ChangeMenuState(MenuName.GameplayPause);
         
+        Time.timeScale = 0.001f;
+        
     }
 
     private void OnExitButtonClicked()
     {
         buttonEvent?.Invoke();
         GameplayPausePanel.ChangeMenuState(MenuName.None);
+        Time.timeScale = 1f;
         
     }
 }

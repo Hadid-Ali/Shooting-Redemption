@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;/*
-using GoogleMobileAds.Api.Mediation.AppLovin;*/
-using GoogleMobileAds.Api;/*
-using AppLovin = GoogleMobileAds.Mediation.AppLovin.Api.AppLovin;*/
+using UnityEngine;
+using GoogleMobileAds.Api;
 
 public class AdsManager : MonoBehaviour
 {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaca8daa85f016469b6ef91f48e55f3, type: 3}
   m_Name: SuitedMan
   m_EditorClassIdentifier: 
-  ItemPrice: 1000
-  ItemPrefab: {fileID: 6147916637216912319, guid: 5508d445b25ac464990c5f791f47de62,
+  ItemPrice: 2000
+  ItemPrefab: {fileID: 6622807026580154390, guid: 822f4f35e2f1f9649b43c69d3b0c0c9d,
     type: 3}
   character: 1

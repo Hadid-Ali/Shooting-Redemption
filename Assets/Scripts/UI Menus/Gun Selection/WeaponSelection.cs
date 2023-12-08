@@ -20,6 +20,8 @@ public class WeaponSelection : MonoBehaviour
     
     
     //Hard References
+    public GameObject Camera;
+    
     public Transform parentObj;
     public Button m_WatchAdForCoins;
     public Button m_WatchAdForFreeGunTry;
@@ -40,8 +42,17 @@ public class WeaponSelection : MonoBehaviour
     private int currentIndex;
     private OverlayWeapons selectedWeapon;
     private OverlayWeapons currentWeapon;
-    
-    
+
+    private void OnEnable()
+    {
+        Camera.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        Camera.SetActive(false);
+    }
+
     private void Start()
     {
         gunsAlreadyInstatiated = false;
@@ -93,7 +104,8 @@ public class WeaponSelection : MonoBehaviour
             }
         }
         weapons.Find(x => x.weaponData.weapon == selectedWeapon).weaponPrefab.SetActive(true);
-        
+
+        UpdateGunData();
     }
 
     public void UpdateGunData()
@@ -102,10 +114,10 @@ public class WeaponSelection : MonoBehaviour
         bool isGunUnlocked = weapons[currentIndex].weaponData.isUnlocked;
         bool isGunSelected = selectedWeapon == currentWeapon;
         bool isAffordable = Dependencies.GameDataOperations.GetCredits() >=
-                            SessionData.Instance.GetGunData(selectedWeapon).ItemPrice;
+                            SessionData.Instance.GetGunData(currentWeapon).ItemPrice;
 
         //Assignation
-        m_GunPrice.SetText("Price : " + SessionData.Instance.GetGunData(selectedWeapon).ItemPrice);
+        m_GunPrice.SetText("Price : " + SessionData.Instance.GetGunData(currentWeapon).ItemPrice);
         m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
 
 
@@ -140,9 +152,17 @@ public class WeaponSelection : MonoBehaviour
             GunStatus.color = Color.white; // Gun Button Color
 
             m_BuyButton.onClick.RemoveAllListeners();
-            m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
-            m_BuyButton.onClick.AddListener(BuyGun);
-            m_BuyButton.interactable = true;
+
+            if (isAffordable)
+            {
+                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
+                m_BuyButton.onClick.AddListener(BuyGun);
+                m_BuyButton.interactable = true;
+            }
+            else
+            {
+                m_BuyButton.interactable = false;
+            }
         }
 
     }
@@ -181,7 +201,7 @@ public class WeaponSelection : MonoBehaviour
     }
     public void BuyGun()
     {
-        int gunCost = SessionData.Instance.GetGunData(selectedWeapon).ItemPrice;
+        int gunCost = SessionData.Instance.GetGunData(currentWeapon).ItemPrice;
         int availableCredits = Dependencies.GameDataOperations.GetCredits();
         
         if (availableCredits >= gunCost && !weapons[currentIndex].weaponData.isUnlocked)

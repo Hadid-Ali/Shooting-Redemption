@@ -33,12 +33,15 @@ public class LevelWinPanel : UIMenuBase
         GetComponent<Animator>().enabled = true;
         IncrementProgressLevel();
         
+        PlayerCanvasScipt.DeActive();
+        
         
     }
 
     protected override void OnMenuContainerDisable()
     {
         Time.timeScale = 1;
+        
     }
 
     private void OnAllGroupsCleared()

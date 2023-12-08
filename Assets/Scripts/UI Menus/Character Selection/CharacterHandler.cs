@@ -17,6 +17,7 @@ public class CharacterHandler : MonoBehaviour
     [SerializeField]private List<CharacterSelectionData> characters = new List<CharacterSelectionData>();
     
     //Hard References
+    public GameObject Camera;
     public Transform parentObj;
     public Button m_WatchAdForCoins;
     public Button m_WatchAdForFreeGunTry;
@@ -38,6 +39,16 @@ public class CharacterHandler : MonoBehaviour
     private CharacterType selectedCharacter;
     private CharacterType currentCharacter;
     
+    
+    private void OnEnable()
+    {
+        Camera.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        Camera.SetActive(false);
+    }
     private void Start()
     {
         charactersAlreadyInstatiated = false;
@@ -98,10 +109,10 @@ public class CharacterHandler : MonoBehaviour
         bool isGunUnlocked = characters[currentIndex].characterData.isUnlocked;
         bool isGunSelected = selectedCharacter == currentCharacter;
         bool isAffordable = Dependencies.GameDataOperations.GetCredits() >=
-                            SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice;
+                            SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice;
 
         //Assignation
-        m_GunPrice.SetText("Price : " + SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice);
+        m_GunPrice.SetText("Price : " + SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice);
         m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
 
 
@@ -132,13 +143,19 @@ public class CharacterHandler : MonoBehaviour
         }
         else
         {
-            m_GunButtonText.SetText("Unlock Gun"); //Gun Status
+            m_GunButtonText.SetText("Unlock Character"); //Gun Status
             GunStatus.color = Color.white; // Gun Button Color
 
-            m_BuyButton.onClick.RemoveAllListeners();
-            m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
-            m_BuyButton.onClick.AddListener(BuyGun);
-            m_BuyButton.interactable = true;
+            if (isAffordable)
+            {
+                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
+                m_BuyButton.onClick.AddListener(BuyGun);
+                m_BuyButton.interactable = true;
+            }
+            else
+            {
+                m_BuyButton.interactable = false;
+            }
         }
 
     }

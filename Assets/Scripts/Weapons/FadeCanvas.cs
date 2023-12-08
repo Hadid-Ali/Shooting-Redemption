@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,4 +14,8 @@ public class FadeCanvas : MonoBehaviour
         _animator.SetTrigger(FadeCanva);
     }
 
+    private void OnEnable()
+    {
+        _animator.SetTrigger(FadeCanva);
+    }
 }

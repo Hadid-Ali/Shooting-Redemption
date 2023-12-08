@@ -37,12 +37,14 @@ public class NPC : MonoBehaviour
 
     public void OnHit(Hit hit)
     {
+        if(!isDead)
+            SessionData.Instance.civiliansKilled += 1;
+        
         isDead = true;
         OverlayGun.OnGunShoot -= OnAlert;
         
         anim.Play(Death);
         helpmeCanvas.SetActive(false);
-        SessionData.Instance.civiliansKilled += 1;
     }
 
     public void OnHit()

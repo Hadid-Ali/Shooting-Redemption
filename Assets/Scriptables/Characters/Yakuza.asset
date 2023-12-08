@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaca8daa85f016469b6ef91f48e55f3, type: 3}
   m_Name: Yakuza
   m_EditorClassIdentifier: 
-  ItemPrice: 1000
-  ItemPrefab: {fileID: 6622807026580154390, guid: 822f4f35e2f1f9649b43c69d3b0c0c9d,
+  ItemPrice: 1500
+  ItemPrefab: {fileID: 4866149641813137889, guid: 850438aad38c175438277654e8f33224,
     type: 3}
   character: 2
