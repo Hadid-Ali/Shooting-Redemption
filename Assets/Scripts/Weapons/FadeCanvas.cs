@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,16 @@ using UnityEngine;
 public class FadeCanvas : MonoBehaviour
 {
     private Animator _animator;
-    
+    private static readonly int FadeCanva = Animator.StringToHash("FadeCanva");
+
     void Awake()
     {
         _animator = GetComponent<Animator>();
-        _animator.enabled = true;
+        _animator.SetTrigger(FadeCanva);
     }
 
+    private void OnEnable()
+    {
+        _animator.SetTrigger(FadeCanva);
+    }
 }

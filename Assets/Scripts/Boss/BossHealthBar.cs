@@ -39,8 +39,6 @@ public class BossHealthBar : MonoBehaviour
         currentHp = val;
         float percentage= currentHp / maxhp;
         GreenHp.fillAmount = percentage;
-        
-        print("workinggg");
     }
 
     private void Update()

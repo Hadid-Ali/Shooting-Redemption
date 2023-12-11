@@ -7,96 +7,13 @@ using UnityEngine;
 
 public class EnemyGroupEvents : MonoBehaviour
 {
-    public static GameEvent<Transform> OnEnemyGroupKilled = new();
-    public static GameEvent<bool> ShowBoss = new();
-    
     private AIPlayerMovement _controller;
     private Actor m_Actor;
-    private CharacterMotor _motor;
     private Animator _animator;
     private PlayerInventory _PlayerInventory;
 
-    private int counter = 0;
-
-    private bool hasboss;
-    private bool hasShowBossOnce;
-
-
-    private void Awake()
+    private void Start()
     {
-        AIGroupsHandler.SetPlayerStartPosition.Register(SetPlayerPosition);
-        
-        _controller = GetComponent<AIPlayerMovement>();
-        _animator = GetComponent<Animator>();
-        //_motor = GetComponent<CharacterMotor>();
-        _PlayerInventory = GetComponent<PlayerInventory>();
-        
-        _controller.OnCoverReached.Register(OnCoverReached);
-        OnEnemyGroupKilled.Register(OnEnemiesKilledEvent);
-        
-        AIGroupsHandler.hasBossE.Register(hasBossCheck);
-
-        hasShowBossOnce = false;
-
-    }
-    
-
-    private void OnDestroy()
-    {
-        _controller.OnCoverReached.Unregister(OnCoverReached);
-        OnEnemyGroupKilled.UnRegister(OnEnemiesKilledEvent);
-        AIGroupsHandler.hasBossE.UnRegister(hasBossCheck);
-        AIGroupsHandler.SetPlayerStartPosition.UnRegister(SetPlayerPosition);
-        
-    }
-
-    public void hasBossCheck(bool _hasboss)
-    {
-        hasboss = _hasboss;
-    }
-
-    public void SetPlayerPosition(Transform t)
-    {
-        transform.SetPositionAndRotation(t.position, t.rotation);
-    }
-
-    public void OnCoverReached()
-    {
-        StartCoroutine(ShowBossSequence());        
-        
-        PlayerInputt.CanTakeInput = true;
-        _PlayerInventory.DrawWeapon(_PlayerInventory.selectedWeapon);
-        
-        CustomCameraController.CameraStateChanged(CamState.Idle);
-    }
-
-    IEnumerator ShowBossSequence()
-    {
-        
-        CharacterStates.playerState = PlayerCustomStates.CutScene;
-        yield return new WaitForSeconds(1);
-        if (hasboss && !hasShowBossOnce)
-        {
-            hasShowBossOnce = true;
-            ShowBoss.Raise(true);
-            yield return new WaitForSeconds(3);
-            ShowBoss.Raise(false);
-        }
-        CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
-
-    }
-
-    public void SetPosition(Transform coverPosition)
-    {
-        _controller.SetPosition(coverPosition);
-        
-        CharacterStates.playerState = PlayerCustomStates.InMovement;
-        CustomCameraController.CameraStateChanged(CamState.Follow);
-    }
-    public void OnEnemiesKilledEvent(Transform coverPosition)
-    {
-        PlayerInputt.CanTakeInput = false;
-        SetPosition(coverPosition);
-        
+        GameEvents.GamePlayEvents.OnPlayerSpawned.Raise();
     }
 }

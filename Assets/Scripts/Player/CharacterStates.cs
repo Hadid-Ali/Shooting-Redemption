@@ -14,6 +14,8 @@ public enum PlayerCustomStates
 }
 public class CharacterStates : MonoBehaviour
 {
+    public CharacterType CharacterType;
+    
     public static PlayerCustomStates playerState;
 
     public PlayerCustomStates currentState;
@@ -22,7 +24,13 @@ public class CharacterStates : MonoBehaviour
     {
         playerState = PlayerCustomStates.CutScene;
     }
-    public void SetPlayerState(PlayerCustomStates state)
+
+    private void Update()
+    {
+        currentState = playerState;
+    }
+
+    public static void SetPlayerState(PlayerCustomStates state)
     {
         playerState = state;
     }

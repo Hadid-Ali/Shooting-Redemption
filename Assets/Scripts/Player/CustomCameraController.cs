@@ -10,19 +10,15 @@ public enum  CamState{
 }
 public class CustomCameraController : MonoBehaviour
 {
-    private CinemachineVirtualCamera followCam;
-    private CinemachineVirtualCamera idleCam;
-    private CinemachineVirtualCamera zoomCam;
+    [SerializeField] private CinemachineVirtualCamera followCam;
+    [SerializeField] private CinemachineVirtualCamera idleCam;
+    [SerializeField] private CinemachineVirtualCamera zoomCam;
     
 
     public static Action<CamState> CameraStateChanged;
 
-    private void Start()
+    private void Awake()
     {
-        followCam = PlayerFollowOffset.followCam;
-        idleCam = PlayerFollowOffset.idleCam;
-        zoomCam = PlayerFollowOffset.zoomCam;
-        
         CameraStateChanged += SetCamState;
         PlayerInputt.OnZoom += OnZoom;
         PlayerInputt.OnUnZoom += OnUnZoom;
@@ -69,7 +65,7 @@ public class CustomCameraController : MonoBehaviour
                 followCam.Priority = 6;
                 idleCam.Priority = 5;
                 zoomCam.Priority = 10;
-                break;
+                break; 
         }
     }
 

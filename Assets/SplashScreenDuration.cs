@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,17 +9,33 @@ public class SplashScreenDuration : MonoBehaviour
 {
     public float splashScreenDuration = 3f;
     public Image progressBar;
-    public string sceneToLoad = "Main Menu";
     
-    void Start()
+    void Awake()
     {
+        //GameAdEvents.OnAdsInitialized.Register(OnAdsInitialized);
+        
+        //AdHandler.InitializeAds();
         StartCoroutine(LoadSceneAsync());
+        
     }
+
+    private void OnDestroy()
+    {
+       // GameAdEvents.OnAdsInitialized.Unregister(OnAdsInitialized);
+    }
+
+    public void OnAdsInitialized()
+    {
+        //AdHandler.ShowAppOpen();
+    }
+    
+    
     
     IEnumerator LoadSceneAsync()
     {
-        yield return new WaitForSeconds(splashScreenDuration);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
+        //AdHandler.ShowAppOpen();
+        yield return new WaitForSecondsRealtime(splashScreenDuration);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         
         while (!asyncLoad.isDone)
         {

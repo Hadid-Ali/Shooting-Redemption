@@ -6,6 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GunData", menuName = "GameData/GunData/Create")]
 public class GunData : ItemData
 {
-    public GunName gun;
+    public OverlayWeapons gun;
 }
 

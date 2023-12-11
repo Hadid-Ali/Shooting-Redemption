@@ -5,37 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid).meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/GunAnimations/GunEquip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GunAnimations/GunEquip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/GunAnimations/GunIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GunAnimations/GunIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimatorController/GunController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorController/GunController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimatorController/NPC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorController/NPC.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimatorController/Rifle.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimatorController/Rifle.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoyFat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoyFat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/CowBoySkinny.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyGroupEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AIPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AIPlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGunHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGunHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Pistol_Equip.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Pistol_Equip.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Rifle_Equip.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Animations/Rifle_Equip.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Brains/Assault - Copy.brain" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Brains/Assault - Copy.brain.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scenes/Prototype scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scenes/Prototype scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scenes/TestThirdPerson.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPersonCoverShooter/Scenes/TestThirdPerson.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" beforeDir="false" afterPath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,21 +57,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/AIPlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelsPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/KillEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInputt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/PlayerVisibility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FadeCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/GamWin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GUI/RemainingPlayersUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OverlayKnife.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFollowOffset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerCanvasScipt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.15/Editor/Collaborate/Components/AlertBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/BoxAndWhiskerPlot.cs" root0="SKIP_HIGHLIGHTING" />
@@ -89,6 +96,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/50/c10db258/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/7d/d3fc5668/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a642ad78cd754c97a615f0d9a616a6031a000/a9/bc248481/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f55746a8e0c546fe96ce923dcba272588800/51/dd23811a/MobileAds.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,12 +117,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Mechanics-And-Chapter2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LevelsSetup&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;layout.inspector.configurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -223,7 +233,26 @@
       <workItem from="1700118105427" duration="4172000" />
       <workItem from="1700219391053" duration="3746000" />
       <workItem from="1700553779110" duration="10675000" />
-      <workItem from="1700636682894" duration="6562000" />
+      <workItem from="1700636682894" duration="7949000" />
+      <workItem from="1700723365339" duration="14536000" />
+      <workItem from="1700832406274" duration="2402000" />
+      <workItem from="1701068471244" duration="12375000" />
+      <workItem from="1701153316464" duration="19765000" />
+      <workItem from="1701245655720" duration="18137000" />
+      <workItem from="1701326233752" duration="549000" />
+      <workItem from="1701326802554" duration="212000" />
+      <workItem from="1701327694982" duration="488000" />
+      <workItem from="1701328198458" duration="229000" />
+      <workItem from="1701328440711" duration="98000" />
+      <workItem from="1701328552923" duration="19193000" />
+      <workItem from="1701414590257" duration="16305000" />
+      <workItem from="1701673990935" duration="17665000" />
+      <workItem from="1701754639289" duration="4786000" />
+      <workItem from="1701760616926" duration="1250000" />
+      <workItem from="1701846484822" duration="11343000" />
+      <workItem from="1701934619108" duration="5411000" />
+      <workItem from="1702019831757" duration="12085000" />
+      <workItem from="1702275792422" duration="667000" />
     </task>
     <servers />
   </component>
@@ -234,7 +263,7 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="241" />
+    <option name="symbolColumnWidth" value="341" />
     <coverage-tree-state>
       <expand />
       <select />
@@ -274,5 +303,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

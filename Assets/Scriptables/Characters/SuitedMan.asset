@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaca8daa85f016469b6ef91f48e55f3, type: 3}
+  m_Name: SuitedMan
+  m_EditorClassIdentifier: 
+  ItemPrice: 2000
+  ItemPrefab: {fileID: 6622807026580154390, guid: 822f4f35e2f1f9649b43c69d3b0c0c9d,
+    type: 3}
+  character: 1

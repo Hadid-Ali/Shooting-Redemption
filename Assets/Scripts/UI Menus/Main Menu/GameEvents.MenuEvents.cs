@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-public partial class GameEvents
+public partial class GameAdEvents
 {
     public static class MenuEvents
     {

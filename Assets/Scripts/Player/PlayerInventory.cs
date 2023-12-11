@@ -4,78 +4,91 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class CustomWeapons
+public class CustomWeapon
 {
     public GameObject weaponRight;
     public GameObject weaponLeft;
+    public OverlayWeapons Weapon;
     public bool TwoHandedweapon;
     public bool isRifle;
 }
 public class PlayerInventory : MonoBehaviour
 {
-    public CustomWeapons[] weapons;
-    public int selectedWeapon;  
-    private Animator _animator;
+    //Events
+    public static Action<OverlayWeapons> OnGunChangeSuccessFul;
+    
+    public List<CustomWeapon> weapons;
     
     private static readonly int Pistol = Animator.StringToHash("EquipPistol");
     private static readonly int Rifle = Animator.StringToHash("EquipRifle");
 
-    public static Action<int> OnGunChangeSuccessFul;
-
+    private Animator _animator;
+    private CustomWeapon _selectedWeapon;
+    
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        //selectedWeapon = -1;
         PlayerInputt.OnGunChangeInput += EquipWeapon;
     }
 
     private void Start()
     {
-        OnGunChangeSuccessFul(selectedWeapon);
+        UpdateSelectedWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Register(OnPlayerCoverReached);
+        OnGunChangeSuccessFul(_selectedWeapon.Weapon);
     }
-
     private void OnDestroy()
     {
         PlayerInputt.OnGunChangeInput -= EquipWeapon;
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Unregister(OnPlayerCoverReached);
     }
+
+    private void UpdateSelectedWeapon(OverlayWeapons i)
+    {
+        _selectedWeapon = weapons.Find(x => x.Weapon == Dependencies.GameDataOperations.GetSelectedWeapon());
+    }
+
+    public void OnPlayerCoverReached()
+    {
+        PlayerInputt.CanTakeInput = true;
+        DrawWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
+
+        CustomCameraController.CameraStateChanged(CamState.Idle);
+    }
+
 
     public void EquipWeapon()
     {
-        //selectedWeapon++;
-        
-       // if (selectedWeapon <= 0 || selectedWeapon >= weapons.Length)
-          //  selectedWeapon = 0;
-        
-        if(weapons[selectedWeapon].isRifle)
+        if(_selectedWeapon.isRifle)
             _animator.SetTrigger(Rifle);
         else
             _animator.SetTrigger(Pistol);
-        
-        
-
     }
 
     public void OnEquipAnimation()
     {
-        for (int i = 0; i < weapons.Length; i++)
-            weapons[i].weaponRight.SetActive(i == selectedWeapon);
-
-        OnGunChangeSuccessFul(selectedWeapon);
+        foreach (var v in weapons)
+        {
+            v.weaponRight.SetActive(false);
+            if(v.weaponLeft) v.weaponLeft.SetActive(false);
+        }
+        
+        _selectedWeapon.weaponRight.SetActive(true); 
+        if(_selectedWeapon.weaponLeft) _selectedWeapon.weaponLeft.SetActive(false);
+        
+        OnGunChangeSuccessFul(_selectedWeapon.Weapon);
     }
 
-    public void DrawWeapon(int i)
+    public void DrawWeapon(OverlayWeapons i)
     {
-        selectedWeapon = i;
+        UpdateSelectedWeapon(i);
         EquipWeapon();
     }
 
     public bool IsCurrentWeaponRifle()
     {
-        if (selectedWeapon <= 0 || selectedWeapon >= weapons.Length)
-            selectedWeapon = 0;
-        
-        return weapons[selectedWeapon].isRifle;
+        return _selectedWeapon.isRifle;
     }
     
     

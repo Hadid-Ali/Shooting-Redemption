@@ -7,5 +7,4 @@ public abstract class ItemData : ScriptableObject
 {
     public int ItemPrice;
     public GameObject ItemPrefab;
-    public bool isLocked;
 }

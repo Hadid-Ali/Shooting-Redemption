@@ -35,6 +35,7 @@ public class OverlayGun : MonoBehaviour
     private Hit _currentHit;
 
     public static Action OnGunShoot;
+    public OverlayWeapons weaponType;
 
     private float timer = 1f;
     private AIPlayerMovement _aiPlayer;
@@ -66,6 +67,7 @@ public class OverlayGun : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        
         if(timer >= 0)
             return;
         
@@ -81,27 +83,26 @@ public class OverlayGun : MonoBehaviour
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
             Explodeable explodeable = raycastHit.collider.GetComponent<Explodeable>();
 
-            if (bodyPartHealth != null )
+            if (bodyPartHealth != null)
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
                 if (characterHealth.Health <= 0)
                     return;
                 
-                if (_canShoot && characterHealth.Health <= damage && AIGroupsHandler.isLastEnemy) //For last enemy
+                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 1 && !characterHealth.isNPC) //For last enemy
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(true));
                 }
-                
-                if (_canShoot) //For All enemies
+                else if (_canShoot) //For All enemies
                 {
                     _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
                     StopAllCoroutines();
                     StartCoroutine(ShootWithDelay(false));
                 }
 
-                OnGunShoot();
+                OnGunShoot?.Invoke();
             }
             
             if (_canShoot && explodeable != null) //For explodeables
@@ -110,8 +111,8 @@ public class OverlayGun : MonoBehaviour
                 StartCoroutine(ShootWithDelayExplode(explodeable));
             }
 
-            
 
+            PlayerInputt.PlayerExposed();
         }
     }
 
@@ -126,10 +127,9 @@ public class OverlayGun : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         _muzzleFlash.SetActive(false);
         
-        yield return new WaitForSeconds(timeBetweenShots);
-        
         e.Detonate();
         
+        yield return new WaitForSeconds(timeBetweenShots);
         _canShoot = true;
     }
     IEnumerator ShootWithDelay(bool last)
@@ -147,7 +147,6 @@ public class OverlayGun : MonoBehaviour
         if (BothHands)
         {
             yield return new WaitForSeconds(1f);
-            
             _muzzleFlash2.SetActive(true);
             yield return new WaitForSeconds(.1f);
             _muzzleFlash2.SetActive(false);

@@ -37,15 +37,15 @@ public abstract class UIMenuBase : MonoBehaviour
     protected virtual void OnMenuContainerEnable()
     {
         
-                                                       }
+    }
 
     protected virtual void OnMenuContainerDisable()
     {
         
     }
 
-    protected void ChangeMenuState(MenuName menuName)
+    public static void ChangeMenuState(MenuName menuName)
     {
-        GameEvents.MenuEvents.MenuStateSwitched.Raise(menuName);
+        GameAdEvents.MenuEvents.MenuStateSwitched.Raise(menuName);
     }
 }

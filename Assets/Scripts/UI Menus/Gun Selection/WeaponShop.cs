@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponShop : UIMenuBase
 {
     [SerializeField] private Button m_CloseBtnTap;
-    [SerializeField]private Text CoinTxt;
+    [SerializeField]private TextMeshProUGUI CoinTxt;
     
     public void Initailize()
     {
@@ -29,7 +30,7 @@ public class WeaponShop : UIMenuBase
     {
         if (CoinTxt != null)
         {
-            CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+            CoinTxt.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
         }
     }
     

@@ -3,16 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundsHandler : MonoBehaviour,ISoundHandler
+public class SoundsHandler : MonoBehaviour, ISoundHandler
 {
     [SerializeField] private AudioSource AS;
     [SerializeField] private AudioSource Bg;
     [SerializeField] private AudioClip playClip;
     [SerializeField] private AudioClip SettingClip;
-    /*[SerializeField] private AudioClip playClip;
-    [SerializeField] private AudioClip playClip;
-    [SerializeField] private AudioClip playClip;
-    [SerializeField] private AudioClip playClip;*/
+
     
     void Awake()
     {
@@ -29,7 +26,7 @@ public class SoundsHandler : MonoBehaviour,ISoundHandler
 
     private void updateSoundStatus()
     {
-        if (Dependencies.GameDataOperations.GetSound())
+        if (Dependencies.GameDataOperations.GetSoundStatus())
         {
             AS.mute = false;
             Bg.mute = false;

@@ -9,15 +9,14 @@ public class AIPlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     private NavMeshAgent _navMeshAgent;
-    //private CharacterMotor _motor;
+    private CharacterMotor _motor;
     private PlayerInventory _playerInventory;
 
     public bool _isMoving;
     public bool _rotate;
     [SerializeField] private float lerpSpeed = 2f;
     private Transform _destination;
-    
-    public GameEvent OnCoverReached = new();
+
     private static readonly int CrouchWalk = Animator.StringToHash("CrouchWalk");
 
 
@@ -29,12 +28,17 @@ public class AIPlayerMovement : MonoBehaviour
         
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-        //_motor = GetComponent<CharacterMotor>();
+        _motor = GetComponent<CharacterMotor>();
         _playerInventory = GetComponent<PlayerInventory>();
-
-        //_motor.enabled = false;
         
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.Register(OnEnemyGroupKilled);
 
+        _motor.enabled = false;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.UnRegister(OnEnemyGroupKilled);
     }
 
     private void Update()
@@ -63,6 +67,14 @@ public class AIPlayerMovement : MonoBehaviour
             
         }
     }
+    public void OnEnemyGroupKilled(Transform coverPosition)
+    {
+        PlayerInputt.CanTakeInput = false;
+        SetPosition(coverPosition);
+        
+        CharacterStates.playerState = PlayerCustomStates.InMovement;
+        CustomCameraController.CameraStateChanged(CamState.Follow);
+    }
     
     public void SetPosition(Transform destination)
     {
@@ -86,7 +98,7 @@ public class AIPlayerMovement : MonoBehaviour
         CharacterStates.playerState = PlayerCustomStates.InMovement;
         _isMoving = false;
         _rotate = true;
-
+        
         if (_playerInventory.IsCurrentWeaponRifle()) //Animate
             _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCoverRifle" : "LowCoverRifle");
         else
@@ -95,7 +107,7 @@ public class AIPlayerMovement : MonoBehaviour
 
         _playerInventory.EquipWeapon();
         
-        OnCoverReached.Raise();
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Raise();
 
         StartCoroutine(DelayedMotorActivation(false));
 
@@ -104,7 +116,7 @@ public class AIPlayerMovement : MonoBehaviour
     IEnumerator DelayedMotorActivation(bool val)
     {
         yield return new WaitForSeconds(1);
-       // _motor.enabled = !val;
+        _motor.enabled = !val;
         _navMeshAgent.enabled = val;
 
         if(val) _navMeshAgent.SetDestination(_destination.position);

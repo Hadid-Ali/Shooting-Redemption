@@ -7,48 +7,32 @@ public interface IGameDataOperation
     public void LoadData();
     public void SaveData();
 
-    public bool GetCharacterUnlocked(CharacterType characterType);
-    public bool GetSelectedCharacter(CharacterType characterType);
-    public void SetSelectedCharacter(CharacterType characterType);
-    public void SetCharacterUnlocked(CharacterType characterTypee);
+    public bool GetSoundStatus();
+    public void SetSoundStatus(bool val);
+    public void SetCredit(int i);
+    public int GetCredits();
 
-    public int SetSelectedCharacterIndex(CharacterType characterTypee);
-    public int GetSelectedCharacterIndex();
-
-
-    public bool GetGunUnlocked(GunName gunName);
-    public bool GetSelectedGun(GunName gunName);
-    public void SetSelectedGun(GunName gunName);
-    public void SetGunUnlocked(GunName gunName);
-   // public int SetSelectedGunIndex(GunName gunName);
-    public int GetSelectedGunIndex();
-
-    public void DeselectAllCharacters();
-    public void DeselectAllGuns();
+    //Levels
+    public void SetUnlockedLevels(int episode, int levels);
+    public int GetUnlockedLevels(int episode);
+    public void SetUnlockedEpisodes(int episodes);
+    public bool GetUnlockedEpisodes(int episode);
+    public int GetSelectedLevel();
     public int GetSelectedEpisode();
+    public void SetSelectedEpisode(int episode);
+    public void SetSelectedLevel(int level);
     
-    public int GetSelectedLevel(int i);
-    public void SetSelectedlevel(int i);
-    public void SetSelectedEpisode(int i);
-    
-    //Unlocking Setter Getters
-    public void SetUnlockedLevels(int index, int val);
-    public void SetUnlockedEpisodes(int val);
+    //Character and Guns
+    public List<GunStatus> GetAllWeaponsData();
+    public List<CharacterStatus> GetAllCharactersData();
+    public void SetCharacterData(CharacterStatus status);
+    public void SetGunData(GunStatus status);
+    public CharacterStatus GetCharacterData(CharacterType character);
+    public GunStatus GetGunData(OverlayWeapons weapon);
 
-    public int GetUnlockedLevels(int index);
-    public int GetUnlockedEpisodes();
-
-
-    public void SetHapticSound(bool i);
-    public bool GetHapticSound();
-    public void SetSound(bool i);
-    public bool GetSound();
-    public void SetShadow(bool i);
-    public bool GetShadow();
-
-    public int SetCoins();
-    public void GetCoins(int i);
-
-    public int SetSelectedGunIndex(int i);
+    public CharacterType GetSelectedCharacter();
+    public OverlayWeapons GetSelectedWeapon();
+    public void SetSelectedCharacter(CharacterType characterType);
+    public void SetSelectedWeapon(OverlayWeapons weapon);
 
 }

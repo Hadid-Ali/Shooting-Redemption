@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class CharacterShop : UIMenuBase
 {
     [SerializeField] private Button m_CloseBtn;
-    [SerializeField]private Text CoinTxt;
+    [SerializeField]private TextMeshProUGUI CoinTxt;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class CharacterShop : UIMenuBase
 
     public void updateCoins()
     {
-        CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+        CoinTxt.SetText(Dependencies.GameDataOperations.GetCredits().ToString()); 
     }
     public void OnCloseBtnTap()
     {

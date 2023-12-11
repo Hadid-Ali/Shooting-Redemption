@@ -14,41 +14,52 @@ public class MainMenuHandler : UIMenuBase
     [SerializeField] private Button m_CharacterPanel;
     [SerializeField] private Button m_GunPanel;
     [SerializeField] private Button m_EpisodeSelectionPanel;
+    [SerializeField] private Button m_AddCoins;
 
-    [SerializeField]private TextMeshProUGUI CoinTxt;
+    [SerializeField] private TextMeshProUGUI CoinTxt;
     
     private void Start()
     {
         Initialize();
         updateCoins();
     }
-    
+
+    protected override void OnMenuContainerEnable()
+    {
+        updateCoins();
+    }
+
     public void updateCoins()
     {
-        CoinTxt.text = Dependencies.GameDataOperations.SetCoins().ToString();
+        CoinTxt.text = Dependencies.GameDataOperations.GetCredits().ToString();
     }
 
     private void Initialize()
     {
         m_PlayButon.onClick.AddListener(OnPlayBtnTap);
-        m_DailyGoal.onClick.AddListener(OnDailyBtnTap);
         m_SettingPanel.onClick.AddListener(OnSettingBtnTap);
         m_QuitPanel.onClick.AddListener(OnQuitBtnTap);
         m_CharacterPanel.onClick.AddListener(OnCharacterBtnTap);
         m_GunPanel.onClick.AddListener(OnGunBtnTap);
         m_EpisodeSelectionPanel.onClick.AddListener(OnEpisodeSelectionBtnTap);
+        m_AddCoins.onClick.AddListener(OnClickAddcoin);
+    }
+
+    private void OnClickAddcoin()
+    {
+        AdHandler.ShowRewarded(OnRewardedAddCoins);
+    }
+
+    private void OnRewardedAddCoins()
+    {
+        Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
+        updateCoins();
     }
 
     private void OnPlayBtnTap()
     {
-        ChangeMenuState(MenuName.EpisodeSelection);
+        ChangeMenuState(MenuName.EpisodesSelection);
     }
-    
-    private void OnDailyBtnTap()
-    {
-        ChangeMenuState(MenuName.DailyGoals);
-    }
-
     private void OnSettingBtnTap()
     {
         ChangeMenuState(MenuName.SettingsMenu);
@@ -61,17 +72,17 @@ public class MainMenuHandler : UIMenuBase
     
     private void OnCharacterBtnTap()
     {
-        ChangeMenuState(MenuName.CharacterShop);
+        ChangeMenuState(MenuName.CharacterSelection);
     }
     
     private void OnGunBtnTap()
     {
-        ChangeMenuState(MenuName.GunShop);
+        ChangeMenuState(MenuName.GunSelection);
     }
     
     private void OnEpisodeSelectionBtnTap()
     {
-        ChangeMenuState(MenuName.EpisodeSelection);
+        ChangeMenuState(MenuName.EpisodesSelection);
     }
     
 }

@@ -1,160 +1,233 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-/*[Serializable]
-public class CharacterStats
+[Serializable]
+public class CharacterSelectionData
 {
-    [Range(0,100)] public  float Aim;
-    [Range(0,100)] public float ReloadTime;
-    [Range(0,100)] public float Bullets;
-}*/
-public class CharacterHandler : ItemHandler
+    public GameObject characterPrefab;
+    public CharacterStatus characterData;
+}
+public class CharacterHandler : MonoBehaviour
 {
-    public List<CharacterType> CharacterTOSpawn;
-    [SerializeField] private List<CharacterData> CharacterDatas = new();
-    [SerializeField] private List<GameObject> Characters = new();
+    [SerializeField]private List<CharacterSelectionData> characters = new List<CharacterSelectionData>();
+    
+    //Hard References
+    public GameObject Camera;
+    public Transform parentObj;
+    public Button m_WatchAdForCoins;
+    public Button m_WatchAdForFreeGunTry;
+    public Button m_BuyButton;
+    public Button m_SelectButton;
+    public Button m_LeftScrollButton;
+    public Button m_RightScrollButton;
+    
+    public TextMeshProUGUI m_GunButtonText;
+    public Image GunStatus;
+    
+    public TextMeshProUGUI m_GunPrice;
+    public TextMeshProUGUI m_Coins;
+
+    
+    //Logic
+    private bool charactersAlreadyInstatiated;
+    private int currentIndex;
+    private CharacterType selectedCharacter;
+    private CharacterType currentCharacter;
+    
+    
+    private void OnEnable()
+    {
+        Camera.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        Camera.SetActive(false);
+    }
     private void Start()
     {
-        m_SelectedItemIndex =Dependencies.GameDataOperations.GetSelectedCharacterIndex();
+        charactersAlreadyInstatiated = false;
         
-        m_Buy.onClick.AddListener(BuyCharacter);
-        m_Select.onClick.AddListener(SelectCharacter);
+        selectedCharacter = Dependencies.GameDataOperations.GetSelectedCharacter();
+        m_BuyButton.onClick.AddListener(BuyGun);
+        m_SelectButton.onClick.AddListener(SelectGun);
+        m_WatchAdForFreeGunTry.onClick.AddListener(OnClickRewardedAdGunFree);
+        m_WatchAdForCoins.onClick.AddListener(OnClickRewardedAdCoins);
+        m_LeftScrollButton.onClick.AddListener((() => ScrollGun(false)));
+        m_RightScrollButton.onClick.AddListener((() => ScrollGun(true)));
+        
         RetainGunData();
-        for (int i = 0; i < m_ItemSelectionButton.Count; i++)
+        UpdateGunData();
+    }
+
+    public void SyncData()
+    {
+        for (int i = 0; i < characters.Count; i++)
         {
-            var j = i;
-           // m_ItemSelectionButton[i].onClick.AddListener(() => SelectCharacter(j));
+            Dependencies.GameDataOperations.SetCharacterData(characters[i].characterData);
         }
-        UpdateCoins();
-        UpdateCharacterData(m_SelectedItemIndex);
+        Dependencies.GameDataOperations.SetSelectedCharacter(selectedCharacter);
+        
+        Dependencies.GameDataOperations.SaveData();
     }
 
     public void RetainGunData()
     {
-        for (int i = 0; i < CharacterTOSpawn.Count; i++)
-        {
-            CharacterDatas.Add(ItemDataHandler.Instance.GetCharacterDataData(CharacterTOSpawn[i]));
-            GameObject Character = Instantiate(CharacterDatas[i].ItemPrefab);
-            Character.transform.SetParent(m_ParentObj);
-            Characters.Add(Character);
-            Character.SetActive(false);
-        }
+        selectedCharacter = Dependencies.GameDataOperations.GetSelectedCharacter();
         
-        Characters[m_SelectedItemIndex].SetActive(true);
-        print(Characters[m_SelectedItemIndex].transform.name);
-    }
+        List<CharacterStatus> guns = Dependencies.GameDataOperations.GetAllCharactersData();
+        for (int i = 0; i < guns.Count; i++)
+        {
+            characters[i].characterData = guns[i];
 
-    public void UpdateCharacterData(int CurrentIndex)
-    {
-        if (!Dependencies.GameDataOperations.GetCharacterUnlocked(CharacterDatas[CurrentIndex].character))
-        {
-            m_Buy.gameObject.SetActive(true);
-            m_Select.gameObject.SetActive(false);
-            m_ItemPrice.text = CharacterDatas[CurrentIndex].ItemPrice.ToString();
-        }
-        else
-        {
-            m_Buy.gameObject.SetActive(false);
-            m_Select.gameObject.SetActive(true);
-            if (Dependencies.GameDataOperations.GetSelectedCharacter(CharacterDatas[CurrentIndex].character))
+            if (!charactersAlreadyInstatiated)
             {
-                m_Select.gameObject.SetActive(false);
-                m_Selected.gameObject.SetActive(true);
+                GameObject gun = Instantiate(SessionData.Instance.GetCharacterData(guns[i].character).ItemPrefab, parentObj,
+                    true);
+                characters[i].characterPrefab = gun;
+            }
+            characters[i].characterPrefab.SetActive(false);
+
+            if (characters[i].characterData.character == selectedCharacter)
+            {
+                currentIndex = i;
+                currentCharacter = characters[i].characterData.character;
             }
         }
-    }
-
-
-    public void SelectCharacter(bool IsRight)
-    {
-        if (IsRight)
-        {
-            m_SelectedItemIndex++;
-        }
-        else
-        {
-            m_SelectedItemIndex--;
-        }
-        if (m_SelectedItemIndex >= Characters.Count || m_SelectedItemIndex < 0)
-        {
-            m_SelectedItemIndex = 0;
-        }
-        foreach (var character in Characters)
-            character.SetActive(false);
-        Characters[m_SelectedItemIndex].SetActive(true);
-        Dependencies.GameDataOperations.SetSelectedCharacterIndex((CharacterType) m_SelectedItemIndex);
-        UpdateCharacterData(m_SelectedItemIndex);
+        characters.Find(x => x.characterData.character == selectedCharacter).characterPrefab.SetActive(true);
         
-        /*if (CharacterIndex >= 0 && CharacterIndex < Characters.Count)
+    }
+
+    public void UpdateGunData()
+    {
+        //Data Assessing
+        bool isGunUnlocked = characters[currentIndex].characterData.isUnlocked;
+        bool isGunSelected = selectedCharacter == currentCharacter;
+        bool isAffordable = Dependencies.GameDataOperations.GetCredits() >=
+                            SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice;
+
+        //Assignation
+        m_GunPrice.SetText("Price : " + SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice);
+        m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
+
+
+        if (isGunUnlocked)
         {
-            if (m_SelectedItemIndex != -1)
+            if (isGunSelected)
             {
-                Characters[m_SelectedItemIndex].SetActive(false);
-            }
-
-            Characters[CharacterIndex].SetActive(true);
-            m_SelectedItemIndex = CharacterIndex;
-
-            UpdateCharacterData(CharacterIndex);
-
-        }*/
-    }
-
-    void SelectCharacter()
-    {
-        print("selected");
-        Dependencies.GameDataOperations.DeselectAllCharacters();
-        Dependencies.GameDataOperations.SetSelectedCharacter(CharacterDatas[m_SelectedItemIndex].character);
-        UpdateCharacterData(m_SelectedItemIndex);
-        Dependencies.GameDataOperations.SetSelectedCharacterIndex((CharacterType) m_SelectedItemIndex);
-        Dependencies.GameDataOperations.SaveData();
-    }
-
-    /*
-    public void Deselect()
-    {
-        if (m_SelectedItemIndex != -1)
-        {
-            Characters[m_SelectedItemIndex].SetActive(false);
-            m_SelectedItemIndex = -1;
-        }
-    }
-    */
-
-    public void BuyCharacter()
-    {
-            int characterCost = CharacterDatas[m_SelectedItemIndex].ItemPrice;
-            if (Dependencies.GameDataOperations.SetCoins() >= characterCost)
-            {
-                Dependencies.GameDataOperations.GetCoins(Dependencies.GameDataOperations.SetCoins() - characterCost);
-                CharacterDatas[m_SelectedItemIndex].isLocked = false;
-                Dependencies.GameDataOperations.SetCharacterUnlocked(CharacterDatas[m_SelectedItemIndex].character);
-                UpdateCharacterData(m_SelectedItemIndex);
-                print("buy gun");
-                //SaveLoadData.SaveData();
-                Dependencies.GameDataOperations.SaveData();
-                UpdateCoins();
-
+                m_GunButtonText.SetText("Selected");
+                m_GunPrice.SetText("");
+                GunStatus.color = Color.green;
+                m_BuyButton.interactable = false;
             }
             else
             {
-                print("not enough coins");
+                m_BuyButton.onClick.RemoveAllListeners();
+                m_BuyButton.onClick.AddListener(SelectGun);
+                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Select");
+                m_BuyButton.interactable = true;
+
+                m_GunButtonText.SetText("Not Selected");
+                GunStatus.color = Color.white;
             }
+        }
+        else if (isGunSelected) //For Rewarded
+        {
+            m_GunButtonText.SetText("Trial");
+            GunStatus.color = Color.cyan;
+        }
+        else
+        {
+            m_GunButtonText.SetText("Unlock Character"); //Gun Status
+            GunStatus.color = Color.white; // Gun Button Color
+
+            if (isAffordable)
+            {
+                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
+                m_BuyButton.onClick.AddListener(BuyGun);
+                m_BuyButton.interactable = true;
+            }
+            else
+            {
+                m_BuyButton.interactable = false;
+            }
+        }
+
     }
 
-    public void WatchAD()
+
+    public void ScrollGun(bool IsRight)
     {
-      //  SaveLoadData.GameData.m_Coins += 300;
-        Dependencies.GameDataOperations.GetCoins(300);
+        if (IsRight)
+        {
+            currentIndex++;
+        }
+        else
+        {
+            currentIndex--;
+        }
+
+        if (currentIndex >= characters.Count || currentIndex <= 0)
+        {
+            currentIndex = 0;
+        }
+
+        foreach (var v in characters)
+            v.characterPrefab.SetActive(false);
+        
+        characters[currentIndex].characterPrefab.SetActive(true);
+
+        currentCharacter = characters[currentIndex].characterData.character;
+        UpdateGunData();
+    }
+
+    public void SelectGun()
+    {
+        selectedCharacter = currentCharacter;
+        SyncData();
+        UpdateGunData();
+    }
+    public void BuyGun()
+    {
+        int gunCost = SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice;
+        int availableCredits = Dependencies.GameDataOperations.GetCredits();
+        
+        if (availableCredits >= gunCost && !characters[currentIndex].characterData.isUnlocked)
+        {
+            Dependencies.GameDataOperations.SetCredit(availableCredits - gunCost);
+            characters[currentIndex].characterData.isUnlocked = true;
+            SyncData();
+            UpdateGunData();
+            Dependencies.GameDataOperations.SaveData();
+        }
+    }
+
+    public void OnClickRewardedAdGunFree()
+    {
+        AdHandler.ShowRewarded(OnRewardedGunADWatched);
+    }
+
+    public void OnClickRewardedAdCoins()
+    {
+        AdHandler.ShowRewarded(OnRewardedCoinsAdWatched);
+    }
+
+    public void OnRewardedCoinsAdWatched()
+    {
+        Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
         Dependencies.GameDataOperations.SaveData();
-        //SaveLoadData.SaveData();
-        UpdateCoins();
+        
+        m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
     }
-
-    void UpdateCoins()
+    public void OnRewardedGunADWatched()
     {
-        m_TotalCoins.text = Dependencies.GameDataOperations.SetCoins().ToString();
+        Dependencies.GameDataOperations.SetSelectedCharacter(currentCharacter);
+        UpdateGunData();
+        Dependencies.GameDataOperations.SaveData();
     }
 }

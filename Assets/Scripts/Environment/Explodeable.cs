@@ -39,6 +39,9 @@ public class Explodeable : MonoBehaviour
             {
                 var collider = Util.Colliders[i];
 
+                if(collider.GetComponent<NPC>())
+                    collider.GetComponent<NPC>().OnHit();
+                    
                 if (!collider.isTrigger)
                 {
                     var part = collider.GetComponent<BodyPartHealth>();
@@ -68,7 +71,8 @@ public class Explodeable : MonoBehaviour
                     }
                 }
             }
-        
+
+            PlayerInputt.PlayerExposed();
     }
     private  void Apply(GameObject target, Vector3 position, Vector3 normal, float fraction)
     {

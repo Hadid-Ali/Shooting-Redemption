@@ -11,82 +11,77 @@ public class AiGroup : MonoBehaviour
     public GameObject CoverPosition;
     
     private GameEvent<AiGroup> m_OnGroupKilled = new();
-    private GameEvent<CharacterHealth> m_OnEnemyKilled = new();
-    
     
     [SerializeField] private List<CharacterHealth> enemies;
-    [SerializeField] private int deadCount;
-    [SerializeField] private int totalCount;
-    
 
-    public static int TotalEnemiesCount { private set; get; }
+    private static HashSet<CharacterHealth> AllEnemies = new();
+    private static int totalEnemiesCount;
+    private static int resurrectingIterations;
 
-    private void Start()
+    public static void ResurrectEnemey(CharacterHealth h)
     {
-        deadCount = 0;
-        totalCount = enemies.Count;
-        
-        foreach (var v in enemies)
-        {
-            v.Initialize(OnEnemykilled);
-        }
-        
-        TotalEnemiesCount += enemies.Count;
-
+        AllEnemies.Add(h);
     }
 
-    public void AddEnemy(CharacterHealth h)
+    private void Awake()
     {
-        enemies.Add(h);
-        totalCount = enemies.Count;
-
-        List<CharacterHealth> temp = new List<CharacterHealth>();
-        
-        
         foreach (var v in enemies)
-        {
-            v.UnInitialize();
-            v.Initialize(OnEnemykilled);
-            if (v == null) temp.Add(v);
-        }
-
-        foreach (var v in temp)
-            enemies.Remove(v);
+            v.GetComponent<Rigidbody>().isKinematic = true;
         
+        AllEnemies.AddRange(enemies);
     }
-    
-    public void Initialize(Action<AiGroup> onactionDie, Action<CharacterHealth> OnEnemyDie)
+
+    public void Initialize(Action<AiGroup> onactionDie, int respawningIteration)
     {
         m_OnGroupKilled.Register(onactionDie);
-        m_OnEnemyKilled.Register(OnEnemyDie);
+        
+        foreach (var v in enemies)
+            v.Initialize(OnEnemykilled);
+        
+        resurrectingIterations = respawningIteration;
+        totalEnemiesCount = AllEnemies.Count;
+        
+        
+        StartCoroutine(Wait()); //For enemies disappearing bug
+
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        foreach (var v in enemies)
+            v.GetComponent<Rigidbody>().isKinematic = false;
+        
+        GameplayStats s = new GameplayStats();
+        s.TotalEnemies = totalEnemiesCount;
+        s.RemainingEnemies = totalEnemiesCount;
+        
+        GamePlayStatsManager.OnUIUpdate.Raise(s);
     }
 
     private void OnDestroy()
     {
         m_OnGroupKilled.UnRegisterAll();
-        m_OnEnemyKilled.UnRegisterAll();
-        EnemyPoolManager.OnEnemyResurrect.UnRegister(AddEnemy);
+        GameEvents.GamePlayEvents.OnEnemyResurrected.UnRegister(ResurrectEnemey);
+        AllEnemies = new HashSet<CharacterHealth>();
     }
+    public static int GetRemainingEnemiesCount() => AllEnemies.Count;
+    public static int GetAllEnemiesCount() => totalEnemiesCount;
 
 
     public void OnEnemykilled(CharacterHealth h)
     {
+        AllEnemies.Remove(h);
         enemies.Remove(h);
 
-        deadCount++;
+        GameplayStats stat = new();
+        stat.TotalEnemies = totalEnemiesCount;
+        stat.RemainingEnemies = AllEnemies.Count;
         
-        //if(enemies.Count >= 1) //So it doesn't throw error on the last enemy
-        m_OnEnemyKilled.Raise(h);
+        GameEvents.GamePlayEvents.OnEnemyKilled.Raise(stat);
         
         if (enemies.Count <= 0)
             m_OnGroupKilled.Raise(this);
-        
-        
-    }
-
-    public bool CheckLastEnemy()
-    {
-        return enemies.Count == 1;
     }
     
     

@@ -8,27 +8,22 @@ public class PlayerFollowOffset : MonoBehaviour
 {
     private Transform playerTransform;
 
-    [SerializeField] private CinemachineVirtualCamera follow;
-    [SerializeField] private CinemachineVirtualCamera idle;
-    [SerializeField] private CinemachineVirtualCamera zoom;
-    
-    public static CinemachineVirtualCamera followCam;
-    public static CinemachineVirtualCamera idleCam;
-    public static CinemachineVirtualCamera zoomCam;
-
     private void Awake()
     {
-        playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
-        EnemyGroupEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
+        GameEvents.GamePlayEvents.OnPlayerSpawned.Register(GetPlayerTransform);
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.Register(UpdateFollowRotation);
+    }
+    
 
-        followCam = follow;
-        idleCam = idle;
-        zoomCam = zoom;
+    private void GetPlayerTransform()
+    {
+        playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
     }
 
     private void OnDestroy()
     {
-        EnemyGroupEvents.OnEnemyGroupKilled.UnRegister(UpdateFollowRotation);
+        GameEvents.GamePlayEvents.OnEnemyGroupKilled.UnRegister(UpdateFollowRotation);
+        GameEvents.GamePlayEvents.OnPlayerSpawned.Unregister(GetPlayerTransform);
     }
 
     private void UpdateFollowRotation(Transform obj)
