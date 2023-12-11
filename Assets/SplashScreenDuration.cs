@@ -33,8 +33,12 @@ public class SplashScreenDuration : MonoBehaviour
     
     IEnumerator LoadSceneAsync()
     {
-        //AdHandler.ShowAppOpen();
-        yield return new WaitForSecondsRealtime(splashScreenDuration);
+        
+        yield return new WaitForSeconds(0.5f);
+        AdHandler.InitializeAds();
+        yield return new WaitForSeconds(5);
+        AdHandler.ShowAppOpen();
+        yield return new WaitForSeconds(splashScreenDuration);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         
         while (!asyncLoad.isDone)
