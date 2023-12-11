@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 339937976512405673, guid: 2551046ec050cb84889e82c4057d3090,
         type: 3}
       propertyPath: m_Initialize
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6622103797305806266, guid: 2551046ec050cb84889e82c4057d3090,
         type: 3}
@@ -398,13 +398,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8354665397511244576, guid: 2551046ec050cb84889e82c4057d3090,
         type: 3}
+      propertyPath: AdId
+      value: ca-app-pub-3940256099942544/9257395921
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354665397511244576, guid: 2551046ec050cb84889e82c4057d3090,
+        type: 3}
       propertyPath: m_Initialize
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8732420641086342840, guid: 2551046ec050cb84889e82c4057d3090,
         type: 3}
       propertyPath: m_Initialize
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2551046ec050cb84889e82c4057d3090, type: 3}

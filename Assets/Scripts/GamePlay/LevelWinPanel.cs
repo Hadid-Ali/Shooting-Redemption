@@ -81,7 +81,7 @@ public class LevelWinPanel : UIMenuBase
             if(unlockedLevels > Dependencies.GameDataOperations.GetUnlockedLevels(currentEpisode))
                 Dependencies.GameDataOperations.SetUnlockedLevels(currentEpisode, unlockedLevels);
         }
-        if (unlockedLevels >= 4)
+        if (unlockedLevels >= 4 && currentEpisode < 4)
         {
             int nextEpisode = currentEpisode + 1;
             if (!Dependencies.GameDataOperations.GetUnlockedEpisodes(nextEpisode))

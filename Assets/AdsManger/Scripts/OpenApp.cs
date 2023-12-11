@@ -18,7 +18,7 @@ public class OpenApp : MonoBehaviour
             return m_AppOpenAd != null;
         }
     }
-    /*private void Awake()
+    private void Awake()
     {
         // Use the AppStateEventNotifier to listen to application open/close events.
         // This is used to launch the loaded ad when we open the app.
@@ -29,7 +29,7 @@ public class OpenApp : MonoBehaviour
     {
         // Always unlisten to events when complete.
         AppStateEventNotifier.AppStateChanged -= OnAppStateChanged;
-    }*/
+    }
     
     public void LoadAD()
     {
@@ -45,7 +45,7 @@ public class OpenApp : MonoBehaviour
         var adRequest = new AdRequest();
 
         // send the request to load the ad.
-        AppOpenAd.Load(AdId, ScreenOrientation.LandscapeLeft, adRequest,
+        AppOpenAd.Load(AdId, ScreenOrientation.Portrait, adRequest,
             (AppOpenAd ad, LoadAdError error) =>
             {
                 // if error is not null, the load request failed.

@@ -143,14 +143,12 @@ public class OverlayGun : MonoBehaviour
         
         yield return new WaitForSeconds(timeBetweenShots);
         
-
         if (BothHands)
         {
             yield return new WaitForSeconds(1f);
             _muzzleFlash2.SetActive(true);
             yield return new WaitForSeconds(.1f);
             _muzzleFlash2.SetActive(false);
-            
         }
         _canShoot = true;
             

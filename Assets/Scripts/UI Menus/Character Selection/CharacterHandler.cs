@@ -135,6 +135,7 @@ public class CharacterHandler : MonoBehaviour
                 m_GunButtonText.SetText("Not Selected");
                 GunStatus.color = Color.white;
             }
+            m_WatchAdForFreeGunTry.interactable = false;
         }
         else if (isGunSelected) //For Rewarded
         {
@@ -156,6 +157,7 @@ public class CharacterHandler : MonoBehaviour
             {
                 m_BuyButton.interactable = false;
             }
+            m_WatchAdForFreeGunTry.interactable = true;
         }
 
     }
