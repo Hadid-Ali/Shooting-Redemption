@@ -6,24 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Splash.unity
+    path: Assets/Scenes/CoverShooterScenes/Splash.unity
     guid: 02b6757323dfcad4d84f0620e2a997e2
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 338bb8d0388dc1943a24ff895befd030
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen.unity
+    path: Assets/Scenes/CoverShooterScenes/LoadingScreen.unity
     guid: 73beb2e22ccd0eb46aa527347d6c6da9
   - enabled: 1
-    path: Assets/Scenes/Chapter1.unity
+    path: Assets/Scenes/CoverShooterScenes/Chapter1.unity
     guid: 54e668a85ca9dcd458137464ee2c77d6
   - enabled: 1
-    path: Assets/Scenes/Chapter2.unity
+    path: Assets/Scenes/CoverShooterScenes/Chapter2.unity
     guid: 43fe9f2cc63192043882132d27d65df9
   - enabled: 1
-    path: Assets/Scenes/Chapter3.unity
+    path: Assets/Scenes/CoverShooterScenes/Chapter3.unity
     guid: 787124b53b1afc94da79e57f04173973
   - enabled: 1
-    path: Assets/Scenes/Chapter4.unity
+    path: Assets/Scenes/CoverShooterScenes/Chapter4.unity
     guid: 9d7cc18f6620d91468df1b14ca62d274
   m_configObjects: {}

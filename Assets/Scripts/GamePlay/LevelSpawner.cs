@@ -11,7 +11,7 @@ public class LevelSpawner : MonoBehaviour
     {
         Time.timeScale = 1;
         
-        LoadLevel(Dependencies.GameDataOperations.GetSelectedLevel());
+      //  LoadLevel(Dependencies.GameDataOperations.GetSelectedLevel());
     }
 
     private void Start()

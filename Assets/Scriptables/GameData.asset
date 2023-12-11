@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: 1
   m_Credits: 0
-  m_SelectedLevel: 0
-  m_SelectedEpisode: 0
-  m_UnlockedLevels: 0100000000000000000000000000000000000000
-  m_UnlockedEpisodes: 0100000000
+  m_SelectedLevel: 4
+  m_SelectedEpisode: 3
+  m_UnlockedLevels: 0400000004000000040000000400000000000000
+  m_UnlockedEpisodes: 0101010101
   Characters:
   - character: 0
     isUnlocked: 1

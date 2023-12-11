@@ -5,89 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid).meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdsManger/Scripts/AdHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdsManger/Scripts/AdHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdsManger/Scripts/AdsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdsManger/Scripts/AdsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.IOSResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.IOSResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.JarResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.JarResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.PackageManagerResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.PackageManagerResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.VersionHandlerImpl.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.177/Google.VersionHandlerImpl.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettingsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettingsEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GradleProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GradleProcessor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/AdImages/AdInspectorHome.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/AdImages/AdInspectorHome.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/AppOpen/768x1024.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/AppOpen/768x1024.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/Interstitials/768x1024.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/Interstitials/768x1024.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/Rewarded/768x1024.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/PlaceholderAds/Rewarded/768x1024.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/Ump/ConsentForm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/Ump/ConsentForm.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/Ump/ConsentForm.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Resources/Ump/ConsentForm.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Utils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/Utils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Android.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Android.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.iOS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds.iOS.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds_version-8.6.0_manifest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/GoogleMobileAds_version-8.6.0_manifest.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/packaging_options.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/packaging_options.gradle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/validate_dependencies.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/validate_dependencies.gradle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/googlemobileads-unity.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/googlemobileads-unity.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/unity-plugin-library.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/unity-plugin-library.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Butch.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Butch.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Jesse.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Jesse.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Player_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Player_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Player_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Guns Prefabs/Player_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Characters/CowBoy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Characters/CowBoy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Characters/SuitedMan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Characters/SuitedMan.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Characters/Yakuza.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Characters/Yakuza.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Double Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Double Pistol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Pistol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/PistolGold.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/PistolGold.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Revolver.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Revolver.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Rifle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Rifle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/SHotGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/SHotGun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelWinPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelWinPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/WeaponSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/WeaponSelection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu/MainMenuHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Main Menu/MainMenuHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/FadeCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FadeCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplashScreenDuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplashScreenDuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" beforeDir="false" afterPath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +251,8 @@
       <workItem from="1701760616926" duration="1250000" />
       <workItem from="1701846484822" duration="11343000" />
       <workItem from="1701934619108" duration="5411000" />
-      <workItem from="1702019831757" duration="11491000" />
+      <workItem from="1702019831757" duration="12085000" />
+      <workItem from="1702275792422" duration="667000" />
     </task>
     <servers />
   </component>
