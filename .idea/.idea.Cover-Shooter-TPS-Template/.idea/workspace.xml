@@ -6,10 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollowOffset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollowOffset.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Util/ResetOnDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Util/ResetOnDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +227,7 @@
       <workItem from="1702275792422" duration="1457000" />
       <workItem from="1702292652393" duration="4172000" />
       <workItem from="1702471369440" duration="1933000" />
-      <workItem from="1702535819641" duration="4466000" />
+      <workItem from="1702535819641" duration="11858000" />
     </task>
     <servers />
   </component>

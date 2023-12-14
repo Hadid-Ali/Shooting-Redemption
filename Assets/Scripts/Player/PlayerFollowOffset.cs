@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerFollowOffset : MonoBehaviour
 {
     private Transform playerTransform;
-
+    
     private void Awake()
     {
         GameEvents.GamePlayEvents.OnPlayerSpawned.Register(GetPlayerTransform);
@@ -33,6 +33,9 @@ public class PlayerFollowOffset : MonoBehaviour
     
     void Update()
     {
+        if(!playerTransform)
+            playerTransform = FindObjectOfType<AIPlayerMovement>().transform;
+            
         transform.position = playerTransform.position + Vector3.up;
     }
 }
