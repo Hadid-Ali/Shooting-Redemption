@@ -5,47 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid).meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbm/Military_3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Character Rig (Hadid)/Thug Geo.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Chapter4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Character Selection/CharacterHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Lighting Settings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/New Universal Render Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/materials/nyc back street mafia.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/Materials/paal_lambert1_BaseMap.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/meshes/nyc back street env.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/nyc back street mafia/Global Volume Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/cobblestone-arched-pavement-road-edge-courses-sidewalk-seaml.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/nyc back street env/texture/nyc back street mafia.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" beforeDir="false" afterPath="$PROJECT_DIR$/CF2-Data/Settings/CF2.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/LevelsPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/CoverObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,7 +91,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LevelsSetup&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Releasefinalization&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -252,7 +226,10 @@
       <workItem from="1701846484822" duration="11343000" />
       <workItem from="1701934619108" duration="5411000" />
       <workItem from="1702019831757" duration="12085000" />
-      <workItem from="1702275792422" duration="667000" />
+      <workItem from="1702275792422" duration="1457000" />
+      <workItem from="1702292652393" duration="4172000" />
+      <workItem from="1702471369440" duration="1933000" />
+      <workItem from="1702535819641" duration="3063000" />
     </task>
     <servers />
   </component>

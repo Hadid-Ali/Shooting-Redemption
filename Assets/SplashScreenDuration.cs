@@ -12,29 +12,17 @@ public class SplashScreenDuration : MonoBehaviour
     
     void Awake()
     {
-        //GameAdEvents.OnAdsInitialized.Register(OnAdsInitialized);
-        
-        //AdHandler.InitializeAds();
         StartCoroutine(LoadSceneAsync());
-        
     }
-
-    private void OnDestroy()
-    {
-       // GameAdEvents.OnAdsInitialized.Unregister(OnAdsInitialized);
-    }
-
-    public void OnAdsInitialized()
-    {
-        //AdHandler.ShowAppOpen();
-    }
-    
-    
     
     IEnumerator LoadSceneAsync()
     {
-        //AdHandler.ShowAppOpen();
-        yield return new WaitForSecondsRealtime(splashScreenDuration);
+        yield return new WaitForSeconds(.5f);
+        AdHandler.InitializeAds();
+        yield return new WaitForSeconds(splashScreenDuration);
+        
+        AdHandler.ShowAppOpen();
+        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         
         while (!asyncLoad.isDone)

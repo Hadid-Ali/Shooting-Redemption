@@ -140,6 +140,8 @@ public class WeaponSelection : MonoBehaviour
                 m_GunButtonText.SetText("Not Selected");
                 GunStatus.color = Color.white;
             }
+
+            m_WatchAdForFreeGunTry.interactable = false;
         }
         else if (isGunSelected) //For Rewarded
         {
@@ -163,6 +165,7 @@ public class WeaponSelection : MonoBehaviour
             {
                 m_BuyButton.interactable = false;
             }
+            m_WatchAdForFreeGunTry.interactable = true;
         }
 
     }
@@ -234,6 +237,7 @@ public class WeaponSelection : MonoBehaviour
     public void OnRewardedGunADWatched()
     {
         Dependencies.GameDataOperations.SetSelectedWeapon(currentWeapon);
+        selectedWeapon = currentWeapon;
         UpdateGunData();
         Dependencies.GameDataOperations.SaveData();
     }

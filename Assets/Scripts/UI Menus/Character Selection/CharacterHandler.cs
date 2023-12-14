@@ -100,7 +100,7 @@ public class CharacterHandler : MonoBehaviour
             }
         }
         characters.Find(x => x.characterData.character == selectedCharacter).characterPrefab.SetActive(true);
-        
+        UpdateGunData();
     }
 
     public void UpdateGunData()
@@ -135,6 +135,7 @@ public class CharacterHandler : MonoBehaviour
                 m_GunButtonText.SetText("Not Selected");
                 GunStatus.color = Color.white;
             }
+            m_WatchAdForFreeGunTry.interactable = false;
         }
         else if (isGunSelected) //For Rewarded
         {
@@ -145,7 +146,9 @@ public class CharacterHandler : MonoBehaviour
         {
             m_GunButtonText.SetText("Unlock Character"); //Gun Status
             GunStatus.color = Color.white; // Gun Button Color
-
+            
+            m_BuyButton.onClick.RemoveAllListeners();
+            
             if (isAffordable)
             {
                 m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
@@ -156,6 +159,7 @@ public class CharacterHandler : MonoBehaviour
             {
                 m_BuyButton.interactable = false;
             }
+            m_WatchAdForFreeGunTry.interactable = true;
         }
 
     }
@@ -227,6 +231,7 @@ public class CharacterHandler : MonoBehaviour
     public void OnRewardedGunADWatched()
     {
         Dependencies.GameDataOperations.SetSelectedCharacter(currentCharacter);
+        selectedCharacter = currentCharacter;
         UpdateGunData();
         Dependencies.GameDataOperations.SaveData();
     }

@@ -16,12 +16,12 @@ public class PlayerInputt : MonoBehaviour
 
     private void Awake()
     {
-        PlayerExposed += playerExposed;
+        PlayerExposed += PlayerExposedF;
     }
 
     private void OnDestroy()
     {
-        PlayerExposed -= playerExposed;
+        PlayerExposed -= PlayerExposedF;
     }
 
     void Update()
@@ -51,7 +51,7 @@ public class PlayerInputt : MonoBehaviour
         }
     }
 
-    public void playerExposed()
+    public void PlayerExposedF()
     {
         GetComponent<Actor>().enabled = true;
     }

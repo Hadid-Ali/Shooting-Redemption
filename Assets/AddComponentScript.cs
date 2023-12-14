@@ -7,6 +7,19 @@ using UnityEngine;
 public class AddComponentScript : MonoBehaviour
 {
     private Rigidbody[] bodyhealths;
+
+    [ContextMenu("ADD MeshColliders")]
+    private void AddMeshColliders()
+    {
+        MeshRenderer[] meshRenderers = transform.GetComponentsInChildren<MeshRenderer>();
+
+        foreach (var VARIABLE in meshRenderers)
+        {
+            VARIABLE.AddComponent<MeshCollider>();
+        }
+    }
+    
+    
     
     [ContextMenu("AddBodyPartHealth")]
     private void AddComponent()

@@ -40,6 +40,8 @@ public class LevelsPanel : UIMenuBase
             SessionData.Instance.sceneToLoad = SceneName.Chapter3;
         if(selectedEpisode == 3)
             SessionData.Instance.sceneToLoad = SceneName.Chapter4;
+        if(selectedEpisode == 4)
+            SessionData.Instance.sceneToLoad = SceneName.Chapter5;
             
         
         Dependencies.GameDataOperations.SetSelectedLevel(i);
