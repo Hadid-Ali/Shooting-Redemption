@@ -3838,14 +3838,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 0}
-  Health: 5000
-  MaxHealth: 5000
+  Health: 1000
+  MaxHealth: 1000
   Regeneration: 2
   DamageMultiplier: 1
   IsTakingDamage: 1
   IsRegisteringHits: 0
   isDead: 0
   isMainPlayer: 1
+  isNPC: 0
 --- !u!114 &8982269655647486154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4135,6 +4136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1901cdcfe75807b488293a18ad89340b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterType: 0
   currentState: 0
 --- !u!114 &8982269655647486150
 MonoBehaviour:
@@ -4228,7 +4230,6 @@ MonoBehaviour:
     Weapon: 1
     TwoHandedweapon: 0
     isRifle: 0
-  selectedWeapon: 0
 --- !u!114 &1788377028
 MonoBehaviour:
   m_ObjectHideFlags: 0

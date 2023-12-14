@@ -100,7 +100,7 @@ public class CharacterHandler : MonoBehaviour
             }
         }
         characters.Find(x => x.characterData.character == selectedCharacter).characterPrefab.SetActive(true);
-        
+        UpdateGunData();
     }
 
     public void UpdateGunData()
@@ -146,7 +146,9 @@ public class CharacterHandler : MonoBehaviour
         {
             m_GunButtonText.SetText("Unlock Character"); //Gun Status
             GunStatus.color = Color.white; // Gun Button Color
-
+            
+            m_BuyButton.onClick.RemoveAllListeners();
+            
             if (isAffordable)
             {
                 m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
@@ -229,6 +231,7 @@ public class CharacterHandler : MonoBehaviour
     public void OnRewardedGunADWatched()
     {
         Dependencies.GameDataOperations.SetSelectedCharacter(currentCharacter);
+        selectedCharacter = currentCharacter;
         UpdateGunData();
         Dependencies.GameDataOperations.SaveData();
     }

@@ -16,8 +16,8 @@ MonoBehaviour:
   m_Credits: 0
   m_SelectedLevel: 0
   m_SelectedEpisode: 0
-  m_UnlockedLevels: 0000000000000000000000000000000000000000
-  m_UnlockedEpisodes: 0100000000
+  m_UnlockedLevels: 0400000004000000040000000400000004000000
+  m_UnlockedEpisodes: 0101010101
   Characters:
   - character: 0
     isUnlocked: 1
