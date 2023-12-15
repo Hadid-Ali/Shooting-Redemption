@@ -124607,6 +124607,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1481685615, guid: d0a75af8b630a934d94918201b63cdcd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -69.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4895833371692587626, guid: d0a75af8b630a934d94918201b63cdcd,
         type: 3}
       propertyPath: m_Name
@@ -124717,8 +124721,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4895833372527773385, guid: d0a75af8b630a934d94918201b63cdcd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895833372527773399, guid: d0a75af8b630a934d94918201b63cdcd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.038576365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895833372527773399, guid: d0a75af8b630a934d94918201b63cdcd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895833372527773399, guid: d0a75af8b630a934d94918201b63cdcd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895833372527773399, guid: d0a75af8b630a934d94918201b63cdcd,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0a75af8b630a934d94918201b63cdcd, type: 3}
+--- !u!1 &4895833372741986984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4895833372527773385, guid: d0a75af8b630a934d94918201b63cdcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4895833372741986983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4895833372741986985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895833372741986984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3df6db69c672d545a3fe58302729b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthUi: {fileID: 0}
 --- !u!1 &4998569472587931800
 GameObject:
   m_ObjectHideFlags: 0
