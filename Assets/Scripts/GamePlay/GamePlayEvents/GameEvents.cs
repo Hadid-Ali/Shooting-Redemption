@@ -11,6 +11,7 @@ public partial class GameEvents
         public static GameEvent OnPlayerSpawned = new();
         public static GameEvent OnPlayerReachedCover = new();
         public static GameEvent OnPlayerHit = new();
+        public static GameEvent OnPlayerDead = new();
         
         //Enemies
         public static GameEvent<GameplayStats> OnEnemyKilled = new ();
@@ -22,6 +23,9 @@ public partial class GameEvents
         public static GameEvent OnAllGroupsCleared = new();
         public static GameEvent<Transform> OnEnemyGroupKilled = new();
         
+        //GameLost
+        public static GameEvent GameOver = new();
+
 
 
     }

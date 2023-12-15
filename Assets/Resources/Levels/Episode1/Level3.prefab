@@ -1345,6 +1345,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622459931190878345}
+  - component: {fileID: -5335464701975187796}
+  - component: {fileID: 1781659868172383255}
   m_Layer: 0
   m_Name: Level3
   m_TagString: Untagged
@@ -1381,6 +1383,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5335464701975187796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622459931190878344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6248d6f501b12428d92ffb87c3d3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 40
+--- !u!114 &1781659868172383255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622459931190878344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b92e5dfc2388f44a30e16e85a006a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 0
 --- !u!1 &1622459931270711291
 GameObject:
   m_ObjectHideFlags: 0

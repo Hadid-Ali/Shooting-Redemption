@@ -9,6 +9,21 @@ public class LevelFailPanel : UIMenuBase
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private Button restartButton;
 
+    
+    private void Awake()
+    {
+        GameEvents.GamePlayEvents.OnPlayerDead.Register(GameLost);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.OnPlayerDead.Unregister(GameLost);
+    }
+
+    private void GameLost()
+    {
+        ChangeMenuState(MenuName.GameplayLevelFailed);
+    }
     protected override void OnMenuContainerEnable()
     {
         AdHandler.ShowInterstitial();

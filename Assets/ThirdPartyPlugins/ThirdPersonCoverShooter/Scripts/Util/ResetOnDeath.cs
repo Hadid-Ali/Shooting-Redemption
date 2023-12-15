@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,15 +10,26 @@ namespace CoverShooter
     /// </summary>
     public class ResetOnDeath : MonoBehaviour, ICharacterHealthListener
     {
-        /// <summary>
-        /// Time in seconds to reset the level after character's death
-        /// </summary>
+        private Animator _animator;
         [Tooltip("Time in seconds to reset the level after character's death")]
-        public float Delay = 3.0f;
+        public float Delay = 2.0f;
 
-        /// <summary>
-        /// Starts a sequence to reset the level after waiting for Delay.
-        /// </summary>
+        private static readonly int Dead = Animator.StringToHash("Dead");
+
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+            GameEvents.GamePlayEvents.GameOver.Register(OnDead);
+            
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.GamePlayEvents.GameOver.Unregister(OnDead);
+        }
+
+
         public void OnDead()
         {
             StartCoroutine(delayedReset());
@@ -27,10 +39,17 @@ namespace CoverShooter
 
         private IEnumerator delayedReset()
         {
+            _animator.SetTrigger(Dead);
+            PlayerInputt.OnUnZoom();
+            PlayerInputt.CanTakeInput = false;
+            CustomCameraController.CameraStateChanged.Invoke(CamState.Follow);
+            
             yield return new WaitForSeconds(Delay);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameEvents.GamePlayEvents.OnPlayerDead.Raise();
+            
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-
+        
         private void OnValidate()
         {
             Delay = Mathf.Max(0, Delay);
