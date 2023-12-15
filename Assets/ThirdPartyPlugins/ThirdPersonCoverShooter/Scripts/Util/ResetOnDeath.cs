@@ -20,7 +20,15 @@ namespace CoverShooter
         private void Awake()
         {
             _animator = GetComponent<Animator>();
+            GameEvents.GamePlayEvents.GameOver.Register(OnDead);
+            
         }
+
+        private void OnDestroy()
+        {
+            GameEvents.GamePlayEvents.GameOver.Unregister(OnDead);
+        }
+
 
         public void OnDead()
         {

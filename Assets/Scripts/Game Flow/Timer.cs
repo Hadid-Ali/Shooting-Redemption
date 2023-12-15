@@ -1,32 +1,70 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float countdownTime = 60f; // Set the countdown time in seconds
-    private float currentTime;
+    [HideInInspector] public float countdownTime; // Set the countdown time in seconds
+    private float _currentTime;
 
-    void Start()
+    private bool _countdownCompleted;
+    private bool _timerInitialized;
+
+    public static GameEvent<string> OnTimerUIUpdate = new();
+
+
+    private void Awake()
     {
-        currentTime = countdownTime;
+        GameEvents.GamePlayEvents.GameOver.Register(UnInitilizeTimer);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.GameOver.Unregister(UnInitilizeTimer);
+    }
+
+    public void UnInitilizeTimer()
+    {
+        _timerInitialized = false;
+    }
+
+    public void Initialize()
+    {
+        _currentTime = countdownTime;
+        _timerInitialized = true;
     }
 
     void Update()
     {
-        // Update the timer
-        currentTime -= Time.deltaTime;
+        if(_countdownCompleted && !_timerInitialized)
+            return;
+        
+        _currentTime -= Time.deltaTime;
+        
+        _currentTime = Mathf.Max(_currentTime, 0f);
 
-        // Check if the timer has reached zero
-        if (currentTime <= 0f)
+
+        int minutes = Mathf.FloorToInt(_currentTime / 60);
+        int seconds = Mathf.FloorToInt(_currentTime % 60);
+
+
+        string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        
+        OnTimerUIUpdate.Raise(timerText);
+        
+        if (_currentTime <= 0f)
         {
-            
-            ResetTimer();
+            CountdownCompleted();
         }
     }
 
-    void ResetTimer()
+    void CountdownCompleted()
     {
-        currentTime = countdownTime;
+        _countdownCompleted = true;
+        GameEvents.GamePlayEvents.GameOver.Raise();
     }
 }

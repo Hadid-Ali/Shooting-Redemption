@@ -6,17 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level5.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/Timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CustomCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollowOffset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollowOffset.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Animations/Mecanim assets/PlayerCustom.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Materials/ImpactMarks/glassDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Materials/ImpactMarks/glassDebris.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Models/Player/Materials/unity_pilot_head_01_dif.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Models/Player/Materials/unity_pilot_head_01_dif.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/Copy of unity_goodsoldier_body_dif_wip.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/RFPSP/Objects/NPCs/Soldier/Materials/Soldier/Copy of unity_goodsoldier_body_dif_wip.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Util/ResetOnDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Util/ResetOnDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +58,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GUI/RemainingPlayersUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/LevelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Flow/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayPauseButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -227,7 +253,8 @@
       <workItem from="1702275792422" duration="1457000" />
       <workItem from="1702292652393" duration="4172000" />
       <workItem from="1702471369440" duration="1933000" />
-      <workItem from="1702535819641" duration="11858000" />
+      <workItem from="1702535819641" duration="12726000" />
+      <workItem from="1702623785991" duration="8130000" />
     </task>
     <servers />
   </component>

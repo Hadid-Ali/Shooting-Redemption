@@ -124612,11 +124612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4895833371692587626, guid: d0a75af8b630a934d94918201b63cdcd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4895833371692587638, guid: d0a75af8b630a934d94918201b63cdcd,
         type: 3}
       propertyPath: m_Pivot.x
