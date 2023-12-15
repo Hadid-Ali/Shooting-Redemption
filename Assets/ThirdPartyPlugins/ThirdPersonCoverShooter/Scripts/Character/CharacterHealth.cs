@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoverShooter.AI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,6 +90,8 @@ namespace CoverShooter
 
         private static Dictionary<GameObject, CharacterHealth> _map = new Dictionary<GameObject, CharacterHealth>();
 
+        public static GameEvent<float> OnHealthUIUpdate = new();
+
         public static CharacterHealth Get(GameObject gameObject)
         {
             if (_map.ContainsKey(gameObject))
@@ -157,6 +160,11 @@ namespace CoverShooter
             if (!_isDead)
             {
                 Health = Mathf.Clamp(Health + Regeneration * Time.deltaTime, 0, MaxHealth);
+                if (isMainPlayer)
+                {
+                    float hp = Health / 100;
+                    OnHealthUIUpdate.Raise(hp);
+                }
                 check();
             }
         }
