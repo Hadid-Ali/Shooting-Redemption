@@ -10685,6 +10685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7476843801816775157
@@ -13673,7 +13674,7 @@ PrefabInstance:
     - target: {fileID: 2307447340316783566, guid: 6423c8b77886a9e4a8b372af47c39c38,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.006897
+      value: -2.44
       objectReference: {fileID: 0}
     - target: {fileID: 2307447340316783566, guid: 6423c8b77886a9e4a8b372af47c39c38,
         type: 3}

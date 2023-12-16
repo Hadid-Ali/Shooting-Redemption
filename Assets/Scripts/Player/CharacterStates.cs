@@ -12,22 +12,30 @@ public enum PlayerCustomStates
      InActive,
      InZoom
 }
+
+public enum GameStates
+{
+    InGame,
+    GamePause,
+    GameOver
+}
 public class CharacterStates : MonoBehaviour
 {
     public CharacterType CharacterType;
     
     public static PlayerCustomStates playerState;
-
-    public PlayerCustomStates currentState;
+    public static GameStates gameState;
 
     private void Awake()
     {
         playerState = PlayerCustomStates.CutScene;
+        gameState = GameStates.InGame;
+
     }
 
-    private void Update()
+    public static void SetGameState(GameStates _gameState)
     {
-        currentState = playerState;
+        gameState = _gameState;
     }
 
     public static void SetPlayerState(PlayerCustomStates state)

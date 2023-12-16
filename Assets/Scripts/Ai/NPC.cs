@@ -45,6 +45,7 @@ public class NPC : MonoBehaviour
         
         anim.Play(Death);
         helpmeCanvas.SetActive(false);
+        GameEvents.GamePlayEvents.GameOver.Raise();
     }
 
     public void OnHit()
@@ -55,6 +56,7 @@ public class NPC : MonoBehaviour
         anim.Play(Death);
         helpmeCanvas.SetActive(false);
         SessionData.Instance.civiliansKilled += 1;
+        
     }
 
     public void OnAlert()

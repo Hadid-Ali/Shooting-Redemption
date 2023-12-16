@@ -162,7 +162,8 @@ namespace CoverShooter
                 Health = Mathf.Clamp(Health + Regeneration * Time.deltaTime, 0, MaxHealth);
                 if (isMainPlayer)
                 {
-                    float hp = Health / 100;
+                    float percentage = (Health / MaxHealth) * 100;
+                    float hp = percentage / 100;
                     OnHealthUIUpdate.Raise(hp);
                 }
                 check();
@@ -209,6 +210,7 @@ namespace CoverShooter
             {
                 Died();
                 if (isMainPlayer) GameAdEvents.GamestateEvents.GameLost.Raise();
+                CharacterStates.gameState = GameStates.GameOver;
             }
         }
 
@@ -219,7 +221,7 @@ namespace CoverShooter
         {
             if (isMainPlayer)
             {
-                if (_motor.GetComponent<CharacterStates>().currentState == PlayerCustomStates.InZoom)
+                if (CharacterStates.playerState == PlayerCustomStates.InZoom)
                 {
                     OnHit?.Invoke();
                     Deal(hit.Damage);
