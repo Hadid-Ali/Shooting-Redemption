@@ -1293,6 +1293,7 @@ GameObject:
   - component: {fileID: 4463542530358922595}
   - component: {fileID: 4463542530358922594}
   - component: {fileID: 4463542530358922597}
+  - component: {fileID: 7304400978157330040}
   m_Layer: 0
   m_Name: Tong
   m_TagString: Untagged
@@ -1380,6 +1381,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6849161054650644438, guid: a82dbce911fa6cc41a36382a1a6e58cd, type: 3}
+--- !u!114 &7304400978157330040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4463542530358922599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4463542530364251786
 GameObject:
   m_ObjectHideFlags: 0

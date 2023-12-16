@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 1722872981153972331}
   - component: {fileID: 1722872981153972330}
   - component: {fileID: 1722872981153972329}
+  - component: {fileID: 2676344515988292581}
   m_Layer: 0
   m_Name: box1 (2)
   m_TagString: Untagged
@@ -948,6 +949,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5999801800477934532, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &2676344515988292581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722872981153972247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1722872981161532693
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,6 +4126,7 @@ GameObject:
   - component: {fileID: 1722872982665365117}
   - component: {fileID: 1722872982665365116}
   - component: {fileID: 1722872982665365115}
+  - component: {fileID: 3989146440655704952}
   m_Layer: 0
   m_Name: box1 (1)
   m_TagString: Untagged
@@ -4200,6 +4214,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5999801800477934532, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &3989146440655704952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722872982665365113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1722872982674626223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,6 +5322,7 @@ GameObject:
   - component: {fileID: 3253082943520623447}
   - component: {fileID: 3253082943520623440}
   - component: {fileID: 3253082943520623441}
+  - component: {fileID: 7814917620665827174}
   m_Layer: 0
   m_Name: BenchAIObstacle (4)
   m_TagString: Untagged
@@ -5383,6 +5410,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1631190101583490588, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &7814917620665827174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253082943520623443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3253082943526455677
 GameObject:
   m_ObjectHideFlags: 0

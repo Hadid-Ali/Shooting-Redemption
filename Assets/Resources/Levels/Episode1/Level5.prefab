@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 730201249925904887}
   - component: {fileID: 730201249925904886}
   - component: {fileID: 730201249925904873}
+  - component: {fileID: 8324504137529922178}
   m_Layer: 0
   m_Name: box1 (1)
   m_TagString: Untagged
@@ -99,6 +100,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5999801800477934532, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &8324504137529922178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730201249925904875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730201250032569596
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +124,7 @@ GameObject:
   - component: {fileID: 730201250032569592}
   - component: {fileID: 730201250032569595}
   - component: {fileID: 730201250032569594}
+  - component: {fileID: 2399582602427933968}
   m_Layer: 0
   m_Name: BenchAIObstacle (6)
   m_TagString: Untagged
@@ -198,6 +212,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1631190101583490588, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &2399582602427933968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730201250032569596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730201250904904804
 GameObject:
   m_ObjectHideFlags: 0
@@ -6631,6 +6657,7 @@ GameObject:
   - component: {fileID: 6026929772922261610}
   - component: {fileID: 6026929772922261613}
   - component: {fileID: 6026929772922261612}
+  - component: {fileID: 4108588474628003174}
   m_Layer: 0
   m_Name: box1 (2)
   m_TagString: Untagged
@@ -6718,6 +6745,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5999801800477934532, guid: c4e634cbd9fa17847ad4b06571e12cf0, type: 3}
+--- !u!114 &4108588474628003174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026929772922261614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6026929773531242179
 GameObject:
   m_ObjectHideFlags: 0
