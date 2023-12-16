@@ -8,6 +8,7 @@ namespace CoverShooter
     /// </summary>
     public class BodyPartHealth : MonoBehaviour
     {
+        public bool isMainPlayer = false;
         /// <summary>
         /// Target CharacterHealth.
         /// </summary>
@@ -99,6 +100,9 @@ namespace CoverShooter
         /// </summary>
         public void OnHit(Hit hit)
         {
+            if(isMainPlayer && CharacterStates.playerState != PlayerCustomStates.InZoom)
+                return;
+            
             var target = TargetOveride;
 
             if (target == null)

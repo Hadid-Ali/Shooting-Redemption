@@ -266,7 +266,7 @@ MonoBehaviour:
   Animator: {fileID: 0}
   Health: 500
   MaxHealth: 500
-  Regeneration: 1
+  Regeneration: 10
   DamageMultiplier: 1
   IsTakingDamage: 1
   IsRegisteringHits: 0
@@ -1330,6 +1330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &2063181141411668072 stripped
@@ -1364,6 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &2123845895605200965 stripped
@@ -1398,6 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &2541440345178689235 stripped
@@ -1431,6 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!4 &3407467502316543392 stripped
@@ -1477,26 +1481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
---- !u!1 &4177491029374860386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4877260255516987278, guid: 7a2fccbfed68f804683835430c5f5579,
-    type: 3}
-  m_PrefabInstance: {fileID: 8815496832797668332}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8815496832797668351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4177491029374860386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e553fe311096ba74385897a96c857fe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5465025803326508655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3567206781218372995, guid: 7a2fccbfed68f804683835430c5f5579,
@@ -1528,6 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5522280899721353195 stripped
@@ -1562,6 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5551638078403796375 stripped
@@ -1596,6 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5889359167346925836 stripped
@@ -1629,6 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7194126200034760419 stripped
@@ -1663,6 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &8440677435977518880 stripped
@@ -1697,5 +1689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 1
   TargetOveride: {fileID: 0}
   DamageScale: 1

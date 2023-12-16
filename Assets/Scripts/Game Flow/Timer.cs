@@ -15,18 +15,22 @@ public class Timer : MonoBehaviour
     private bool _timerInitialized;
 
     public static GameEvent<string> OnTimerUIUpdate = new();
+    public static GameEvent StopTimer = new();
 
 
     private void Awake()
     {
         GameEvents.GamePlayEvents.GameOver.Register(UnInitilizeTimer);
+        GameEvents.GamePlayEvents.OnAllGroupsCleared.Register(UnInitilizeTimer);
+        StopTimer.Register(UnInitilizeTimer);
     }
 
     private void OnDestroy()
     {
         GameEvents.GamePlayEvents.GameOver.Unregister(UnInitilizeTimer);
+        GameEvents.GamePlayEvents.OnAllGroupsCleared.Unregister(UnInitilizeTimer);
+        StopTimer.Unregister(UnInitilizeTimer);
     }
-
     public void UnInitilizeTimer()
     {
         _timerInitialized = false;
@@ -66,5 +70,7 @@ public class Timer : MonoBehaviour
     {
         _countdownCompleted = true;
         GameEvents.GamePlayEvents.GameOver.Raise();
+
+        CharacterStates.gameState = GameStates.GameOver;
     }
 }

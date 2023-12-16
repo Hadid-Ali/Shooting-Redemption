@@ -20,12 +20,15 @@ public class GameplayPausePanel : UIMenuBase
         AdHandler.ShowInterstitial();
         
         PlayerCanvasScipt.DeActive();
+
+        CharacterStates.gameState = GameStates.GamePause;
     }
 
     protected override void OnMenuContainerDisable()
     {
         GetComponent<Animator>().enabled = false;
         PlayerCanvasScipt.SetActive();
+        CharacterStates.gameState = GameStates.InGame;
     }
     
 }

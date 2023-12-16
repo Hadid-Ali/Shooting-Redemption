@@ -6706,6 +6706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5907517747525303873
@@ -9177,7 +9178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5907517748595038701}
   m_LocalRotation: {x: -0, y: -0.32732314, z: -0, w: 0.9449125}
-  m_LocalPosition: {x: 4.27, y: -2.713, z: 23.07}
+  m_LocalPosition: {x: 4.27, y: -2.917, z: 23.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12196,6 +12197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875591 stripped
@@ -12229,6 +12231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875611 stripped
@@ -12263,6 +12266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875623 stripped
@@ -12314,6 +12318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875629 stripped
@@ -12348,6 +12353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875635 stripped
@@ -12382,6 +12388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875639 stripped
@@ -12415,6 +12422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875645 stripped
@@ -12449,6 +12457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875691 stripped
@@ -12527,6 +12536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875701 stripped
@@ -12561,6 +12571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7640251245109875703 stripped
@@ -12595,6 +12606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!4 &7640251245110038475 stripped
@@ -12732,6 +12744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668741 stripped
@@ -12766,6 +12779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668747 stripped
@@ -12800,6 +12814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668753 stripped
@@ -12852,6 +12867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668765 stripped
@@ -12885,6 +12901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668781 stripped
@@ -12919,6 +12936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668785 stripped
@@ -12952,6 +12970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668801 stripped
@@ -12986,6 +13005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668803 stripped
@@ -13020,6 +13040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668827 stripped
@@ -13054,6 +13075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6701814608711668829 stripped
@@ -13132,6 +13154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!4 &6701814608712157309 stripped
