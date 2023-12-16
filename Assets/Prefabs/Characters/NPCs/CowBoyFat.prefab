@@ -983,6 +983,7 @@ MonoBehaviour:
   IsRegisteringHits: 0
   isDead: 0
   isMainPlayer: 0
+  isNPC: 0
 --- !u!114 &3420614215353427962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,10 +1256,10 @@ MonoBehaviour:
   MinSweepDuration: 4
   MaxSweepDuration: 6
   SweepFOV: 30
-  AccuracyError: 1
+  AccuracyError: 0
   Target:
-    Min: 0.5
-    Max: 0.8
+    Min: 0
+    Max: 1
   DebugAim: 1
 --- !u!114 &3420614215353427951
 MonoBehaviour:

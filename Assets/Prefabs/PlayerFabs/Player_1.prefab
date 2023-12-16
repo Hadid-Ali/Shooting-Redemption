@@ -3839,8 +3839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 0}
-  Health: 100
-  MaxHealth: 100
+  Health: 500
+  MaxHealth: 500
   Regeneration: 1
   DamageMultiplier: 1
   IsTakingDamage: 1
