@@ -11649,7 +11649,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8063
+    m_Bits: 8055
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -25160,7 +25160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6704662355017309380}
   - component: {fileID: 5542097347423898473}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Guns
   m_TagString: gun
   m_Icon: {fileID: 0}
