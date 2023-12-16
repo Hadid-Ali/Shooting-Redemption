@@ -390,6 +390,8 @@ GameObject:
   - component: {fileID: 8850277830661390142}
   - component: {fileID: 5473908652055534506}
   - component: {fileID: 6078735717074614005}
+  - component: {fileID: 6330499168740528031}
+  - component: {fileID: 2946999316628042461}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -478,6 +480,31 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.18300001, z: 0.0050000004}
   m_TimeToStationary: 0.5
+--- !u!114 &6330499168740528031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221059900656981327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2946999316628042461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221059900656981327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.470939, y: 0.86012655, z: 1.4837382}
+  m_Center: {x: 0.00097298075, y: -0.18340042, z: 0.004729943}
 --- !u!1 &3811972762465541945
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,11 +928,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 1.355, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.18, z: 0}
   m_TimeToStationary: 0.5
 --- !u!1 &4335030075008325134
 GameObject:
@@ -918,6 +945,8 @@ GameObject:
   - component: {fileID: 4335030075008325129}
   - component: {fileID: 4335030075008325131}
   - component: {fileID: 4335030075008325128}
+  - component: {fileID: 5013863169986712213}
+  - component: {fileID: 6352348197815119084}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -990,6 +1019,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5013863169986712213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335030075008325134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4709387, y: 0.8601266, z: 1.4837384}
+  m_Center: {x: 0.00097296963, y: -0.18340805, z: 0.004728988}
+--- !u!114 &6352348197815119084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335030075008325134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4335030075083242150
 GameObject:
   m_ObjectHideFlags: 0

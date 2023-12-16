@@ -1061,6 +1061,7 @@ GameObject:
   - component: {fileID: 6113029832261261684}
   - component: {fileID: 6113029832261261685}
   - component: {fileID: 6113029832261261686}
+  - component: {fileID: 5714331967484309699}
   m_Layer: 0
   m_Name: ven_03 (2)
   m_TagString: Untagged
@@ -1148,6 +1149,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1556762697173376375, guid: e62ea6c3cfe3a1a4e8f24bd36adfead0, type: 3}
+--- !u!114 &5714331967484309699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113029832261261688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6113029832270993784
 GameObject:
   m_ObjectHideFlags: 0
@@ -7511,6 +7524,7 @@ GameObject:
   - component: {fileID: 8605402534387980721}
   - component: {fileID: 8605402534387980720}
   - component: {fileID: 8605402534387980723}
+  - component: {fileID: 6329053249121107484}
   m_Layer: 0
   m_Name: ven_03 (3)
   m_TagString: Untagged
@@ -7598,6 +7612,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1556762697173376375, guid: e62ea6c3cfe3a1a4e8f24bd36adfead0, type: 3}
+--- !u!114 &6329053249121107484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8605402534387980725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8605402534419841927
 GameObject:
   m_ObjectHideFlags: 0

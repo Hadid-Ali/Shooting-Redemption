@@ -1284,6 +1284,7 @@ GameObject:
   - component: {fileID: 2441829889498361978}
   - component: {fileID: 2441829889498361979}
   - component: {fileID: 2441829889498361976}
+  - component: {fileID: 3154782743857834926}
   m_Layer: 0
   m_Name: Cylinder_006 (3)
   m_TagString: Untagged
@@ -1386,6 +1387,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &3154782743857834926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441829889498361982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2441829889547417923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1610,7 @@ GameObject:
   - component: {fileID: 2441829889647809422}
   - component: {fileID: 2441829889647809423}
   - component: {fileID: 2441829889866660471}
+  - component: {fileID: 6801814243488551197}
   m_Layer: 0
   m_Name: Cylinder_006 (4)
   m_TagString: Untagged
@@ -1699,6 +1713,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &6801814243488551197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441829889647809421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb34953b8e52ca4b95831130108ebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4329300339342555007
 GameObject:
   m_ObjectHideFlags: 0
