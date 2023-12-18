@@ -18,6 +18,8 @@ public class KillEnemy : MonoBehaviour
             body.gameObject, HitType.Pistol, 0);
          
          body.OnHit(hit);
+         
+         print("Enemy hit");
       }
    }
 }

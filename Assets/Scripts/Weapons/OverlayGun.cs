@@ -119,6 +119,7 @@ public class OverlayGun : MonoBehaviour
             else if (explodeable != null) //For explodeables
             {
                 StartCoroutine(PlayFireAnimation());
+                FireProjectile(false);
                 explodeable.OnHitF(damage);
                 
                 PlayerInputt.PlayerExposed();

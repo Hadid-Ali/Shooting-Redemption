@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609736440163549}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3903609736472030886}
   - component: {fileID: 3903609736472030881}
   - component: {fileID: 3903609736472030880}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pistol (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3903609737139139130}
-  m_LocalRotation: {x: -0, y: 0.99307436, z: -0, w: 0.1174877}
+  m_LocalRotation: {x: 0, y: 0.9930746, z: 0, w: 0.1174855}
   m_LocalPosition: {x: -3.9378052, y: -3.5103745, z: 13.563095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
   AttackAggressors: 1
   Start:
     ReturnOnIdle: 0
-    Mode: 1
+    Mode: 0
     Position: {x: 0, y: 0, z: 0}
   Speed:
     Enabled: 1
@@ -1060,10 +1060,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points:
-  - Position: {x: 323.01538, y: 0, z: 266.21747}
+  - Position: {x: -57.492905, y: 8.824989, z: 65.97575}
     Run: 0
     Pause: 0
-  - Position: {x: 318.415, y: 0, z: 265.47693}
+  - Position: {x: -60.1879, y: 8.824989, z: 64.48507}
     Run: 0
     Pause: 0
 --- !u!114 &3903609737139139131
@@ -1373,7 +1373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609737810009059}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowCoverRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609737955738131}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 3903609738018780159}
   - component: {fileID: 3903609738018780157}
   - component: {fileID: 3903609738018780156}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GUN_UNITY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,7 +1518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609738023575593}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TallCoverLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1549,7 +1549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609738050806061}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TallCoverRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3903609738088244869}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowCoverLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250502412544399}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr2_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,7 +1645,7 @@ GameObject:
   - component: {fileID: 6141250501845057205}
   - component: {fileID: 6140555523867214821}
   - component: {fileID: 6140555523867214820}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1694,6 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555523941386399
@@ -1705,7 +1706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250497882854059}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503930832541}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250497856822311}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr1_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,7 +1801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501714317743}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr3_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1834,7 +1835,7 @@ GameObject:
   - component: {fileID: 6141250498276533405}
   - component: {fileID: 6140555524704673447}
   - component: {fileID: 6140555524704673446}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555524780469261
@@ -1895,7 +1897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501797257573}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl4_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1926,7 +1928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250502038114869}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501828192741}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl1_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1989,7 +1991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503088371903}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr0_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2025,7 @@ GameObject:
   - component: {fileID: 6141250501910308429}
   - component: {fileID: 6140555525165475759}
   - component: {fileID: 6140555525165475758}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,6 +2074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555525244867669
@@ -2083,7 +2086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250498258511501}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl1_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2120,7 @@ GameObject:
   - component: {fileID: 6141250501934629317}
   - component: {fileID: 6140555525273139505}
   - component: {fileID: 6140555525273139504}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_upperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2166,6 +2169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555525305933991
@@ -2177,7 +2181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250498099189145}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl2_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250505317655359}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr1_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2241,7 +2245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504368763717}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl2_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,7 +2277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504590225569}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl3_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2305,7 +2309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501377217271}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2341,7 +2345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501905026105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2379,7 @@ GameObject:
   - component: {fileID: 6141250504481934815}
   - component: {fileID: 6140555525887626685}
   - component: {fileID: 6140555525887626684}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_upperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2424,6 +2428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555525902821271
@@ -2435,7 +2440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503843083969}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl1_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2466,7 +2471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504269406547}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr1_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2500,7 +2505,7 @@ GameObject:
   - component: {fileID: 6141250501283877435}
   - component: {fileID: 6140555526209934215}
   - component: {fileID: 6140555526209934214}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2549,6 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555526328192713
@@ -2698,7 +2704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504134406123}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2730,7 +2736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250502755597043}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl0_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2761,7 +2767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504310981055}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr0_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2792,7 +2798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501524534367}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl0_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504296637649}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2855,7 +2861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501909667447}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr0_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2887,7 +2893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504527690299}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2921,7 +2927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501738863925}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2952,7 +2958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501423246967}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr4_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2985,7 +2991,7 @@ GameObject:
   - component: {fileID: 6141250504100946939}
   - component: {fileID: 6140555526966483685}
   - component: {fileID: 6140555526966483684}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3033,6 +3039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555527166913149
@@ -3044,7 +3051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501169699035}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr3_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3077,7 +3084,7 @@ GameObject:
   - component: {fileID: 6141250502040629423}
   - component: {fileID: 6140555527216543279}
   - component: {fileID: 6140555527216543278}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3126,6 +3133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555527225410831
@@ -3139,7 +3147,7 @@ GameObject:
   - component: {fileID: 6141250498306725009}
   - component: {fileID: 6140555527225410829}
   - component: {fileID: 6140555527225410828}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,6 +3196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555527286434443
@@ -3199,7 +3208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250497984753827}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr4_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3233,7 +3242,7 @@ GameObject:
   - component: {fileID: 6141250498321087211}
   - component: {fileID: 6140555527420173191}
   - component: {fileID: 6140555527420173190}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3282,6 +3291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555527428483523
@@ -3293,7 +3303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504012966157}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl3_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3325,7 +3335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503486837725}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl2_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3356,7 +3366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501421065763}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3388,7 +3398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501513569445}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr3_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3420,7 +3430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250505114239127}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl0_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3452,7 +3462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503291667287}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr2_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3483,7 +3493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250505028240791}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr2_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3515,7 +3525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503547894219}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3546,7 +3556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250504754376815}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_l_clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501747373417}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fr4_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3610,7 +3620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250503026977947}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_r_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3647,7 +3657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501421026075}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl4_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3679,7 +3689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250501661093913}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl4_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,7 +3723,7 @@ GameObject:
   - component: {fileID: 6141250503756094619}
   - component: {fileID: 6140555528037740657}
   - component: {fileID: 6140555528037740656}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3762,6 +3772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6140555528053317733
@@ -3773,7 +3784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141250498294102313}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gmob_fl3_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -78,6 +78,9 @@ public class AIPlayerMovement : MonoBehaviour
     
     public void SetPosition(Transform destination)
     {
+        if(CharacterStates.gameState  == GameStates.GameOver)
+            return;
+        
         PlayerInputt.OnUnZoom();
         
         _rotate = false;

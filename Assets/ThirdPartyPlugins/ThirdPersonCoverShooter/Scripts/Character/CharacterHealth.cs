@@ -209,8 +209,11 @@ namespace CoverShooter
             if (!wasOff && Died != null)
             {
                 Died();
-                if (isMainPlayer) GameAdEvents.GamestateEvents.GameLost.Raise();
-                CharacterStates.gameState = GameStates.GameOver;
+                if (isMainPlayer)
+                {
+                    GameAdEvents.GamestateEvents.GameLost.Raise();
+                    CharacterStates.gameState = GameStates.GameOver;
+                }
             }
         }
 
