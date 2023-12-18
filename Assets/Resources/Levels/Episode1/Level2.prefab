@@ -2381,9 +2381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a375ffa79dc5ef346bd7c7c71e849400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 6.14
-  explosionForce: 1000
-  damage: 500
+  explosionRadius: 4.06
+  damage: 488
+  hitPoints: 1
   particle: {fileID: 1857007868129594, guid: f79046a5825502a4cbd1574676fca803, type: 3}
 --- !u!64 &1722872981883753261
 MeshCollider:
@@ -3210,7 +3210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722872982185838000}
   m_LocalRotation: {x: -0, y: 0.87196505, z: -0, w: 0.48956814}
-  m_LocalPosition: {x: -5.31, y: -2.97, z: 27.3}
+  m_LocalPosition: {x: -6.45, y: -2.97, z: 31.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3279,9 +3279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a375ffa79dc5ef346bd7c7c71e849400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 6.14
-  explosionForce: 1000
+  explosionRadius: 4.09
   damage: 500
+  hitPoints: 1
   particle: {fileID: 1857007868129594, guid: f79046a5825502a4cbd1574676fca803, type: 3}
 --- !u!64 &1722872982185838006
 MeshCollider:

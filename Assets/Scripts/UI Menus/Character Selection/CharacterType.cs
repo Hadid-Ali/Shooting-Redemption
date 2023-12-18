@@ -4,5 +4,7 @@ public enum CharacterType
     CowBoy,
     SuitedMan,
     Yakuza,
-    Girl
+    Girl,
+    AmitabBachan
+    
 }

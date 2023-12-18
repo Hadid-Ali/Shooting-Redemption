@@ -12220,6 +12220,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 996d38be4561fb847bb4554fb530b0b9, type: 2}
   - {fileID: 11400000, guid: 5d30f1e0a1fdd4a44875acd3b60545ee, type: 2}
   - {fileID: 11400000, guid: 5bdd126c92b106e4b80324e141386a81, type: 2}
+  - {fileID: 11400000, guid: 089dbf98a5ba6e946a051a0000e4afd8, type: 2}
+  - {fileID: 11400000, guid: 35248f20a11e983439f517d612057b20, type: 2}
   GunDatas:
   - {fileID: 11400000, guid: ce62aa917d84b7741a4be3cdbdd8b168, type: 2}
   - {fileID: 11400000, guid: c467c65630618d34b8e05c515789633e, type: 2}
@@ -12231,6 +12233,8 @@ MonoBehaviour:
   - {fileID: 8982269655647486151, guid: 035eff01e2fcb2a45a199b7829386b82, type: 3}
   - {fileID: 500322873794762804, guid: 9ebadb275e5c74a47b8a3a48bd5d9597, type: 3}
   - {fileID: 9009508647946769331, guid: 76745417ec1bcf34fabb05119e8054b7, type: 3}
+  - {fileID: 1088257185611773279, guid: 4c52ac01cc0dc824c994dad74fa2209f, type: 3}
+  - {fileID: 6736497200699218654, guid: 945357f14789b944d893acedeb3e6aa5, type: 3}
 --- !u!1 &1878835586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12744,6 +12748,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
+  - characterPrefab: {fileID: 0}
+    characterData:
+      character: 0
+      isUnlocked: 0
+  - characterPrefab: {fileID: 0}
+    characterData:
+      character: 0
+      isUnlocked: 0
   - characterPrefab: {fileID: 0}
     characterData:
       character: 0

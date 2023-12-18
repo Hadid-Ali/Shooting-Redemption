@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8eaca8daa85f016469b6ef91f48e55f3, type: 3}
-  m_Name: Girl
+  m_Name: AmitabBachan
   m_EditorClassIdentifier: 
   ItemPrice: 2000
-  ItemPrefab: {fileID: 4866149641813137889, guid: d15ca8114001bec4bb5b134d515db725,
+  ItemPrefab: {fileID: 4866149641813137889, guid: 39aafbc7d32053b45ab1ad82af7a7d7a,
     type: 3}
-  character: 3
+  character: 4
