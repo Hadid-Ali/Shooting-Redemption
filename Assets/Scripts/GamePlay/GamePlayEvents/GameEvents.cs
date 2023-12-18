@@ -24,7 +24,8 @@ public partial class GameEvents
         public static GameEvent<Transform> OnEnemyGroupKilled = new();
         
         //GameLost
-        public static GameEvent GameOver = new();
+        public static GameEvent TimeOver = new();
+        public static GameEvent OnNPCKilled = new();
 
 
 

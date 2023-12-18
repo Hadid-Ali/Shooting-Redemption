@@ -8,6 +8,19 @@ public class AddComponentScript : MonoBehaviour
 {
     private Rigidbody[] bodyhealths;
     private BodyPartHealth[] bodyParthealths;
+    private Collider[] _colliders;
+
+
+    [ContextMenu("Add vest to colliders")]
+    private void AddVestScript()
+    {
+        _colliders = transform.GetComponentsInChildren<Collider>();
+        foreach (var VARIABLE in _colliders)
+        {
+            VARIABLE.AddComponent<VestArmour>();
+        }
+    }
+    
 
     [ContextMenu("ADD MeshColliders")]
     private void AddMeshColliders()
@@ -31,7 +44,16 @@ public class AddComponentScript : MonoBehaviour
             VARIABLE.isMainPlayer = true;
         }
     }
-    
+
+    [ContextMenu("Remove Bodypart Health")]
+    private void RemoveBodypoartHealths()
+    {
+        bodyParthealths = transform.GetComponentsInChildren<BodyPartHealth>();
+        foreach (var VARIABLE in bodyParthealths)
+        {
+            DestroyImmediate(VARIABLE);
+        }
+    }
     
     
     [ContextMenu("AddBodyPartHealth")]

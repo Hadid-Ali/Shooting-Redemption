@@ -45,7 +45,7 @@ public class NPC : MonoBehaviour
         
         anim.Play(Death);
         helpmeCanvas.SetActive(false);
-        GameEvents.GamePlayEvents.GameOver.Raise();
+        GameEvents.GamePlayEvents.OnNPCKilled.Raise();
     }
 
     public void OnHit()

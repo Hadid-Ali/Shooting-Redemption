@@ -37,14 +37,14 @@ public class OverlayGun : MonoBehaviour
     public static Action OnGunShoot;
     public OverlayWeapons weaponType;
 
-    private float timer = 1f;
-    private AIPlayerMovement _aiPlayer;
+    private float _waitTimer = 1f;
+    private PlayerInputt player;
     private Transform _nearestBone;
 
     private void OnEnable()
     {
         _anim.SetTrigger(Active);
-        timer = 1f;
+        _waitTimer = 1f;
     }
     private void OnDisable()
     {
@@ -59,90 +59,77 @@ public class OverlayGun : MonoBehaviour
         _anim = GetComponent<Animator>();
         _audioSource = transform.parent.GetComponent<AudioSource>();
         _playerCamera = Camera.main;
-        _aiPlayer = FindObjectOfType<AIPlayerMovement>();
+        player = FindObjectOfType<PlayerInputt>();
         
         _bullet = Resources.Load("Prefabs/Bullet") as GameObject;
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        _waitTimer -= Time.deltaTime;
         
-        if(timer >= 0)
+        if(_waitTimer >= 0)
             return;
         
         Ray ray = _playerCamera.ViewportPointToRay (new Vector3(0.5f,0.5f,0));
         RaycastHit raycastHit;
         
-        Debug.DrawRay(ray.origin, ray.direction * range,Color.blue);
         if (Physics.Raycast(ray , out raycastHit, range, shootableLayer))
         {
-            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, _aiPlayer.gameObject,
+            _currentHit = new Hit(raycastHit.point, raycastHit.normal, damage, player.gameObject,
                 raycastHit.transform.gameObject, HitType.Pistol, 0);
             
             BodyPartHealth bodyPartHealth = raycastHit.collider.GetComponent<BodyPartHealth>();
-            Explodeable explodeable = raycastHit.collider.GetComponent<Explodeable>();
+            IDestructible explodeable = raycastHit.collider.GetComponent<IDestructible>();
 
+            //Conditions
+            bool isGameOver = CharacterStates.gameState == GameStates.GameOver;
+            bool isLastEnemy = AiGroup.GetRemainingEnemiesCount() <= 1;
+            
+            if(!_canShoot)
+                return;
+            
+            StopAllCoroutines();
+            
             if (bodyPartHealth != null)
             {
                 CharacterHealth characterHealth = bodyPartHealth.Target;
                 if (characterHealth.Health <= 0)
                     return;
                 
-                if (_canShoot && characterHealth.Health <= damage && AiGroup.GetRemainingEnemiesCount() <= 1 && !characterHealth.isNPC && CharacterStates.gameState != GameStates.GameOver) //For last enemy
+                _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
+                bool lastHit = characterHealth.Health <= damage;
+                
+                if (lastHit && !characterHealth.isNPC && !isGameOver && isLastEnemy) //For last enemy
                 {
                     Timer.StopTimer.Raise();
-                    _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
-                    StopAllCoroutines();
-                    StartCoroutine(ShootWithDelay(true));
+                    
+                    StartCoroutine(PlayFireAnimation());
+                    FireProjectile(true);
                 }
-                else if (_canShoot) //For All enemies
+                else //For All enemies
                 {
-                    _nearestBone = GetNearestBone(characterHealth.Animator, raycastHit.point);
-                    StopAllCoroutines();
-                    StartCoroutine(ShootWithDelay(false));
+                    StartCoroutine(PlayFireAnimation());
+                    FireProjectile(false);
                 }
 
                 OnGunShoot?.Invoke();
+                PlayerInputt.PlayerExposed();
+            }
+            else if (explodeable != null) //For explodeables
+            {
+                StartCoroutine(PlayFireAnimation());
+                explodeable.OnHitF(damage);
+                
+                PlayerInputt.PlayerExposed();
             }
             
-            if (_canShoot && explodeable != null) //For explodeables
-            {
-                StopAllCoroutines();
-                StartCoroutine(ShootWithDelayExplode(explodeable));
-            }
-
-
-            PlayerInputt.PlayerExposed();
         }
     }
 
-    IEnumerator ShootWithDelayExplode(Explodeable e)
+    IEnumerator PlayFireAnimation()
     {
         _canShoot = false;
-        
-        _audioSource.PlayOneShot(_FireSound);
-        _anim.SetTrigger(Fire);
-        
-        _muzzleFlash.SetActive(true);
-        yield return new WaitForSeconds(.1f);
-        _muzzleFlash.SetActive(false);
-        
-        e.Detonate();
-        
-        yield return new WaitForSeconds(timeBetweenShots);
-        _canShoot = true;
-    }
-    IEnumerator ShootWithDelay(bool last)
-    {
-        _canShoot = false;
-        
-        FireProjectile(last);
-        _muzzleFlash.SetActive(true);
-        yield return new WaitForSeconds(.1f);
-        _muzzleFlash.SetActive(false);
-        
-        yield return new WaitForSeconds(timeBetweenShots);
         
         if (BothHands)
         {
@@ -151,10 +138,16 @@ public class OverlayGun : MonoBehaviour
             yield return new WaitForSeconds(.1f);
             _muzzleFlash2.SetActive(false);
         }
+        else
+        {
+            _muzzleFlash.SetActive(true);
+            yield return new WaitForSeconds(.1f);
+            _muzzleFlash.SetActive(false);
+        }
+        yield return new WaitForSeconds(timeBetweenShots);
+        
         _canShoot = true;
-            
     }
-    
     Transform GetNearestBone(Animator animator,Vector3 point)
     {
         Transform nearestBone = null;
@@ -177,8 +170,7 @@ public class OverlayGun : MonoBehaviour
 
         return nearestBone;
     }
-
-    void FireProjectile(bool last, bool explode = false)
+    void FireProjectile(bool last)
     {
         if (_bullet != null)
         {
@@ -190,8 +182,6 @@ public class OverlayGun : MonoBehaviour
 
             var projectile = bullet.GetComponent<Projectile>();
             var vector = _currentHit.Position - gunTipPosition;
-            
-            if(!explode) vector = _nearestBone.position - gunTipPosition;
             
             if (last)
             {
@@ -215,8 +205,6 @@ public class OverlayGun : MonoBehaviour
                 projectile.Direction = vector.normalized;
             }
 
-            
-
             projectile.Hit = _currentHit;
             projectile.Target = _currentHit.Target;
 
@@ -225,8 +213,6 @@ public class OverlayGun : MonoBehaviour
         
         _anim.SetTrigger(Fire);
         _audioSource.PlayOneShot(_FireSound);
-
-        
     }
 
     

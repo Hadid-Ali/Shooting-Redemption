@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,15 +21,31 @@ namespace CoverShooter
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            GameEvents.GamePlayEvents.GameOver.Register(OnDead);
+            GameEvents.GamePlayEvents.TimeOver.Register(OnDead);
+            GameEvents.GamePlayEvents.OnNPCKilled.Register(OnNPCKilled);
             
         }
 
         private void OnDestroy()
         {
-            GameEvents.GamePlayEvents.GameOver.Unregister(OnDead);
+            GameEvents.GamePlayEvents.TimeOver.Unregister(OnDead);
+            GameEvents.GamePlayEvents.OnNPCKilled.Unregister(OnNPCKilled);
         }
 
+        public void OnNPCKilled()
+        {
+            PlayerInputt.OnUnZoom();
+            PlayerInputt.CanTakeInput = false;
+            CustomCameraController.CameraStateChanged.Invoke(CamState.Follow);
+            StartCoroutine(Wait());
+
+        }
+
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(2);
+            GameEvents.GamePlayEvents.OnPlayerDead.Raise();
+        }
 
         public void OnDead()
         {
@@ -46,8 +63,7 @@ namespace CoverShooter
             
             yield return new WaitForSeconds(Delay);
             GameEvents.GamePlayEvents.OnPlayerDead.Raise();
-            
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
         
         private void OnValidate()
