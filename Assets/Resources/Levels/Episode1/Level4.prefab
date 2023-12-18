@@ -896,6 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &438499492596925266
@@ -4609,7 +4610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6248d6f501b12428d92ffb87c3d3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTimer: 40
+  countdownTimer: 57
 --- !u!114 &-3261686498382721031
 MonoBehaviour:
   m_ObjectHideFlags: 0
