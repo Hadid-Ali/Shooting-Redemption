@@ -33,7 +33,7 @@ public class LevelWinPanel : UIMenuBase
         GetComponent<Animator>().enabled = true;
         IncrementProgressLevel();
         
-        PlayerCanvasScipt.DeActive();
+      //  PlayerCanvasScipt.DeActive();
         
         
     }

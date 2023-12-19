@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   sound: 1
-  m_Credits: 4710
-  m_SelectedLevel: 1
+  m_Credits: 5000
+  m_SelectedLevel: 0
   m_SelectedEpisode: 0
   m_UnlockedLevels: 0400000004000000040000000400000004000000
   m_UnlockedEpisodes: 0101010101
@@ -41,6 +41,6 @@ MonoBehaviour:
   - weapon: 4
     isUnlocked: 0
   - weapon: 5
-    isUnlocked: 1
-  selectedGun: 5
+    isUnlocked: 0
+  selectedGun: 0
   selectedCharacter: 0
