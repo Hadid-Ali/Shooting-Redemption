@@ -51,10 +51,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void OnPlayerCoverReached()
     {
-        PlayerInputt.CanTakeInput = true;
         DrawWeapon(Dependencies.GameDataOperations.GetSelectedWeapon());
-
         CustomCameraController.CameraStateChanged(CamState.Idle);
+        OnEquipAnimation();
     }
 
 

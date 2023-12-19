@@ -3296,7 +3296,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8875987746658294225}
-  - component: {fileID: 3300570081954907051}
   m_Layer: 10
   m_Name: PFB_Character_Cowboy_LWPR
   m_TagString: Untagged
@@ -3321,26 +3320,6 @@ Transform:
   m_Father: {fileID: 8982269655647486145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3300570081954907051
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099169194080846699}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b5085b15daefec04d9d51c36e3e0791d, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8271142537638238031
 GameObject:
   m_ObjectHideFlags: 0

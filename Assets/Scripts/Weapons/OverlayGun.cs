@@ -50,6 +50,7 @@ public class OverlayGun : MonoBehaviour
     {
         _anim.SetTrigger(InActive);
         _muzzleFlash.SetActive(false);
+        _muzzleFlash2.SetActive(false);
         _canShoot = true;
     }
 
@@ -134,17 +135,15 @@ public class OverlayGun : MonoBehaviour
         
         if (BothHands)
         {
-            yield return new WaitForSeconds(1f);
             _muzzleFlash2.SetActive(true);
             yield return new WaitForSeconds(.1f);
             _muzzleFlash2.SetActive(false);
         }
-        else
-        {
-            _muzzleFlash.SetActive(true);
-            yield return new WaitForSeconds(.1f);
-            _muzzleFlash.SetActive(false);
-        }
+        
+        _muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(.1f);
+        _muzzleFlash.SetActive(false);
+           
         yield return new WaitForSeconds(timeBetweenShots);
         
         _canShoot = true;

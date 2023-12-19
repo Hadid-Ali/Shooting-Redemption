@@ -70,7 +70,10 @@ public class AIGroupsHandler : MonoBehaviour
             GameEvents.GamePlayEvents.ShowingBoss.Raise(false);
         }
         CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
-        
+
+        yield return new WaitForSeconds(1f);
+        PlayerInputt.CanTakeInput = true;
+
     }
     
     private void OnGroupKilled(AiGroup aiGroup)

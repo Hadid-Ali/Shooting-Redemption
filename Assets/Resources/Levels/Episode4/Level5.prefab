@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 327795410646980537}
   - component: {fileID: 327795410646980538}
   - component: {fileID: 327795410646980539}
+  - component: {fileID: 333360195}
   m_Layer: 0
   m_Name: BoundaryObstaccle
   m_TagString: Untagged
@@ -654,6 +655,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &333360195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327795410646980533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &327795410648876960
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +679,7 @@ GameObject:
   - component: {fileID: 327795410648876964}
   - component: {fileID: 327795410648876965}
   - component: {fileID: 327795410648876966}
+  - component: {fileID: 333360194}
   m_Layer: 0
   m_Name: BoundaryObstaccle (1)
   m_TagString: Untagged
@@ -754,6 +768,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &333360194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327795410648876960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &385058794586367572
 GameObject:
   m_ObjectHideFlags: 0
@@ -8463,6 +8489,7 @@ GameObject:
   - component: {fileID: 4427555936918401131}
   - component: {fileID: 4427555936918401130}
   - component: {fileID: 4427555936918401129}
+  - component: {fileID: 333360193}
   m_Layer: 0
   m_Name: BoundaryObstaccle (2)
   m_TagString: Untagged
@@ -8551,6 +8578,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &333360193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427555936918401135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4427555937277486484
 GameObject:
   m_ObjectHideFlags: 0
@@ -8678,6 +8717,7 @@ GameObject:
   - component: {fileID: 4427555938045177594}
   - component: {fileID: 4427555938045177593}
   - component: {fileID: 4427555938045177592}
+  - component: {fileID: 333360192}
   m_Layer: 0
   m_Name: BoundaryObstaccle (3)
   m_TagString: Untagged
@@ -8766,6 +8806,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &333360192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427555938045177598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4708006937906285379
 GameObject:
   m_ObjectHideFlags: 0

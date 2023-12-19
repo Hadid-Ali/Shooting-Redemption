@@ -41,7 +41,8 @@ namespace CoverShooter
 
             var effect = GameObject.Instantiate(prefab);
             effect.transform.SetParent(null);
-            effect.transform.position = hit.Position + hit.Normal * 0.1f;
+            //effect.transform.position = hit.Position + hit.Normal * 0.1f;
+            effect.transform.position = hit.Position ;
             effect.SetActive(true);
             GameObject.Destroy(effect, 4);
         }

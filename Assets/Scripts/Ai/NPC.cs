@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        OverlayGun.OnGunShoot += OnAlert;
+        PlayerInputt.PlayerExposed += OnAlert;
 
         isDead = false;
         hasScreamed = false;
@@ -30,9 +30,9 @@ public class NPC : MonoBehaviour
 
     private void OnDestroy()
     {
-        OverlayGun.OnGunShoot -= OnAlert;
+        PlayerInputt.PlayerExposed -= OnAlert;
         if(SessionData.Instance)
-        SessionData.Instance.civiliansKilled = 0;
+            SessionData.Instance.civiliansKilled = 0;
     }
 
     public void OnHit(Hit hit)

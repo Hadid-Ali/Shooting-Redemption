@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 301754946}
   - component: {fileID: 301754945}
   - component: {fileID: 301754949}
+  - component: {fileID: 1939833909}
   m_Layer: 0
   m_Name: BoundaryObstaccle (7)
   m_TagString: Untagged
@@ -127,6 +128,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1939833909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301754943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8393148275694003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2272,7 @@ GameObject:
   - component: {fileID: 1455538045174073767}
   - component: {fileID: 1455538045174073764}
   - component: {fileID: 1455538045174073765}
+  - component: {fileID: 1939833911}
   m_Layer: 0
   m_Name: BoundaryObstaccle (5)
   m_TagString: Untagged
@@ -2347,6 +2361,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1939833911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455538045174073763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1455538045178545654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,6 +5993,7 @@ GameObject:
   - component: {fileID: 7545397743811160420}
   - component: {fileID: 7545397743811160421}
   - component: {fileID: 7545397743811160426}
+  - component: {fileID: 1939833912}
   m_Layer: 0
   m_Name: BoundaryObstaccle (1)
   m_TagString: Untagged
@@ -6055,6 +6082,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1939833912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545397743811160424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7545397743849611542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,6 +6532,7 @@ GameObject:
   - component: {fileID: 7545397744601214337}
   - component: {fileID: 7545397744601214342}
   - component: {fileID: 7545397744601214343}
+  - component: {fileID: 1939833913}
   m_Layer: 0
   m_Name: BoundaryObstaccle (3)
   m_TagString: Untagged
@@ -6581,6 +6621,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1939833913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545397744601214341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7651436600737077166
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,6 +7073,7 @@ GameObject:
   - component: {fileID: 7651436601947607381}
   - component: {fileID: 7651436601947607380}
   - component: {fileID: 7651436601947607383}
+  - component: {fileID: 1939833910}
   m_Layer: 0
   m_Name: BoundaryObstaccle (6)
   m_TagString: Untagged
@@ -7109,6 +7162,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1939833910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651436601947607401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2b50dc636ed0745bfbda032dacb808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1455538044880771606
 PrefabInstance:
   m_ObjectHideFlags: 0
