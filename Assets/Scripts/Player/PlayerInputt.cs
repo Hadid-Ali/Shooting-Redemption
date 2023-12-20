@@ -54,6 +54,7 @@ public class PlayerInputt : MonoBehaviour
     public void PlayerExposedF()
     {
         GetComponent<Actor>().enabled = true;
+        GameEvents.GamePlayEvents.OnTutorialFinished.Raise();
     }
 
 }

@@ -121535,8 +121535,72 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 311805798, guid: 82c342cb6ff26bc44ab2a015d7489d5b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82c342cb6ff26bc44ab2a015d7489d5b, type: 3}
+--- !u!114 &1216492385370176174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1717073337, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1216492385370176173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fd50606ecddfe4d8f58ea8463bd3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1216492385370176175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 311805794, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1216492385370176173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1216492385370176176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216492385370176175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1216492385370176174}
+          m_TargetAssemblyTypeName: GamePlayTutorial, Assembly-CSharp
+          m_MethodName: OnButtonDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1216492385370176174}
+          m_TargetAssemblyTypeName: GamePlayTutorial, Assembly-CSharp
+          m_MethodName: OnButtonUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1291584667311552890
 GameObject:
   m_ObjectHideFlags: 0

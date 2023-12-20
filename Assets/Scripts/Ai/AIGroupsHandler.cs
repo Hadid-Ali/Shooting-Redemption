@@ -72,6 +72,7 @@ public class AIGroupsHandler : MonoBehaviour
         CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
 
         yield return new WaitForSeconds(1f);
+        GameEvents.GamePlayEvents.OnCutSceneFinished.Raise();
         PlayerInputt.CanTakeInput = true;
 
     }

@@ -12,6 +12,9 @@ public partial class GameEvents
         public static GameEvent OnPlayerReachedCover = new();
         public static GameEvent OnPlayerHit = new();
         public static GameEvent OnPlayerDead = new();
+        public static GameEvent OnCutSceneFinished = new();
+
+        public static GameEvent OnTutorialFinished = new();
         
         //Enemies
         public static GameEvent<GameplayStats> OnEnemyKilled = new ();

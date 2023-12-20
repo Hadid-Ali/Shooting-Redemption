@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PistolGold
   m_EditorClassIdentifier: 
   ItemPrice: 900
-  ItemPrefab: {fileID: 5824043819015282735, guid: 785d93be115991541b8e42af04acbbcf,
+  ItemPrefab: {fileID: 6520525575486989128, guid: 785d93be115991541b8e42af04acbbcf,
     type: 3}
   gun: 3

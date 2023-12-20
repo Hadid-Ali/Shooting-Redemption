@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SHotGun
   m_EditorClassIdentifier: 
   ItemPrice: 1500
-  ItemPrefab: {fileID: 4811978201292533855, guid: ea06ad6b64a53f34bbbc959b26c9ac33,
+  ItemPrefab: {fileID: 7303093110088769338, guid: ea06ad6b64a53f34bbbc959b26c9ac33,
     type: 3}
   gun: 5

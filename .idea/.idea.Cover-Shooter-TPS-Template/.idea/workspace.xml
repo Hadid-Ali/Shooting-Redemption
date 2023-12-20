@@ -6,34 +6,544 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Characters/Gangsters/Materials/mob_suit_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Characters/Gangsters/Materials/mob_suit_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/PatrollerBossEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/NPCs/PatrollerBossEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerFollowOffset.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/Player_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode1/Level5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/1000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/6th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/6th.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/GOT IT !.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/GOT IT !.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/Layer 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/Layer 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/THE MISSION IS NOT EASY SO YOU BETTER TAKE ALL THE HELP YOU GET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/THE MISSION IS NOT EASY SO YOU BETTER TAKE ALL THE HELP YOU GET.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/WELCOME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/WELCOME.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/got it button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/got it button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/main pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/main pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/ribbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/6th/ribbon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/100.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/1000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/8TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/8TH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHARACTER  SELECTION_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHARACTER  SELECTION_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHR ICON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHR ICON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHR SELECT BUTTON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/CHR SELECT BUTTON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/EPISODE SELECT BUTTON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/EPISODE SELECT BUTTON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/EPISODE SELECTION.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/EPISODE SELECTION.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/FREE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/FREE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN  SELECTION_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN  SELECTION_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN ICON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN ICON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN SELECT BUTTON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/GUN SELECT BUTTON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/Gold-coins-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/Gold-coins-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/Gold-coins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/Gold-coins.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/LEVEL SELECT BUTTON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/LEVEL SELECT BUTTON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/LEVEL SELECTION.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/LEVEL SELECTION.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/START.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/START.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/STORE BUTTON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/STORE BUTTON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/STORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/STORE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/back button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/back button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/back icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/back icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/play icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/play icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/plus-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/plus-button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/settings button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/settings button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/settings icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/settings icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/start button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/start button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/top banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/8TH/top banner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Bronzier-Medium SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Bronzier-Medium SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Bronzier-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Bronzier-Medium.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/BuyButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/BuyButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/12th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/12th.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE SELECTION.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE SELECTION.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE copy 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE copy 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE copy 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/EPISODE copy 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/GUN ICON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/GUN ICON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/main pannel copy 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/main pannel copy 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/ribbon copy 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Episode Selection/ribbon copy 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/10_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/10_10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/1st.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/1st.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/AUTO  SHOOT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/AUTO  SHOOT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/HEALTH _   100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/HEALTH _   100.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/Layer 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/Layer 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/SECOND WEAPON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/SECOND WEAPON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/auto shoot button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/auto shoot button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb count button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb count button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bomb.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1) copy 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1) copy 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1) copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1) copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet count button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullet count button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullets icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/bullets icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/eye button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/eye button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/eye iocn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/eye iocn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/gun man button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/gun man button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/gun man icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/gun man icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/health button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/health button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick inner part.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick inner part.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/joy stick.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/location dots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/location dots.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/man count button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/man count button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/man icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/man icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/pause button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/pause button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/pause icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/pause icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/prohibited icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/prohibited icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/replay button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/replay button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/replay icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/replay icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/second weapon button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/second weapon button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/shooting-target.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/shooting-target.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/target button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/target button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/treasure box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/treasure box.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/wens button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/wens button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/wens.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GamePlay/wens.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+1 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+1 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+3 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+3 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/+3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/100.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/1000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/2nd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/2nd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/700 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/700 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/700.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARROW  copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARROW  copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARROW_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARROW_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARSENAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/ARSENAL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/FREE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/FREE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/GRENADE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/GRENADE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/Layer 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/Layer 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/START.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/START.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/WATCH copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/WATCH copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/WATCH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/WATCH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/archery pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/archery pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/archery_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/archery_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/back button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/back button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/back icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/back icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/camera icon-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/camera icon-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/camera icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/camera icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency button_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency button_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/currency icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gernade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gernade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/gun_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/long gun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/long gun.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/main gun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/main gun.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/mission selection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/mission selection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/old golden gun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/old golden gun.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/play icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/play icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/plus-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/plus-button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/settings button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/settings button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/settings icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/settings icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/start button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/start button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/stun gernade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/stun gernade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/top banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/top banner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/watch video button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/watch video button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/watch video button_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/watch video button_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/weapon pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/GunSelection/weapon pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/HUDBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/HUDBg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/10TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/10TH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/HOME BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/HOME BT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/HOME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/HOME.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/LEVEL COMPLETE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/LEVEL COMPLETE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/NEXT BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/NEXT BT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/NEXT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/NEXT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/REPLAY BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/REPLAY BT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/REPLAY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/REPLAY.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/main pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Complete/main pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/9TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/9TH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/HOME BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/HOME BT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/HOME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/HOME.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/LEVEL FAILED.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/LEVEL FAILED.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/REPLAY BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/REPLAY BT.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/REPLAY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/REPLAY.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/main pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Failed/main pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/11TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/11TH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN -2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN -2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN PNG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN PNG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/CHAIN_.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/LEVEL SELECTION.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/LEVEL SELECTION.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/Polygon 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Level Selection/Polygon 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/3rd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/3rd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Group 1 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Group 1 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 2 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 2 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 5 copy 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 5 copy 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 5 copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/Layer 5 copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/MAIN MENU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/MAIN MENU.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/No Sound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/No Sound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/RESTART.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/RESTART.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/RESUME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/RESUME.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SENSITIVITY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SENSITIVITY.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SOUNDS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SOUNDS.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SPEAKER ICON 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/SPEAKER ICON 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/minus button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/minus button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/no-sound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/no-sound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/pause.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/plus button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/plus button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/sound bar rectangle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Pause Panel/sound bar rectangle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/4th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/4th.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/NO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/NO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/QUIT _.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/QUIT _.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/YES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/YES.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/main pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/main pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/no button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/no button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/yes button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Quit Game/yes button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/RemainingEnemiesIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/RemainingEnemiesIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/10000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/10000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/20000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/20000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/4000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/4000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/7th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/7th.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/ANY PURCHASE WILL REMOVE ADS PERMANENTLY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/ANY PURCHASE WILL REMOVE ADS PERMANENTLY.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/BACK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/BACK.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/BASIC BUNDLE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/BASIC BUNDLE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/EXCLUSIVE BUNDLE copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/EXCLUSIVE BUNDLE copy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/EXCLUSIVE BUNDLE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/EXCLUSIVE BUNDLE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   1.99 $.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   1.99 $.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   2.99 $.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   2.99 $.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   3.99 $.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/FOR   3.99 $.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/STORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/STORE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/back button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/back button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/back icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/back icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/main panel 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/money icon 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/price button3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/store button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Store/store button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/5th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/5th.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/NO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/NO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/WATCH AD TO GET EXTRA CASH  TO UNLOCKALL LEVELS  AND CHARACTERS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/WATCH AD TO GET EXTRA CASH  TO UNLOCKALL LEVELS  AND CHARACTERS.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/WATCH AD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/WATCH AD.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/YES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/YES.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/main pannel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/main pannel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/no button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/no button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/ribbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/ribbon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/yes button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/Watch Ads/yes button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/WatchAds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/New shooting mafia ui potrait/WatchAds.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/CF2-Rig.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/CF2-Rig.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/AK47 Assault Rifle_Black Cherry (Shooting).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/AK47 Assault Rifle_Black Cherry (Shooting).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/AK47 Assault Rifle_Black Cherry (Shooting).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/AK47 Assault Rifle_Black Cherry (Shooting).prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Classic Revolver.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Classic Revolver.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/DoubleGun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/DoubleGun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/DoubleGun.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/DoubleGun.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/GunStats.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/GunStats.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Black (Shooting).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Black (Shooting).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Gold (Shooting).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Gold (Shooting).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Gold (Shooting).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/M1911 Handgun_Gold (Shooting).prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Mossberg 590 Shotgun (Shooting).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Mossberg 590 Shotgun (Shooting).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Mossberg 590 Shotgun (Shooting).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Mossberg 590 Shotgun (Shooting).prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Old Revolver.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Old Revolver.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Pistol.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Pistol.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Revolver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Revolver.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI Character Prefabs/Revolver.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Characters/Characters.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Characters/Characters.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Double Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Double Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/PistolGold.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/PistolGold.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Revolver.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Revolver.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/Rifle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/Rifle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Guns/SHotGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Guns/SHotGun.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OverlayGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/WeaponSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Gun Selection/WeaponSelection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/ButtonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/ButtonType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Gun/Grenade/Revolver/Materials/gun_color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Gun/Grenade/Revolver/Materials/gun_color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Weapons/HitEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Scripts/Weapons/HitEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +572,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/LevelDifficulty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/VestArmour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Menus/MainMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.15/Editor/Collaborate/Components/AlertBox.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,6 +596,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Scripts/Controllers/SpaceshipController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Tests/WeaponTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/ReorderableList/ReorderableListFlags.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/24/d4074cb1/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/30/076d1622/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/3d/6b35485d/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/50/c10db258/Component.cs" root0="SKIP_HIGHLIGHTING" />
@@ -253,7 +765,8 @@
       <workItem from="1702623785991" duration="9023000" />
       <workItem from="1702718990931" duration="4585000" />
       <workItem from="1702880412868" duration="14009000" />
-      <workItem from="1702963905082" duration="4578000" />
+      <workItem from="1702963905082" duration="4579000" />
+      <workItem from="1703058380285" duration="9505000" />
     </task>
     <servers />
   </component>

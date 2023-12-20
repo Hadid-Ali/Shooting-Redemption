@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   ItemPrice: 0
-  ItemPrefab: {fileID: 523826144556307348, guid: cf943c2c2a644e64c94a272f8b0543da,
+  ItemPrefab: {fileID: 6214998996436158986, guid: cf943c2c2a644e64c94a272f8b0543da,
     type: 3}
   gun: 0

@@ -1,7 +1,6 @@
 
 public enum ButtonType
 {
-    
     play,
     setting,
     dailyGoal,

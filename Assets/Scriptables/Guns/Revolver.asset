@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Revolver
   m_EditorClassIdentifier: 
   ItemPrice: 1000
-  ItemPrefab: {fileID: 1596868014938995498, guid: 3bf5ad277098ddd4db0602acb5c897dd,
+  ItemPrefab: {fileID: 3824550301409977920, guid: 3bf5ad277098ddd4db0602acb5c897dd,
     type: 3}
   gun: 1

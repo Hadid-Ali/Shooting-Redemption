@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   ItemPrice: 1300
-  ItemPrefab: {fileID: 2955617016580990451, guid: 0197ff42a23b39c4798e951fdb58b901,
+  ItemPrefab: {fileID: 3515710379074677049, guid: 0197ff42a23b39c4798e951fdb58b901,
     type: 3}
   gun: 4
