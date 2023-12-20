@@ -14,11 +14,12 @@ public class CharacterSelectionData
 }
 public class CharacterHandler : MonoBehaviour
 {
-    [SerializeField]private List<CharacterSelectionData> characters = new List<CharacterSelectionData>();
+    [SerializeField] private List<CharacterSelectionData> weapons = new List<CharacterSelectionData>();
+    
     
     //Hard References
     public GameObject Camera;
-    public Transform parentObj;
+    
     public Button m_WatchAdForCoins;
     public Button m_WatchAdForFreeGunTry;
     public Button m_BuyButton;
@@ -26,19 +27,17 @@ public class CharacterHandler : MonoBehaviour
     public Button m_LeftScrollButton;
     public Button m_RightScrollButton;
     
-    public TextMeshProUGUI m_GunButtonText;
-    public Image GunStatus;
     
+    public Image GunStatus;
     public TextMeshProUGUI m_GunPrice;
     public TextMeshProUGUI m_Coins;
 
     
     //Logic
-    private bool charactersAlreadyInstatiated;
+    private bool gunsAlreadyInstatiated;
     private int currentIndex;
-    private CharacterType selectedCharacter;
-    private CharacterType currentCharacter;
-    
+    private CharacterType selectedWeapon;
+    private CharacterType currentWeapon;
     
     private void OnEnable()
     {
@@ -49,11 +48,12 @@ public class CharacterHandler : MonoBehaviour
     {
         Camera.SetActive(false);
     }
+
     private void Start()
     {
-        charactersAlreadyInstatiated = false;
+        gunsAlreadyInstatiated = false;
         
-        selectedCharacter = Dependencies.GameDataOperations.GetSelectedCharacter();
+        selectedWeapon = Dependencies.GameDataOperations.GetSelectedCharacter();
         m_BuyButton.onClick.AddListener(BuyGun);
         m_SelectButton.onClick.AddListener(SelectGun);
         m_WatchAdForFreeGunTry.onClick.AddListener(OnClickRewardedAdGunFree);
@@ -67,101 +67,60 @@ public class CharacterHandler : MonoBehaviour
 
     public void SyncData()
     {
-        for (int i = 0; i < characters.Count; i++)
+        for (int i = 0; i < weapons.Count; i++)
         {
-            Dependencies.GameDataOperations.SetCharacterData(characters[i].characterData);
+            Dependencies.GameDataOperations.SetCharacterData(weapons[i].characterData);
         }
-        Dependencies.GameDataOperations.SetSelectedCharacter(selectedCharacter);
+        Dependencies.GameDataOperations.SetSelectedCharacter(selectedWeapon);
         
         Dependencies.GameDataOperations.SaveData();
     }
 
     public void RetainGunData()
     {
-        selectedCharacter = Dependencies.GameDataOperations.GetSelectedCharacter();
+        selectedWeapon = Dependencies.GameDataOperations.GetSelectedCharacter();
         
         List<CharacterStatus> guns = Dependencies.GameDataOperations.GetAllCharactersData();
         for (int i = 0; i < guns.Count; i++)
         {
-            characters[i].characterData = guns[i];
+            weapons[i].characterData = guns[i];
 
-            if (!charactersAlreadyInstatiated)
+            if (!gunsAlreadyInstatiated)
             {
-                GameObject gun = Instantiate(SessionData.Instance.GetCharacterData(guns[i].character).ItemPrefab, parentObj,
-                    true);
-                characters[i].characterPrefab = gun;
+                GameObject gun = Instantiate(SessionData.Instance.GetCharacterData(guns[i].character).ItemPrefab);
+                weapons[i].characterPrefab = gun;
             }
-            characters[i].characterPrefab.SetActive(false);
+            weapons[i].characterPrefab.SetActive(false);
 
-            if (characters[i].characterData.character == selectedCharacter)
+            if (weapons[i].characterData.character == selectedWeapon)
             {
                 currentIndex = i;
-                currentCharacter = characters[i].characterData.character;
+                currentWeapon = weapons[i].characterData.character;
             }
         }
-        characters.Find(x => x.characterData.character == selectedCharacter).characterPrefab.SetActive(true);
+        weapons.Find(x => x.characterData.character == selectedWeapon).characterPrefab.SetActive(true);
+
         UpdateGunData();
     }
+    
 
     public void UpdateGunData()
     {
         //Data Assessing
-        bool isGunUnlocked = characters[currentIndex].characterData.isUnlocked;
-        bool isGunSelected = selectedCharacter == currentCharacter;
-        bool isAffordable = Dependencies.GameDataOperations.GetCredits() >=
-                            SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice;
+        bool isGunUnlocked = weapons[currentIndex].characterData.isUnlocked;
+        bool isGunSelected = selectedWeapon == currentWeapon;
+        
+        int price = SessionData.Instance.GetCharacterData(currentWeapon).ItemPrice;
+        int availableCoins = Dependencies.GameDataOperations.GetCredits();
+        
+        bool isAffordable = availableCoins >= price;
 
-        //Assignation
-        m_GunPrice.SetText("Price : " + SessionData.Instance.GetCharacterData(currentCharacter).ItemPrice);
-        m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
-
-
-        if (isGunUnlocked)
-        {
-            if (isGunSelected)
-            {
-                m_GunButtonText.SetText("Selected");
-                m_GunPrice.SetText("");
-                GunStatus.color = Color.green;
-                m_BuyButton.interactable = false;
-            }
-            else
-            {
-                m_BuyButton.onClick.RemoveAllListeners();
-                m_BuyButton.onClick.AddListener(SelectGun);
-                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Select");
-                m_BuyButton.interactable = true;
-
-                m_GunButtonText.SetText("Not Selected");
-                GunStatus.color = Color.white;
-            }
-            m_WatchAdForFreeGunTry.interactable = false;
-        }
-        else if (isGunSelected) //For Rewarded
-        {
-            m_GunButtonText.SetText("Trial");
-            GunStatus.color = Color.cyan;
-        }
-        else
-        {
-            m_GunButtonText.SetText("Unlock Character"); //Gun Status
-            GunStatus.color = Color.white; // Gun Button Color
-            
-            m_BuyButton.onClick.RemoveAllListeners();
-            
-            if (isAffordable)
-            {
-                m_BuyButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Buy");
-                m_BuyButton.onClick.AddListener(BuyGun);
-                m_BuyButton.interactable = true;
-            }
-            else
-            {
-                m_BuyButton.interactable = false;
-            }
-            m_WatchAdForFreeGunTry.interactable = true;
-        }
-
+        m_BuyButton.interactable = !isGunUnlocked && isAffordable;
+        m_SelectButton.interactable = isGunUnlocked && !isGunSelected;
+        m_WatchAdForFreeGunTry.interactable = !isGunUnlocked;
+        GunStatus.gameObject.SetActive(isGunSelected);
+        m_GunPrice.SetText(isGunSelected ? "" : price.ToString());
+        m_Coins.SetText(availableCoins.ToString());
     }
 
 
@@ -176,51 +135,47 @@ public class CharacterHandler : MonoBehaviour
             currentIndex--;
         }
 
-        if (currentIndex >= characters.Count || currentIndex <= 0)
+        if (currentIndex >= weapons.Count || currentIndex <= 0)
         {
             currentIndex = 0;
         }
 
-        foreach (var v in characters)
+        foreach (var v in weapons)
             v.characterPrefab.SetActive(false);
         
-        characters[currentIndex].characterPrefab.SetActive(true);
+        weapons[currentIndex].characterPrefab.SetActive(true);
 
-        currentCharacter = characters[currentIndex].characterData.character;
+        currentWeapon = weapons[currentIndex].characterData.character;
         UpdateGunData();
     }
-
     public void SelectGun()
     {
-        selectedCharacter = currentCharacter;
+        selectedWeapon = currentWeapon;
         SyncData();
         UpdateGunData();
     }
     public void BuyGun()
     {
-        int gunCost = SessionData.Instance.GetCharacterData(selectedCharacter).ItemPrice;
+        int gunCost = SessionData.Instance.GetCharacterData(currentWeapon).ItemPrice;
         int availableCredits = Dependencies.GameDataOperations.GetCredits();
         
-        if (availableCredits >= gunCost && !characters[currentIndex].characterData.isUnlocked)
+        if (availableCredits >= gunCost && !weapons[currentIndex].characterData.isUnlocked)
         {
             Dependencies.GameDataOperations.SetCredit(availableCredits - gunCost);
-            characters[currentIndex].characterData.isUnlocked = true;
+            weapons[currentIndex].characterData.isUnlocked = true;
             SyncData();
             UpdateGunData();
             Dependencies.GameDataOperations.SaveData();
         }
     }
-
     public void OnClickRewardedAdGunFree()
     {
         AdHandler.ShowRewarded(OnRewardedGunADWatched);
     }
-
     public void OnClickRewardedAdCoins()
     {
         AdHandler.ShowRewarded(OnRewardedCoinsAdWatched);
     }
-
     public void OnRewardedCoinsAdWatched()
     {
         Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
@@ -230,9 +185,11 @@ public class CharacterHandler : MonoBehaviour
     }
     public void OnRewardedGunADWatched()
     {
-        Dependencies.GameDataOperations.SetSelectedCharacter(currentCharacter);
-        selectedCharacter = currentCharacter;
+        Dependencies.GameDataOperations.SetSelectedCharacter(currentWeapon);
+        selectedWeapon = currentWeapon;
         UpdateGunData();
         Dependencies.GameDataOperations.SaveData();
     }
+
+
 }
