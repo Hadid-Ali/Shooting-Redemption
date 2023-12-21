@@ -16,18 +16,6 @@ public class CharacterHandler : MonoBehaviour
 {
     [SerializeField] private List<CharacterSelectionData> weapons = new List<CharacterSelectionData>();
     
-    
-    //Hard References
-    public GameObject Camera;
-    
-    public Button m_WatchAdForCoins;
-    public Button m_WatchAdForFreeGunTry;
-    public Button m_BuyButton;
-    public Button m_SelectButton;
-    public Button m_LeftScrollButton;
-    public Button m_RightScrollButton;
-    
-    
     public Image GunStatus;
     public TextMeshProUGUI m_GunPrice;
     public TextMeshProUGUI m_Coins;
@@ -39,27 +27,10 @@ public class CharacterHandler : MonoBehaviour
     private CharacterType selectedWeapon;
     private CharacterType currentWeapon;
     
-    private void OnEnable()
-    {
-        Camera.SetActive(true);
-    }
-
-    private void OnDisable()
-    {
-        Camera.SetActive(false);
-    }
 
     private void Start()
     {
         gunsAlreadyInstatiated = false;
-        
-        selectedWeapon = Dependencies.GameDataOperations.GetSelectedCharacter();
-        m_BuyButton.onClick.AddListener(BuyGun);
-        m_SelectButton.onClick.AddListener(SelectGun);
-        m_WatchAdForFreeGunTry.onClick.AddListener(OnClickRewardedAdGunFree);
-        m_WatchAdForCoins.onClick.AddListener(OnClickRewardedAdCoins);
-        m_LeftScrollButton.onClick.AddListener((() => ScrollGun(false)));
-        m_RightScrollButton.onClick.AddListener((() => ScrollGun(true)));
         
         RetainGunData();
         UpdateGunData();
@@ -115,9 +86,10 @@ public class CharacterHandler : MonoBehaviour
         
         bool isAffordable = availableCoins >= price;
 
-        m_BuyButton.interactable = !isGunUnlocked && isAffordable;
-        m_SelectButton.interactable = isGunUnlocked && !isGunSelected;
-        m_WatchAdForFreeGunTry.interactable = !isGunUnlocked;
+        GameEvents.GamePlayEvents.updateButton.Raise(ButtonType.Buy, !isGunUnlocked && isAffordable); 
+        GameEvents.GamePlayEvents.updateButton.Raise(ButtonType.Select, isGunUnlocked && !isGunSelected); 
+        GameEvents.GamePlayEvents.updateButton.Raise(ButtonType.TryForFree, !isGunUnlocked); 
+
         GunStatus.gameObject.SetActive(isGunSelected);
         m_GunPrice.SetText(isGunSelected ? "" : price.ToString());
         m_Coins.SetText(availableCoins.ToString());
@@ -153,6 +125,7 @@ public class CharacterHandler : MonoBehaviour
         selectedWeapon = currentWeapon;
         SyncData();
         UpdateGunData();
+        
     }
     public void BuyGun()
     {
@@ -161,27 +134,12 @@ public class CharacterHandler : MonoBehaviour
         
         if (availableCredits >= gunCost && !weapons[currentIndex].characterData.isUnlocked)
         {
-            Dependencies.GameDataOperations.SetCredit(availableCredits - gunCost);
+            Dependencies.GameDataOperations.SubtractCredits(gunCost);
             weapons[currentIndex].characterData.isUnlocked = true;
             SyncData();
             UpdateGunData();
             Dependencies.GameDataOperations.SaveData();
         }
-    }
-    public void OnClickRewardedAdGunFree()
-    {
-        AdHandler.ShowRewarded(OnRewardedGunADWatched);
-    }
-    public void OnClickRewardedAdCoins()
-    {
-        AdHandler.ShowRewarded(OnRewardedCoinsAdWatched);
-    }
-    public void OnRewardedCoinsAdWatched()
-    {
-        Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
-        Dependencies.GameDataOperations.SaveData();
-        
-        m_Coins.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
     }
     public void OnRewardedGunADWatched()
     {

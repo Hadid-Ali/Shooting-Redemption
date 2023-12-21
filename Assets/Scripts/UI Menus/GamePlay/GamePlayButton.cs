@@ -57,6 +57,12 @@ public class GamePlayButton : MonoBehaviour
                 break;
                 
         }
+        _button.onClick.AddListener(PlayButtonSound);
+    }
+
+    private void PlayButtonSound()
+    {
+        Dependencies.SoundHandler.BtnClickSound(ButtonType.Play);
     }
 
     private void OnClickDoubleReward()
@@ -69,14 +75,14 @@ public class GamePlayButton : MonoBehaviour
         _button.interactable = false;
         
         GameWinStats stats = new();
-        stats.coinsEarned = ((AiGroup.GetAllEnemiesCount() * 50)  ) + Dependencies.GameDataOperations.GetCredits();
+        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) ;
         stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
         stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
         stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
 
         LevelWinPanel.OnUpdateStatsStart.Raise(stats);
         
-        Dependencies.GameDataOperations.SetCredit(stats.coinsEarned);
+        Dependencies.GameDataOperations.AddCredits(stats.coinsEarned);
         Dependencies.GameDataOperations.SaveData();
     }
 

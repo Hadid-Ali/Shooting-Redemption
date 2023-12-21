@@ -50,7 +50,8 @@ public class OverlayGun : MonoBehaviour
     {
         _anim.SetTrigger(InActive);
         _muzzleFlash.SetActive(false);
-        _muzzleFlash2.SetActive(false);
+        
+        if(_muzzleFlash2 != null) _muzzleFlash2.SetActive(false);
         _canShoot = true;
     }
 
@@ -116,6 +117,7 @@ public class OverlayGun : MonoBehaviour
 
                 OnGunShoot?.Invoke();
                 PlayerInputt.PlayerExposed();
+                GameEvents.GamePlayEvents.OnTutorialFinished.Raise();
             }
             else if (explodeable != null) //For explodeables
             {

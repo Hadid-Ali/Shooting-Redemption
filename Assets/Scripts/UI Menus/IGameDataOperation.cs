@@ -9,7 +9,8 @@ public interface IGameDataOperation
 
     public bool GetSoundStatus();
     public void SetSoundStatus(bool val);
-    public void SetCredit(int i);
+    public void AddCredits(int i);
+    public void SubtractCredits(int i);
     public int GetCredits();
 
     //Levels

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CowBoy
   m_EditorClassIdentifier: 
   ItemPrice: 0
-  ItemPrefab: {fileID: 6147916637216912319, guid: 5508d445b25ac464990c5f791f47de62,
+  ItemPrefab: {fileID: 78258066452779601, guid: 5508d445b25ac464990c5f791f47de62,
     type: 3}
   character: 0

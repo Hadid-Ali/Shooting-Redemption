@@ -8,10 +8,6 @@ using UnityEngine.UI;
 
 public class LevelWinPanel : UIMenuBase
 {
-    [SerializeField] private Button mainMenuButton;
-    [SerializeField] private Button restartButton;
-    [SerializeField] private Button nextButton;
-
     public static GameEvent<GameWinStats> OnUpdateStatsStart = new();
 
     private void Awake()
@@ -29,12 +25,8 @@ public class LevelWinPanel : UIMenuBase
         AdHandler.ShowInterstitial();
         
         Time.timeScale = 0.001f;
-
-        GetComponent<Animator>().enabled = true;
+        
         IncrementProgressLevel();
-        
-      //  PlayerCanvasScipt.DeActive();
-        
         
     }
 
@@ -56,15 +48,14 @@ public class LevelWinPanel : UIMenuBase
         IncrementProgressLevel();
         
         GameWinStats stats = new();
-        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) + Dependencies.GameDataOperations.GetCredits() - 
-                            (SessionData.Instance.civiliansKilled * 20);
+        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) + (SessionData.Instance.civiliansKilled * 20);
         stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
         stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
         stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
 
         OnUpdateStatsStart.Raise(stats);
         
-        Dependencies.GameDataOperations.SetCredit(stats.coinsEarned);
+        Dependencies.GameDataOperations.AddCredits(stats.coinsEarned);
         Dependencies.GameDataOperations.SaveData();
     }
     

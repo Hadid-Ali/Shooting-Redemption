@@ -49,13 +49,13 @@ public class GameWinStatsVisual : MonoBehaviour
         while (timer < 2)
         {
             float progress = timer / 2;
-            int newCoins = Mathf.RoundToInt(Mathf.Lerp(_winStats.previousCoins, _winStats.coinsEarned, progress));
+            int newCoins = Mathf.RoundToInt(Mathf.Lerp(_winStats.previousCoins, _winStats.coinsEarned + _winStats.previousCoins, progress));
             int enemyKilled = Mathf.RoundToInt(Mathf.Lerp(0, _winStats.EnemiesKilled, progress));
             int civiliansKilled = Mathf.RoundToInt(Mathf.Lerp(0, _winStats.CiviliansKilled, progress));
             
             
-            enemiesText.SetText("Enemies Killed : " + enemyKilled + "  +" + (_winStats.EnemiesKilled * 50));
-            civiliansText.SetText("Civilians Killed : " + civiliansKilled + "  -" + (_winStats.CiviliansKilled * 20));
+            enemiesText.SetText( enemyKilled + "  +" + (_winStats.EnemiesKilled * 50));
+            civiliansText.SetText(+ civiliansKilled + "  -" + (_winStats.CiviliansKilled * 20));
             coinsText.SetText(newCoins.ToString());
             
             timer += Time.unscaledDeltaTime;

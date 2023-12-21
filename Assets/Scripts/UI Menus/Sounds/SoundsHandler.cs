@@ -7,24 +7,24 @@ public class SoundsHandler : MonoBehaviour, ISoundHandler
 {
     [SerializeField] private AudioSource AS;
     [SerializeField] private AudioSource Bg;
-    [SerializeField] private AudioClip playClip;
-    [SerializeField] private AudioClip SettingClip;
+    [SerializeField] private AudioClip buttonSound;
+    [SerializeField] private AudioClip changeSelectionSound;
+    [SerializeField] private AudioClip _coinsSound;
 
     
     void Awake()
     {
-        
         Bg.Play();
-        Dependencies.SoundHandler = this;
-        
+        if(Dependencies.SoundHandler == null)
+            Dependencies.SoundHandler = this;
     }
 
     private void Start()
     {
-        updateSoundStatus();
+        UpdateSoundStatus();
     }
-
-    private void updateSoundStatus()
+    
+    private void UpdateSoundStatus()
     {
         if (Dependencies.GameDataOperations.GetSoundStatus())
         {
@@ -40,20 +40,36 @@ public class SoundsHandler : MonoBehaviour, ISoundHandler
     
     public void BtnClickSound(ButtonType buttonType)
     {
-        updateSoundStatus();
-        HapticHandler.Vibrate();
+        UpdateSoundStatus();
         switch (buttonType)
         {
-            case ButtonType.play:
+            case ButtonType.Play:
+            case ButtonType.CharactersPanel:
+            case ButtonType.GunsPanel:
+            case ButtonType.SelectLevel:
+            case ButtonType.SelectEpisode:
+            case ButtonType.AddCoins:
+            case ButtonType.Buy:
+            case ButtonType.TryForFree:
+            case ButtonType.Exit:
+            case ButtonType.Settings:
                 AS.Stop();
-                AS.clip = playClip;
+                AS.clip = buttonSound;
                 AS.Play();
                 break;
-            case ButtonType.setting:
+            case ButtonType.ScrollLeft:
+            case ButtonType.ScrollRight:
                 AS.Stop();
-                AS.clip = SettingClip;
+                AS.clip = changeSelectionSound;
                 AS.Play();
                 break;
         }
+    }
+
+    public void PlayCoinsSound()
+    {
+        AS.Stop();
+        AS.clip = _coinsSound;
+        AS.Play();
     }
 }

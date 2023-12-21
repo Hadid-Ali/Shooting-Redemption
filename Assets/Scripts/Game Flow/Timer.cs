@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
     public void UnInitilizeTimer()
     {
         _timerInitialized = false;
+        print("TimerUninitialized");
     }
 
     public void Initialize()
@@ -44,7 +45,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if(_countdownCompleted && !_timerInitialized)
+        if(_countdownCompleted || _timerInitialized == false)
             return;
         
         _currentTime -= Time.deltaTime;

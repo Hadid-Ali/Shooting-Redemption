@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class GamePlayTutorial : MonoBehaviour
 {
-    [FormerlySerializedAs("_aimTapButton")] [SerializeField] private Button aimTapButton; 
-    [FormerlySerializedAs("_aimingAnimation")] [SerializeField] private GameObject aimingAnimation;
+    [SerializeField] private GameObject aimTapButton; 
+    [SerializeField] private GameObject aimingAnimation;
 
     private TextMeshProUGUI tutorialText;
 
@@ -20,30 +20,40 @@ public class GamePlayTutorial : MonoBehaviour
 
     private void Awake()
     {
-        aimingAnimation.SetActive(false);
-        aimTapButton.gameObject.SetActive(false);
-
-        tutorialText = GetComponentInChildren<TextMeshProUGUI>();
-        
-        if(_showTutorial)
-            GameEvents.GamePlayEvents.OnCutSceneFinished.Register(OnButtonDown);
-
-        
         GameEvents.GamePlayEvents.OnTutorialFinished.Register(OnTutorialFinished);
+        GameEvents.GamePlayEvents.OnCutSceneFinished.Register(OnCutSceneCompleted);
+    }
+
+    private void OnCutSceneCompleted()
+    {
+        tutorialText = GetComponentInChildren<TextMeshProUGUI>();
+
+        if (Dependencies.GameDataOperations.GetSelectedEpisode() == 0 && Dependencies.GameDataOperations.GetSelectedLevel() == 0)
+        {
+            PlayerInputt.OnZoom += OnButtonDown;
+            PlayerInputt.OnUnZoom += OnButtonUp;
+            aimTapButton.gameObject.SetActive(true);
+        }
+        
     }
 
     private void OnDestroy()
     {
         GameEvents.GamePlayEvents.OnTutorialFinished.Unregister(OnTutorialFinished);
-        
-        if(_showTutorial)
-            GameEvents.GamePlayEvents.OnCutSceneFinished.Unregister(OnButtonDown);
+        GameEvents.GamePlayEvents.OnCutSceneFinished.Unregister(OnCutSceneCompleted);
+
+        if (_showTutorial)
+        {
+            PlayerInputt.OnZoom -= OnButtonDown;
+            PlayerInputt.OnUnZoom -= OnButtonUp;
+        }
     }
     
     
 
     public void OnButtonDown()
     {
+        aimTapButton.gameObject.SetActive(false);
         aimingAnimation.SetActive(true); 
         tutorialText.SetText("Swipe to Aim");
     }
@@ -51,6 +61,7 @@ public class GamePlayTutorial : MonoBehaviour
     public void OnButtonUp()
     {
         aimTapButton.gameObject.SetActive(true);
+        aimingAnimation.SetActive(false); 
         tutorialText.SetText("Tap on the Button");
     }
     
@@ -58,8 +69,25 @@ public class GamePlayTutorial : MonoBehaviour
     {
         aimingAnimation.SetActive(false);
         aimTapButton.gameObject.SetActive(false);
+
+        StartCoroutine(Wait());
         
-        tutorialText.gameObject.SetActive(false);
+        if (_showTutorial)
+        {
+            PlayerInputt.OnZoom -= OnButtonDown;
+            PlayerInputt.OnUnZoom -= OnButtonUp;
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        if(tutorialText != null)
+            tutorialText.SetText("GOOD JOB !");
+        
+        yield return new WaitForSeconds(2f);
+        
+        if(tutorialText != null)
+            tutorialText.gameObject.SetActive(false);
     }
     
 }

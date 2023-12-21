@@ -8,22 +8,50 @@ using UnityEngine.UI;
 
 public class CharacterShop : UIMenuBase
 {
-    [SerializeField] private Button m_CloseBtn;
-    [SerializeField]private TextMeshProUGUI CoinTxt;
+    [SerializeField] private CharacterHandler _characterSelection;
 
-    private void Start()
+
+
+    protected override void OnMenuContainerEnable()
     {
-        m_CloseBtn.onClick.AddListener(OnCloseBtnTap);
-        
-        updateCoins();
+        Time.timeScale = 1;
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
     }
 
-    public void updateCoins()
+    protected override void OnMenuContainerDisable()
     {
-        CoinTxt.SetText(Dependencies.GameDataOperations.GetCredits().ToString()); 
+        GameEvents.GamePlayEvents.mainMenuButtonTap.UnRegister(ButtonsOnClickExecution);
     }
-    public void OnCloseBtnTap()
+    
+
+    private void ButtonsOnClickExecution(ButtonType type)
     {
-        ChangeMenuState(MenuName.MainMenu);
+        switch (type)    
+        {
+            case ButtonType.Exit:
+                ChangeMenuState(MenuName.MainMenu);
+                break;
+            case ButtonType.AddCoins:
+                AdHandler.ShowRewarded(() => Dependencies.GameDataOperations.AddCredits(200));
+                break;
+            case ButtonType.ScrollLeft:
+                _characterSelection.ScrollGun(false);
+                break;
+            case ButtonType.ScrollRight:
+                _characterSelection.ScrollGun(true);
+                break;
+            case ButtonType.Buy:
+                _characterSelection.BuyGun();
+                break;
+            case ButtonType.Select:
+                _characterSelection.SelectGun();
+                break;
+            case ButtonType.TryForFree:
+                AdHandler.ShowRewarded(_characterSelection.OnRewardedGunADWatched);;
+                break;
+        }
     }
+
+
+
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Girl
   m_EditorClassIdentifier: 
   ItemPrice: 2000
-  ItemPrefab: {fileID: 4866149641813137889, guid: d15ca8114001bec4bb5b134d515db725,
+  ItemPrefab: {fileID: 4083521338534595518, guid: d15ca8114001bec4bb5b134d515db725,
     type: 3}
   character: 3

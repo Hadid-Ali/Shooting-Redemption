@@ -10,13 +10,27 @@ public class ButtonComponent : MonoBehaviour
 {
     [SerializeField] private Button m_ButtonComponent;
     [SerializeField] private ButtonType buttonType;
-
-    private GameEvent m_OnButtonTap = new();
     
     void Start()
     {
+        OnValidate();
         m_ButtonComponent.onClick.AddListener(ButtonClickInternal);
         
+        GameEvents.GamePlayEvents.updateButton.Register(UpdateButton);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.updateButton.UnRegister(UpdateButton);
+    }
+
+    private void UpdateButton( ButtonType _buttonType,bool interactable)
+    {
+        if (_buttonType == buttonType)
+        {
+            OnValidate();
+            m_ButtonComponent.interactable = interactable;
+        }
     }
 
     private void OnValidate()
@@ -29,17 +43,8 @@ public class ButtonComponent : MonoBehaviour
 
     private void ButtonClickInternal()
     {
-        m_OnButtonTap.Raise();
         Dependencies.SoundHandler.BtnClickSound(buttonType);
-    }
-    
-    public void SubscribeClick(Action action)
-    {
-        m_OnButtonTap.Register(action);
-    }
-
-    public void UnSubscribeClick(Action action)
-    {
-        m_OnButtonTap.Unregister(action);
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Raise(buttonType);
+        print("Working");
     }
 }

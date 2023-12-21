@@ -7,6 +7,12 @@ using UnityEngine.UI;
 public class LevelsPanel : UIMenuBase
 {
     public List<Button> buttons;
+    [SerializeField] private Button backButton;
+    
+    private void Awake()
+    {
+        backButton.onClick.AddListener((() => ChangeMenuState(MenuName.EpisodesSelection)));
+    }
     
     protected override void OnMenuContainerEnable()
     {
@@ -15,7 +21,9 @@ public class LevelsPanel : UIMenuBase
             int j = i;
             buttons[j].interactable = j <= Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode());
             buttons[j].onClick.AddListener(()=> SetLevelNum(j));
+            buttons[j].onClick.AddListener(()=>Dependencies.SoundHandler.BtnClickSound(ButtonType.Play));
         }
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
         
     }
 
@@ -26,6 +34,7 @@ public class LevelsPanel : UIMenuBase
             int j = i;
             buttons[j].onClick.RemoveAllListeners();
         }
+        GameEvents.GamePlayEvents.mainMenuButtonTap.UnRegister(ButtonsOnClickExecution);
     }
 
     public void SetLevelNum(int i)
@@ -48,9 +57,15 @@ public class LevelsPanel : UIMenuBase
 
         SceneManager.LoadScene("LoadingScreen");
     }
-
-    public void OnCloseButtonClicked()
+    
+    private void ButtonsOnClickExecution(ButtonType type)
     {
-        ChangeMenuState(MenuName.EpisodesSelection);
+        switch (type)    
+        {
+            case ButtonType.Exit:
+                ChangeMenuState(MenuName.EpisodesSelection);
+                break;
+        }
     }
+
 }

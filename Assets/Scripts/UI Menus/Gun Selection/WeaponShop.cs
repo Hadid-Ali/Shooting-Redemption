@@ -2,36 +2,56 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponShop : UIMenuBase
 {
-    [SerializeField] private Button m_CloseBtnTap;
-    [SerializeField]private TextMeshProUGUI CoinTxt;
-    
-    public void Initailize()
+    [SerializeField] private WeaponSelection _weaponSelection;
+    protected override void OnMenuContainerEnable()
     {
-        m_CloseBtnTap.onClick.AddListener(onCloseButtonTap);
-        updateCoins();
+        Time.timeScale = 1;
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
     }
 
-    private void Start()
+    protected override void OnMenuContainerDisable()
     {
-        Initailize();
-    }
-
-    public void onCloseButtonTap()
-    {
-        ChangeMenuState(MenuName.MainMenu);
+        GameEvents.GamePlayEvents.mainMenuButtonTap.UnRegister(ButtonsOnClickExecution);
     }
     
-    public void updateCoins()
+
+    private void ButtonsOnClickExecution(ButtonType type)
     {
-        if (CoinTxt != null)
+        switch (type)    
         {
-            CoinTxt.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
+            case ButtonType.Exit:
+                ChangeMenuState(MenuName.MainMenu);
+                break;
+            case ButtonType.AddCoins:
+                AdHandler.ShowRewarded(() => Dependencies.GameDataOperations.AddCredits(200));
+                break;
+            case ButtonType.ScrollLeft:
+                _weaponSelection.ScrollGun(false);
+                break;
+            case ButtonType.ScrollRight:
+                _weaponSelection.ScrollGun(true);
+                break;
+            case ButtonType.Buy:
+                _weaponSelection.BuyGun();
+                break;
+            case ButtonType.Select:
+                _weaponSelection.SelectGun();
+                break;
+            case ButtonType.TryForFree:
+                AdHandler.ShowRewarded(_weaponSelection.OnRewardedGunADWatched);;
+                break;
         }
     }
+    
+
+    
+
+
     
 }

@@ -67,7 +67,19 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
     public void SetSoundStatus(bool val) => m_GameData.sound = val;
 
     //Credits
-    public void SetCredit(int i) => m_GameData.m_Credits = i;
+    public void AddCredits(int i)
+    {
+        m_GameData.m_Credits += i;
+        GameEvents.GamePlayEvents.OnUpdateCoins.Raise(m_GameData.m_Credits);
+        Dependencies.SoundHandler.PlayCoinsSound();
+    }
+
+    public void SubtractCredits(int i)
+    {
+        m_GameData.m_Credits -= i;
+        GameEvents.GamePlayEvents.OnUpdateCoins.Raise(m_GameData.m_Credits);
+        Dependencies.SoundHandler.PlayCoinsSound();
+    } 
     public int GetCredits() => m_GameData.m_Credits;
     
     //Levels and Episodes

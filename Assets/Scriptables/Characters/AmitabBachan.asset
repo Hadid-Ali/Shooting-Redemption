@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AmitabBachan
   m_EditorClassIdentifier: 
   ItemPrice: 2000
-  ItemPrefab: {fileID: 4866149641813137889, guid: 39aafbc7d32053b45ab1ad82af7a7d7a,
+  ItemPrefab: {fileID: 9099744187643352444, guid: 39aafbc7d32053b45ab1ad82af7a7d7a,
     type: 3}
   character: 4

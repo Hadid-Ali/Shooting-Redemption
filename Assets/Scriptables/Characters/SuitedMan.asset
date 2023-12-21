@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SuitedMan
   m_EditorClassIdentifier: 
   ItemPrice: 2000
-  ItemPrefab: {fileID: 6622807026580154390, guid: 822f4f35e2f1f9649b43c69d3b0c0c9d,
+  ItemPrefab: {fileID: 52296641287515915, guid: 850438aad38c175438277654e8f33224,
     type: 3}
   character: 1

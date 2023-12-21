@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Yakuza
   m_EditorClassIdentifier: 
   ItemPrice: 1500
-  ItemPrefab: {fileID: 4866149641813137889, guid: 850438aad38c175438277654e8f33224,
+  ItemPrefab: {fileID: 4522469899654426145, guid: 822f4f35e2f1f9649b43c69d3b0c0c9d,
     type: 3}
   character: 2

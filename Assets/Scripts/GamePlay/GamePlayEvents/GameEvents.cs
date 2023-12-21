@@ -29,6 +29,11 @@ public partial class GameEvents
         //GameLost
         public static GameEvent TimeOver = new();
         public static GameEvent OnNPCKilled = new();
+        
+        //UI Events
+        public static GameEvent<int> OnUpdateCoins = new();
+        public static GameEvent<ButtonType> mainMenuButtonTap = new();
+        public static GameEvent<ButtonType, bool> updateButton = new();
 
 
 

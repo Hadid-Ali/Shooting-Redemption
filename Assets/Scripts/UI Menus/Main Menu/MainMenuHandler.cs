@@ -7,82 +7,51 @@ using TMPro;
 
 public class MainMenuHandler : UIMenuBase
 {
-    [SerializeField] private Button m_PlayButon;
-    [SerializeField] private Button m_DailyGoal;
-    [SerializeField] private Button m_SettingPanel;
-    [SerializeField] private Button m_QuitPanel;
-    [SerializeField] private Button m_CharacterPanel;
-    [SerializeField] private Button m_GunPanel;
-    [SerializeField] private Button m_EpisodeSelectionPanel;
-    [SerializeField] private Button m_AddCoins;
-
-    [SerializeField] private TextMeshProUGUI CoinTxt;
-    
-    private void Start()
+    private void Awake()
     {
-        Initialize();
-        updateCoins();
+        Time.timeScale = 1;
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
     }
 
     protected override void OnMenuContainerEnable()
     {
-        updateCoins();
+        Time.timeScale = 1;
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
     }
 
-    public void updateCoins()
+
+    protected override void OnMenuContainerDisable()
     {
-        CoinTxt.text = Dependencies.GameDataOperations.GetCredits().ToString();
+        GameEvents.GamePlayEvents.mainMenuButtonTap.UnRegister(ButtonsOnClickExecution);
     }
+    
 
-    private void Initialize()
+    private void ButtonsOnClickExecution(ButtonType type)
     {
-        m_PlayButon.onClick.AddListener(OnPlayBtnTap);
-        m_SettingPanel.onClick.AddListener(OnSettingBtnTap);
-        m_QuitPanel.onClick.AddListener(OnQuitBtnTap);
-        m_CharacterPanel.onClick.AddListener(OnCharacterBtnTap);
-        m_GunPanel.onClick.AddListener(OnGunBtnTap);
-        m_EpisodeSelectionPanel.onClick.AddListener(OnEpisodeSelectionBtnTap);
-        m_AddCoins.onClick.AddListener(OnClickAddcoin);
+        switch (type)    
+        {
+            case ButtonType.Play:
+                ChangeMenuState(MenuName.EpisodesSelection);
+                break;
+            case ButtonType.CharactersPanel:
+                ChangeMenuState(MenuName.CharacterSelection);
+                break;
+            case ButtonType.GunsPanel:
+                ChangeMenuState(MenuName.GunSelection);
+                break;
+            case ButtonType.AddCoins:
+                AdHandler.ShowRewarded(OnRewardedAddCoins);
+                break;
+            case ButtonType.Settings:
+                ChangeMenuState(MenuName.SettingsMenu);
+                break;
+        }
+        print("Working");
     }
-
-    private void OnClickAddcoin()
-    {
-        AdHandler.ShowRewarded(OnRewardedAddCoins);
-    }
-
     private void OnRewardedAddCoins()
     {
-        Dependencies.GameDataOperations.SetCredit(Dependencies.GameDataOperations.GetCredits() + 300);
-        updateCoins();
+        Dependencies.GameDataOperations.AddCredits(200);
     }
 
-    private void OnPlayBtnTap()
-    {
-        ChangeMenuState(MenuName.EpisodesSelection);
-    }
-    private void OnSettingBtnTap()
-    {
-        ChangeMenuState(MenuName.SettingsMenu);
-    }
-    
-    private void OnQuitBtnTap()
-    {
-        ChangeMenuState(MenuName.QuitPanel);
-    }
-    
-    private void OnCharacterBtnTap()
-    {
-        ChangeMenuState(MenuName.CharacterSelection);
-    }
-    
-    private void OnGunBtnTap()
-    {
-        ChangeMenuState(MenuName.GunSelection);
-    }
-    
-    private void OnEpisodeSelectionBtnTap()
-    {
-        ChangeMenuState(MenuName.EpisodesSelection);
-    }
     
 }

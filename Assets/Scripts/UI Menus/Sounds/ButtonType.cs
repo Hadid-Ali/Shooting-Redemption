@@ -1,12 +1,18 @@
 
 public enum ButtonType
 {
-    play,
-    setting,
-    dailyGoal,
-    haptic,
-    qualitysetting,
-    bydefault,
-    close
+    Play,
+    CharactersPanel,
+    GunsPanel,
+    SelectEpisode,
+    SelectLevel,
+    ScrollLeft,
+    ScrollRight,
+    AddCoins,
+    Buy,
+    TryForFree,
+    Exit,
+    Select,
+    Settings
 }
 
