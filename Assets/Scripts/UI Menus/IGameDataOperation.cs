@@ -13,6 +13,9 @@ public interface IGameDataOperation
     public void SubtractCredits(int i);
     public int GetCredits();
 
+    public void SetTutorialShown(bool val);
+    public bool GetTutorialShown();
+
     //Levels
     public void SetUnlockedLevels(int episode, int levels);
     public int GetUnlockedLevels(int episode);

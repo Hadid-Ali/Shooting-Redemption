@@ -35,6 +35,8 @@ public partial class GameEvents
         public static GameEvent<ButtonType> mainMenuButtonTap = new();
         public static GameEvent<ButtonType, bool> updateButton = new();
 
+        public static GameEvent OnInterstitialClosed = new();
+
 
 
     }

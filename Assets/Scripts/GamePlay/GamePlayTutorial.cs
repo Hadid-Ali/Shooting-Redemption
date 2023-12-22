@@ -14,7 +14,7 @@ public class GamePlayTutorial : MonoBehaviour
 
     private TextMeshProUGUI tutorialText;
 
-    private bool _showTutorial = true;
+    private bool _isVeryFirstlevel;
     
     private bool _buttonPressed;
 
@@ -26,9 +26,11 @@ public class GamePlayTutorial : MonoBehaviour
 
     private void OnCutSceneCompleted()
     {
+        _isVeryFirstlevel = Dependencies.GameDataOperations.GetSelectedEpisode() == 0 &&
+                        Dependencies.GameDataOperations.GetSelectedLevel() == 0;
         tutorialText = GetComponentInChildren<TextMeshProUGUI>();
-
-        if (Dependencies.GameDataOperations.GetSelectedEpisode() == 0 && Dependencies.GameDataOperations.GetSelectedLevel() == 0)
+        
+        if (_isVeryFirstlevel && !Dependencies.GameDataOperations.GetTutorialShown())
         {
             PlayerInputt.OnZoom += OnButtonDown;
             PlayerInputt.OnUnZoom += OnButtonUp;
@@ -42,7 +44,7 @@ public class GamePlayTutorial : MonoBehaviour
         GameEvents.GamePlayEvents.OnTutorialFinished.Unregister(OnTutorialFinished);
         GameEvents.GamePlayEvents.OnCutSceneFinished.Unregister(OnCutSceneCompleted);
 
-        if (_showTutorial)
+        if (_isVeryFirstlevel && !Dependencies.GameDataOperations.GetTutorialShown())
         {
             PlayerInputt.OnZoom -= OnButtonDown;
             PlayerInputt.OnUnZoom -= OnButtonUp;
@@ -67,15 +69,16 @@ public class GamePlayTutorial : MonoBehaviour
     
     private void OnTutorialFinished()
     {
-        aimingAnimation.SetActive(false);
-        aimTapButton.gameObject.SetActive(false);
-
-        StartCoroutine(Wait());
-        
-        if (_showTutorial)
+        if (_isVeryFirstlevel && !Dependencies.GameDataOperations.GetTutorialShown())
         {
+            aimingAnimation.SetActive(false);
+            aimTapButton.gameObject.SetActive(false);
+            
             PlayerInputt.OnZoom -= OnButtonDown;
             PlayerInputt.OnUnZoom -= OnButtonUp;
+
+            StartCoroutine(Wait());
+            Dependencies.GameDataOperations.SetTutorialShown(true);
         }
     }
 

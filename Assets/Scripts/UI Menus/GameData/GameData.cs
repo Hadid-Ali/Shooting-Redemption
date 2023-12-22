@@ -7,6 +7,7 @@ using UnityEngine.Purchasing;
 [CreateAssetMenu(fileName = "GameData", menuName = "GameData/GameData/Create", order = 1)]
 public class GameData : ScriptableObject
 {
+    public bool hasShownTutorial;
     public bool sound;
     
     public int m_Credits;

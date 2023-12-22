@@ -43,6 +43,8 @@ public class Interstitial : MonoBehaviour
                           + ad.GetResponseInfo());
 
                 interstitialAd = ad;
+
+                RegisterEventHandlers(interstitialAd);
             });
     }
     
@@ -104,6 +106,7 @@ public class Interstitial : MonoBehaviour
         {
             Debug.Log("Interstitial Ad full screen content closed.");
 
+            GameEvents.GamePlayEvents.OnInterstitialClosed.Raise();
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd();
         };

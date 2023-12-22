@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class LevelWinPanel : UIMenuBase
 {
     public static GameEvent<GameWinStats> OnUpdateStatsStart = new();
-
+    [SerializeField] private Animator _animator;
     private void Awake()
     {
         GameEvents.GamePlayEvents.OnAllGroupsCleared.Register(OnAllGroupsCleared);
@@ -23,11 +23,16 @@ public class LevelWinPanel : UIMenuBase
     protected override void OnMenuContainerEnable()
     {
         AdHandler.ShowInterstitial();
-        
         Time.timeScale = 0.001f;
         
         IncrementProgressLevel();
-        
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
+    }
+
+    private void OnAdClosed()
+    {
+        _animator.enabled = true;
+        _animator.SetTrigger("Open");
     }
 
     protected override void OnMenuContainerDisable()

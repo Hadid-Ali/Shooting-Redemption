@@ -1268,6 +1268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MenuName: 10
   m_MenuContainer: {fileID: 2070124244922924952}
+  _animator: {fileID: 5050639680466537744}
 --- !u!1 &2036261740479372246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2b5a05f63655b41bcc69e8ba326e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGamePlay: 1
 --- !u!1 &4895833371440273932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,6 +4542,7 @@ MonoBehaviour:
   m_MenuName: 8
   m_MenuContainer: {fileID: 4895833372194341977}
   sound: {fileID: 4895833371298360070}
+  _animator: {fileID: 5365736289233877693}
 --- !u!95 &5365736289233877693
 Animator:
   serializedVersion: 4
@@ -4751,6 +4754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MenuName: 9
   m_MenuContainer: {fileID: 4895833371354575044}
+  _animator: {fileID: 3741049176069260235}
 --- !u!1 &4918075635643216876
 GameObject:
   m_ObjectHideFlags: 0

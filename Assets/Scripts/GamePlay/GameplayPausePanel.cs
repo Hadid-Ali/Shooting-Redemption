@@ -10,25 +10,28 @@ public class GameplayPausePanel : UIMenuBase
     [SerializeField] private Toggle sound;
     private static readonly int Play = Animator.StringToHash("Play");
 
+    [SerializeField] private Animator _animator;
+
     protected override void OnMenuContainerEnable()
     {
         sound.isOn = Dependencies.GameDataOperations.GetSoundStatus();
-
-        GetComponent<Animator>().enabled = true;
-        GetComponent<Animator>().SetTrigger(Play);
         
         AdHandler.ShowInterstitial();
-        
-       // PlayerCanvasScipt.DeActive();
-
         CharacterStates.gameState = GameStates.GamePause;
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
+    }
+
+    private void OnAdClosed()
+    {
+        _animator.enabled = true;
+        _animator.SetTrigger(Play);
     }
 
     protected override void OnMenuContainerDisable()
     {
-        GetComponent<Animator>().enabled = false;
-       // PlayerCanvasScipt.SetActive();
+        _animator.enabled = false;
         CharacterStates.gameState = GameStates.InGame;
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
     }
     
 }

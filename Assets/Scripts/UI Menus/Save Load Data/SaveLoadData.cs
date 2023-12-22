@@ -81,7 +81,10 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
         Dependencies.SoundHandler.PlayCoinsSound();
     } 
     public int GetCredits() => m_GameData.m_Credits;
-    
+    public void SetTutorialShown(bool val) => m_GameData.hasShownTutorial = val;
+    public bool GetTutorialShown() => m_GameData.hasShownTutorial;
+
+
     //Levels and Episodes
     public void SetUnlockedLevels(int episode, int levels) => m_GameData.m_UnlockedLevels[episode] = levels;
     public int GetUnlockedLevels(int episode) => m_GameData.m_UnlockedLevels[episode];

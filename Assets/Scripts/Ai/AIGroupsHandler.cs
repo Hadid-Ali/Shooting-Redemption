@@ -68,15 +68,12 @@ public class AIGroupsHandler : MonoBehaviour
             GameEvents.GamePlayEvents.ShowingBoss.Raise(true);
             yield return new WaitForSeconds(3);
             GameEvents.GamePlayEvents.ShowingBoss.Raise(false);
+            GameEvents.GamePlayEvents.OnCutSceneFinished.Raise(); 
         }
         CharacterStates.playerState = PlayerCustomStates.HoldingPosition;
 
         yield return new WaitForSeconds(1f);
         PlayerInputt.CanTakeInput = true;
-        
-        if(!hasShowBossOnce)
-            GameEvents.GamePlayEvents.OnCutSceneFinished.Raise(); 
-
     }
     
     private void OnGroupKilled(AiGroup aiGroup)

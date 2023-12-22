@@ -8,15 +8,19 @@ using UnityEngine;
 public class TriggerAnimationOnEnable : MonoBehaviour
 {
     private Animator _aniamtor;
+    public bool isGamePlay;
 
     private void Awake()
     {
         _aniamtor = GetComponent<Animator>();
-        _aniamtor.updateMode = AnimatorUpdateMode.UnscaledTime;
+        
+        if(!isGamePlay)
+            _aniamtor.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     private void OnEnable()
     {
-        _aniamtor.SetTrigger("Open");
+        if(!isGamePlay)
+            _aniamtor.SetTrigger("Open");
     }
 }
