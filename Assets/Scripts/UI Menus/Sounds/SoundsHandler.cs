@@ -2,74 +2,114 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
+[Serializable]
+public class SfxSounds
+{
+    public AudioClip Clip;
+    public SFX Sfx;
+}
+[Serializable]
+public class AmbienceSounds
+{
+    public AudioClip Clip;
+    public Ambience Sfx;
+}
 public class SoundsHandler : MonoBehaviour, ISoundHandler
 {
-    [SerializeField] private AudioSource AS;
-    [SerializeField] private AudioSource Bg;
-    [SerializeField] private AudioClip buttonSound;
-    [SerializeField] private AudioClip changeSelectionSound;
-    [SerializeField] private AudioClip _coinsSound;
+    [SerializeField] private AudioSource sfx1;
+    [SerializeField] private AudioSource sfx2;
+    [SerializeField] private AudioSource bg;
+    [SerializeField] private AudioSource ambience;
+
+    [SerializeField] private AudioClip backgroundMusic;
+    [SerializeField] private List<SfxSounds> _sfxSounds;
+    [SerializeField] private List<AmbienceSounds> _ambienceSounds;
 
     
     void Awake()
     {
-        Bg.Play();
         if(Dependencies.SoundHandler == null)
             Dependencies.SoundHandler = this;
+        
     }
 
     private void Start()
     {
         UpdateSoundStatus();
+        PlayBGMusic();
     }
-    
+
     private void UpdateSoundStatus()
     {
-        if (Dependencies.GameDataOperations.GetSoundStatus())
+        bool val = Dependencies.GameDataOperations.GetSoundStatus();
+        sfx1.mute = !val;
+        sfx2.mute = !val;
+        bg.mute = !val;
+        ambience.mute = !val;
+        
+        bg.loop = true;
+        ambience.loop = true;
+    }
+
+    public void PlaySFXSound(SFX sfx)
+    {
+        UpdateSoundStatus();
+        
+        var clip = _sfxSounds?.Find(x => x.Sfx == sfx).Clip;
+        
+        if (!sfx1.isPlaying)
         {
-            AS.mute = false;
-            Bg.mute = false;
+            sfx1.Stop();
+            sfx1.clip = clip;
+            sfx1.Play();
         }
         else
         {
-            AS.mute = true;
-            Bg.mute = true;
-        }
-    }
-    
-    public void BtnClickSound(ButtonType buttonType)
-    {
-        UpdateSoundStatus();
-        switch (buttonType)
-        {
-            case ButtonType.Play:
-            case ButtonType.CharactersPanel:
-            case ButtonType.GunsPanel:
-            case ButtonType.SelectLevel:
-            case ButtonType.SelectEpisode:
-            case ButtonType.AddCoins:
-            case ButtonType.Buy:
-            case ButtonType.TryForFree:
-            case ButtonType.Exit:
-            case ButtonType.Settings:
-                AS.Stop();
-                AS.clip = buttonSound;
-                AS.Play();
-                break;
-            case ButtonType.ScrollLeft:
-            case ButtonType.ScrollRight:
-                AS.Stop();
-                AS.clip = changeSelectionSound;
-                AS.Play();
-                break;
+            sfx2.Stop();
+            sfx2.clip = clip;
+            sfx2.Play();
         }
     }
 
-    public void PlayCoinsSound()
+    public void PlayAmbienceSound(Ambience ambience)
     {
-        AS.Stop();
-        AS.clip = _coinsSound;
-        AS.Play();
+        UpdateSoundStatus();
+
+        var clip = _ambienceSounds?.Find(x => x.Sfx == ambience).Clip;
+
+        sfx1.Stop();
+        sfx1.clip = clip;
+        sfx1.Play();
+    }
+    public void MuteAll()
+    {
+        Dependencies.GameDataOperations.SetSoundStatus(false);
+        UpdateSoundStatus();
+    }
+
+    public void UnMuteAll()
+    {
+        Dependencies.GameDataOperations.SetSoundStatus(true);
+        UpdateSoundStatus();
+    }
+
+    public void MuteBgMusic()
+    {
+        bg.Stop();
+        bg.clip = null;
+    }
+
+    public void MuteAmbience()
+    {
+        ambience.Stop();
+        ambience.clip = null;
+    }
+
+    public void PlayBGMusic()
+    {
+        bg.clip = backgroundMusic;
+        bg.Play();
     }
 }

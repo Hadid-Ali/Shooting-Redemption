@@ -21,7 +21,11 @@ public class SettingPanel : UIMenuBase
 
     public void SetToggle()
     {
-        Dependencies.GameDataOperations.SetSoundStatus(soundToggle.isOn);
+        if(soundToggle.isOn)
+            Dependencies.SoundHandler.UnMuteAll();
+        else
+            Dependencies.SoundHandler.MuteAll();
+            
     }
 
     private void ButtonsOnClickExecution(ButtonType type)

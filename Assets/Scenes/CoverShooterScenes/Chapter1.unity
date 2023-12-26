@@ -121368,11 +121368,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 759756869163999318, guid: f6caa32464ba6cb48af9ea5ab32373a5,
-        type: 3}
-      propertyPath: damage
-      value: 102.16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6caa32464ba6cb48af9ea5ab32373a5, type: 3}
 --- !u!1 &919132147825932224

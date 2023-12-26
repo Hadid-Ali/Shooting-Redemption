@@ -34,14 +34,17 @@ namespace CoverShooter
         /// </summary>
         public void Play()
         {
-            if (Clips.Length == 0)
-                return;
+            if (!Dependencies.GameDataOperations.GetSoundStatus())
+            {
+                if (Clips.Length == 0)
+                    return;
 
-            var source = GetComponent<AudioSource>();
-            if (source == null) return;
+                var source = GetComponent<AudioSource>();
+                if (source == null) return;
             
-            source.clip = Clips[Random.Range(0, Clips.Length)];
-            source.Play();
+                source.clip = Clips[Random.Range(0, Clips.Length)];
+                source.Play();
+            }
         }
     }
 }

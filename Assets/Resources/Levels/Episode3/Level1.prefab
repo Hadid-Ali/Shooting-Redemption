@@ -5102,6 +5102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownTimer: 35
+  ambience: 2
 --- !u!114 &-6819987825987296202
 MonoBehaviour:
   m_ObjectHideFlags: 0

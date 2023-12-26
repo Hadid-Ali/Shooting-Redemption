@@ -37,6 +37,10 @@ public partial class GameEvents
 
         public static GameEvent OnInterstitialClosed = new();
 
+        public static GameEvent OnLevelPause = new();
+        public static GameEvent OnLevelResumed = new();
+        
+
 
 
     }

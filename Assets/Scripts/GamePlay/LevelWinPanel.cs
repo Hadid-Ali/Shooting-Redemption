@@ -33,11 +33,13 @@ public class LevelWinPanel : UIMenuBase
     {
         _animator.enabled = true;
         _animator.SetTrigger("Open");
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
     }
 
     protected override void OnMenuContainerDisable()
     {
         Time.timeScale = 1;
+        GameEvents.GamePlayEvents.OnLevelResumed.Raise();
         
     }
 

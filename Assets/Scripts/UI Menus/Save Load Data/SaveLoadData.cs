@@ -71,14 +71,14 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
     {
         m_GameData.m_Credits += i;
         GameEvents.GamePlayEvents.OnUpdateCoins.Raise(m_GameData.m_Credits);
-        Dependencies.SoundHandler.PlayCoinsSound();
+        Dependencies.SoundHandler.PlaySFXSound(SFX.Coins);
     }
 
     public void SubtractCredits(int i)
     {
         m_GameData.m_Credits -= i;
         GameEvents.GamePlayEvents.OnUpdateCoins.Raise(m_GameData.m_Credits);
-        Dependencies.SoundHandler.PlayCoinsSound();
+        Dependencies.SoundHandler.PlaySFXSound(SFX.Coins);
     } 
     public int GetCredits() => m_GameData.m_Credits;
     public void SetTutorialShown(bool val) => m_GameData.hasShownTutorial = val;

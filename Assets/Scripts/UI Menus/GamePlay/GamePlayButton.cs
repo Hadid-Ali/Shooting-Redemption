@@ -62,7 +62,7 @@ public class GamePlayButton : MonoBehaviour
 
     private void PlayButtonSound()
     {
-        Dependencies.SoundHandler.BtnClickSound(ButtonType.Play);
+        Dependencies.SoundHandler.PlaySFXSound(SFX.ButtonClick);
     }
 
     private void OnClickDoubleReward()
@@ -90,12 +90,19 @@ public class GamePlayButton : MonoBehaviour
     {
         buttonEvent?.Invoke();
         SessionData.Instance.sceneToLoad = SceneName.MainMenu;
+        
+        Dependencies.SoundHandler.MuteBgMusic();
+        Dependencies.SoundHandler.MuteAmbience();
+        
         SceneManager.LoadScene("LoadingScreen");
+        
     }
 
     private void OnRestartClicked()
     {
         buttonEvent?.Invoke();
+        Dependencies.SoundHandler.MuteBgMusic();
+        Dependencies.SoundHandler.MuteAmbience();
 
         SceneManager.LoadScene("LoadingScreen");
     }
@@ -105,6 +112,9 @@ public class GamePlayButton : MonoBehaviour
         int currentLevel = Dependencies.GameDataOperations.GetSelectedLevel();
         currentLevel++;
         Dependencies.GameDataOperations.SetSelectedLevel(currentLevel);
+        
+        Dependencies.SoundHandler.MuteBgMusic();
+        Dependencies.SoundHandler.MuteAmbience();
         
         SceneManager.LoadScene("LoadingScreen");
         

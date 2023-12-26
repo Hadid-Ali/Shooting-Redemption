@@ -32,11 +32,13 @@ public class LevelFailPanel : UIMenuBase
     {
         _animator.enabled = true;
         _animator.SetTrigger("Play");
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
     }
     protected override void OnMenuContainerDisable()
     {
         _animator.enabled = false;
         Time.timeScale = 1f;
+        GameEvents.GamePlayEvents.OnLevelResumed.Raise();
     }
 
 

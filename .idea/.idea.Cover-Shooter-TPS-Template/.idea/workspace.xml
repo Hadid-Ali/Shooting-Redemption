@@ -6,24 +6,93 @@
   <component name="ChangeListManager">
     <list default="true" id="0e522722-86ab-47ff-8095-804a718297dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cover-Shooter-TPS-Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdsManger/Scripts/Interstitial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdsManger/Scripts/Interstitial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/GunSelectionAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GunSelectionAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/GameCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddComponentScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddComponentScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/Tile_Diff.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/Tile_Diff.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/TrimSheet_Diff01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/TrimSheet_Diff01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/china town_mafia final.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/china town_mafia final.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/streetsalbedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/Materials/streetsalbedo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town env final.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town env final.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town env final.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town env final.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town_mafia final.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/china town env final/china town_mafia final.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/west_mafia/Materials/west wild mafia game.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/west_mafia/Materials/west wild mafia game.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/west_mafia/Texture/west wild mafia game.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/3D/Environments/west_mafia/Texture/west wild mafia game.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CompleteLevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CompleteLevel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EpisodePanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EpisodePanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FailLevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FailLevel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GamePlayPause.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GamePlayPause.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelsPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelsPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Character selection in Store_SFX.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Character selection in Store_SFX.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Clack_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Clack_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 01_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 01_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 02_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 02_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 03_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 03_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 04_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Click 04_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Coarse Click_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Coarse Click_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Collectible04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Collectible04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Funny Click_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Funny Click_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Ping_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Ping_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Spacey Click_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Spacey Click_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Tiny Click_Minimal UI Sounds.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minimal UI Sounds/Tiny Click_Minimal UI Sounds.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerFabs/PlayerCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode2/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode3/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode4/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Levels/Episode5/Level5.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/Chapter5/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CoverShooterScenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/GameData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ai/AIGroupsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Flow/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Flow/LevelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayEvents/GameEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayTutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GamePlayTutorial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameplayPausePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelFailPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelWinPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/LevelWinPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GameData/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GameData/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/IGameDataOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/IGameDataOperation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Base/ButtonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Base/ButtonComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/GamePlay/GamePlayButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Save Load Data/SaveLoadData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Save Load Data/SaveLoadData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/TriggerAnimationOnEnable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/TriggerAnimationOnEnable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/SettingPanel/SettingPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/SettingPanel/SettingPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/ISoundHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/ISoundHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/SoundsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Menus/Sounds/SoundsHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Prefabs/Death.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Prefabs/Death.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Prefabs/Hurt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdPartyPlugins/ThirdPersonCoverShooter/Assets/Prefabs/Hurt.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -36,11 +105,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/LevelsPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/CoverObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/EnemyPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ai/GamePlayStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoverBrain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/SFXname.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment/Barrel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment/IDestructible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment/IExplodeable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -252,6 +321,7 @@
       <workItem from="1703058380285" duration="9505000" />
       <workItem from="1703081294034" duration="349000" />
       <workItem from="1703229088810" duration="4961000" />
+      <workItem from="1703592605117" duration="5571000" />
     </task>
     <servers />
   </component>

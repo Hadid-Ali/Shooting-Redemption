@@ -2439,7 +2439,7 @@ MonoBehaviour:
   range: 50
   timeBetweenShots: 1
   BothHands: 0
-  _FireSound: {fileID: 8300000, guid: 5023689c4ec4df24f86a1e6674384c95, type: 3}
+  _FireSound: {fileID: 8300000, guid: 148788cb16a7804488a3bd6728e7fae0, type: 3}
   _muzzleFlash: {fileID: 4873068}
   _muzzleFlash2: {fileID: 0}
   weaponType: 1
@@ -10324,7 +10324,7 @@ MonoBehaviour:
   range: 50
   timeBetweenShots: 1
   BothHands: 1
-  _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
+  _FireSound: {fileID: 8300000, guid: 148788cb16a7804488a3bd6728e7fae0, type: 3}
   _muzzleFlash: {fileID: 759756869671087364}
   _muzzleFlash2: {fileID: 759756869514422750}
   weaponType: 2
@@ -12967,7 +12967,7 @@ MonoBehaviour:
   range: 50
   timeBetweenShots: 0.7
   BothHands: 0
-  _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
+  _FireSound: {fileID: 8300000, guid: 148788cb16a7804488a3bd6728e7fae0, type: 3}
   _muzzleFlash: {fileID: 759756867603787707}
   _muzzleFlash2: {fileID: 0}
   weaponType: 3
@@ -17511,7 +17511,7 @@ MonoBehaviour:
   shootableLayer:
     serializedVersion: 2
     m_Bits: 4097
-  damage: 100
+  damage: 102.16
   range: 30
   _knifeSound: {fileID: 8300000, guid: b6309b7dd7c8d5c40949c8ac697f5388, type: 3}
   KnifeObject: {fileID: 5723852590054138582}
@@ -25360,7 +25360,7 @@ MonoBehaviour:
   range: 50
   timeBetweenShots: 0.7
   BothHands: 0
-  _FireSound: {fileID: 8300000, guid: 0761fa9e3ee158646ba8a11dc270f9c3, type: 3}
+  _FireSound: {fileID: 8300000, guid: 148788cb16a7804488a3bd6728e7fae0, type: 3}
   _muzzleFlash: {fileID: 759756867970569565}
   _muzzleFlash2: {fileID: 0}
   weaponType: 0

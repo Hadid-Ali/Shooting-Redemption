@@ -19,12 +19,15 @@ public class GameplayPausePanel : UIMenuBase
         AdHandler.ShowInterstitial();
         CharacterStates.gameState = GameStates.GamePause;
         GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
+
     }
 
     private void OnAdClosed()
     {
         _animator.enabled = true;
         _animator.SetTrigger(Play);
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
+        Time.timeScale = 0.001f;
     }
 
     protected override void OnMenuContainerDisable()
@@ -32,6 +35,8 @@ public class GameplayPausePanel : UIMenuBase
         _animator.enabled = false;
         CharacterStates.gameState = GameStates.InGame;
         GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnLevelResumed.Raise();
+        Time.timeScale = 1f;
     }
     
 }
