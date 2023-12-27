@@ -36,6 +36,7 @@ public class Interstitial : MonoBehaviour
                 {
                     Debug.LogError("interstitial ad failed to load an ad " +
                                    "with error : " + error);
+                    GameEvents.GamePlayEvents.OnInterstitialFailed.Raise();
                     return;
                 }
 

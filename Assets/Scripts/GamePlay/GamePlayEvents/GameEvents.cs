@@ -36,6 +36,7 @@ public partial class GameEvents
         public static GameEvent<ButtonType, bool> updateButton = new();
 
         public static GameEvent OnInterstitialClosed = new();
+        public static GameEvent OnInterstitialFailed = new();
 
         public static GameEvent OnLevelPause = new();
         public static GameEvent OnLevelResumed = new();

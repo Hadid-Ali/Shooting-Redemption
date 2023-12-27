@@ -16,12 +16,14 @@ public class LevelController : MonoBehaviour
         Dependencies.SoundHandler.PlayAmbienceSound(ambience);
         GameEvents.GamePlayEvents.OnLevelPause.Register(OnLevelPause);
         GameEvents.GamePlayEvents.OnLevelResumed.Register(OnLevelResume);
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Register(OnCoverReached);
     }
 
     private void OnDestroy()
     {
         GameEvents.GamePlayEvents.OnLevelPause.Unregister(OnLevelPause);
         GameEvents.GamePlayEvents.OnLevelResumed.Unregister(OnLevelResume);
+        GameEvents.GamePlayEvents.OnPlayerReachedCover.Unregister(OnCoverReached);
     }
 
     private void OnLevelPause()
@@ -36,11 +38,16 @@ public class LevelController : MonoBehaviour
         Dependencies.SoundHandler.MuteBgMusic();
     }
 
+    private void OnCoverReached()
+    {
+        Dependencies.SoundHandler.PlayAmbienceSound(ambience);
+        Dependencies.SoundHandler.MuteBgMusic();
+    }
+
     private void Start()
     {
         _timer = GetComponent<Timer>();
         _timer.countdownTime = countdownTimer;
         _timer.Initialize();
-        Dependencies.SoundHandler.PlayAmbienceSound(ambience);
     }
 }

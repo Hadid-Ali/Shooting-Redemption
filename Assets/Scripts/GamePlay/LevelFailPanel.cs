@@ -15,6 +15,8 @@ public class LevelFailPanel : UIMenuBase
     private void OnDestroy()
     {
         GameEvents.GamePlayEvents.OnPlayerDead.Unregister(GameLost);
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
     }
 
     private void GameLost()
@@ -24,23 +26,30 @@ public class LevelFailPanel : UIMenuBase
     protected override void OnMenuContainerEnable()
     {
         AdHandler.ShowInterstitial();
-        Time.timeScale = 0.001f;
         GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Register(OnAdFailed);
+        Time.timeScale = 0.001f;
     }
 
     private void OnAdClosed()
     {
         _animator.enabled = true;
-        _animator.SetTrigger("Play");
+        _animator.SetTrigger("Open");
         GameEvents.GamePlayEvents.OnLevelPause.Raise();
     }
     protected override void OnMenuContainerDisable()
     {
         _animator.enabled = false;
-        Time.timeScale = 1f;
         GameEvents.GamePlayEvents.OnLevelResumed.Raise();
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
+        Time.timeScale = 1f;
     }
 
-
-
+    private void OnAdFailed()
+    {
+        _animator.enabled = true;
+        _animator.SetTrigger("Open");
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
+    }
 }

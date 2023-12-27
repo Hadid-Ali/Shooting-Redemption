@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,7 +20,7 @@ public class GameplayPausePanel : UIMenuBase
         AdHandler.ShowInterstitial();
         CharacterStates.gameState = GameStates.GamePause;
         GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
-
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Register(OnAdFailed);
     }
 
     private void OnAdClosed()
@@ -30,11 +31,28 @@ public class GameplayPausePanel : UIMenuBase
         Time.timeScale = 0.001f;
     }
 
+    private void OnAdFailed()
+    {
+        _animator.enabled = true;
+        _animator.SetTrigger(Play);
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
+        Time.timeScale = 0.001f;
+    }
+
+    public void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
+    }
+
     protected override void OnMenuContainerDisable()
     {
         _animator.enabled = false;
         CharacterStates.gameState = GameStates.InGame;
+        
         GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
+        
         GameEvents.GamePlayEvents.OnLevelResumed.Raise();
         Time.timeScale = 1f;
     }

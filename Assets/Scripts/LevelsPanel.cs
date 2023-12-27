@@ -7,19 +7,18 @@ using UnityEngine.UI;
 public class LevelsPanel : UIMenuBase
 {
     public List<Button> buttons;
-    [SerializeField] private Button backButton;
-    
-    private void Awake()
-    {
-        backButton.onClick.AddListener((() => ChangeMenuState(MenuName.EpisodesSelection)));
-    }
     
     protected override void OnMenuContainerEnable()
     {
         for (int i = 0; i < buttons.Count; i++)
         {
             int j = i;
-            buttons[j].interactable = j <= Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode());
+            bool unlocked = j <= Dependencies.GameDataOperations.GetUnlockedLevels(Dependencies.GameDataOperations.GetSelectedEpisode());
+            buttons[j].interactable = unlocked;
+            
+            buttons[j].transform.GetChild(0).gameObject.SetActive(!unlocked);
+            buttons[j].transform.GetChild(1).gameObject.SetActive(unlocked); //For lock image
+            
             buttons[j].onClick.AddListener(()=> SetLevelNum(j));
             buttons[j].onClick.AddListener(()=>Dependencies.SoundHandler.PlaySFXSound(SFX.ButtonClick));
         }

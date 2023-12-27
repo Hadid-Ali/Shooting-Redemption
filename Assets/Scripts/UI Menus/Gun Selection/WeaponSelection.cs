@@ -110,6 +110,7 @@ public class WeaponSelection : MonoBehaviour
 
         GunStatus.gameObject.SetActive(isGunSelected);
         m_GunPrice.SetText(isGunSelected ? "" : price.ToString());
+        m_GunPrice.transform.parent.gameObject.SetActive(!isGunUnlocked);
     }
 
 
@@ -124,7 +125,7 @@ public class WeaponSelection : MonoBehaviour
             currentIndex--;
         }
 
-        if (currentIndex >= weapons.Count || currentIndex <= 0)
+        if (currentIndex >= weapons.Count || currentIndex < 0)
         {
             currentIndex = 0;
         }

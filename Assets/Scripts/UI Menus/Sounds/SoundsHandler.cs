@@ -78,10 +78,10 @@ public class SoundsHandler : MonoBehaviour, ISoundHandler
         UpdateSoundStatus();
 
         var clip = _ambienceSounds?.Find(x => x.Sfx == ambience).Clip;
-
-        sfx1.Stop();
-        sfx1.clip = clip;
-        sfx1.Play();
+        
+        this.ambience.Stop();
+        this.ambience.clip = clip;
+        this.ambience.Play();
     }
     public void MuteAll()
     {

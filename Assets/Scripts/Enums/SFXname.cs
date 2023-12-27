@@ -16,4 +16,5 @@ public enum Ambience
     Ambience3,
     Ambience4,
     Ambience5,
+    FootSteps
 }

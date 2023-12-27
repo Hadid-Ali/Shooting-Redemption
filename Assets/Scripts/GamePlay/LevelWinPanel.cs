@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,29 +19,41 @@ public class LevelWinPanel : UIMenuBase
     private void OnDestroy()
     {
         GameEvents.GamePlayEvents.OnAllGroupsCleared.Unregister(OnAllGroupsCleared);
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
+    }
+
+    private void OnAdFailed()
+    {
+        StartCoroutine(Wait());
     }
 
     protected override void OnMenuContainerEnable()
     {
-        AdHandler.ShowInterstitial();
-        Time.timeScale = 0.001f;
-        
-        IncrementProgressLevel();
         GameEvents.GamePlayEvents.OnInterstitialClosed.Register(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Register(OnAdFailed);
+        IncrementProgressLevel();
+        AdHandler.ShowInterstitial();
     }
 
     private void OnAdClosed()
     {
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
         _animator.enabled = true;
         _animator.SetTrigger("Open");
-        GameEvents.GamePlayEvents.OnLevelPause.Raise();
+        
     }
 
     protected override void OnMenuContainerDisable()
     {
-        Time.timeScale = 1;
         GameEvents.GamePlayEvents.OnLevelResumed.Raise();
-        
+        GameEvents.GamePlayEvents.OnInterstitialClosed.Unregister(OnAdClosed);
+        GameEvents.GamePlayEvents.OnInterstitialFailed.Unregister(OnAdFailed);
     }
 
     private void OnAllGroupsCleared()
@@ -50,20 +63,23 @@ public class LevelWinPanel : UIMenuBase
 
     IEnumerator GameWon()
     {
-        yield return new WaitForSeconds(2f);
-        ChangeMenuState(MenuName.GameplayLevelWon);
+        yield return new WaitForSecondsRealtime(2f);
         IncrementProgressLevel();
+        ChangeMenuState(MenuName.GameplayLevelWon);
+        
+        GameEvents.GamePlayEvents.OnLevelPause.Raise();
         
         GameWinStats stats = new();
         stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) + (SessionData.Instance.civiliansKilled * 20);
         stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
         stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
         stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
-
+        
         OnUpdateStatsStart.Raise(stats);
         
         Dependencies.GameDataOperations.AddCredits(stats.coinsEarned);
         Dependencies.GameDataOperations.SaveData();
+        
     }
     
     public void IncrementProgressLevel()

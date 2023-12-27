@@ -11,6 +11,7 @@ public class SettingPanel : UIMenuBase
     {
         Time.timeScale = 1;
         GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
+        soundToggle.isOn = Dependencies.GameDataOperations.GetSoundStatus();
     }
 
 
@@ -21,10 +22,18 @@ public class SettingPanel : UIMenuBase
 
     public void SetToggle()
     {
-        if(soundToggle.isOn)
+        if (soundToggle.isOn)
+        {
             Dependencies.SoundHandler.UnMuteAll();
+            Dependencies.GameDataOperations.SetSoundStatus(true);
+            Dependencies.GameDataOperations.SaveData();
+        }
         else
+        {
             Dependencies.SoundHandler.MuteAll();
+            Dependencies.GameDataOperations.SetSoundStatus(false);
+            Dependencies.GameDataOperations.SaveData();
+        }
             
     }
 

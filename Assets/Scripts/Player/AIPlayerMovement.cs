@@ -88,7 +88,8 @@ public class AIPlayerMovement : MonoBehaviour
         
         _destination = destination.GetChild(0);
         _animator.SetTrigger(CrouchWalk); //Animate
-
+        Dependencies.SoundHandler.PlayAmbienceSound(Ambience.FootSteps);
+        
         _navMeshAgent.enabled = true;
         
         StartCoroutine(DelayedMotorActivation(true));
@@ -107,6 +108,7 @@ public class AIPlayerMovement : MonoBehaviour
         else
             _animator.SetTrigger(_destination.GetComponentInParent<Cover>().isHigh ? "TallCover" : "LowCover");
         
+        Dependencies.SoundHandler.MuteAmbience();
 
         _playerInventory.EquipWeapon();
         

@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.64742184, g: 0.64705884, b: 0.93333334, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.9568628, g: 0.9058824, b: 0.73333335, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.002
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 5
+  m_LinearFogEnd: 70
   m_AmbientSkyColor: {r: 0.4811321, g: 0.4788626, b: 0.4788626, a: 1}
   m_AmbientEquatorColor: {r: 0.9056604, g: 0.79656404, b: 0.49982202, a: 1}
   m_AmbientGroundColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
@@ -121530,23 +121530,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6266375593981449683, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527745389426598526, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8952665743733461764, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
-        type: 3}
-      propertyPath: isGamePlay
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1216492385370176176, guid: 82c342cb6ff26bc44ab2a015d7489d5b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c342cb6ff26bc44ab2a015d7489d5b, type: 3}
 --- !u!1 &1291584667311552890
 GameObject:

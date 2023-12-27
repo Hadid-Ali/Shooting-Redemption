@@ -18,7 +18,6 @@ public class CharacterHandler : MonoBehaviour
     
     public Image GunStatus;
     public TextMeshProUGUI m_GunPrice;
-    public TextMeshProUGUI m_Coins;
 
     
     //Logic
@@ -92,7 +91,7 @@ public class CharacterHandler : MonoBehaviour
 
         GunStatus.gameObject.SetActive(isGunSelected);
         m_GunPrice.SetText(isGunSelected ? "" : price.ToString());
-        m_Coins.SetText(availableCoins.ToString());
+        m_GunPrice.transform.parent.gameObject.SetActive(!isGunUnlocked);
     }
 
 
@@ -107,7 +106,7 @@ public class CharacterHandler : MonoBehaviour
             currentIndex--;
         }
 
-        if (currentIndex >= weapons.Count || currentIndex <= 0)
+        if (currentIndex >= weapons.Count || currentIndex < 0)
         {
             currentIndex = 0;
         }

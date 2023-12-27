@@ -57,7 +57,13 @@ public class GamePlayButton : MonoBehaviour
                 break;
                 
         }
+        
         _button.onClick.AddListener(PlayButtonSound);
+    }
+
+    private void OnDestroy()
+    {
+        _button.onClick.RemoveAllListeners();
     }
 
     private void PlayButtonSound()
@@ -123,9 +129,7 @@ public class GamePlayButton : MonoBehaviour
     {
         buttonEvent?.Invoke();
         GameplayPausePanel.ChangeMenuState(MenuName.GameplayPause);
-        
         Time.timeScale = 0.001f;
-        
     }
 
     private void OnExitButtonClicked()

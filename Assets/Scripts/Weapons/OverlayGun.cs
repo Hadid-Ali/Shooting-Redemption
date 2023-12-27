@@ -214,7 +214,9 @@ public class OverlayGun : MonoBehaviour
         }
         
         _anim.SetTrigger(Fire);
-        _audioSource.PlayOneShot(_FireSound);
+        
+        if(Dependencies.GameDataOperations.GetSoundStatus())
+            _audioSource.PlayOneShot(_FireSound);
     }
 
     

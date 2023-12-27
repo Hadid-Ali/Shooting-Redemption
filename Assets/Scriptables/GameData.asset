@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f11a60e315f7241a7462f3e3b0f0fe, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  hasShownTutorial: 1
+  hasShownTutorial: 0
   sound: 1
-  m_Credits: 2650
+  m_Credits: 3000
   m_SelectedLevel: 0
   m_SelectedEpisode: 0
-  m_UnlockedLevels: 0400000004000000040000000400000004000000
-  m_UnlockedEpisodes: 0101010101
+  m_UnlockedLevels: 0000000000000000000000000000000000000000
+  m_UnlockedEpisodes: 0100000000
   Characters:
   - character: 0
     isUnlocked: 1
   - character: 1
-    isUnlocked: 1
+    isUnlocked: 0
   - character: 2
-    isUnlocked: 1
+    isUnlocked: 0
   - character: 3
     isUnlocked: 0
   - character: 4
@@ -36,12 +36,12 @@ MonoBehaviour:
   - weapon: 1
     isUnlocked: 0
   - weapon: 2
-    isUnlocked: 1
+    isUnlocked: 0
   - weapon: 3
-    isUnlocked: 1
+    isUnlocked: 0
   - weapon: 4
-    isUnlocked: 1
+    isUnlocked: 0
   - weapon: 5
-    isUnlocked: 1
-  selectedGun: 0
-  selectedCharacter: 1
+    isUnlocked: 0
+  selectedGun: 4
+  selectedCharacter: 4
