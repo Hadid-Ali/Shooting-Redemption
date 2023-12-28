@@ -16,8 +16,8 @@ RenderSettings:
   serializedVersion: 9
   m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 1
-  m_FogDensity: 0.01
+  m_FogMode: 2
+  m_FogDensity: 0.025
   m_LinearFogStart: 10
   m_LinearFogEnd: 70
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -245,6 +245,11 @@ PrefabInstance:
     - target: {fileID: 1216492385549231902, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985468495319918599, guid: 82c342cb6ff26bc44ab2a015d7489d5b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -34,24 +34,14 @@ public class WeaponSelection : MonoBehaviour
 
 
     private Mask mask;
-    private void OnEnable()
-    {
-        Camera.SetActive(true);
-    }
 
-    private void OnDisable()
-    {
-        Camera.SetActive(false);
-    }
 
-    private void Start()
+    IEnumerator  Start()
     {
         gunsAlreadyInstatiated = false;
-        
         selectedWeapon = Dependencies.GameDataOperations.GetSelectedWeapon();
-        
+        yield return new WaitForSeconds(.2f);
         RetainGunData();
-        UpdateGunData();
     }
 
     public void SyncData()
@@ -125,10 +115,10 @@ public class WeaponSelection : MonoBehaviour
             currentIndex--;
         }
 
-        if (currentIndex >= weapons.Count || currentIndex < 0)
-        {
+        if (currentIndex >= weapons.Count)
             currentIndex = 0;
-        }
+        else if(currentIndex < 0)
+            currentIndex = weapons.Count -1;
 
         foreach (var v in weapons)
             v.weaponPrefab.SetActive(false);

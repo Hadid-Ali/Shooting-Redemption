@@ -47,7 +47,7 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         _timer = GetComponent<Timer>();
-        _timer.countdownTime = countdownTimer;
+        _timer.countdownTime = countdownTimer + 30;
         _timer.Initialize();
     }
 }

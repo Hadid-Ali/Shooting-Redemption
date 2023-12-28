@@ -106,19 +106,19 @@ namespace CoverShooter
         /// </summary>
         public void OnTakenHit(Hit hit)
         {
-            if (!_motor.IsAlive)
-                return;
+          //  if (!_motor.IsAlive)
+             //   return;
 
-            if (_hurtSoundTimer < float.Epsilon)
-            {
-                _hurtSoundTimer = 0.5f;
-                Instantiate(Hurt, hit.Position);
-            }
+          //  if (_hurtSoundTimer < float.Epsilon)
+           // {
+           //     _hurtSoundTimer = 0.5f;
+              //  Instantiate(Hurt, hit.Position);
+           // }
 
-            if (BigHit != null && hit.Damage >= BigDamageThreshold)
-                Instantiate(BigHit, hit.Position);
-            else if (Hit != null)
-                Instantiate(Hit, hit.Position);
+           // if (BigHit != null && hit.Damage >= BigDamageThreshold)
+             //   Instantiate(BigHit, hit.Position);
+           // else if (Hit != null)
+            //    Instantiate(Hit, hit.Position);
         }
 
         /// <summary>

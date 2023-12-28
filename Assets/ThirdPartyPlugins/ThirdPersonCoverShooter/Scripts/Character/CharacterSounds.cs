@@ -92,8 +92,8 @@ namespace CoverShooter
 
         public void OnFootstep(Vector3 position)
         {
-            if (_motor.IsAlive)
-                playSound(Footstep, position);
+          //  if (_motor.IsAlive)
+              //  playSound(Footstep, position);
         }
 
         public void OnDead()
@@ -132,21 +132,22 @@ namespace CoverShooter
 
         private void playSound(AudioClip[] clips, Vector3 position,  float delay = 0f)
         {
-            if (clips.Length == 0)
-                return;
-
-            var clip = clips[UnityEngine.Random.Range(0, clips.Length)];
-
-            if (delay < float.Epsilon)
-                AudioSource.PlayClipAtPoint(clip, position);
-            else
-                StartCoroutine(delayedClip(clip, position, delay));
+            // if (clips.Length <= 0 && !Dependencies.GameDataOperations.GetSoundStatus())
+            //     return;
+            //
+            // var clip = clips[UnityEngine.Random.Range(0, clips.Length)];
+            //
+            // if (delay < float.Epsilon)
+            //     AudioSource.PlayClipAtPoint(clip, position);
+            // else
+            //     StartCoroutine(delayedClip(clip, position, delay));
         }
 
         private IEnumerator delayedClip(AudioClip clip, Vector3 position, float delay)
         {
             yield return new WaitForSeconds(delay);
-            AudioSource.PlayClipAtPoint(clip, position);
+            if(Dependencies.GameDataOperations.GetSoundStatus())
+                AudioSource.PlayClipAtPoint(clip, position);
         }
     }
 }

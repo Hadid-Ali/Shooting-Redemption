@@ -30,10 +30,10 @@ public class CharacterHandler : MonoBehaviour
     private void Start()
     {
         gunsAlreadyInstatiated = false;
-        
         RetainGunData();
         UpdateGunData();
     }
+    
 
     public void SyncData()
     {
@@ -106,10 +106,11 @@ public class CharacterHandler : MonoBehaviour
             currentIndex--;
         }
 
-        if (currentIndex >= weapons.Count || currentIndex < 0)
-        {
+        if (currentIndex >= weapons.Count)
             currentIndex = 0;
-        }
+        else if(currentIndex < 0)
+            currentIndex = weapons.Count -1;
+            
 
         foreach (var v in weapons)
             v.characterPrefab.SetActive(false);

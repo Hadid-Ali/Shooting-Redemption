@@ -150,7 +150,7 @@ MonoBehaviour:
   Death: {fileID: 1089779840387952, guid: 3c30ae926cf645543bb909fbb1fd2e61, type: 3}
   Resurrection: {fileID: 0}
   Jump: {fileID: 1075378003986696, guid: 54d9c475864942a4db67fb2420db315a, type: 3}
-  Hurt: {fileID: 1475366652680470, guid: c2e6a03945531b449ba1a5ee4115753f, type: 3}
+  Hurt: {fileID: 0}
   Block: {fileID: 1083284618116306, guid: 6b3933c2c56ed8049aa32165c1fbbd4a, type: 3}
   Hit: {fileID: 0}
   BigHit: {fileID: 0}

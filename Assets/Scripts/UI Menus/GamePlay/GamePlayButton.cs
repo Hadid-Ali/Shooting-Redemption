@@ -81,14 +81,14 @@ public class GamePlayButton : MonoBehaviour
         _button.interactable = false;
         
         GameWinStats stats = new();
-        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) ;
-        stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
-        stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
+        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) * 2 ;
+        //stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
+       // stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
         stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
 
         LevelWinPanel.OnUpdateStatsStart.Raise(stats);
         
-        Dependencies.GameDataOperations.AddCredits(stats.coinsEarned);
+        Dependencies.GameDataOperations.AddCredits(AiGroup.GetAllEnemiesCount() * 50);
         Dependencies.GameDataOperations.SaveData();
     }
 

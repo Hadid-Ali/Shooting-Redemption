@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &1028580065519075653
@@ -156,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &2558649602600008492
@@ -249,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &2940691616470398937
@@ -552,7 +555,7 @@ MonoBehaviour:
   BulletsPerShot: 1
   ConsumeSingleBulletPerShot: 1
   Distance: 50
-  Damage: 35
+  Damage: 10
   Error: 0
   AutoReload: 0
   ReloadWithMagazines: 1
@@ -1567,6 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &4279660521798795367
@@ -1629,6 +1633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &4447487123414586271
@@ -1755,6 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5499472675044311753
@@ -1884,6 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &5798265893062070956
@@ -2009,6 +2016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &6434020588533956087
@@ -2200,6 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7716464327806875061
@@ -2262,6 +2271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &7737662640277803228
@@ -2507,6 +2517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76556444638a25841af41b6a66c91edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainPlayer: 0
   TargetOveride: {fileID: 0}
   DamageScale: 1
 --- !u!1 &8607537789004860128

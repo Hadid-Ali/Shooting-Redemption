@@ -46,6 +46,7 @@ public class CoinsUI : MonoBehaviour
             yield return null;
         }
 
+        _text.SetText(Dependencies.GameDataOperations.GetCredits().ToString());
         _previousCoins = coins;
     }
 }

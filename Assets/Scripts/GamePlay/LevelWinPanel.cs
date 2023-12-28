@@ -63,16 +63,16 @@ public class LevelWinPanel : UIMenuBase
 
     IEnumerator GameWon()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSeconds(2f);
         IncrementProgressLevel();
         ChangeMenuState(MenuName.GameplayLevelWon);
         
         GameEvents.GamePlayEvents.OnLevelPause.Raise();
         
         GameWinStats stats = new();
-        stats.coinsEarned = (AiGroup.GetAllEnemiesCount() * 50) + (SessionData.Instance.civiliansKilled * 20);
-        stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
-        stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
+        stats.coinsEarned = AiGroup.GetAllEnemiesCount() * 50;
+      // stats.previousCoins = Dependencies.GameDataOperations.GetCredits();
+        //stats.CiviliansKilled = SessionData.Instance.civiliansKilled;
         stats.EnemiesKilled = AiGroup.GetAllEnemiesCount();
         
         OnUpdateStatsStart.Raise(stats);
@@ -95,7 +95,7 @@ public class LevelWinPanel : UIMenuBase
             if(unlockedLevels > Dependencies.GameDataOperations.GetUnlockedLevels(currentEpisode))
                 Dependencies.GameDataOperations.SetUnlockedLevels(currentEpisode, unlockedLevels);
         }
-        if (unlockedLevels >= 4 && currentEpisode < 4)
+        else if (currentEpisode < 4)
         {
             int nextEpisode = currentEpisode + 1;
             if (!Dependencies.GameDataOperations.GetUnlockedEpisodes(nextEpisode))

@@ -13,6 +13,11 @@ public class MainMenuHandler : UIMenuBase
         GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
     }
 
+    private void Start()
+    {
+        Dependencies.SoundHandler.PlayBGMusic();
+    }
+
     protected override void OnMenuContainerEnable()
     {
         Time.timeScale = 1;

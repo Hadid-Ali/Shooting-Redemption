@@ -92,13 +92,13 @@ namespace CoverShooter
 
         private void play(AudioClip clip)
         {
-            if (clip != null)
+            if (clip != null && Dependencies.GameDataOperations.GetSoundStatus())
                 AudioSource.PlayClipAtPoint(clip, transform.position);
         }
 
         private void play(AudioClip[] clips)
         {
-            if (clips.Length > 0)
+            if (clips.Length > 0 && Dependencies.GameDataOperations.GetSoundStatus())
                 play(clips[UnityEngine.Random.Range(0, clips.Length)]);
         }
 

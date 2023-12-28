@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasShownTutorial: 0
   sound: 1
-  m_Credits: 3000
+  m_Credits: 1000
   m_SelectedLevel: 0
   m_SelectedEpisode: 0
   m_UnlockedLevels: 0000000000000000000000000000000000000000
@@ -43,5 +43,5 @@ MonoBehaviour:
     isUnlocked: 0
   - weapon: 5
     isUnlocked: 0
-  selectedGun: 4
-  selectedCharacter: 4
+  selectedGun: 0
+  selectedCharacter: 0
