@@ -22,6 +22,10 @@ public class LevelFailPanel : UIMenuBase
     private void GameLost()
     {
         ChangeMenuState(MenuName.GameplayLevelFailed);
+        
+        string episode = "Episode : " + Dependencies.GameDataOperations.GetSelectedEpisode();
+        string level = "Level : " + Dependencies.GameDataOperations.GetSelectedLevel();
+        FirebaseEvents.logEvent($"{episode} {level} Lost");
     }
     protected override void OnMenuContainerEnable()
     {

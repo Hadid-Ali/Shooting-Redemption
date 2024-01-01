@@ -15,4 +15,6 @@ public partial class GameAdEvents
     public static GameEvent<Action> ShowRewardedAd = new();
 
     public static GameEvent OnAdsInitialized = new();
+    public static GameEvent InitFirebaseAnalytics = new();
+    
 }

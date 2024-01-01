@@ -49,5 +49,9 @@ public class LevelController : MonoBehaviour
         _timer = GetComponent<Timer>();
         _timer.countdownTime = countdownTimer + 30;
         _timer.Initialize();
+
+        string episode = "Episode : " + Dependencies.GameDataOperations.GetSelectedEpisode();
+        string level = "Level : " + Dependencies.GameDataOperations.GetSelectedLevel();
+        FirebaseEvents.logEvent($"{episode} {level} Started");
     }
 }

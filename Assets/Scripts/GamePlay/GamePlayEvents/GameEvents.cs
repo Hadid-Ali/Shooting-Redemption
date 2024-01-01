@@ -41,6 +41,8 @@ public partial class GameEvents
         public static GameEvent OnLevelPause = new();
         public static GameEvent OnLevelResumed = new();
         
+        
+        
 
 
 

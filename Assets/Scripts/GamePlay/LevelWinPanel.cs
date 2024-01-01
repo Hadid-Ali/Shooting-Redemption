@@ -80,6 +80,10 @@ public class LevelWinPanel : UIMenuBase
         Dependencies.GameDataOperations.AddCredits(stats.coinsEarned);
         Dependencies.GameDataOperations.SaveData();
         
+        string episode = "Episode : " + Dependencies.GameDataOperations.GetSelectedEpisode();
+        string level = "Level : " + Dependencies.GameDataOperations.GetSelectedLevel();
+        FirebaseEvents.logEvent($"{episode} {level} Won");
+        
     }
     
     public void IncrementProgressLevel()

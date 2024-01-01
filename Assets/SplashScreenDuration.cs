@@ -19,9 +19,11 @@ public class SplashScreenDuration : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         AdHandler.InitializeAds();
+        GameAdEvents.InitFirebaseAnalytics.Raise();
         yield return new WaitForSeconds(splashScreenDuration);
         
         AdHandler.ShowAppOpen();
+        FirebaseEvents.logEvent("Game Started");
         
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         
