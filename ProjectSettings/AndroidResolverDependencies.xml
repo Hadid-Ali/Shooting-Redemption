@@ -2,6 +2,7 @@
   <packages>
     <package>com.google.android.gms:play-services-ads:22.3.0</package>
     <package>com.google.android.gms:play-services-base:18.2.0</package>
+    <package>com.google.android.play:core:1.10.3</package>
     <package>com.google.android.ump:user-messaging-platform:2.1.0</package>
     <package>com.google.firebase:firebase-analytics:21.3.0</package>
     <package>com.google.firebase:firebase-analytics-unity:11.4.0</package>
