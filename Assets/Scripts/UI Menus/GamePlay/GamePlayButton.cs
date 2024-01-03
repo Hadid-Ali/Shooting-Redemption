@@ -99,6 +99,9 @@ public class GamePlayButton : MonoBehaviour
         
         Dependencies.SoundHandler.MuteBgMusic();
         Dependencies.SoundHandler.MuteAmbience();
+
+        if (Dependencies.GameDataOperations.GetSelectedLevel() >= 4)
+            SessionData.Instance.comingToMainMenuOnModeComplete = true;
         
         SceneManager.LoadScene("LoadingScreen");
         

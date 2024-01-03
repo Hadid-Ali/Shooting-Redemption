@@ -16,6 +16,12 @@ public class MainMenuHandler : UIMenuBase
     private void Start()
     {
         Dependencies.SoundHandler.PlayBGMusic();
+
+        if (SessionData.Instance.comingToMainMenuOnModeComplete)
+        {
+            SessionData.Instance.comingToMainMenuOnModeComplete = false;
+            ChangeMenuState(MenuName.EpisodesSelection);
+        }
     }
 
     protected override void OnMenuContainerEnable()

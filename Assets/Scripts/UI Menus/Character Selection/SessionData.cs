@@ -5,6 +5,8 @@ using UnityEngine.Serialization;
 
 public class SessionData : MonobehaviourSingleton<SessionData>
 {
+    public bool comingToMainMenuOnModeComplete;
+    
     public int civiliansKilled;
     public SceneName sceneToLoad;
     
