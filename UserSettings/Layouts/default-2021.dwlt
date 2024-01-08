@@ -97,7 +97,7 @@ MonoBehaviour:
   m_MinSize: {x: 903, y: 399}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 9574
+  controlID: 140
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 7102
+  controlID: 108
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 63
+  controlID: 107
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 102
+  controlID: 43
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 103
+  controlID: 44
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -559,7 +559,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 92c9faff98cafaff36defaffdcedfaffc000fbff5c21fbff3231fbff3631fbffa031fbffc831fbff803dfbff863efbff2452fbffca61fbffae74fbff4a95fbff20a5fbff24a5fbff8ea5fbffb6a5fbffc0adfbffc6aefbff3ac8fbffe0d7fbffc4eafbff620bfcff7a1bfcff801bfcffea1bfcff201cfcff542ffcff5a2ffcffb230fcff9233fcff9833fcff2436fcff9049fcff704cfcff764cfcff024ffcff424ffcffe050fcff3460fcff3661fcffd474fcff7a84fcff5e97fcfffab7fcffd0c7fcffd4c7fcff3ec8fcff66c8fcfff2d0fcfff6d1fcff94e5fcff3af5fcff1e08fdffba28fdff9038fdff9438fdfffe38fdff2639fdff2a41fdff2e42fdffcc55fdff7265fdff5678fdfff298fdffc8a8fdffcca8fdff36a9fdff5ea9fdff18b0fdff1cb1fdffbac4fdff60d4fdff44e7fdffe007feffb617feffba17feff2418feff4c18feff741afeff781bfeff162ffeffbc3efeffa051feff3c72feff1282feff1682feff8082feffa882feffce84feffd285feff7099feff16a9fefffabbfeff96dcfeff6cecfeff70ecfeffdaecfeff02edfeffb2f3feffb6f4feff5408fffffa17ffffde2affff7a4bffff505bffff545bffffbe5bffffe65bffff0665ffff0a66ffff7e7fffff248fffff08a2ffffa6c2ffffbed2ffffc4d2ffff2ed3ffff64d3ffff9af7ffffe2fafffff4ffffff3c070500d60705000a08050016080500660b05007c0b0500588e07008c8e0700988e07002e920700
+      m_ExpandedIDs: 4c55feff5056feffee69feff9479feff788cfeff14adfeffeabcfeffeebcfeff58bdfeff80bdfeffb4bffeffbac0feff58d4fefffee3feffe2f6feff7e17ffff5427ffff5827ffffc227ffffea27ffff602bffff682cffffd245ffff7855ffff5c68fffffa88ffff1299ffff1899ffffcc99fffff499ffff08d7ffffe2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1224,36 +1224,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Artwork/PlayerYakuzaSuited
+    - Assets/Scenes/CoverShooterScenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Artwork/PlayerYakuzaSuited
+  - Assets/Scenes/CoverShooterScenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitProjects\Cover-Shooter-TPS-Template
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1125}
-    m_SelectedIDs: 76870000
-    m_LastClickedID: 34678
-    m_ExpandedIDs: 000000008a8600008c8600008e86000090860000928600009486000096860000988600009a8600009c8600009e860000a0860000a2860000a4860000a6860000a8860000aa860000ac860000ae860000b0860000b2860000b4860000b6860000b8860000ba860000bc860000be860000c0860000c2860000c4860000c6860000c8860000ca860000cc860000d286000000ca9a3b
+    scrollPos: {x: 0, y: 157}
+    m_SelectedIDs: aeb50000
+    m_LastClickedID: 46510
+    m_ExpandedIDs: 00000000a8b50000aab50000acb50000aeb50000b0b50000b2b50000b4b50000b6b50000bab50000bcb50000beb50000c0b50000c2b50000c4b50000c6b50000c8b50000cab50000ccb50000ceb50000d0b50000d2b50000d4b50000d6b50000d8b50000dab50000dcb50000deb50000e0b50000e2b50000e8b50000fcb50000b8b6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Keystore
+      m_OriginalName: Keystore
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 46774
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 15}
     m_SearchString: 
@@ -1267,7 +1267,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a8600008c8600008e86000090860000928600009486000096860000988600009a8600009c8600009e860000a0860000a2860000a4860000a6860000a8860000aa860000ac860000ae860000b0860000b2860000b4860000b6860000b8860000ba860000bc860000be860000c0860000c2860000c4860000c6860000c8860000ca860000cc860000
+    m_ExpandedIDs: 00000000a8b50000aab50000acb50000aeb50000b0b50000b2b50000b4b50000b6b50000b8b50000bab50000bcb50000beb50000c0b50000c2b50000c4b50000c6b50000c8b50000cab50000ccb50000ceb50000d0b50000d2b50000d4b50000d6b50000d8b50000dab50000dcb50000deb50000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
