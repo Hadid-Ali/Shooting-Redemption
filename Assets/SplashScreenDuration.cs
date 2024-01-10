@@ -12,12 +12,26 @@ public class SplashScreenDuration : MonoBehaviour
     public Image progressBar;
 
     [SerializeField] private GameObject consentPanel;
+
+    [SerializeField] private GameObject adManagersAndroid;
+    [SerializeField] private GameObject adManagersIOS;
     
     void Start()
     {
         consentPanel.SetActive(!Dependencies.GameDataOperations.GetConsent());
         StartCoroutine(LoadSceneAsync());
         GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
+
+
+#if UNITY_ANDROID
+        adManagersAndroid.SetActive(true);
+#elif UNITY_IOS
+        adManagersIOS.SetActive(true);
+#else
+        adManagersAndroid.SetActive(true);
+#endif
+        
+        
     }
 
     private void OnDestroy()
@@ -42,8 +56,6 @@ public class SplashScreenDuration : MonoBehaviour
     
     IEnumerator LoadSceneAsync()
     {
-        
-        
         yield return new WaitForSeconds(.5f);
         AdHandler.InitializeAds();
         GameAdEvents.InitFirebaseAnalytics.Raise();
