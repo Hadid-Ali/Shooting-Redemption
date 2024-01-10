@@ -62,7 +62,8 @@ public class SaveLoadData : MonoBehaviour, IGameDataOperation
         PlayerPrefs.Save();
     }
 
-
+    public void SetConsent(bool val) => m_GameData.hasconsent = val;
+    public bool GetConsent() => m_GameData.hasconsent;
     public bool GetSoundStatus() => m_GameData.sound;
     public void SetSoundStatus(bool val) => m_GameData.sound = val;
 

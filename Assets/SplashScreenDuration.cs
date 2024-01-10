@@ -3,20 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SplashScreenDuration : MonoBehaviour
 {
     public float splashScreenDuration = 3f;
     public Image progressBar;
+
+    [SerializeField] private GameObject consentPanel;
     
-    void Awake()
+    void Start()
     {
+        consentPanel.SetActive(!Dependencies.GameDataOperations.GetConsent());
         StartCoroutine(LoadSceneAsync());
+        GameEvents.GamePlayEvents.mainMenuButtonTap.Register(ButtonsOnClickExecution);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GamePlayEvents.mainMenuButtonTap.UnRegister(ButtonsOnClickExecution);
+    }
+
+    private void ButtonsOnClickExecution(ButtonType type)
+    {
+        switch (type)    
+        {
+            case ButtonType.PrivacyPolicy:
+                Application.OpenURL("https://play.virtua.com/privacy-policy");
+                break;
+            case ButtonType.AcceptConsent:
+                Dependencies.GameDataOperations.SetConsent(true);
+                consentPanel.SetActive(false);
+                break;
+        }
+        print("Working");
     }
     
     IEnumerator LoadSceneAsync()
     {
+        
+        
         yield return new WaitForSeconds(.5f);
         AdHandler.InitializeAds();
         GameAdEvents.InitFirebaseAnalytics.Raise();
@@ -24,6 +51,12 @@ public class SplashScreenDuration : MonoBehaviour
         
         AdHandler.ShowAppOpen();
         FirebaseEvents.logEvent("Game Started");
+        
+        
+        while (!Dependencies.GameDataOperations.GetConsent())
+        {
+            yield return null;
+        }
         
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName.MainMenu.ToString());
         

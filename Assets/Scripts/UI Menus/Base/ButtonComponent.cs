@@ -45,6 +45,5 @@ public class ButtonComponent : MonoBehaviour
     {
         Dependencies.SoundHandler.PlaySFXSound(SFX.ButtonClick);
         GameEvents.GamePlayEvents.mainMenuButtonTap.Raise(buttonType);
-        print("Working");
     }
 }

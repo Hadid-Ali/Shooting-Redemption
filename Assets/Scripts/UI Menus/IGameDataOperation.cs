@@ -7,6 +7,8 @@ public interface IGameDataOperation
     public void LoadData();
     public void SaveData();
 
+    public void SetConsent(bool val);
+    public bool GetConsent();
     public bool GetSoundStatus();
     public void SetSoundStatus(bool val);
     public void AddCredits(int i);

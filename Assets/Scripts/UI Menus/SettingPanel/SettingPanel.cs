@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Sequences;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.Purchasing;
+using UnityEngine.SceneManagement;
+
 public class SettingPanel : UIMenuBase
 {
     [SerializeField] private Toggle soundToggle;
@@ -43,6 +47,10 @@ public class SettingPanel : UIMenuBase
         {
             case ButtonType.Exit:
                 ChangeMenuState(MenuName.MainMenu);
+                break;
+            case ButtonType.RevokeConsent:
+                Dependencies.GameDataOperations.SetConsent(false);
+                SceneManager.LoadScene(SceneName.Splash.ToString());
                 break;
         }
 

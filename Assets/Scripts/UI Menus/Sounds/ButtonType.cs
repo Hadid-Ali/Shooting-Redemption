@@ -13,6 +13,9 @@ public enum ButtonType
     TryForFree,
     Exit,
     Select,
-    Settings
+    Settings,
+    AcceptConsent,
+    PrivacyPolicy,
+    RevokeConsent
 }
 

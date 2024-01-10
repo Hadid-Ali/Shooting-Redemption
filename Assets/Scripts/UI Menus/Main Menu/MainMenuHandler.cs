@@ -56,6 +56,9 @@ public class MainMenuHandler : UIMenuBase
             case ButtonType.Settings:
                 ChangeMenuState(MenuName.SettingsMenu);
                 break;
+            case ButtonType.PrivacyPolicy:
+                Application.OpenURL("https://play.virtua.com/privacy-policy");
+                break;
         }
         print("Working");
     }
