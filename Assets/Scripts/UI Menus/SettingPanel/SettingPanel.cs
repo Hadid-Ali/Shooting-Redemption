@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Sequences;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-using UnityEngine.Purchasing;
 using UnityEngine.SceneManagement;
 
 public class SettingPanel : UIMenuBase
@@ -53,9 +51,5 @@ public class SettingPanel : UIMenuBase
                 SceneManager.LoadScene(SceneName.Splash.ToString());
                 break;
         }
-
     }
-
-
-    
 }
